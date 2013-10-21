@@ -1,7 +1,8 @@
 package data.idao;
 
 	import java.util.List;
-	import data.dto.BilledDTO;
+
+import logic.dto.BilledDTO;
 
 		public interface IOperatoerDAO {
 			BilledDTO getbilledNummer(int billedNummer) throws DALException;

@@ -1,4 +1,4 @@
-package data.dto;
+package logic.dto;
 
 public class RolleDTO {
 	

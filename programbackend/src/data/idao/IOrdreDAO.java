@@ -1,5 +1,5 @@
 package data.idao;
 
-public class OrdreIDAO {
+public class IOrdreDAO {
 
 }

@@ -1,5 +1,5 @@
 package data.idao;
 
-public class KundeIDAO {
+public class IKundeDAO {
 
 }
