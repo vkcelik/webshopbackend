@@ -1,17 +1,13 @@
 package data.idao;
 
-	import java.util.List;
+import java.util.List;
 
-import logic.dto.BilledDTO;
+import logic.dto.BilledeDTO;
 
-		public interface IOperatoerDAO {
-			BilledDTO getbilledNummer(int billedNummer) throws DALException;
-			List<BilledDTO> getBilledList() throws DALException;
-			List<BilledDTO> getBilledList(int vareNummer) throws DALException;
-			void createBilled(BilledDTO billed) throws DALException;
-			void updateBilled(BilledDTO billed) throws DALException;
-			}
-	
-	
-	
+public interface IBilledDAO {
+	BilledeDTO getbilledNummer(int billedNummer) throws DALException;
+	List<BilledeDTO> getBilledList() throws DALException;
+	List<BilledeDTO> getBilledList(int vareNummer) throws DALException;
+	void createBilled(BilledeDTO billed) throws DALException;
+	void updateBilled(BilledeDTO billed) throws DALException;
 }
