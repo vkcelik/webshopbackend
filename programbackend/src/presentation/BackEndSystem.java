@@ -126,7 +126,7 @@ public class BackEndSystem extends JFrame {
 		});
 		
 		
-		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Tilf�j varehus");
+		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Tilføj varehus");
 		mntmNewMenuItem_1.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/1380431095_103.png")));
 		mnNewMenu_1.add(mntmNewMenuItem_1);
 		
@@ -193,7 +193,7 @@ public class BackEndSystem extends JFrame {
 			}
 		});
 		
-		JMenuItem mntmNewMenuItem_10 = new JMenuItem("Tilf�j kategori");
+		JMenuItem mntmNewMenuItem_10 = new JMenuItem("Tilføj kategori");
 		mntmNewMenuItem_10.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/1380431095_103.png")));
 		mnNewMenu_2.add(mntmNewMenuItem_10);
 		
@@ -310,7 +310,7 @@ public class BackEndSystem extends JFrame {
 			}
 		});
 		
-		JMenuItem mntmNewMenuItem_18 = new JMenuItem("Tilf�j medarbejder");
+		JMenuItem mntmNewMenuItem_18 = new JMenuItem("Tilføj medarbejder");
 		mntmNewMenuItem_18.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/1380431095_103.png")));
 		mnNewMenu_4.add(mntmNewMenuItem_18);
 		
