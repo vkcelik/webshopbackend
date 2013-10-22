@@ -56,7 +56,7 @@ public class BackEndSystem extends JFrame {
 		
 		
 		JMenuItem mntmNewMenuItem = new JMenuItem("Opret varer");
-		mntmNewMenuItem.setIcon(new ImageIcon(BackEndSystem.class.getResource("/GUIResourses/catalog-icon (1).png")));
+		mntmNewMenuItem.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/catalog-icon (1).png")));
 		mnNewMenu.add(mntmNewMenuItem);
 		
 		mntmNewMenuItem.addActionListener(new ActionListener() {
@@ -73,7 +73,7 @@ public class BackEndSystem extends JFrame {
 	
 
 		JMenuItem mntmNewMenuItem_4 = new JMenuItem("Se/Rediger Varer");
-		mntmNewMenuItem_4.setIcon(new ImageIcon(BackEndSystem.class.getResource("/GUIResourses/Start-Menu-Run-icon (1).png")));
+		mntmNewMenuItem_4.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/Start-Menu-Run-icon (1).png")));
 		mnNewMenu.add(mntmNewMenuItem_4);
 		
 		mntmNewMenuItem_4.addActionListener(new ActionListener() {
@@ -91,7 +91,7 @@ public class BackEndSystem extends JFrame {
 		
 		
 		JMenuItem mntmNewMenuItem_2 = new JMenuItem("Slet varer");
-		mntmNewMenuItem_2.setIcon(new ImageIcon(BackEndSystem.class.getResource("/GUIResourses/1380431140_150.png")));
+		mntmNewMenuItem_2.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/1380431140_150.png")));
 		mnNewMenu.add(mntmNewMenuItem_2);
 		
 		mntmNewMenuItem_2.addActionListener(new ActionListener() {
@@ -127,7 +127,7 @@ public class BackEndSystem extends JFrame {
 		
 		
 		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Tilf�j varehus");
-		mntmNewMenuItem_1.setIcon(new ImageIcon(BackEndSystem.class.getResource("/GUIResourses/1380431095_103.png")));
+		mntmNewMenuItem_1.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/1380431095_103.png")));
 		mnNewMenu_1.add(mntmNewMenuItem_1);
 		
 		mntmNewMenuItem_1.addActionListener(new ActionListener() {
@@ -143,7 +143,7 @@ public class BackEndSystem extends JFrame {
 		});
 		
 		JMenuItem mntmNewMenuItem_7 = new JMenuItem("Redigere varehus");
-		mntmNewMenuItem_7.setIcon(new ImageIcon(BackEndSystem.class.getResource("/GUIResourses/Start-Menu-Run-icon (1).png")));
+		mntmNewMenuItem_7.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/Start-Menu-Run-icon (1).png")));
 		mnNewMenu_1.add(mntmNewMenuItem_7);
 		
 		mntmNewMenuItem_7.addActionListener(new ActionListener() {
@@ -159,7 +159,7 @@ public class BackEndSystem extends JFrame {
 		});
 		
 		JMenuItem mntmNewMenuItem_6 = new JMenuItem("Slet varehus");
-		mntmNewMenuItem_6.setIcon(new ImageIcon(BackEndSystem.class.getResource("/GUIResourses/1380431140_150.png")));
+		mntmNewMenuItem_6.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/1380431140_150.png")));
 		mnNewMenu_1.add(mntmNewMenuItem_6);
 		
 		mntmNewMenuItem_6.addActionListener(new ActionListener() {
@@ -178,7 +178,7 @@ public class BackEndSystem extends JFrame {
 		menuBar.add(mnNewMenu_2);
 		
 		JMenuItem mntmNewMenuItem_9 = new JMenuItem("Se kategori");
-		mntmNewMenuItem_9.setIcon(new ImageIcon(BackEndSystem.class.getResource("/GUIResourses/category-icon.png")));
+		mntmNewMenuItem_9.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/category-icon.png")));
 		mnNewMenu_2.add(mntmNewMenuItem_9);
 		
 		mntmNewMenuItem_9.addActionListener(new ActionListener() {
@@ -194,7 +194,7 @@ public class BackEndSystem extends JFrame {
 		});
 		
 		JMenuItem mntmNewMenuItem_10 = new JMenuItem("Tilf�j kategori");
-		mntmNewMenuItem_10.setIcon(new ImageIcon(BackEndSystem.class.getResource("/GUIResourses/1380431095_103.png")));
+		mntmNewMenuItem_10.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/1380431095_103.png")));
 		mnNewMenu_2.add(mntmNewMenuItem_10);
 		
 		mntmNewMenuItem_10.addActionListener(new ActionListener() {
@@ -210,7 +210,7 @@ public class BackEndSystem extends JFrame {
 		});
 		
 		JMenuItem mntmNewMenuItem_8 = new JMenuItem("Rediger kategori");
-		mntmNewMenuItem_8.setIcon(new ImageIcon(BackEndSystem.class.getResource("/GUIResourses/Start-Menu-Run-icon (1).png")));
+		mntmNewMenuItem_8.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/Start-Menu-Run-icon (1).png")));
 		mnNewMenu_2.add(mntmNewMenuItem_8);
 
 		mntmNewMenuItem_8.addActionListener(new ActionListener() {
@@ -226,7 +226,7 @@ public class BackEndSystem extends JFrame {
 		});
 		
 		JMenuItem mntmNewMenuItem_11 = new JMenuItem("Slet kategori");
-		mntmNewMenuItem_11.setIcon(new ImageIcon(BackEndSystem.class.getResource("/GUIResourses/1380431140_150.png")));
+		mntmNewMenuItem_11.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/1380431140_150.png")));
 		mnNewMenu_2.add(mntmNewMenuItem_11);
 		
 		mntmNewMenuItem_11.addActionListener(new ActionListener() {
@@ -260,7 +260,7 @@ public class BackEndSystem extends JFrame {
 		});
 		
 		JMenuItem mntmNewMenuItem_12 = new JMenuItem("Rediger ordre");
-		mntmNewMenuItem_12.setIcon(new ImageIcon(BackEndSystem.class.getResource("/GUIResourses/Start-Menu-Run-icon (1).png")));
+		mntmNewMenuItem_12.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/Start-Menu-Run-icon (1).png")));
 		mnNewMenu_3.add(mntmNewMenuItem_12);
 		
 		mntmNewMenuItem_12.addActionListener(new ActionListener() {
@@ -276,7 +276,7 @@ public class BackEndSystem extends JFrame {
 		});
 		
 		JMenuItem mntmNewMenuItem_16 = new JMenuItem("Slette ordre");
-		mntmNewMenuItem_16.setIcon(new ImageIcon(BackEndSystem.class.getResource("/GUIResourses/1380431140_150.png")));
+		mntmNewMenuItem_16.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/1380431140_150.png")));
 		mnNewMenu_3.add(mntmNewMenuItem_16);
 		
 		mntmNewMenuItem_16.addActionListener(new ActionListener() {
@@ -295,7 +295,7 @@ public class BackEndSystem extends JFrame {
 		menuBar.add(mnNewMenu_4);
 		
 		JMenuItem mntmNewMenuItem_13 = new JMenuItem("Se medarbejder");
-		mntmNewMenuItem_13.setIcon(new ImageIcon(BackEndSystem.class.getResource("/GUIResourses/users-icon.png")));
+		mntmNewMenuItem_13.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/users-icon.png")));
 		mnNewMenu_4.add(mntmNewMenuItem_13);
 		
 		mntmNewMenuItem_13.addActionListener(new ActionListener() {
@@ -311,7 +311,7 @@ public class BackEndSystem extends JFrame {
 		});
 		
 		JMenuItem mntmNewMenuItem_18 = new JMenuItem("Tilf�j medarbejder");
-		mntmNewMenuItem_18.setIcon(new ImageIcon(BackEndSystem.class.getResource("/GUIResourses/1380431095_103.png")));
+		mntmNewMenuItem_18.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/1380431095_103.png")));
 		mnNewMenu_4.add(mntmNewMenuItem_18);
 		
 		mntmNewMenuItem_18.addActionListener(new ActionListener() {
@@ -327,7 +327,7 @@ public class BackEndSystem extends JFrame {
 		});
 		
 		JMenuItem mntmNewMenuItem_17 = new JMenuItem("Rediger medarbjeder");
-		mntmNewMenuItem_17.setIcon(new ImageIcon(BackEndSystem.class.getResource("/GUIResourses/Start-Menu-Run-icon (1).png")));
+		mntmNewMenuItem_17.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/Start-Menu-Run-icon (1).png")));
 		mnNewMenu_4.add(mntmNewMenuItem_17);
 		
 		mntmNewMenuItem_17.addActionListener(new ActionListener() {
@@ -343,7 +343,7 @@ public class BackEndSystem extends JFrame {
 		});
 		
 		JMenuItem mntmNewMenuItem_19 = new JMenuItem("Slette medarbejeder");
-		mntmNewMenuItem_19.setIcon(new ImageIcon(BackEndSystem.class.getResource("/GUIResourses/1380431140_150.png")));
+		mntmNewMenuItem_19.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/1380431140_150.png")));
 		mnNewMenu_4.add(mntmNewMenuItem_19);
 		
 		mntmNewMenuItem_19.addActionListener(new ActionListener() {
@@ -362,7 +362,7 @@ public class BackEndSystem extends JFrame {
 		menuBar.add(mnNewMenu_8);
 		
 		JMenuItem mntmNewMenuItem_20 = new JMenuItem("Se Statistik");
-		mntmNewMenuItem_20.setIcon(new ImageIcon(BackEndSystem.class.getResource("/GUIResourses/statistics-icon.png")));
+		mntmNewMenuItem_20.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/statistics-icon.png")));
 		mnNewMenu_8.add(mntmNewMenuItem_20);
 		
 		JMenu mnNewMenu_5 = new JMenu("Instillinger");
