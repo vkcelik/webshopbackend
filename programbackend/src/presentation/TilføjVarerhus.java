@@ -1,0 +1,56 @@
+package presentation;
+
+import java.awt.Button;
+import java.awt.Color;
+import java.awt.Font;
+
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+
+
+public class TilføjVarerhus extends JPanel {
+
+	public TilføjVarerhus() {
+		
+		
+		this.setBackground(new Color(0, 145, 255));
+		setLayout(null);
+		
+		JLabel Label = new JLabel("Tilføj Varerhus");
+		Label.setFont(new Font("sansserif", Font.BOLD, 24));
+		Label.setForeground(Color.white);
+		Label.setBounds(26, 30, 200, 30);
+		this.add(Label);
+		
+		JLabel varehusnavn = new JLabel("Tilføj Varehusnavn:");
+		varehusnavn.setBounds(26, 90, 120, 20);
+		varehusnavn.setForeground(Color.white);
+		add(varehusnavn);
+		
+		JTextField varehusnavnText = new JTextField();
+		varehusnavnText.setBounds(165, 90, 300, 20);
+		add(varehusnavnText);
+		
+		JLabel varehusnr = new JLabel("Tilføj Varehusnummer:");
+		varehusnr.setBounds(26, 120, 130, 20);
+		varehusnr.setForeground(Color.white);
+		add(varehusnr);
+		
+		JTextField varehusnrText = new JTextField();
+		varehusnrText.setBounds(165, 120, 300, 20);
+		add(varehusnrText);
+		
+		Button TilføjVarerhus = new Button("Tilføj");
+		TilføjVarerhus.setBackground(Color.lightGray);
+		TilføjVarerhus.setBounds(165, 160, 70, 22);
+		TilføjVarerhus.setForeground(Color.black);
+		add(TilføjVarerhus);
+		
+		
+		
+		
+	}
+
+}

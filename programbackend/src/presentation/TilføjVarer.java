@@ -2,7 +2,6 @@ package presentation;
 
 
 
-import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
 
@@ -13,20 +12,18 @@ import java.awt.Button;
 
 
 
-public class Panel1 extends JPanel {
-	private JTextField textField;
-	private JTextField textField1;
-	private JTextField textField2;
-	private JTextField textField3;
+public class TilføjVarer extends JPanel {
+	
+	
 
 
-	public Panel1() {
+	public TilføjVarer() {
 		
 		
-		this.setBackground(new Color(29, 160, 169));
+		this.setBackground(new Color(0, 145, 255));
 		setLayout(null);
 		
-		JLabel Label = new JLabel("Opret Varer");
+		JLabel Label = new JLabel("Tilføj Varer");
 		Label.setFont(new Font("sansserif", Font.BOLD, 24));
 		Label.setForeground(Color.white);
 		Label.setBounds(26, 30, 140, 30);
@@ -37,7 +34,7 @@ public class Panel1 extends JPanel {
 		vare.setForeground(Color.white);
 		add(vare);
 		
-		textField = new JTextField();
+		JTextField textField = new JTextField();
 		textField.setBounds(140, 90, 300, 20);
 		add(textField);
 		
@@ -47,7 +44,7 @@ public class Panel1 extends JPanel {
 		add(vare1);
 		
 		
-		textField1 = new JTextField();
+		JTextField textField1 = new JTextField();
 		textField1.setBounds(140, 120, 300, 20);
 		add(textField1);
 		
@@ -56,7 +53,7 @@ public class Panel1 extends JPanel {
 		vare2.setForeground(Color.white);
 		add(vare2);
 		
-		textField2 = new JTextField();
+		JTextField textField2 = new JTextField();
 		textField2.setBounds(140, 150, 300, 20);
 		add(textField2);
 		
@@ -65,15 +62,15 @@ public class Panel1 extends JPanel {
 		vare3.setForeground(Color.white);
 		add(vare3);
 		
-		textField3 = new JTextField();
+		JTextField textField3 = new JTextField();
 		textField3.setBounds(140, 180, 300, 20);
 		add(textField3);
 		
-		Button button = new Button("Opret");
-		button.setBackground(Color.lightGray);
-		button.setBounds(140, 220, 70, 22);
-		button.setForeground(Color.black);
-		add(button);
+		Button TilføjVarer = new Button("Tilføj");
+		TilføjVarer.setBackground(Color.lightGray);
+		TilføjVarer.setBounds(140, 220, 70, 22);
+		TilføjVarer.setForeground(Color.black);
+		add(TilføjVarer);
 		
 		
 		
