@@ -18,11 +18,11 @@ public class TilføjVarerhus extends JPanel {
 		this.setBackground(new Color(0, 145, 255));
 		setLayout(null);
 		
-		JLabel Label = new JLabel("Tilføj Varerhus");
-		Label.setFont(new Font("sansserif", Font.BOLD, 24));
-		Label.setForeground(Color.white);
-		Label.setBounds(26, 30, 200, 30);
-		this.add(Label);
+		JLabel TilføjVarehus = new JLabel("Tilføj Varerhus");
+		TilføjVarehus.setFont(new Font("sansserif", Font.BOLD, 24));
+		TilføjVarehus.setForeground(Color.white);
+		TilføjVarehus.setBounds(26, 30, 200, 30);
+		this.add(TilføjVarehus);
 		
 		JLabel varehusnavn = new JLabel("Tilføj Varehusnavn:");
 		varehusnavn.setBounds(26, 90, 120, 20);
