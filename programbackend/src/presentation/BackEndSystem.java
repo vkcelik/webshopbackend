@@ -141,11 +141,6 @@ public class BackEndSystem extends JFrame {
 			}
 		});
 		
-		
-	
-		
-		
-		
 		JMenuItem mntmNewMenuItem_6 = new JMenuItem("Slet varehus");
 		mntmNewMenuItem_6.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/1380431140_150.png")));
 		mnNewMenu_1.add(mntmNewMenuItem_6);
@@ -214,6 +209,58 @@ public class BackEndSystem extends JFrame {
 			}
 		});
 		
+		JMenu mnNewMenu_4 = new JMenu("Medarbejder");
+		menuBar.add(mnNewMenu_4);
+		
+		JMenuItem mntmNewMenuItem_18 = new JMenuItem("Tilføj medarbejder");
+		mntmNewMenuItem_18.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/1380431095_103.png")));
+		mnNewMenu_4.add(mntmNewMenuItem_18);
+		
+		mntmNewMenuItem_18.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			
+				
+					getContentPane().removeAll();
+	                getContentPane().add(new TilføjMedarbejder());//Adding to content pane, not to Frame
+	                repaint();
+	                printAll(getGraphics());
+				
+			}
+		});
+		
+		JMenuItem mntmNewMenuItem_13 = new JMenuItem("Se/Rediger medarbejder");
+		mntmNewMenuItem_13.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/users-icon.png")));
+		mnNewMenu_4.add(mntmNewMenuItem_13);
+		
+		mntmNewMenuItem_13.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			
+				
+					getContentPane().removeAll();
+	                getContentPane().add(new SeRedigerMedarbejder());//Adding to content pane, not to Frame
+	                repaint();
+	                printAll(getGraphics());
+				
+			}
+		});
+		
+		
+		JMenuItem mntmNewMenuItem_19 = new JMenuItem("Slette medarbejeder");
+		mntmNewMenuItem_19.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/1380431140_150.png")));
+		mnNewMenu_4.add(mntmNewMenuItem_19);
+		
+		mntmNewMenuItem_19.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			
+				
+					getContentPane().removeAll();
+	                getContentPane().add(new PanelI());//Adding to content pane, not to Frame
+	                repaint();
+	                printAll(getGraphics());
+				
+			}
+		});
+		
 		JMenu mnNewMenu_3 = new JMenu("Ordre");
 		menuBar.add(mnNewMenu_3);
 		
@@ -250,57 +297,6 @@ public class BackEndSystem extends JFrame {
 			}
 		});
 		
-		JMenu mnNewMenu_4 = new JMenu("Medarbejder");
-		menuBar.add(mnNewMenu_4);
-		
-		JMenuItem mntmNewMenuItem_18 = new JMenuItem("Tilføj medarbejder");
-		mntmNewMenuItem_18.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/1380431095_103.png")));
-		mnNewMenu_4.add(mntmNewMenuItem_18);
-		
-		mntmNewMenuItem_18.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			
-				
-					getContentPane().removeAll();
-	                getContentPane().add(new PanelG());//Adding to content pane, not to Frame
-	                repaint();
-	                printAll(getGraphics());
-				
-			}
-		});
-		
-		JMenuItem mntmNewMenuItem_13 = new JMenuItem("Se/Rediger medarbejder");
-		mntmNewMenuItem_13.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/users-icon.png")));
-		mnNewMenu_4.add(mntmNewMenuItem_13);
-		
-		mntmNewMenuItem_13.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			
-				
-					getContentPane().removeAll();
-	                getContentPane().add(new PanelF());//Adding to content pane, not to Frame
-	                repaint();
-	                printAll(getGraphics());
-				
-			}
-		});
-		
-		
-		JMenuItem mntmNewMenuItem_19 = new JMenuItem("Slette medarbejeder");
-		mntmNewMenuItem_19.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/1380431140_150.png")));
-		mnNewMenu_4.add(mntmNewMenuItem_19);
-		
-		mntmNewMenuItem_19.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			
-				
-					getContentPane().removeAll();
-	                getContentPane().add(new PanelI());//Adding to content pane, not to Frame
-	                repaint();
-	                printAll(getGraphics());
-				
-			}
-		});
 		
 		JMenu mnNewMenu_8 = new JMenu("Statistik");
 		menuBar.add(mnNewMenu_8);

@@ -5,9 +5,9 @@ import javax.swing.JPanel;
 
 
 
-public class PanelE extends JPanel {
+public class SeRedigerMedarbejder extends JPanel {
 
-	public PanelE() {
+	public SeRedigerMedarbejder() {
 		
 		
 		this.setBackground(new Color(0, 145, 255));

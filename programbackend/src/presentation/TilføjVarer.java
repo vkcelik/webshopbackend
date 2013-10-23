@@ -5,10 +5,17 @@ package presentation;
 import java.awt.Color;
 import java.awt.Font;
 
+import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import java.awt.Button;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+
+import javax.swing.JButton;
 
 
 
@@ -16,6 +23,8 @@ public class TilføjVarer extends JPanel {
 	
 	
 
+
+	private JLabel jLabel;
 
 	public TilføjVarer() {
 		
@@ -68,11 +77,15 @@ public class TilføjVarer extends JPanel {
 		
 		Button TilføjVarer = new Button("Tilføj");
 		TilføjVarer.setBackground(Color.lightGray);
-		TilføjVarer.setBounds(140, 220, 70, 22);
+		TilføjVarer.setBounds(140, 215, 70, 22);
 		TilføjVarer.setForeground(Color.black);
 		add(TilføjVarer);
 		
-		
+		JButton Home = new JButton();
+		Home.setBounds(600, 10, 40, 23);
+		Home.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/home.png")));
+		Home.setBackground(new Color(0, 145, 255));
+		add(Home);
 		
 		
 		

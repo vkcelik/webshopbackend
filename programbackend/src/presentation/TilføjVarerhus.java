@@ -42,14 +42,24 @@ public class TilføjVarerhus extends JPanel {
 		varehusnrText.setBounds(165, 120, 300, 20);
 		add(varehusnrText);
 		
+		JLabel varehusadresse = new JLabel("Tilføj Varehusadresse:");
+		varehusadresse.setBounds(26, 150, 130, 20);
+		varehusadresse.setForeground(Color.white);
+		add(varehusadresse);
+		
+		JTextField varehusadresseText = new JTextField();
+		varehusadresseText.setBounds(165, 150, 300, 20);
+		add(varehusadresseText);
+		
 		Button TilføjVarerhus = new Button("Tilføj");
 		TilføjVarerhus.setBackground(Color.lightGray);
-		TilføjVarerhus.setBounds(165, 160, 70, 22);
+		TilføjVarerhus.setBounds(165, 185, 70, 22);
 		TilføjVarerhus.setForeground(Color.black);
 		add(TilføjVarerhus);
 		
 		
-		
+
+	
 		
 	}
 
