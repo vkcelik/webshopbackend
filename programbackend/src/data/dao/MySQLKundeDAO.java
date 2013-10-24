@@ -12,6 +12,7 @@ public class MySQLKundeDAO implements IKundeDAO {
 	public KundeDTO getKunde(int id) throws DALException {
 		
 		return null;
+		
 	}
 
 	
