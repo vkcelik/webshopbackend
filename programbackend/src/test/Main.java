@@ -19,11 +19,11 @@ public class Main {
 		System.out.println("Hent indstilling nummer 2");
 		MySQLIndstillingDAO ia = new MySQLIndstillingDAO();
 		try {System.out.println(ia.getIndstilling(2));}
-		catch (DALException e){ System.out.println(e.getMessage());
+		catch (DALException e){ System.out.println(e.getMessage()); }
 		
 		System.out.println("Oprettelse af momsprocent indstilling");
 		IndstillingDTO i1 = new IndstillingDTO(3, "0.25");
-		try {i1.createIndstilling(i1);}
+		try {ia.createIndstilling(i1);}
 		catch (DALException e){System.out.println(e.getMessage());}
 	}
 }
