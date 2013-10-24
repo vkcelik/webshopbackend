@@ -40,7 +40,7 @@ public class MySQLMedarbejderDAO implements IMedarbejderDAO{
 				"INSERT INTO Medarbejder(medarbejderNummer, medarbejderNavn, medarbejderAdresse, medarbejderPostnummer, medarbejderEmail, medarbejderPassword, medarbejderRolle, medarbejderLønType, medarbejderLøn, medarbejderRegnr, medarbejderKonto, medarbejderCpr) VALUES " +
 				"(" + medarb.getMedarbejderNummer() + ", '" + medarb.getMedarbejderLand() + ", '" + medarb.getMedarbejderAdresse() + ", '" + medarb.getMedarbejderPostnummer() + ", '" + medarb.getMedarbejderEmail() + ", '" + medarb.getMedarbejderPassword()+ ", '" + medarb.getMedarbejderRolle() + ", '" + medarb.getMedarbejderLønType() + ", '" + medarb.getMedarbejderLøn() + ", '" + medarb.getMedarbejderRegnr() + ", '" + medarb.getMedarbejderKonto() + ", '" + medarb.getMedarbejderCpr() + "')"
 				);
-}
+	}
 
 	@Override
 	public void updateMedarbejder(MedarbejderDTO m) throws DALException {
@@ -58,5 +58,5 @@ public class MySQLMedarbejderDAO implements IMedarbejderDAO{
 				"', medarbejderCpr =  '" + m.getMedarbejderCpr() +
 				"' WHERE medarbejderNummer = " + m.getMedarbejderNummer()
 				);
-}
+	}
 }
