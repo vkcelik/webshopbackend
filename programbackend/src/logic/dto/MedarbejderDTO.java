@@ -10,11 +10,19 @@ public class MedarbejderDTO {
 	private String medarbejderEmail;
 	private String medarbejderPassword;
 	private String medarbejderRolle;
+	private String medarbejderLønType;
+	private double medarbejderLøn;
+	private int medarbejderRegnr;
+	private int medarbejderKonto;
+	private int medarbejderCpr;
 	
+
 	public MedarbejderDTO(int medarbejderNummer, String medarbejderNavn,
 			String medarbejderAdresse, String medarbejderLand,
 			int medarbejderPostnummer, String medarbejderEmail,
-			String medarbejderPassword, String medarbejderRolle) {
+			String medarbejderPassword, String medarbejderRolle,
+			String medarbejderLønType, double medarbejderLøn,
+			int medarbejderRegnr, int medarbejderKonto, int medarbejderCpr) {
 		this.medarbejderNummer = medarbejderNummer;
 		this.medarbejderNavn = medarbejderNavn;
 		this.medarbejderAdresse = medarbejderAdresse;
@@ -23,6 +31,11 @@ public class MedarbejderDTO {
 		this.medarbejderEmail = medarbejderEmail;
 		this.medarbejderPassword = medarbejderPassword;
 		this.medarbejderRolle = medarbejderRolle;
+		this.medarbejderLønType = medarbejderLønType;
+		this.medarbejderLøn = medarbejderLøn;
+		this.medarbejderRegnr = medarbejderRegnr;
+		this.medarbejderKonto = medarbejderKonto;
+		this.medarbejderCpr = medarbejderCpr;
 	}
 
 	public int getMedarbejderNummer() {
@@ -87,6 +100,46 @@ public class MedarbejderDTO {
 
 	public void setMedarbejderRolle(String medarbejderRolle) {
 		this.medarbejderRolle = medarbejderRolle;
+	}
+
+	public String getMedarbejderLønType() {
+		return medarbejderLønType;
+	}
+
+	public void setMedarbejderLønType(String medarbejderLønType) {
+		this.medarbejderLønType = medarbejderLønType;
+	}
+
+	public double getMedarbejderLøn() {
+		return medarbejderLøn;
+	}
+
+	public void setMedarbejderLøn(double medarbejderLøn) {
+		this.medarbejderLøn = medarbejderLøn;
+	}
+
+	public int getMedarbejderRegnr() {
+		return medarbejderRegnr;
+	}
+
+	public void setMedarbejderRegnr(int medarbejderRegnr) {
+		this.medarbejderRegnr = medarbejderRegnr;
+	}
+
+	public int getMedarbejderKonto() {
+		return medarbejderKonto;
+	}
+
+	public void setMedarbejderKonto(int medarbejderKonto) {
+		this.medarbejderKonto = medarbejderKonto;
+	}
+
+	public int getMedarbejderCpr() {
+		return medarbejderCpr;
+	}
+
+	public void setMedarbejderCpr(int medarbejderCpr) {
+		this.medarbejderCpr = medarbejderCpr;
 	}
 	
 	
