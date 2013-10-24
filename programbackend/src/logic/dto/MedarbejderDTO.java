@@ -141,8 +141,5 @@ public class MedarbejderDTO {
 	public void setMedarbejderCpr(int medarbejderCpr) {
 		this.medarbejderCpr = medarbejderCpr;
 	}
-	
-	
-	
 
 }
