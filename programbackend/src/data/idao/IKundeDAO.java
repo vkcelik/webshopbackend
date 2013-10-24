@@ -1,5 +1,17 @@
 package data.idao;
 
-public class IKundeDAO {
+import java.util.List;
+
+import logic.dto.KundeDTO;
+
+
+
+
+public interface IKundeDAO {
+	
+	KundeDTO getKunde(int id) throws DALException;
+	List<KundeDTO> getKundeList() throws DALException;
+	void createKunde(KundeDTO kunde) throws DALException;
+	void updateKunde(KundeDTO kunde) throws DALException;
 
 }

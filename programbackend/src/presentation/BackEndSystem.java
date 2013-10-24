@@ -46,6 +46,7 @@ public class BackEndSystem extends JFrame {
 		Label.setForeground(Color.white);
 		contentPane.add(Label, BorderLayout.PAGE_START);
 		
+		
 		 
 		
 		JMenuBar menuBar = new JMenuBar();
