@@ -1,5 +1,11 @@
-package data.dao;
+package dao_interfaces;
 
-public class MySQLBynavnDAO {
+import java.util.List;
+
+public interface MySQLBynavnDAO {
+	
+	
+	
+	
 
 }
