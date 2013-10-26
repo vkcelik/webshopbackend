@@ -81,11 +81,13 @@ public class TilføjVarer extends JPanel {
 		TilføjVarer.setForeground(Color.black);
 		add(TilføjVarer);
 		
-		JButton Home = new JButton();
-		Home.setBounds(600, 10, 40, 23);
-		Home.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/home.png")));
-		Home.setBackground(new Color(0, 145, 255));
-		add(Home);
+		
+		//JButton Home = new JButton();
+		//Home.setBounds(600, 10, 40, 23);
+		//Home.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/home.png")));
+		//Home.setBackground(new Color(0, 145, 255));
+		//add(Home);
+		
 		
 		
 		
