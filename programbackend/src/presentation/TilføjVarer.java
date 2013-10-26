@@ -82,6 +82,8 @@ public class TilføjVarer extends JPanel {
 		add(TilføjVarer);
 		
 		
+		
+		
 		//JButton Home = new JButton();
 		//Home.setBounds(600, 10, 40, 23);
 		//Home.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/home.png")));

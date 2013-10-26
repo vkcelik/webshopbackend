@@ -8,18 +8,18 @@ import javax.swing.JPanel;
 
 
 
-public class SeRedigerMedarbejder extends JPanel {
+public class SletVarerhus extends JPanel {
 
-	public SeRedigerMedarbejder() {
+	public SletVarerhus() {
 		
 		
 		this.setBackground(new Color(0, 145, 255));
 		setLayout(null);
 		
-		JLabel Label = new JLabel("Se/Rediger Medarbejder");
+		JLabel Label = new JLabel("Slet varerhus");
 		Label.setFont(new Font("sansserif", Font.BOLD, 24));
 		Label.setForeground(Color.white);
-		Label.setBounds(26, 30, 300, 30);
+		Label.setBounds(26, 30, 200, 30);
 		this.add(Label);
 	
 		
