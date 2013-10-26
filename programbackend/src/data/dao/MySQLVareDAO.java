@@ -5,9 +5,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import logic.dto.KategoriDTO;
-import logic.dto.KundeDTO;
-import logic.dto.MedarbejderDTO;
+
 import logic.dto.VareDTO;
 import data.connect.Connector;
 import data.idao.DALException;
