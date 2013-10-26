@@ -10,7 +10,7 @@ import javax.swing.*;
 public class BackEndSystem extends JFrame {
 
 	
-	private JPanel contentPane;
+	JPanel contentPane;
 	
 	
 	
@@ -82,7 +82,7 @@ public class BackEndSystem extends JFrame {
 			
 				
 					getContentPane().removeAll();
-	                getContentPane().add(new Panel2());//Adding to content pane, not to Frame
+	                getContentPane().add(new SeRedigerVare());//Adding to content pane, not to Frame
 	                repaint();
 	                printAll(getGraphics());
 				
@@ -100,7 +100,7 @@ public class BackEndSystem extends JFrame {
 			
 				
 					getContentPane().removeAll();
-	                getContentPane().add(new Panel3());//Adding to content pane, not to Frame
+	                getContentPane().add(new SletVarer());//Adding to content pane, not to Frame
 	                repaint();
 	                printAll(getGraphics());
 				
@@ -135,7 +135,7 @@ public class BackEndSystem extends JFrame {
 			
 				
 					getContentPane().removeAll();
-	                getContentPane().add(new Panel4());//Adding to content pane, not to Frame
+	                getContentPane().add(new SeVarehus());//Adding to content pane, not to Frame
 	                repaint();
 	                printAll(getGraphics());
 				
@@ -151,7 +151,7 @@ public class BackEndSystem extends JFrame {
 			
 				
 					getContentPane().removeAll();
-	                getContentPane().add(new Panel7());//Adding to content pane, not to Frame
+	                getContentPane().add(new SletVarerhus());//Adding to content pane, not to Frame
 	                repaint();
 	                printAll(getGraphics());
 				
@@ -186,7 +186,7 @@ public class BackEndSystem extends JFrame {
 			
 				
 					getContentPane().removeAll();
-	                getContentPane().add(new Panel8());//Adding to content pane, not to Frame
+	                getContentPane().add(new SeRedigerKategori());//Adding to content pane, not to Frame
 	                repaint();
 	                printAll(getGraphics());
 				
@@ -203,7 +203,7 @@ public class BackEndSystem extends JFrame {
 			
 				
 					getContentPane().removeAll();
-	                getContentPane().add(new PanelB());//Adding to content pane, not to Frame
+	                getContentPane().add(new SletKategori());//Adding to content pane, not to Frame
 	                repaint();
 	                printAll(getGraphics());
 				
@@ -255,7 +255,7 @@ public class BackEndSystem extends JFrame {
 			
 				
 					getContentPane().removeAll();
-	                getContentPane().add(new PanelI());//Adding to content pane, not to Frame
+	                getContentPane().add(new SletMedarbejder());//Adding to content pane, not to Frame
 	                repaint();
 	                printAll(getGraphics());
 				
@@ -275,7 +275,7 @@ public class BackEndSystem extends JFrame {
 			
 				
 					getContentPane().removeAll();
-	                getContentPane().add(new PanelD());//Adding to content pane, not to Frame
+	                getContentPane().add(new SeRedigerOrdre());//Adding to content pane, not to Frame
 	                repaint();
 	                printAll(getGraphics());
 				
@@ -291,7 +291,7 @@ public class BackEndSystem extends JFrame {
 			
 				
 					getContentPane().removeAll();
-	                getContentPane().add(new PanelE());//Adding to content pane, not to Frame
+	                getContentPane().add(new SletOrdre());//Adding to content pane, not to Frame
 	                repaint();
 	                printAll(getGraphics());
 				
@@ -305,6 +305,21 @@ public class BackEndSystem extends JFrame {
 		JMenuItem mntmNewMenuItem_20 = new JMenuItem("Se Statistik");
 		mntmNewMenuItem_20.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/statistics-icon.png")));
 		mnNewMenu_8.add(mntmNewMenuItem_20);
+		
+		mntmNewMenuItem_20.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			
+				
+					getContentPane().removeAll();
+	                getContentPane().add(contentPane);//Adding to content pane, not to Frame
+	                repaint();
+	                printAll(getGraphics());
+				
+			}
+		});
+		
+		
+		
 		
 		JMenu mnNewMenu_5 = new JMenu("Instillinger");
 		menuBar.add(mnNewMenu_5);
