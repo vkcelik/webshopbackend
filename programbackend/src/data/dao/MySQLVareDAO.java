@@ -27,7 +27,7 @@ public class MySQLVareDAO implements IVareDAO {
 	@Override
 	public List<VareDTO> getVareList() throws DALException {
 		List<VareDTO> list = new ArrayList<VareDTO>();
-		ResultSet rs = Connector.doQuery("SELECT * FROM Medarbejder");
+		ResultSet rs = Connector.doQuery("SELECT * FROM Vare");
 		try { 
 			while (rs.next()){
 				list.add(new VareDTO(rs.getInt(1), rs.getString(2), rs.getDouble(3), rs.getInt(4), rs.getString(5), rs.getDouble(6), rs.getDouble(7), rs.getDouble(8), rs.getDouble(9)));
