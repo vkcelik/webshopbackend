@@ -61,7 +61,7 @@ public class MySQLVareDAO implements IVareDAO {
 				+ "', dybde =  '" + vare.getDybde()
 				+ "', højde =  '" + vare.getHøjde() );
 	
-	}
+		}
 		
 	}
 
