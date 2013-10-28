@@ -6,13 +6,17 @@ import java.awt.Font;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTable;
 import javax.swing.JTextField;
 
 
 
 public class TilføjMedarbejder extends JPanel {
 
-	public TilføjMedarbejder() {
+		private JTable table;
+		
+		
+		public TilføjMedarbejder() {
 		
 		
 		this.setBackground(new Color(0, 145, 255));
@@ -25,48 +29,53 @@ public class TilføjMedarbejder extends JPanel {
 		this.add(Label);
 		
 		JLabel Fornavn = new JLabel("Tilføj Fornavn:");
-		Fornavn.setBounds(26, 90, 130, 20);
-		Fornavn.setForeground(Color.white);
+		Fornavn.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		Fornavn.setBounds(30, 90, 130, 20);
+		Fornavn.setForeground(Color.black);
 		add(Fornavn);
 		
 		JTextField FornavnText = new JTextField();
-		FornavnText.setBounds(140, 90, 300, 20);
+		FornavnText.setBounds(145, 90, 300, 20);
 		add(FornavnText);
 		
 		JLabel Efternavn = new JLabel("Tilføj Efternavn:");
-		Efternavn.setBounds(26, 120, 130, 20);
-		Efternavn.setForeground(Color.white);
+		Efternavn.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		Efternavn.setBounds(30, 120, 130, 20);
+		Efternavn.setForeground(Color.black);
 		add(Efternavn);
 		
 		JTextField EfternavnText = new JTextField();
-		EfternavnText.setBounds(140, 120, 300, 20);
+		EfternavnText.setBounds(145, 120, 300, 20);
 		add(EfternavnText);
 		
 		JLabel Jobtitel = new JLabel("Tilføj Jobtitel:");
-		Jobtitel.setBounds(26, 150, 130, 20);
-		Jobtitel.setForeground(Color.white);
+		Jobtitel.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		Jobtitel.setBounds(30, 150, 130, 20);
+		Jobtitel.setForeground(Color.black);
 		add(Jobtitel);
 		
 		JTextField JobtitelText = new JTextField();
-		JobtitelText.setBounds(140, 150, 300, 20);
+		JobtitelText.setBounds(145, 150, 300, 20);
 		add(JobtitelText);
 		
 		JLabel Telefon = new JLabel("Tilføj Telefon:");
-		Telefon.setBounds(26, 180, 130, 20);
-		Telefon.setForeground(Color.white);
+		Telefon.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		Telefon.setBounds(30, 180, 130, 20);
+		Telefon.setForeground(Color.black);
 		add(Telefon);
 		
 		JTextField TelefonText = new JTextField();
-		TelefonText.setBounds(140, 180, 300, 20);
+		TelefonText.setBounds(145, 180, 300, 20);
 		add(TelefonText);
 		
 		JLabel Email = new JLabel("Tilføj Email:");
-		Email.setBounds(26, 210, 130, 20);
-		Email.setForeground(Color.white);
+		Email.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		Email.setBounds(30, 210, 130, 20);
+		Email.setForeground(Color.black);
 		add(Email);
 		
 		JTextField EmailText = new JTextField();
-		EmailText.setBounds(140, 210, 300, 20);
+		EmailText.setBounds(145, 210, 300, 20);
 		add(EmailText);
 		
 		Button TilføjMedarbejder = new Button("Tilføj");
@@ -75,7 +84,10 @@ public class TilføjMedarbejder extends JPanel {
 		TilføjMedarbejder.setForeground(Color.black);
 		add(TilføjMedarbejder);
 		
-		
+		table = new JTable();
+		table.setBounds(26, 71, 596, 333);
+		table.setBackground(new Color(238, 238, 238));
+		add(table);
 		
 		
 		

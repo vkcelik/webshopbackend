@@ -5,12 +5,15 @@ import java.awt.Font;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTable;
 
 
 
 public class SeRedigerVare extends JPanel {
-
-	public SeRedigerVare() {
+		
+		private JTable table;
+	
+		public SeRedigerVare() {
 		
 		
 		this.setBackground(new Color(0, 145, 255));
@@ -23,7 +26,10 @@ public class SeRedigerVare extends JPanel {
 		this.add(Label);
 		
 	
-		
+		table = new JTable();
+		table.setBounds(26, 71, 596, 333);
+		table.setBackground(new Color(238, 238, 238));
+		add(table);
 	}
 
 }

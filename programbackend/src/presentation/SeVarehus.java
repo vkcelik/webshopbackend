@@ -5,12 +5,15 @@ import java.awt.Font;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTable;
 
 
 
 public class SeVarehus extends JPanel {
 
-	public SeVarehus() {
+		private JTable table;
+	
+		public SeVarehus() {
 		
 		
 		this.setBackground(new Color(0, 145, 255));
@@ -22,7 +25,10 @@ public class SeVarehus extends JPanel {
 		Label.setBounds(26, 30, 180, 30);
 		this.add(Label);
 	
-		
+		table = new JTable();
+		table.setBounds(26, 71, 596, 333);
+		table.setBackground(new Color(238, 238, 238));
+		add(table);
 	}
 
 }

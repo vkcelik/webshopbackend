@@ -6,12 +6,14 @@ import java.awt.Font;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTable;
 import javax.swing.JTextField;
 
 
 
 public class TilføjKategori extends JPanel {
-
+	
+	private JTable table;
 	public TilføjKategori() {
 		
 		
@@ -25,20 +27,26 @@ public class TilføjKategori extends JPanel {
 		this.add(TilføjKategori);
 		
 		JLabel TilføjKategorinavn = new JLabel("Tilføj Kategorinavn:");
-		TilføjKategorinavn.setBounds(26, 90, 140, 20);
-		TilføjKategorinavn.setForeground(Color.white);
+		TilføjKategorinavn.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		TilføjKategorinavn.setBounds(35, 90, 140, 20);
+		TilføjKategorinavn.setForeground(Color.black);
 		add(TilføjKategorinavn);
 		
 		JTextField kattegorinavnText = new JTextField();
-		kattegorinavnText.setBounds(150, 90, 300, 20);
+		kattegorinavnText.setBounds(155, 92, 300, 20);
 		add(kattegorinavnText);
 		
 		
 		Button TilføjKategori1 = new Button("Tilføj");
 		TilføjKategori1.setBackground(Color.lightGray);
-		TilføjKategori1.setBounds(150, 150, 70, 22);
+		TilføjKategori1.setBounds(155, 150, 70, 22);
 		TilføjKategori1.setForeground(Color.black);
 		add(TilføjKategori1);
+		
+		table = new JTable();
+		table.setBounds(26, 71, 596, 333);
+		table.setBackground(new Color(238, 238, 238));
+		add(table);
 		
 	}
 

@@ -5,12 +5,16 @@ import java.awt.Font;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTable;
 
 
 
 public class SletMedarbejder extends JPanel {
+	
+	
+		private JTable table;
 
-	public SletMedarbejder() {
+		public SletMedarbejder() {
 		
 		
 		this.setBackground(new Color(0, 145, 255));
@@ -22,7 +26,10 @@ public class SletMedarbejder extends JPanel {
 		Label.setBounds(26, 30,300, 30);
 		this.add(Label);
 	
-		
+		table = new JTable();
+		table.setBounds(26, 71, 596, 333);
+		table.setBackground(new Color(238, 238, 238));
+		add(table);
 	}
 
 }
