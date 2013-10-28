@@ -1,14 +1,16 @@
 package logic.dto;
 
+import java.sql.Timestamp;
+
 public class OrdreDTO {
 
 	private int ordreNummer;
 	private int kundeNummer;
-	private int bestillingsDato;
+	private Timestamp bestillingsDato;
 	private double total;
 	private String ordreStatus;
 	
-	public OrdreDTO(int ordreNummer, int kundeNummer, int bestillingsDato,
+	public OrdreDTO(int ordreNummer, int kundeNummer, Timestamp bestillingsDato,
 			double total, String ordreStatus) {
 		this.ordreNummer = ordreNummer;
 		this.kundeNummer = kundeNummer;
@@ -33,11 +35,11 @@ public class OrdreDTO {
 		this.kundeNummer = kundeNummer;
 	}
 
-	public int getBestillingsDato() {
+	public Timestamp getBestillingsDato() {
 		return bestillingsDato;
 	}
 
-	public void setBestillingsDato(int bestillingsDato) {
+	public void setBestillingsDato(Timestamp bestillingsDato) {
 		this.bestillingsDato = bestillingsDato;
 	}
 

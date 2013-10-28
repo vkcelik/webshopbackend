@@ -3,12 +3,12 @@ package logic.dto;
 public class RolleDTO {
 	
 	private int rolleNummer;
-	private String rolleNavn;
+	private int medarbejderNummer;
 	
 	
-	public RolleDTO(int rolleNummer, String rolleNavn) {
+	public RolleDTO(int rolleNummer, int medarbejderNummer) {
 		this.rolleNummer = rolleNummer;
-		this.rolleNavn = rolleNavn;
+		this.medarbejderNummer = medarbejderNummer;
 	}
 	public int getRolleNummer() {
 		return rolleNummer;
@@ -16,14 +16,12 @@ public class RolleDTO {
 	public void setRolleNummer(int rolleNummer) {
 		this.rolleNummer = rolleNummer;
 	}
-	public String getRolleNavn() {
-		return rolleNavn;
+	public int getMedarbejderNummer() {
+		return medarbejderNummer;
 	}
-	public void setRolleNavn(String rolleNavn) {
-		this.rolleNavn = rolleNavn;
+	public void setMedarbejderNummer(int medarbejderNummer) {
+		this.medarbejderNummer = medarbejderNummer;
 	}
-	
-	
-	
+
 
 }

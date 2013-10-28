@@ -9,7 +9,6 @@ public class MedarbejderDTO {
 	private int medarbejderPostnummer;
 	private String medarbejderEmail;
 	private String medarbejderPassword;
-	private String medarbejderRolle;
 	private String medarbejderLønType;
 	private double medarbejderLøn;
 	private int medarbejderRegnr;
@@ -20,8 +19,7 @@ public class MedarbejderDTO {
 	public MedarbejderDTO(int medarbejderNummer, String medarbejderNavn,
 			String medarbejderAdresse, String medarbejderLand,
 			int medarbejderPostnummer, String medarbejderEmail,
-			String medarbejderPassword, String medarbejderRolle,
-			String medarbejderLønType, double medarbejderLøn,
+			String medarbejderPassword, String medarbejderLønType, double medarbejderLøn,
 			int medarbejderRegnr, int medarbejderKonto, int medarbejderCpr) {
 		this.medarbejderNummer = medarbejderNummer;
 		this.medarbejderNavn = medarbejderNavn;
@@ -30,7 +28,6 @@ public class MedarbejderDTO {
 		this.medarbejderPostnummer = medarbejderPostnummer;
 		this.medarbejderEmail = medarbejderEmail;
 		this.medarbejderPassword = medarbejderPassword;
-		this.medarbejderRolle = medarbejderRolle;
 		this.medarbejderLønType = medarbejderLønType;
 		this.medarbejderLøn = medarbejderLøn;
 		this.medarbejderRegnr = medarbejderRegnr;
@@ -92,14 +89,6 @@ public class MedarbejderDTO {
 
 	public void setMedarbejderPassword(String medarbejderPassword) {
 		this.medarbejderPassword = medarbejderPassword;
-	}
-
-	public String getMedarbejderRolle() {
-		return medarbejderRolle;
-	}
-
-	public void setMedarbejderRolle(String medarbejderRolle) {
-		this.medarbejderRolle = medarbejderRolle;
 	}
 
 	public String getMedarbejderLønType() {

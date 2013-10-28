@@ -18,7 +18,7 @@ public class MySQLMedarbejderDAO implements IMedarbejderDAO{
 		try {
 			if (!rs.first())
 				throw new DALException("Medarbejder med medarbejderNummer " + medarbejderId + " findes ikke.");
-			return new MedarbejderDTO(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getInt(5), rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9), rs.getDouble(10), rs.getInt(11), rs.getInt(12), rs.getInt(13));
+			return new MedarbejderDTO(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getInt(5), rs.getString(6), rs.getString(7), rs.getString(8), rs.getDouble(9), rs.getInt(10), rs.getInt(11), rs.getInt(12));
 		} catch (SQLException e) {throw new DALException(e); }
 	}
 
@@ -28,7 +28,7 @@ public class MySQLMedarbejderDAO implements IMedarbejderDAO{
 		ResultSet rs = Connector.doQuery("SELECT * FROM Medarbejder");
 		try { 
 			while (rs.next()){
-				list.add(new MedarbejderDTO(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getInt(5), rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9), rs.getDouble(10), rs.getInt(11), rs.getInt(12), rs.getInt(13)));
+				list.add(new MedarbejderDTO(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getInt(5), rs.getString(6), rs.getString(7), rs.getString(8), rs.getDouble(9), rs.getInt(10), rs.getInt(11), rs.getInt(12)));
 			}
 		} catch (SQLException e) {throw new DALException(e);}
 		return list;
@@ -37,8 +37,8 @@ public class MySQLMedarbejderDAO implements IMedarbejderDAO{
 	@Override
 	public void createMedarbejder(MedarbejderDTO medarb) throws DALException {
 		Connector.doUpdate(
-				"INSERT INTO Medarbejder(medarbejderNummer, medarbejderNavn, medarbejderAdresse, medarbejderPostnummer, medarbejderEmail, medarbejderPassword, medarbejderRolle, medarbejderLønType, medarbejderLøn, medarbejderRegnr, medarbejderKonto, medarbejderCpr) VALUES " +
-				"(" + medarb.getMedarbejderNummer() + ", '" + medarb.getMedarbejderLand() + ", '" + medarb.getMedarbejderAdresse() + ", '" + medarb.getMedarbejderPostnummer() + ", '" + medarb.getMedarbejderEmail() + ", '" + medarb.getMedarbejderPassword()+ ", '" + medarb.getMedarbejderRolle() + ", '" + medarb.getMedarbejderLønType() + ", '" + medarb.getMedarbejderLøn() + ", '" + medarb.getMedarbejderRegnr() + ", '" + medarb.getMedarbejderKonto() + ", '" + medarb.getMedarbejderCpr() + "')"
+				"INSERT INTO Medarbejder(medarbejderNummer, medarbejderNavn, medarbejderAdresse, medarbejderPostnummer, medarbejderEmail, medarbejderPassword, medarbejderLønType, medarbejderLøn, medarbejderRegnr, medarbejderKonto, medarbejderCpr) VALUES " +
+				"(" + medarb.getMedarbejderNummer() + ", '" + medarb.getMedarbejderLand() + ", '" + medarb.getMedarbejderAdresse() + ", '" + medarb.getMedarbejderPostnummer() + ", '" + medarb.getMedarbejderEmail() + ", '" + medarb.getMedarbejderPassword() + ", '" + medarb.getMedarbejderLønType() + ", '" + medarb.getMedarbejderLøn() + ", '" + medarb.getMedarbejderRegnr() + ", '" + medarb.getMedarbejderKonto() + ", '" + medarb.getMedarbejderCpr() + "')"
 				);
 	}
 
@@ -50,7 +50,6 @@ public class MySQLMedarbejderDAO implements IMedarbejderDAO{
 				"', medarbejderPostnummer =  '" + m.getMedarbejderPostnummer() +
 				"', medarbejderEmail =  '" + m.getMedarbejderEmail() + 
 				"', medarbejderPassword =  '" + m.getMedarbejderPassword() +
-				"', medarbejderRolle =  '" + m.getMedarbejderRolle() +
 				"', medarbejderLønType =  '" + m.getMedarbejderLønType() +
 				"', medarbejderLøn =  '" + m.getMedarbejderLøn() +
 				"', medarbejderRegnr =  '" + m.getMedarbejderRegnr() +
