@@ -7,7 +7,7 @@ import logic.dto.BynavnDTO;
 public interface IBynavnDAO {
 	BynavnDTO getBynavn(int postnummer) throws DALException;
 	List<BynavnDTO> getBynavnList() throws DALException;
-	void createbynavn(BynavnDTO by) throws DALException;
-	void updateBynavn(BynavnDTO by ) throws DALException;
+	void createbynavn(BynavnDTO ByNavn) throws DALException;
+	void updateBynavn(BynavnDTO ByNavn ) throws DALException;
 
 	}

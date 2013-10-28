@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import logic.dto.BynavnDTO;
-import logic.dto.KategoriDTO;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -17,7 +16,7 @@ import data.idao.IBynavnDAO;
 
 public class MySQLBynavnDAO implements IBynavnDAO   {
 
-	private static final BynavnDTO Bynavn = null;
+
 
 	@Override
 	public BynavnDTO getBynavn(int postnummer) throws DALException {
@@ -47,20 +46,22 @@ public class MySQLBynavnDAO implements IBynavnDAO   {
 	}
 
 	@Override
-	public void createbynavn(BynavnDTO by) throws DALException {
+	public void createbynavn(BynavnDTO ByNavn) throws DALException {
 	
-		
+
 		Connector.doUpdate(
-				"INSERT INTO Bynavn(postNummer, byNavn) VALUES " +
-				"(" + Bynavn.getPostNummer() + ", '" + Bynavn.getByNavn()  + "')");
-		}
+				"INSERT INTO ByNavn(postNummer, byNavn) VALUES " +
+				"(" + ByNavn.getPostNummer() + ", '" + ByNavn.getByNavn() + "')");
+			
+		
+	}
 
 	@Override
-	public void updateBynavn(BynavnDTO by) throws DALException {
-		
+	public void updateBynavn(BynavnDTO ByNavn) throws DALException {
 		
 		Connector.doUpdate(
-				"UPDATE Bynavn SET Bynavn = '" + Bynavn.getByNavn() + "' where postNummer =  '" + Bynavn.getPostNummer());
-	
+				"UPDATE bynavnDTO SET ByNavn=  '" + ByNavn.getPostNummer()
+				+ "' WHERE postNummer = " + ByNavn.getByNavn()
+				);
 		}
 	}
