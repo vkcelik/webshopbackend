@@ -57,9 +57,10 @@ public class MySQLBilledeDAO implements IBilledeDAO{
 
 	@Override
 	public void createBillede(BilledeDTO billede) throws DALException {
+		String s = "INSERT INTO Billede(billedeNummer,vareNummer, billedeSti) VALUES " +
+				"('" + billede.getBilledeNummer() + "', '" + billede.getVareNummer() + "','" +billede.getBilledeSti() +"')";
 		Connector.doUpdate(
-				"INSERT INTO Billede(billedeNummer,vareNummer, billedeSti) VALUES " +
-				"('" + billede.getBilledeNummer() + "', '" + billede.getBilledeSti() + "','" +billede.getBilledeSti() +"')"
+				s
 				);
 
 		
