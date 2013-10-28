@@ -49,9 +49,9 @@ public class MySQLBynavnDAO implements IBynavnDAO   {
 	@Override
 	public void createbynavn(BynavnDTO by) throws DALException {
 	
-		BynavnDTO bynavn;
+		
 		Connector.doUpdate(
-				"INSERT INTO BynavnDTO(postNummer, byNavn) VALUES " +
+				"INSERT INTO Bynavn(postNummer, byNavn) VALUES " +
 				"(" + Bynavn.getPostNummer() + ", '" + Bynavn.getByNavn()  + "')");
 		}
 
@@ -60,7 +60,7 @@ public class MySQLBynavnDAO implements IBynavnDAO   {
 		
 		
 		Connector.doUpdate(
-				"UPDATE BynavnDTO SET Bynavn = '" + Bynavn.getByNavn() + "', kategoriNavn =  '" + Bynavn.getPostNummer());
+				"UPDATE Bynavn SET Bynavn = '" + Bynavn.getByNavn() + "' where postNummer =  '" + Bynavn.getPostNummer());
 	
 		}
 	}
