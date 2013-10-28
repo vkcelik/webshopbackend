@@ -7,7 +7,7 @@ import data.dao.MySQLBilledeDAO;
 import data.idao.DALException;
 
 
-public class TestBillede {
+public class TestAfBillede {
 
 
 

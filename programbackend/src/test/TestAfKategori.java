@@ -8,7 +8,7 @@ import data.connect.Connector;
 import data.dao.MySQLKategoriDAO;
 import data.idao.DALException;
 
-public class Test_Kategori {
+public class TestAfKategori {
 
 	public static void main(String[] args) {
 		try { new Connector(); }

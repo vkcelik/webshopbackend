@@ -11,7 +11,7 @@ import data.connect.Connector;
 import data.dao.MySQLBynavnDAO;
 import data.idao.DALException;
 
-public class TestBynavn {
+public class TestAfBynavn {
 
 	/**
 	 * @param args
