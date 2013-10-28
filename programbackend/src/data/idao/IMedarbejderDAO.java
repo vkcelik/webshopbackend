@@ -6,7 +6,7 @@ import logic.dto.MedarbejderDTO;
 
 public interface IMedarbejderDAO {
 	MedarbejderDTO getMedarbejder(int medarbejderId) throws DALException;
-	List<MedarbejderDTO> getMedarbejder() throws DALException;
+	List<MedarbejderDTO> getMedarbejderList() throws DALException;
 	void createMedarbejder(MedarbejderDTO medarbejderObject) throws DALException;
 	void updateMedarbejder(MedarbejderDTO medarbejderObject) throws DALException;
 
