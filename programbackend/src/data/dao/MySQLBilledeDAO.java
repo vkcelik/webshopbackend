@@ -44,7 +44,15 @@ public class MySQLBilledeDAO implements IBilledeDAO{
 
 	@Override
 	public List<BilledeDTO> getBilledeList(int vareNummer) throws DALException {
-		return null;
+		
+		List<BilledeDTO> list = new ArrayList<BilledeDTO>();
+		ResultSet rs = Connector.doQuery("SELECT * FROM Billede where vareNummer = vareNummer");
+		try { 
+			while (rs.next()){
+				list.add(new BilledeDTO(rs.getInt(1),rs.getInt(2), rs.getString(2)));
+			}
+		} catch (SQLException e) {throw new DALException(e);}
+		return list;
 	}
 
 	@Override
