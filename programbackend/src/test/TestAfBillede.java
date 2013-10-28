@@ -33,10 +33,24 @@ public class TestAfBillede {
 		try {ba.createBillede(b2);}
 		catch (DALException e){System.out.println(e.getMessage());}
 
-
 		System.out.println("Hent Billede nummer 1");
 		try {System.out.println(ba.getbilledNummer(1));}
 		catch (DALException e){ System.out.println(e.getMessage()); }
+		
+		System.out.println("Hent alle billeder");
+		try {System.out.println(ba.getBilledeList()); }
+		catch (DALException e){System.out.println(e.getMessage()); }
+		
+		System.out.println("Hent alle billeder for vare 4");
+		try {System.out.println(ba.getBilledeList(4)); }
+		catch (DALException e){System.out.println(e.getMessage()); }
+		
+		System.out.println("Jeg ændre stien til et billede");
+		b2.setBilledeSti("0332.png");
+		try {ba.updateBillede(b2); } 
+		catch (DALException e){System.out.println(e.getMessage());
+		
+		}
 
 
 	}
