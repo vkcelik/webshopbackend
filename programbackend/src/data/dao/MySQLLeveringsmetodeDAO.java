@@ -15,10 +15,10 @@ public class MySQLLeveringsmetodeDAO implements ILeveringsmetodeDAO {
 
 	@Override
 	public LeveringsmetodeDTO getLeveringsmetode(int levmetodeId) throws DALException {
-		ResultSet rs = Connector.doQuery("SELECT * FROM Leveringsmulighed WHERE mulighedNummer = " + levmetodeId);
+		ResultSet rs = Connector.doQuery("SELECT * FROM Leveringsmulighed WHERE metodeNummer = " + levmetodeId);
 		try {
 			if (!rs.first())
-				throw new DALException("Leveringsmulighed med mulighedNummer " + levmetodeId + " findes ikke.");
+				throw new DALException("Leveringsmulighed med metodeNummer " + levmetodeId + " findes ikke.");
 			return new LeveringsmetodeDTO(rs.getInt(1), rs.getString(2), rs.getDouble(3));
 		} catch (SQLException e) {throw new DALException(e); }
 	}
@@ -48,7 +48,7 @@ public class MySQLLeveringsmetodeDAO implements ILeveringsmetodeDAO {
 		Connector.doUpdate(
 				"UPDATE Leveringsmetode SET metodeNavn = '" + l.getLeveringsmetodeNavn() + 
 				"', metodePris =  '" + l.getLeveringsmetodePris()  +
-				"' WHERE medarbejderNummer = " + l.getLeveringsmetodeNummer()
+				"' WHERE metodeNummer = " + l.getLeveringsmetodeNummer()
 				);
 	}
 

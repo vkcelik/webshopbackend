@@ -16,6 +16,7 @@ public class Main {
 		catch (ClassNotFoundException e){ e.printStackTrace(); }
 		catch (SQLException e){ e.printStackTrace(); }
 		
+		System.out.println(java.lang.System.currentTimeMillis());
 		System.out.println("Hent indstilling nummer 2");
 		MySQLIndstillingDAO ia = new MySQLIndstillingDAO();
 		try {System.out.println(ia.getIndstilling(2));}

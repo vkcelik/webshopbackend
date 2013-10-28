@@ -18,7 +18,7 @@ public class MySQLOrdreDAO implements IOrdreDAO {
 		ResultSet rs = Connector.doQuery("SELECT * FROM Ordre WHERE ordreNummer = " + ordreId);
 	    try {
 	    	if (!rs.first()) throw new DALException("Ordre med ordreNummer " + ordreId + " findes ikke."); 
-	    	return new OrdreDTO (rs.getInt(1), rs.getInt(2), rs.getInt(3), rs.getDouble(4), rs.getString(5));
+	    	return new OrdreDTO (rs.getInt(1), rs.getInt(2), rs.getTimestamp(3), rs.getDouble(4), rs.getString(5));
 	    }
 	    catch (SQLException e) {throw new DALException(e); }
 	}
@@ -30,7 +30,7 @@ public class MySQLOrdreDAO implements IOrdreDAO {
 		ResultSet rs = Connector.doQuery("SELECT * FROM Ordre");
 		try { 
 			while (rs.next()){
-				list.add(new OrdreDTO(rs.getInt(1), rs.getInt(2), rs.getInt(3), rs.getDouble(4), rs.getString(5)));
+				list.add(new OrdreDTO(rs.getInt(1), rs.getInt(2),  rs.getTimestamp(3), rs.getDouble(4), rs.getString(5)));
 			}
 		} catch (SQLException e) {throw new DALException(e);}
 		return list;	
