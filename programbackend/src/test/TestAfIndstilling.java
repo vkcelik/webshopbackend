@@ -38,16 +38,9 @@ public class TestAfIndstilling {
 		catch (DALException e) { System.out.println(e.getMessage()); }
 		
 		System.out.println("Ændrer HEJ til NEJ i nummer 4");
-		IndstillingDTO i3 = null;
+		i2.setIndstillingVærdi("NEJ");
 		try {
-			i3 = ia.getIndstilling(4);
-		} catch (DALException e) {
-			System.out.println(e.getMessage());
-		}
-		if (i3 != null)
-		i3.setIndstillingVærdi("NEJ");
-		try {
-			ia.updateIndstilling(i3);
+			ia.updateIndstilling(i2);
 		} catch (DALException e) {
 			System.out.println(e.getMessage());
 		}		
