@@ -17,7 +17,6 @@ public class TestAfIndstilling {
 		catch (SQLException e){ e.printStackTrace(); }
 		
 		MySQLIndstillingDAO ia = new MySQLIndstillingDAO();
-		//System.out.println(java.lang.System.currentTimeMillis());
 		
 		System.out.println("Oprettelse af momsprocent indstilling");
 		IndstillingDTO i1 = new IndstillingDTO(3, "0.25");
@@ -38,16 +37,9 @@ public class TestAfIndstilling {
 		catch (DALException e) { System.out.println(e.getMessage()); }
 		
 		System.out.println("Ændrer HEJ til NEJ i nummer 4");
-		IndstillingDTO i3 = null;
+		i2.setIndstillingVærdi("NEJ");
 		try {
-			i3 = ia.getIndstilling(4);
-		} catch (DALException e) {
-			System.out.println(e.getMessage());
-		}
-		if (i3 !=null)
-		i3.setIndstillingVærdi("NEJ");
-		try {
-			ia.updateIndstilling(i3);
+			ia.updateIndstilling(i2);
 		} catch (DALException e) {
 			System.out.println(e.getMessage());
 		}		

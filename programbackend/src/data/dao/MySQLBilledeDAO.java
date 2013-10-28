@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import logic.dto.BilledeDTO;
-import logic.dto.IndstillingDTO;
 import data.connect.Connector;
 import data.idao.DALException;
 import data.idao.IBilledeDAO;
@@ -14,9 +13,9 @@ import data.idao.IBilledeDAO;
 public class MySQLBilledeDAO implements IBilledeDAO{
 
 	@Override
-	public BilledeDTO getbilledNummer(int billedeNummer ) throws DALException {
+	public BilledeDTO getbilledNummer(int billedeNummer) throws DALException {
 		
-		ResultSet rs = Connector.doQuery("SELECT * FROM Billede WHERE BilledeNummer = " + billedeNummer);
+		ResultSet rs = Connector.doQuery("SELECT * FROM Billede WHERE billedeNummer = " + billedeNummer);
 		try {
 			if (!rs.first())
 				throw new DALException("Billede med BilledeNummer " + billedeNummer + " findes ikke.");
@@ -57,9 +56,10 @@ public class MySQLBilledeDAO implements IBilledeDAO{
 
 	@Override
 	public void createBillede(BilledeDTO billede) throws DALException {
+		String s = "INSERT INTO Billede(billedeNummer,vareNummer, billedeSti) VALUES " +
+				"('" + billede.getBilledeNummer() + "', '" + billede.getVareNummer() + "','" +billede.getBilledeSti() +"')";
 		Connector.doUpdate(
-				"INSERT INTO Billede(billedeNummer,vareNummer, billedeSti) VALUES " +
-				"(" + billede.getBilledeNummer() + "', '" + billede.getBilledeSti() + "','" +billede.getBilledeSti() +"')"
+				s
 				);
 
 		
