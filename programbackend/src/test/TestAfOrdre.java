@@ -1,14 +1,15 @@
 package test;
 
 import java.sql.SQLException;
+import java.sql.Timestamp;
 
-import logic.dto.IndstillingDTO;
-
+import logic.dto.OrdreDTO;
 import data.connect.Connector;
 import data.dao.MySQLIndstillingDAO;
 import data.idao.DALException;
 
-public class TestAfIndstilling {
+public class TestAfOrdre {
+
 	public static void main(String[] args) {
 		try { new Connector(); }
 		catch (InstantiationException e){ e.printStackTrace(); }
@@ -19,13 +20,12 @@ public class TestAfIndstilling {
 		MySQLIndstillingDAO ia = new MySQLIndstillingDAO();
 		//System.out.println(java.lang.System.currentTimeMillis());
 		
-		System.out.println("Oprettelse af momsprocent indstilling");
-		IndstillingDTO i1 = new IndstillingDTO(3, "0.25");
+		OrdreDTO i1 = new OrdreDTO(1, 1, new Timestamp(System.currentTimeMillis()), 120, 1);
 		try {ia.createIndstilling(i1);}
 		catch (DALException e){System.out.println(e.getMessage());}
 		
 		System.out.println("Oprettelse af underlig indstilling");
-		IndstillingDTO i2 = new IndstillingDTO(4, "HEJ");
+		OrdreDTO i2 = new OrdreDTO(2, "HEJ");
 		try {ia.createIndstilling(i2);}
 		catch (DALException e){System.out.println(e.getMessage());}
 		
@@ -38,19 +38,19 @@ public class TestAfIndstilling {
 		catch (DALException e) { System.out.println(e.getMessage()); }
 		
 		System.out.println("Ændrer HEJ til NEJ i nummer 4");
-		IndstillingDTO i3 = null;
+		OrdreDTO i3 = null;
 		try {
 			i3 = ia.getIndstilling(4);
 		} catch (DALException e) {
 			System.out.println(e.getMessage());
 		}
-		if (i3 != null)
+		if (i3 !=null)
 		i3.setIndstillingVærdi("NEJ");
 		try {
 			ia.updateIndstilling(i3);
 		} catch (DALException e) {
 			System.out.println(e.getMessage());
 		}		
-		
 	}
+
 }
