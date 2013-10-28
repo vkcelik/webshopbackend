@@ -17,7 +17,7 @@ import data.idao.IBynavnDAO;
 
 public class MySQLBynavnDAO implements IBynavnDAO   {
 
-	private static final BynavnDTO Bynavn = null;
+
 
 	@Override
 	public BynavnDTO getBynavn(int postnummer) throws DALException {
@@ -51,12 +51,9 @@ public class MySQLBynavnDAO implements IBynavnDAO   {
 	@Override
 	public void createbynavn(BynavnDTO by) throws DALException {
 	
-		BynavnDTO bynavn;
 		Connector.doUpdate(
-				"INSERT INTO BynavnDTO(postNummer, byNavn) VALUES " +
-				"(" + Bynavn.getPostNummer() + ", '" + Bynavn.getByNavn()  + "')");
-		
-		
+				"INSERT INTO by(postNummer, byNavn) VALUES " +
+				"(" + by.getPostNummer() + ", '" + by.getByNavn() + "')");
 		
 		
 		
@@ -68,11 +65,11 @@ public class MySQLBynavnDAO implements IBynavnDAO   {
 		
 		
 		Connector.doUpdate(
-				"UPDATE BynavnDTO SET Bynavn = '" + Bynavn.getByNavn() + "', kategoriNavn =  '" + Bynavn.getPostNummer());
+				"UPDATE bynavnDTO SET byNavn=  '" + by.getPostNummer()
+				+ "' WHERE postNummer = " + by.getByNavn()
+				);
 	
-		
-		
-		
+
 		
 	}
 	
