@@ -39,10 +39,10 @@ public class MySQLOrdreDAO implements IOrdreDAO {
 
 	@Override
 	public void createOrdre(OrdreDTO ordreObject) throws DALException {
-		
+		String query = "INSERT INTO Ordre(ordreNummer, kundeNummer, bestillingsDato, total, ordreStatus) VALUES " +
+				"('" + ordreObject.getOrdreNummer() + "', '" + ordreObject.getKundeNummer() + "', '" + ordreObject.getBestillingsDato() + "', '" + ordreObject.getTotal() + "', '" + ordreObject.getOrdreStatus() + "')" ;
 		Connector.doUpdate(
-				"INSERT INTO Ordre(ordreNummer, kundeNummer, bestillingsDato, total, ordreStatus) VALUES " +
-				"(" + ordreObject.getOrdreNummer() + ", '" + ordreObject.getKundeNummer() + ", '" + ordreObject.getBestillingsDato() + ", '" + ordreObject.getTotal() + ", '" + ordreObject.getOrdreStatus() + "')"
+				query
 				);
 	}
 
