@@ -3,9 +3,6 @@ package test;
 import java.sql.SQLException;
 
 import logic.dto.BynavnDTO;
-import logic.dto.IndstillingDTO;
-
-
 
 import data.connect.Connector;
 import data.dao.MySQLBynavnDAO;
@@ -27,13 +24,28 @@ public class TestBynavn {
 		
 		System.out.println("Oprettelse af bynavn");
 		BynavnDTO bn1 = new BynavnDTO(3000, "Helsingør");
-		try {bn.createbynavn(bn1);}
+		try {bn.createbyNavn(bn1);}
 		catch (DALException e){System.out.println(e.getMessage());}
 		
+		System.out.println("Hent Bynavn");
+		try {System.out.println(bn.getByNavnList());}
+		catch (DALException e) { System.out.println(e.getMessage()); }
 		
 		
-		
-		
+		System.out.println("Ændre bynavn til Halsingar");
+		BynavnDTO b1 = null;
+		try {
+			b1 = bn.getByNavn(3000);
+		} catch (DALException e) {
+			System.out.println(e.getMessage());
+		}
+		if (b1 !=null)
+		b1.setByNavn("Halsingar");
+		try {
+			bn.updateByNavn(b1);
+		} catch (DALException e) {
+			System.out.println(e.getMessage());
+		}	
 		
 		
 
