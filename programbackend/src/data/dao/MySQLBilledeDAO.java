@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import logic.dto.BilledeDTO;
-import logic.dto.IndstillingDTO;
 import data.connect.Connector;
 import data.idao.DALException;
 import data.idao.IBilledeDAO;

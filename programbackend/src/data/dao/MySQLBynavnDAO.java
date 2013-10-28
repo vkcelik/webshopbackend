@@ -20,9 +20,9 @@ public class MySQLBynavnDAO implements IBynavnDAO   {
 
 	@Override
 	public BynavnDTO getBynavn(int postnummer) throws DALException {
-		ResultSet rs = Connector.doQuery("SELECT * FROM BynavnDTO WHERE Bynavn = " +postnummer );
+		ResultSet rs = Connector.doQuery("SELECT * FROM ByNavn WHERE postNummer = " +postnummer );
 	    try {
-	    	if (!rs.first()) throw new DALException("By med Bynavn = " + postnummer +" findes ikke"); 
+	    	if (!rs.first()) throw new DALException("By med postnummer = " + postnummer +" findes ikke"); 
 	    	return new BynavnDTO (rs.getInt(1), rs.getString(2));
 	    }
 	    catch (SQLException e) {throw new DALException(e); }
@@ -33,7 +33,7 @@ public class MySQLBynavnDAO implements IBynavnDAO   {
 	@Override
 	public List<BynavnDTO> getBynavnList() throws DALException {
 		List<BynavnDTO> list = new ArrayList<BynavnDTO>();
-		ResultSet rs = Connector.doQuery("SELECT * FROM Bynavn");
+		ResultSet rs = Connector.doQuery("SELECT * FROM ByNavn");
 		try
 		{
 			while (rs.next()) 
@@ -51,7 +51,7 @@ public class MySQLBynavnDAO implements IBynavnDAO   {
 
 		Connector.doUpdate(
 				"INSERT INTO ByNavn(postNummer, byNavn) VALUES " +
-				"(" + ByNavn.getPostNummer() + ", '" + ByNavn.getByNavn() + "')");
+				"('" + ByNavn.getPostNummer() + "', '" + ByNavn.getByNavn() + "')");
 			
 		
 	}
@@ -60,8 +60,8 @@ public class MySQLBynavnDAO implements IBynavnDAO   {
 	public void updateBynavn(BynavnDTO ByNavn) throws DALException {
 		
 		Connector.doUpdate(
-				"UPDATE bynavnDTO SET ByNavn=  '" + ByNavn.getPostNummer()
-				+ "' WHERE postNummer = " + ByNavn.getByNavn()
+				"UPDATE ByNavn SET byNavn=  '" + ByNavn.getByNavn()
+				+ "' WHERE postNummer = " + ByNavn.getPostNummer()
 				);
 		}
 	}

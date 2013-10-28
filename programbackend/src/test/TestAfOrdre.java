@@ -6,6 +6,7 @@ import java.sql.Timestamp;
 import logic.dto.OrdreDTO;
 import data.connect.Connector;
 import data.dao.MySQLIndstillingDAO;
+import data.dao.MySQLOrdreDAO;
 import data.idao.DALException;
 
 public class TestAfOrdre {
@@ -17,37 +18,30 @@ public class TestAfOrdre {
 		catch (ClassNotFoundException e){ e.printStackTrace(); }
 		catch (SQLException e){ e.printStackTrace(); }
 		
-		MySQLIndstillingDAO ia = new MySQLIndstillingDAO();
-		//System.out.println(java.lang.System.currentTimeMillis());
+		MySQLOrdreDAO ia = new MySQLOrdreDAO();
 		
-		OrdreDTO i1 = new OrdreDTO(1, 1, new Timestamp(System.currentTimeMillis()), 120, 1);
-		try {ia.createIndstilling(i1);}
+		System.out.println("Oprettelse af ordre 1");
+		OrdreDTO i1 = new OrdreDTO(1, 1, new Timestamp(System.currentTimeMillis()), 120.00, "Oprettet");
+		try {ia.createOrdre(i1);}
 		catch (DALException e){System.out.println(e.getMessage());}
 		
 		System.out.println("Oprettelse af underlig indstilling");
-		OrdreDTO i2 = new OrdreDTO(2, "HEJ");
-		try {ia.createIndstilling(i2);}
+		OrdreDTO i2 = new OrdreDTO(1, 1, new Timestamp(System.currentTimeMillis()), 120.00, "Oprettet");
+		try {ia.createOrdre(i2);}
 		catch (DALException e){System.out.println(e.getMessage());}
 		
 		System.out.println("Hent indstilling nummer 4");
-		try {System.out.println(ia.getIndstilling(4));}
+		try {System.out.println(ia.getOrdre(4));}
 		catch (DALException e){ System.out.println(e.getMessage()); }
 
 		System.out.println("Hent alle indstillinger");
-		try {System.out.println(ia.getIndstillingList());}
+		try {System.out.println(ia.getOrdreList());}
 		catch (DALException e) { System.out.println(e.getMessage()); }
 		
 		System.out.println("Ændrer HEJ til NEJ i nummer 4");
-		OrdreDTO i3 = null;
+		i2.set
 		try {
-			i3 = ia.getIndstilling(4);
-		} catch (DALException e) {
-			System.out.println(e.getMessage());
-		}
-		if (i3 !=null)
-		i3.setIndstillingVærdi("NEJ");
-		try {
-			ia.updateIndstilling(i3);
+			ia.update
 		} catch (DALException e) {
 			System.out.println(e.getMessage());
 		}		
