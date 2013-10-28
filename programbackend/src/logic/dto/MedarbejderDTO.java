@@ -12,15 +12,15 @@ public class MedarbejderDTO {
 	private String medarbejderLønType;
 	private double medarbejderLøn;
 	private int medarbejderRegnr;
-	private int medarbejderKonto;
-	private int medarbejderCpr;
+	private String medarbejderKonto;
+	private String medarbejderCpr;
 	
 
 	public MedarbejderDTO(int medarbejderNummer, String medarbejderNavn,
 			String medarbejderAdresse, String medarbejderLand,
 			int medarbejderPostnummer, String medarbejderEmail,
 			String medarbejderPassword, String medarbejderLønType, double medarbejderLøn,
-			int medarbejderRegnr, int medarbejderKonto, int medarbejderCpr) {
+			int medarbejderRegnr, String medarbejderKonto, String medarbejderCpr) {
 		this.medarbejderNummer = medarbejderNummer;
 		this.medarbejderNavn = medarbejderNavn;
 		this.medarbejderAdresse = medarbejderAdresse;
@@ -115,19 +115,19 @@ public class MedarbejderDTO {
 		this.medarbejderRegnr = medarbejderRegnr;
 	}
 
-	public int getMedarbejderKonto() {
+	public String getMedarbejderKonto() {
 		return medarbejderKonto;
 	}
 
-	public void setMedarbejderKonto(int medarbejderKonto) {
+	public void setMedarbejderKonto(String medarbejderKonto) {
 		this.medarbejderKonto = medarbejderKonto;
 	}
 
-	public int getMedarbejderCpr() {
+	public String getMedarbejderCpr() {
 		return medarbejderCpr;
 	}
 
-	public void setMedarbejderCpr(int medarbejderCpr) {
+	public void setMedarbejderCpr(String medarbejderCpr) {
 		this.medarbejderCpr = medarbejderCpr;
 	}
 

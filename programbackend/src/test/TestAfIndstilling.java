@@ -17,7 +17,6 @@ public class TestAfIndstilling {
 		catch (SQLException e){ e.printStackTrace(); }
 		
 		MySQLIndstillingDAO ia = new MySQLIndstillingDAO();
-		//System.out.println(java.lang.System.currentTimeMillis());
 		
 		System.out.println("Oprettelse af momsprocent indstilling");
 		IndstillingDTO i1 = new IndstillingDTO(3, "0.25");

@@ -27,7 +27,7 @@ public class MySQLOrdreLinieDAO implements IOrdreLinieDAO {
 	public List<OrdreLinieDTO> getOrdrelinieList() throws DALException {
 	
 		List<OrdreLinieDTO> list = new ArrayList<OrdreLinieDTO>();
-		ResultSet rs = Connector.doQuery("SELECT * FROM OrdeLinie");
+		ResultSet rs = Connector.doQuery("SELECT * FROM OrdreLinie");
 		try { 
 			while (rs.next()){
 				list.add(new OrdreLinieDTO(rs.getInt(1), rs.getInt(2), rs.getInt(3), rs.getDouble(4), rs.getDouble(5), rs.getBoolean(6)));
@@ -42,7 +42,7 @@ public class MySQLOrdreLinieDAO implements IOrdreLinieDAO {
 		
 		Connector.doUpdate(
 				"INSERT INTO OrdreLinie(linieNummer, vareNummer, antal, stykPris, linieTotal, erGave) VALUES " +
-				"(" + ordreL.getLinieNummer() + ", '" + ordreL.getVareNummer() + ", '" + ordreL.getAntal() + ", '" + ordreL.getStykPris() + ", '" + ordreL.getLinieTotal() + ", '" + ordreL.isErGave() + "')"
+				"('" + ordreL.getLinieNummer() + "', '" + ordreL.getVareNummer() + "', '" + ordreL.getAntal() + "', '" + ordreL.getStykPris() + "', '" + ordreL.getLinieTotal() + "', '" + ordreL.isErGave() + "')"
 				);
 	}
 
@@ -50,7 +50,7 @@ public class MySQLOrdreLinieDAO implements IOrdreLinieDAO {
 	public void updateOrdrelinie(OrdreLinieDTO ordreL) throws DALException {
 
 		Connector.doUpdate(
-				"UPDATE ordrelinieDTO SET vareNummer = '" + ordreL.getVareNummer() 
+				"UPDATE OrdreLinie SET vareNummer = '" + ordreL.getVareNummer() 
 				+ "', antal =  '" + ordreL.getAntal() 
 				+ "', stykPris =  '" + ordreL.getStykPris()
 				+ "', linieTotal =  '" + ordreL.getLinieTotal()
