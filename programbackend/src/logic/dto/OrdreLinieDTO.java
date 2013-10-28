@@ -1,15 +1,17 @@
 package logic.dto;
 
-public class OrdrelinieDTO {
+public class OrdreLinieDTO {
 
+	private int linieNummer;
 	private int vareNummer;
 	private int antal;
 	private double stykPris;
 	private double linieTotal;
-	private boolean erGave;
+	private boolean erGave; // hvis man bestiller fx 3 bøger som gave, skal der oprettes 3 ordrelinier og hver bog skal pakkes ind i gavepapir enkeltvis 
 	
-	public OrdrelinieDTO(int vareNummer, int antal, double stykPris,
+	public OrdreLinieDTO(int linieNummer, int vareNummer, int antal, double stykPris,
 			double linieTotal, boolean erGave) {
+		this.linieNummer = linieNummer;
 		this.vareNummer = vareNummer;
 		this.antal = antal;
 		this.stykPris = stykPris;
@@ -55,6 +57,14 @@ public class OrdrelinieDTO {
 
 	public void setErGave(boolean erGave) {
 		this.erGave = erGave;
+	}
+
+	public int getLinieNummer() {
+		return linieNummer;
+	}
+
+	public void setLinieNummer(int linieNummer) {
+		this.linieNummer = linieNummer;
 	}
 	
 	

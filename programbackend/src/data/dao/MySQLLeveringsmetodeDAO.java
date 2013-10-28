@@ -46,7 +46,7 @@ public class MySQLLeveringsmetodeDAO implements ILeveringsmetodeDAO {
 	@Override
 	public void updateLeveringsmetode(LeveringsmetodeDTO l) throws DALException {
 		Connector.doUpdate(
-				"UPDATE Medarbejder SET metodeNavn = '" + l.getLeveringsmetodeNavn() + 
+				"UPDATE Leveringsmetode SET metodeNavn = '" + l.getLeveringsmetodeNavn() + 
 				"', metodePris =  '" + l.getLeveringsmetodePris()  +
 				"' WHERE medarbejderNummer = " + l.getLeveringsmetodeNummer()
 				);

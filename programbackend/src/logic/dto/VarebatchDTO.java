@@ -1,6 +1,6 @@
 package logic.dto;
 
-public class VareBatchDTO {
+public class VarebatchDTO {
 
 	private int vareBatchNummer;
 	private int vareNummer;
@@ -8,7 +8,7 @@ public class VareBatchDTO {
 	private String lagerPlacering;
 	private int mængde;
 	
-	public VareBatchDTO(int vareBatchNummer, int vareNummer, int vareLager,
+	public VarebatchDTO(int vareBatchNummer, int vareNummer, int vareLager,
 			String lagerPlacering, int mængde) {
 		this.vareBatchNummer = vareBatchNummer;
 		this.vareNummer = vareNummer;

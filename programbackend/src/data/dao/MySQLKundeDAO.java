@@ -16,9 +16,9 @@ public class MySQLKundeDAO implements IKundeDAO {
 	
 	public KundeDTO getKunde(int id) throws DALException {
 		
-		ResultSet rs = Connector.doQuery("SELECT * FROM kundeDTO WHERE kundeNummer = " + id);
+		ResultSet rs = Connector.doQuery("SELECT * FROM Kunde WHERE kundeNummer = " + id);
 	    try {
-	    	if (!rs.first()) throw new DALException("Produktbatchkomponent med produktbatch " + id); 
+	    	if (!rs.first()) throw new DALException("Kunde med kundeNummer " + id + " findes ikke."); 
 	    	return new KundeDTO (rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getInt(6), rs.getInt(6));
 	    }
 	    catch (SQLException e) {throw new DALException(e); }
@@ -46,7 +46,7 @@ public class MySQLKundeDAO implements IKundeDAO {
 	public void createKunde(KundeDTO kunde) throws DALException {
 		
 		Connector.doUpdate(
-				"INSERT INTO KundeDTO(kundeNummer, kundeNavn, kundeEmail, kundeAdresse, KundeLand, kundePostnummer, kundeTelefon) VALUES " +
+				"INSERT INTO Kunde(kundeNummer, kundeNavn, kundeEmail, kundeAdresse, KundeLand, kundePostnummer, kundeTelefon) VALUES " +
 				"(" + kunde.getKundeNummer() + ", '" + kunde.getKundeNavn()+ ", '" + kunde.getKundeEmail() + ", '" + kunde.getKundeAdresse()+ ", '" +
 				kunde.getKundeLand()+ ", '" + kunde.getKundePostnummer()+ ", '" + kunde.getKundeTelefon()  + "')");
 	
@@ -57,9 +57,14 @@ public class MySQLKundeDAO implements IKundeDAO {
 	public void updateKunde(KundeDTO kunde) throws DALException {
 		
 		Connector.doUpdate(
-				"UPDATE kundeDTO SET kundeNummer = '" + kunde.getKundeNummer() + "', kundeNavn =  '" + kunde.getKundeNavn() + "', kundeEmail =  '" + kunde.getKundeEmail() 
-				+ "', kundeAdresse =  '" + kunde.getKundeAdresse() + "', kundeLand =  '" + kunde.getKundeLand() + "', kundePostnummer =  '" + kunde.getKundePostnummer()
-				+ "', kundeTelefon =  '" + kunde.getKundeTelefon());
+				"UPDATE kundeDTO SET kundeNavn =  '" + kunde.getKundeNavn()
+				+ "', kundeEmail =  '" + kunde.getKundeEmail() 
+				+ "', kundeAdresse =  '" + kunde.getKundeAdresse() 
+				+ "', kundeLand =  '" + kunde.getKundeLand() 
+				+ "', kundePostnummer =  '" + kunde.getKundePostnummer()
+				+ "', kundeTelefon =  '" + kunde.getKundeTelefon()
+				+ "' WHERE kundeNummer = " + kunde.getKundeNummer()
+				);
 		
 	}
 
