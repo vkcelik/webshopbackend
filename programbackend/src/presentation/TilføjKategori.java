@@ -4,6 +4,7 @@ import java.awt.Button;
 import java.awt.Color;
 import java.awt.Font;
 
+import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTable;
@@ -23,6 +24,7 @@ public class TilføjKategori extends JPanel {
 		setLayout(null);
 		
 		JLabel TilføjKategori = new JLabel("Tilføj Kategori");
+		TilføjKategori.setIcon(new ImageIcon(TilføjVarer.class.getResource("/presentation/resources/add32.png")));
 		TilføjKategori.setFont(new Font("sansserif", Font.BOLD, 24));
 		TilføjKategori.setForeground(Color.black);
 		TilføjKategori.setBounds(30, 30, 200, 30);

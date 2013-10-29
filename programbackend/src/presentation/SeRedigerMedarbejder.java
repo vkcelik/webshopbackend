@@ -6,6 +6,7 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -26,9 +27,10 @@ public class SeRedigerMedarbejder extends JPanel {
 		setLayout(null);
 	
 		JLabel Label = new JLabel("Se/Rediger Medarbejder");
+		Label.setIcon(new ImageIcon(TilføjVarer.class.getResource("/presentation/resources/Edit.png")));
 		Label.setFont(new Font("sansserif", Font.BOLD, 24));
 		Label.setForeground(Color.black);
-		Label.setBounds(30, 30, 300, 30);
+		Label.setBounds(30, 30, 330, 30);
 		add(Label);
 		
 		JLabel Medarbejdernavn1 = new JLabel("MedarbejderId");

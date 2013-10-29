@@ -3,6 +3,7 @@ package presentation;
 import java.awt.Color;
 import java.awt.Font;
 
+import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTable;
@@ -20,9 +21,10 @@ public class SeRedigerKategori extends JPanel {
 		setLayout(null);
 		
 		JLabel Label = new JLabel("Se/Rediger Kategori");
+		Label.setIcon(new ImageIcon(TilføjVarer.class.getResource("/presentation/resources/Edit.png")));
 		Label.setFont(new Font("sansserif", Font.BOLD, 24));
 		Label.setForeground(Color.white);
-		Label.setBounds(26, 30, 250, 30);
+		Label.setBounds(26, 30, 280, 30);
 		this.add(Label);
 		
 		table = new JTable();

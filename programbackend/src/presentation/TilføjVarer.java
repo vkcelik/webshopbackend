@@ -32,9 +32,10 @@ public class TilføjVarer extends JPanel {
 		setLayout(null);
 		
 		JLabel Label = new JLabel("Tilføj Varer");
+		Label.setIcon(new ImageIcon(TilføjVarer.class.getResource("/presentation/resources/add32.png")));
 		Label.setFont(new Font("sansserif", Font.BOLD, 24));
 		Label.setForeground(Color.black);
-		Label.setBounds(30, 30, 140, 30);
+		Label.setBounds(30, 28, 180, 32);
 		this.add(Label);
 		
 		JLabel vare = new JLabel("Tilføj Varenavn:");

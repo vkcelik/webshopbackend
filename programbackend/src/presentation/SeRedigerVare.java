@@ -3,6 +3,7 @@ package presentation;
 import java.awt.Color;
 import java.awt.Font;
 
+import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTable;
@@ -21,9 +22,10 @@ public class SeRedigerVare extends JPanel {
 		setLayout(null);
 		
 		JLabel Label = new JLabel("Se/Rediger Varer");
+		Label.setIcon(new ImageIcon(TilføjVarer.class.getResource("/presentation/resources/Edit.png")));
 		Label.setFont(new Font("sansserif", Font.BOLD, 24));
 		Label.setForeground(Color.black);
-		Label.setBounds(30, 30, 200, 30);
+		Label.setBounds(30, 30, 230, 30);
 		this.add(Label);
 		
 	

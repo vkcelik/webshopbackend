@@ -4,6 +4,7 @@ import java.awt.Button;
 import java.awt.Color;
 import java.awt.Font;
 
+import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTable;
@@ -23,6 +24,7 @@ public class TilføjVarerhus extends JPanel {
 		setLayout(null);
 		
 		JLabel TilføjVarehus = new JLabel("Tilføj Varerhus");
+		TilføjVarehus.setIcon(new ImageIcon(TilføjVarer.class.getResource("/presentation/resources/add32.png")));
 		TilføjVarehus.setFont(new Font("sansserif", Font.BOLD, 24));
 		TilføjVarehus.setForeground(Color.black);
 		TilføjVarehus.setBounds(30, 30, 200, 30);
