@@ -39,25 +39,36 @@ public class TilføjKategori extends JPanel {
 		add(TilføjKategorinavn);
 
 		JTextField kattegorinavnText = new JTextField();
-		kattegorinavnText.setBounds(155, 92, 300, 20);
+		kattegorinavnText.setBounds(160, 92, 300, 20);
 		add(kattegorinavnText);
+		
+		JLabel TilføjKategorinummer = new JLabel("Tilføj Kategorinummer:");
+		TilføjKategorinummer.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		TilføjKategorinummer.setBounds(30, 120, 140, 20);
+		TilføjKategorinummer.setForeground(Color.black);
+		add(TilføjKategorinummer);
+
+		JTextField kattegorinummerText = new JTextField();
+		kattegorinummerText.setBounds(160, 122, 300, 20);
+		add(kattegorinummerText);
 
 
 		Button TilføjKategori1 = new Button("Tilføj");
-		TilføjKategori1.setBackground(Color.lightGray);
-		TilføjKategori1.setBounds(155, 150, 70, 22);
+		TilføjKategori1.setBackground(new Color(255,215,10));
+		TilføjKategori1.setBounds(627, 28, 70, 22);
 		TilføjKategori1.setForeground(Color.black);
 		add(TilføjKategori1);
 
 		table1 = new JTable();
-		table1.setBounds(12, 10, 622, 57);
+		table1.setBounds(12, 10, 710, 57);
 		table1.setBackground(new Color(238, 238, 238));
 		add(table1);
 
 		table = new JTable();
-		table.setBounds(12, 71, 622, 340);
+		table.setBounds(12, 71, 710, 405);
 		table.setBackground(new Color(238, 238, 238));
 		add(table);
+
 
 	}
 

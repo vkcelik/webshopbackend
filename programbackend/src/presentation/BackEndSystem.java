@@ -10,7 +10,7 @@ import javax.swing.*;
 public class BackEndSystem extends JFrame {
 
 	private static final long serialVersionUID = 4422022285818218937L;
-	JPanel contentPane;	
+	JPanel Forside;	
 
 	/**
 	 * Launch the application.
@@ -31,17 +31,17 @@ public class BackEndSystem extends JFrame {
 	public BackEndSystem() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setTitle("Backend System");
-		setBounds(100, 100, 662, 483);
-		contentPane = new JPanel();
-		contentPane.setLayout(new BorderLayout(0, 0));
-		setContentPane(contentPane); 
-		contentPane.setBackground(new Color(51, 161, 201));
+		setBounds(100, 100, 750, 550);
+		Forside = new JPanel();
+		Forside.setLayout(new BorderLayout(0, 0));
+		setContentPane(Forside); 
+		Forside.setBackground(new Color(51, 161, 201));
 
 
 		JLabel Label = new JLabel("Velkommen til Backend System", JLabel.CENTER);
 		Label.setFont(new Font("sansserif", Font.BOLD, 24));
 		Label.setForeground(Color.white);
-		contentPane.add(Label, BorderLayout.PAGE_START);
+		Forside.add(Label, BorderLayout.PAGE_START);
 
 
 
@@ -308,7 +308,7 @@ public class BackEndSystem extends JFrame {
 
 
 				getContentPane().removeAll();
-				getContentPane().add(contentPane);//Adding to content pane, not to Frame
+				getContentPane().add(Forside);//Adding to content pane, not to Frame
 				repaint();
 				printAll(getGraphics());
 

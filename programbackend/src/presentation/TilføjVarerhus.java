@@ -62,20 +62,21 @@ public class TilføjVarerhus extends JPanel {
 		add(varehusadresseText);
 		
 		Button TilføjVarerhus = new Button("Tilføj");
-		TilføjVarerhus.setBackground(Color.lightGray);
-		TilføjVarerhus.setBounds(170, 185, 70, 22);
+		TilføjVarerhus.setBackground(new Color(255,215,10));
+		TilføjVarerhus.setBounds(627, 28, 70, 22);
 		TilføjVarerhus.setForeground(Color.black);
 		add(TilføjVarerhus);
 		
 		table1 = new JTable();
-		table1.setBounds(12, 10, 622, 57);
+		table1.setBounds(12, 10, 710, 57);
 		table1.setBackground(new Color(238, 238, 238));
 		add(table1);
-		
+
 		table = new JTable();
-		table.setBounds(12, 71, 622, 340);
+		table.setBounds(12, 71, 710, 405);
 		table.setBackground(new Color(238, 238, 238));
 		add(table);
+
 
 	
 		

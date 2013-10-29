@@ -19,7 +19,7 @@ public class SletKategori extends JPanel {
 	public SletKategori() {
 
 
-		this.setBackground(new Color(0, 145, 255));
+		this.setBackground(new Color(51, 161, 201));
 		setLayout(null);
 
 		JLabel Label = new JLabel("Slet Kategori");
@@ -29,15 +29,16 @@ public class SletKategori extends JPanel {
 		Label.setBounds(30, 30, 200, 30);
 		this.add(Label);
 
-		table1 = new JTable();
-		table1.setBounds(12, 10, 622, 57);
-		table1.setBackground(new Color(238, 238, 238));
-		add(table1);
-
 		table = new JTable();
-		table.setBounds(12, 71, 622, 340);
+		table.setBounds(12, 71, 710, 405);
 		table.setBackground(new Color(238, 238, 238));
 		add(table);
+		
+		
+		table1 = new JTable();
+		table1.setBounds(12, 10, 710, 57);
+		table1.setBackground(new Color(238, 238, 238));
+		add(table1);
 
 
 	}

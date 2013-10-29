@@ -12,8 +12,9 @@ import javax.swing.JTable;
 
 public class SeRedigerKategori extends JPanel {
 
-	private static final long serialVersionUID = -995287522422891917L;
+	
 	private JTable table;
+	private JTable table1;
 
 	public SeRedigerKategori() {
 
@@ -22,17 +23,25 @@ public class SeRedigerKategori extends JPanel {
 		setLayout(null);
 
 		JLabel Label = new JLabel("Se/Rediger Kategori");
-		Label.setIcon(new ImageIcon(TilføjVarer.class.getResource("/presentation/resources/Edit.png")));
+		Label.setIcon(new ImageIcon(TilføjVarer.class.getResource("/presentation/resources/Run.png")));
 		Label.setFont(new Font("sansserif", Font.BOLD, 24));
-		Label.setForeground(Color.white);
-		Label.setBounds(26, 30, 280, 30);
+		Label.setForeground(Color.black);
+		Label.setBounds(30, 30, 280, 30);
 		this.add(Label);
 
 		table = new JTable();
-		table.setBounds(26, 71, 596, 333);
+		table.setBounds(12, 71, 710, 405);
 		table.setBackground(new Color(238, 238, 238));
 		add(table);
-
+		
+		
+		table1 = new JTable();
+		table1.setBounds(12, 10, 710, 57);
+		table1.setBackground(new Color(238, 238, 238));
+		add(table1);
+		
+		
+		
 	}
 
 }
