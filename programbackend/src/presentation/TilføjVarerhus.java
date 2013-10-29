@@ -14,9 +14,9 @@ import javax.swing.JTextField;
 
 public class TilføjVarerhus extends JPanel {
 	
-	private static final long serialVersionUID = 5458623455865113615L;
-	private JTable table;
-	private JTable table1;
+
+	private JTable VHtable;
+	private JTable VHtable1;
 	
 	public TilføjVarerhus() {
 		
@@ -67,15 +67,15 @@ public class TilføjVarerhus extends JPanel {
 		TilføjVarerhus.setForeground(Color.black);
 		add(TilføjVarerhus);
 		
-		table1 = new JTable();
-		table1.setBounds(12, 10, 710, 57);
-		table1.setBackground(new Color(238, 238, 238));
-		add(table1);
+		VHtable1 = new JTable();
+		VHtable1.setBounds(12, 10, 710, 57);
+		VHtable1.setBackground(new Color(238, 238, 238));
+		add(VHtable1);
 
-		table = new JTable();
-		table.setBounds(12, 71, 710, 405);
-		table.setBackground(new Color(238, 238, 238));
-		add(table);
+		VHtable = new JTable();
+		VHtable.setBounds(12, 71, 710, 405);
+		VHtable.setBackground(new Color(238, 238, 238));
+		add(VHtable);
 
 
 	

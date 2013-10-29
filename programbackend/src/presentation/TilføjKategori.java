@@ -15,9 +15,9 @@ import javax.swing.JTextField;
 public class TilføjKategori extends JPanel {
 
 
-	private static final long serialVersionUID = -7443203238753661596L;
-	private JTable table;
-	private JTable table1;
+	
+	private JTable Ktable;
+	private JTable Ktable1;
 
 	public TilføjKategori() {
 
@@ -59,15 +59,15 @@ public class TilføjKategori extends JPanel {
 		TilføjKategori1.setForeground(Color.black);
 		add(TilføjKategori1);
 
-		table1 = new JTable();
-		table1.setBounds(12, 10, 710, 57);
-		table1.setBackground(new Color(238, 238, 238));
-		add(table1);
+		Ktable1 = new JTable();
+		Ktable1.setBounds(12, 10, 710, 57);
+		Ktable1.setBackground(new Color(238, 238, 238));
+		add(Ktable1);
 
-		table = new JTable();
-		table.setBounds(12, 71, 710, 405);
-		table.setBackground(new Color(238, 238, 238));
-		add(table);
+		Ktable = new JTable();
+		Ktable.setBounds(12, 71, 710, 405);
+		Ktable.setBackground(new Color(238, 238, 238));
+		add(Ktable);
 
 
 	}
