@@ -10,7 +10,7 @@ import javax.swing.JTable;
 
 public class SeRedigerMedarbejder extends JPanel {
 	
-	private static final long serialVersionUID = -7064276064802704768L;
+	
 	private JTable table;
 	private JTable table1;
 	
