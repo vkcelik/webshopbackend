@@ -12,9 +12,9 @@ import javax.swing.JTable;
 
 public class SletKategori extends JPanel {
 
-	private static final long serialVersionUID = -7332325133089964895L;
-	private JTable table;
-	private JTable table1;
+	
+	private JTable SKtable;
+	private JTable SKtable1;
 
 	public SletKategori() {
 
@@ -22,23 +22,23 @@ public class SletKategori extends JPanel {
 		this.setBackground(new Color(51, 161, 201));
 		setLayout(null);
 
-		JLabel Label = new JLabel("Slet Kategori");
-		Label.setIcon(new ImageIcon(TilføjVarer.class.getResource("/presentation/resources/delete.png")));
-		Label.setFont(new Font("sansserif", Font.BOLD, 24));
-		Label.setForeground(Color.black);
-		Label.setBounds(30, 30, 200, 30);
-		this.add(Label);
+		JLabel SletKategori = new JLabel("Slet Kategori");
+		SletKategori.setIcon(new ImageIcon(TilføjVarer.class.getResource("/presentation/resources/delete.png")));
+		SletKategori.setFont(new Font("sansserif", Font.BOLD, 24));
+		SletKategori.setForeground(Color.black);
+		SletKategori.setBounds(30, 30, 200, 30);
+		this.add(SletKategori);
 
-		table = new JTable();
-		table.setBounds(12, 71, 710, 405);
-		table.setBackground(new Color(238, 238, 238));
-		add(table);
+		SKtable = new JTable();
+		SKtable.setBounds(12, 71, 710, 405);
+		SKtable.setBackground(new Color(238, 238, 238));
+		add(SKtable);
 		
 		
-		table1 = new JTable();
-		table1.setBounds(12, 10, 710, 57);
-		table1.setBackground(new Color(238, 238, 238));
-		add(table1);
+		SKtable1 = new JTable();
+		SKtable1.setBounds(12, 10, 710, 57);
+		SKtable1.setBackground(new Color(238, 238, 238));
+		add(SKtable1);
 
 
 	}

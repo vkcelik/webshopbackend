@@ -12,9 +12,9 @@ import javax.swing.JTable;
 
 public class SletMedarbejder extends JPanel {
 
-	private static final long serialVersionUID = -878923221051519619L;
-	private JTable table;
-	private JTable table1;
+	
+	private JTable SMtable;
+	private JTable SMtable1;
 
 	public SletMedarbejder() {
 
@@ -22,23 +22,23 @@ public class SletMedarbejder extends JPanel {
 		this.setBackground(new Color(51, 161, 201));
 		setLayout(null);
 
-		JLabel Label = new JLabel("Slette Medarbejder");
-		Label.setIcon(new ImageIcon(TilføjVarer.class.getResource("/presentation/resources/delete.png")));
-		Label.setFont(new Font("sansserif", Font.BOLD, 24));
-		Label.setForeground(Color.black);
-		Label.setBounds(30, 30,300, 30);
-		this.add(Label);
+		JLabel SletMedarbejder = new JLabel("Slet Medarbejder");
+		SletMedarbejder.setIcon(new ImageIcon(TilføjVarer.class.getResource("/presentation/resources/delete.png")));
+		SletMedarbejder.setFont(new Font("sansserif", Font.BOLD, 24));
+		SletMedarbejder.setForeground(Color.black);
+		SletMedarbejder.setBounds(30, 30,300, 30);
+		this.add(SletMedarbejder);
 
-		table = new JTable();
-		table.setBounds(12, 71, 710, 405);
-		table.setBackground(new Color(238, 238, 238));
-		add(table);
+		SMtable = new JTable();
+		SMtable.setBounds(12, 71, 710, 405);
+		SMtable.setBackground(new Color(238, 238, 238));
+		add(SMtable);
 		
 		
-		table1 = new JTable();
-		table1.setBounds(12, 10, 710, 57);
-		table1.setBackground(new Color(238, 238, 238));
-		add(table1);
+		SMtable1 = new JTable();
+		SMtable1.setBounds(12, 10, 710, 57);
+		SMtable1.setBackground(new Color(238, 238, 238));
+		add(SMtable1);
 		
 	}
 

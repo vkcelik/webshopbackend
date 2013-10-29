@@ -12,9 +12,10 @@ import javax.swing.JTable;
 
 public class SeVarehus extends JPanel {
 
-	private static final long serialVersionUID = 7080152466356027082L;
-	private JTable table;
-	private JTable table1;
+	
+	
+	private JTable SEVHtable;
+	private JTable SEVHtable1;
 
 	public SeVarehus() {
 
@@ -22,23 +23,23 @@ public class SeVarehus extends JPanel {
 		this.setBackground(new Color(51, 161, 201));
 		setLayout(null);
 
-		JLabel Label = new JLabel("Se/Rediger Varerhus");
-		Label.setIcon(new ImageIcon(TilføjVarer.class.getResource("/presentation/resources/Run.png")));
-		Label.setFont(new Font("sansserif", Font.BOLD, 24));
-		Label.setForeground(Color.black);
-		Label.setBounds(30, 30, 280, 30);
-		this.add(Label);
+		JLabel SeRedigerVarehus = new JLabel("Se/Rediger Varerhus");
+		SeRedigerVarehus.setIcon(new ImageIcon(TilføjVarer.class.getResource("/presentation/resources/Run.png")));
+		SeRedigerVarehus.setFont(new Font("sansserif", Font.BOLD, 24));
+		SeRedigerVarehus.setForeground(Color.black);
+		SeRedigerVarehus.setBounds(30, 30, 280, 30);
+		this.add(SeRedigerVarehus);
 
-		table = new JTable();
-		table.setBounds(12, 71, 710, 405);
-		table.setBackground(new Color(238, 238, 238));
-		add(table);
+		SEVHtable = new JTable();
+		SEVHtable.setBounds(12, 71, 710, 405);
+		SEVHtable.setBackground(new Color(238, 238, 238));
+		add(SEVHtable);
 		
 		
-		table1 = new JTable();
-		table1.setBounds(12, 10, 710, 57);
-		table1.setBackground(new Color(238, 238, 238));
-		add(table1);
+		SEVHtable1 = new JTable();
+		SEVHtable1.setBounds(12, 10, 710, 57);
+		SEVHtable1.setBackground(new Color(238, 238, 238));
+		add(SEVHtable1);
 		
 	}
 

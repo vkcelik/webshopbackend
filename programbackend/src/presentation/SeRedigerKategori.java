@@ -13,8 +13,8 @@ import javax.swing.JTable;
 public class SeRedigerKategori extends JPanel {
 
 	
-	private JTable table;
-	private JTable table1;
+	private JTable SERtable;
+	private JTable SERtable1;
 
 	public SeRedigerKategori() {
 
@@ -22,23 +22,23 @@ public class SeRedigerKategori extends JPanel {
 		this.setBackground(new Color(51, 161, 201));
 		setLayout(null);
 
-		JLabel Label = new JLabel("Se/Rediger Kategori");
-		Label.setIcon(new ImageIcon(TilføjVarer.class.getResource("/presentation/resources/Run.png")));
-		Label.setFont(new Font("sansserif", Font.BOLD, 24));
-		Label.setForeground(Color.black);
-		Label.setBounds(30, 30, 280, 30);
-		this.add(Label);
+		JLabel SeRedigerKategori = new JLabel("Se/Rediger Kategori");
+		SeRedigerKategori.setIcon(new ImageIcon(TilføjVarer.class.getResource("/presentation/resources/Run.png")));
+		SeRedigerKategori.setFont(new Font("sansserif", Font.BOLD, 24));
+		SeRedigerKategori.setForeground(Color.black);
+		SeRedigerKategori.setBounds(30, 30, 280, 30);
+		this.add(SeRedigerKategori);
 
-		table = new JTable();
-		table.setBounds(12, 71, 710, 405);
-		table.setBackground(new Color(238, 238, 238));
-		add(table);
+		SERtable = new JTable();
+		SERtable.setBounds(12, 71, 710, 405);
+		SERtable.setBackground(new Color(238, 238, 238));
+		add(SERtable);
 		
 		
-		table1 = new JTable();
-		table1.setBounds(12, 10, 710, 57);
-		table1.setBackground(new Color(238, 238, 238));
-		add(table1);
+		SERtable1 = new JTable();
+		SERtable1.setBounds(12, 10, 710, 57);
+		SERtable1.setBackground(new Color(238, 238, 238));
+		add(SERtable1);
 		
 		
 		

@@ -7,10 +7,11 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 
+
 public class BackEndSystem extends JFrame {
 
 	private static final long serialVersionUID = 4422022285818218937L;
-	JPanel Forside;	
+	
 
 	/**
 	 * Launch the application.
@@ -32,16 +33,16 @@ public class BackEndSystem extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setTitle("Backend System");
 		setBounds(100, 100, 750, 550);
-		Forside = new JPanel();
-		Forside.setLayout(new BorderLayout(0, 0));
-		setContentPane(Forside); 
-		Forside.setBackground(new Color(51, 161, 201));
+		JPanel contentPane = new JPanel();
+		contentPane.setLayout(new BorderLayout(0, 0));
+		setContentPane(contentPane); 
+		contentPane.setBackground(new Color(51, 161, 201));
 
 
 		JLabel Label = new JLabel("Velkommen til Backend System", JLabel.CENTER);
 		Label.setFont(new Font("sansserif", Font.BOLD, 24));
 		Label.setForeground(Color.white);
-		Forside.add(Label, BorderLayout.PAGE_START);
+		contentPane.add(Label, BorderLayout.PAGE_START);
 
 
 
@@ -243,7 +244,7 @@ public class BackEndSystem extends JFrame {
 		});
 
 
-		JMenuItem mntmNewMenuItem_19 = new JMenuItem("Slette medarbejeder");
+		JMenuItem mntmNewMenuItem_19 = new JMenuItem("Slet medarbejeder");
 		mntmNewMenuItem_19.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/1380431140_150.png")));
 		mnNewMenu_4.add(mntmNewMenuItem_19);
 
@@ -279,7 +280,7 @@ public class BackEndSystem extends JFrame {
 			}
 		});
 
-		JMenuItem mntmNewMenuItem_16 = new JMenuItem("Slette ordre");
+		JMenuItem mntmNewMenuItem_16 = new JMenuItem("Slet ordre");
 		mntmNewMenuItem_16.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/1380431140_150.png")));
 		mnNewMenu_3.add(mntmNewMenuItem_16);
 
@@ -303,18 +304,7 @@ public class BackEndSystem extends JFrame {
 		mntmNewMenuItem_20.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/statistics-icon.png")));
 		mnNewMenu_8.add(mntmNewMenuItem_20);
 
-		mntmNewMenuItem_20.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-
-
-				getContentPane().removeAll();
-				getContentPane().add(Forside);//Adding to content pane, not to Frame
-				repaint();
-				printAll(getGraphics());
-
-			}
-		});
-
+	
 
 
 

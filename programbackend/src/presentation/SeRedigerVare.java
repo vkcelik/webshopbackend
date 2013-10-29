@@ -12,9 +12,9 @@ import javax.swing.JTable;
 
 public class SeRedigerVare extends JPanel {
 
-	private static final long serialVersionUID = 1384084884111581058L;
-	private JTable table;
-	private JTable table1;
+
+	private JTable SEVtable;
+	private JTable SEVtable1;
 
 	public SeRedigerVare() {
 
@@ -22,24 +22,24 @@ public class SeRedigerVare extends JPanel {
 		this.setBackground(new Color(51, 161, 201));
 		setLayout(null);
 
-		JLabel Label = new JLabel("Se/Rediger Varer");
-		Label.setIcon(new ImageIcon(TilføjVarer.class.getResource("/presentation/resources/Run.png")));
-		Label.setFont(new Font("sansserif", Font.BOLD, 24));
-		Label.setForeground(Color.black);
-		Label.setBounds(30, 30, 230, 30);
-		this.add(Label);
+		JLabel SeRedigerVare = new JLabel("Se/Rediger Varer");
+		SeRedigerVare.setIcon(new ImageIcon(TilføjVarer.class.getResource("/presentation/resources/Run.png")));
+		SeRedigerVare.setFont(new Font("sansserif", Font.BOLD, 24));
+		SeRedigerVare.setForeground(Color.black);
+		SeRedigerVare.setBounds(30, 30, 230, 30);
+		this.add(SeRedigerVare);
 
 
-		table = new JTable();
-		table.setBounds(12, 71, 710, 405);
-		table.setBackground(new Color(238, 238, 238));
-		add(table);
+		SEVtable = new JTable();
+		SEVtable.setBounds(12, 71, 710, 405);
+		SEVtable.setBackground(new Color(238, 238, 238));
+		add(SEVtable);
 		
 		
-		table1 = new JTable();
-		table1.setBounds(12, 10, 710, 57);
-		table1.setBackground(new Color(238, 238, 238));
-		add(table1);
+		SEVtable1 = new JTable();
+		SEVtable1.setBounds(12, 10, 710, 57);
+		SEVtable1.setBackground(new Color(238, 238, 238));
+		add(SEVtable1);
 		
 	}
 

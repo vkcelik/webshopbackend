@@ -12,9 +12,9 @@ import javax.swing.JTable;
 
 public class SletVarer extends JPanel {
 
-	private static final long serialVersionUID = -4489846409748301897L;
-	private JTable table;
-	private JTable table1;
+	
+	private JTable SVtable;
+	private JTable SVtable1;
 
 	public SletVarer() {
 
@@ -22,23 +22,23 @@ public class SletVarer extends JPanel {
 		this.setBackground(new Color(51, 161, 201));
 		setLayout(null);
 
-		JLabel Label = new JLabel("Slet Varer");
-		Label.setIcon(new ImageIcon(TilføjVarer.class.getResource("/presentation/resources/delete.png")));
-		Label.setFont(new Font("sansserif", Font.BOLD, 24));
-		Label.setForeground(Color.black);
-		Label.setBounds(30, 30, 200, 30);
-		this.add(Label);
+		JLabel SletVare = new JLabel("Slet Varer");
+		SletVare.setIcon(new ImageIcon(TilføjVarer.class.getResource("/presentation/resources/delete.png")));
+		SletVare.setFont(new Font("sansserif", Font.BOLD, 24));
+		SletVare.setForeground(Color.black);
+		SletVare.setBounds(30, 30, 200, 30);
+		this.add(SletVare);
 
-		table = new JTable();
-		table.setBounds(12, 71, 710, 405);
-		table.setBackground(new Color(238, 238, 238));
-		add(table);
+		SVtable = new JTable();
+		SVtable.setBounds(12, 71, 710, 405);
+		SVtable.setBackground(new Color(238, 238, 238));
+		add(SVtable);
 		
 		
-		table1 = new JTable();
-		table1.setBounds(12, 10, 710, 57);
-		table1.setBackground(new Color(238, 238, 238));
-		add(table1);
+		SVtable1 = new JTable();
+		SVtable1.setBounds(12, 10, 710, 57);
+		SVtable1.setBackground(new Color(238, 238, 238));
+		add(SVtable1);
 		
 
 
