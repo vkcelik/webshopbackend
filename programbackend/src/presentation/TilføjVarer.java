@@ -6,22 +6,18 @@ import java.awt.Color;
 import java.awt.Font;
 
 import javax.swing.ImageIcon;
-import javax.swing.JFileChooser;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import java.awt.Button;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.io.File;
 
-import javax.swing.JButton;
 
 
 
 public class TilføjVarer extends JPanel {
 	
+	private static final long serialVersionUID = 5431961989474607359L;
 		private JTable table;
 		private JTable table1;
 	

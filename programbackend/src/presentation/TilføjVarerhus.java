@@ -14,6 +14,7 @@ import javax.swing.JTextField;
 
 public class TilføjVarerhus extends JPanel {
 	
+	private static final long serialVersionUID = 5458623455865113615L;
 	private JTable table;
 	private JTable table1;
 	

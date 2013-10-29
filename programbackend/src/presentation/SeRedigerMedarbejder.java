@@ -1,22 +1,16 @@
 package presentation;
 
-import java.awt.Button;
 import java.awt.Color;
 import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
-import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTable;
-import javax.swing.JTextField;
-
-
 
 public class SeRedigerMedarbejder extends JPanel {
 	
+	private static final long serialVersionUID = -7064276064802704768L;
 	private JTable table;
 	private JTable table1;
 	
