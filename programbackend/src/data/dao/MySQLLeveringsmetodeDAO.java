@@ -10,7 +10,6 @@ import data.connect.Connector;
 import data.idao.DALException;
 import data.idao.ILeveringsmetodeDAO;
 
-//TODO Skal testes 
 public class MySQLLeveringsmetodeDAO implements ILeveringsmetodeDAO {
 
 	@Override
