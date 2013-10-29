@@ -10,7 +10,6 @@ import data.connect.Connector;
 import data.idao.DALException;
 import data.idao.IMedarbejderDAO;
 
-//TODO Skal testes 
 public class MySQLMedarbejderDAO implements IMedarbejderDAO{
 	@Override
 	public MedarbejderDTO getMedarbejder(int medarbejderId) throws DALException {
