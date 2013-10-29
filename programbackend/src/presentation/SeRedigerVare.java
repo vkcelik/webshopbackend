@@ -12,6 +12,7 @@ import javax.swing.JTable;
 public class SeRedigerVare extends JPanel {
 		
 		private JTable table;
+		private JTable table1;
 	
 		public SeRedigerVare() {
 		
@@ -21,13 +22,18 @@ public class SeRedigerVare extends JPanel {
 		
 		JLabel Label = new JLabel("Se/Rediger Varer");
 		Label.setFont(new Font("sansserif", Font.BOLD, 24));
-		Label.setForeground(Color.white);
-		Label.setBounds(26, 30, 200, 30);
+		Label.setForeground(Color.black);
+		Label.setBounds(30, 30, 200, 30);
 		this.add(Label);
 		
 	
+		table1 = new JTable();
+		table1.setBounds(12, 10, 622, 57);
+		table1.setBackground(new Color(238, 238, 238));
+		add(table1);
+		
 		table = new JTable();
-		table.setBounds(26, 71, 596, 333);
+		table.setBounds(12, 71, 622, 340);
 		table.setBackground(new Color(238, 238, 238));
 		add(table);
 	}

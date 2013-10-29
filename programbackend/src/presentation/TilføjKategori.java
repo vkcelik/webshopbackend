@@ -13,22 +13,24 @@ import javax.swing.JTextField;
 
 public class TilføjKategori extends JPanel {
 	
-	private JTable table;
-	public TilføjKategori() {
+		private JTable table;
+		private JTable table1;
+		
+		public TilføjKategori() {
 		
 		
-		this.setBackground(new Color(0, 145, 255));
+		this.setBackground(new Color(51, 161, 201));
 		setLayout(null);
 		
 		JLabel TilføjKategori = new JLabel("Tilføj Kategori");
 		TilføjKategori.setFont(new Font("sansserif", Font.BOLD, 24));
-		TilføjKategori.setForeground(Color.white);
-		TilføjKategori.setBounds(26, 30, 200, 30);
+		TilføjKategori.setForeground(Color.black);
+		TilføjKategori.setBounds(30, 30, 200, 30);
 		this.add(TilføjKategori);
 		
 		JLabel TilføjKategorinavn = new JLabel("Tilføj Kategorinavn:");
 		TilføjKategorinavn.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		TilføjKategorinavn.setBounds(35, 90, 140, 20);
+		TilføjKategorinavn.setBounds(30, 90, 140, 20);
 		TilføjKategorinavn.setForeground(Color.black);
 		add(TilføjKategorinavn);
 		
@@ -43,8 +45,13 @@ public class TilføjKategori extends JPanel {
 		TilføjKategori1.setForeground(Color.black);
 		add(TilføjKategori1);
 		
+		table1 = new JTable();
+		table1.setBounds(12, 10, 622, 57);
+		table1.setBackground(new Color(238, 238, 238));
+		add(table1);
+		
 		table = new JTable();
-		table.setBounds(26, 71, 596, 333);
+		table.setBounds(12, 71, 622, 340);
 		table.setBackground(new Color(238, 238, 238));
 		add(table);
 		

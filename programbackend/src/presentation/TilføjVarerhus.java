@@ -14,17 +14,18 @@ import javax.swing.JTextField;
 public class TilføjVarerhus extends JPanel {
 	
 	private JTable table;
+	private JTable table1;
 	
 	public TilføjVarerhus() {
 		
 		
-		this.setBackground(new Color(0, 145, 255));
+		this.setBackground(new Color(51, 161, 201));
 		setLayout(null);
 		
 		JLabel TilføjVarehus = new JLabel("Tilføj Varerhus");
 		TilføjVarehus.setFont(new Font("sansserif", Font.BOLD, 24));
-		TilføjVarehus.setForeground(Color.white);
-		TilføjVarehus.setBounds(26, 30, 200, 30);
+		TilføjVarehus.setForeground(Color.black);
+		TilføjVarehus.setBounds(30, 30, 200, 30);
 		this.add(TilføjVarehus);
 		
 		JLabel varehusnavn = new JLabel("Tilføj Varerhusnavn:");
@@ -63,8 +64,13 @@ public class TilføjVarerhus extends JPanel {
 		TilføjVarerhus.setForeground(Color.black);
 		add(TilføjVarerhus);
 		
+		table1 = new JTable();
+		table1.setBounds(12, 10, 622, 57);
+		table1.setBackground(new Color(238, 238, 238));
+		add(table1);
+		
 		table = new JTable();
-		table.setBounds(26, 71, 596, 333);
+		table.setBounds(12, 71, 622, 340);
 		table.setBackground(new Color(238, 238, 238));
 		add(table);
 

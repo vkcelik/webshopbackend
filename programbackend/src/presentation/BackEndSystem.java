@@ -38,7 +38,7 @@ public class BackEndSystem extends JFrame {
 		contentPane = new JPanel();
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane); 
-		contentPane.setBackground(new Color(0, 145, 255));
+		contentPane.setBackground(new Color(51, 161, 201));
 		
 		
 		JLabel Label = new JLabel("Velkommen til Backend System", JLabel.CENTER);
@@ -266,7 +266,7 @@ public class BackEndSystem extends JFrame {
 		menuBar.add(mnNewMenu_3);
 		
 		
-		JMenuItem mntmNewMenuItem_12 = new JMenuItem("Se/Rediger ordre");
+		JMenuItem mntmNewMenuItem_12 = new JMenuItem("Se ordre");
 		mntmNewMenuItem_12.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/Start-Menu-Run-icon (1).png")));
 		mnNewMenu_3.add(mntmNewMenuItem_12);
 		
@@ -275,7 +275,7 @@ public class BackEndSystem extends JFrame {
 			
 				
 					getContentPane().removeAll();
-	                getContentPane().add(new SeRedigerOrdre());//Adding to content pane, not to Frame
+	                getContentPane().add(new SeOrdre());//Adding to content pane, not to Frame
 	                repaint();
 	                printAll(getGraphics());
 				

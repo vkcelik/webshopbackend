@@ -16,7 +16,7 @@ public class SeRedigerKategori extends JPanel {
 		public SeRedigerKategori() {
 		
 		
-		this.setBackground(new Color(0, 145, 255));
+		this.setBackground(new Color(51, 161, 201));
 		setLayout(null);
 		
 		JLabel Label = new JLabel("Se/Rediger Kategori");
