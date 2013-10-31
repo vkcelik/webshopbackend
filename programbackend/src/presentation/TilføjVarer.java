@@ -12,8 +12,6 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import java.awt.Button;
 import javax.swing.JTextPane;
-import javax.swing.JEditorPane;
-import java.awt.SystemColor;
 import javax.swing.UIManager;
 
 

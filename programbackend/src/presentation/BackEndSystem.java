@@ -10,9 +10,11 @@ import javax.swing.*;
 
 public class BackEndSystem extends JFrame {
 
-	private static final long serialVersionUID = 4422022285818218937L;
 	
-
+	
+	private JPanel contentPane;
+	
+	
 	/**
 	 * Launch the application.
 	 */
@@ -33,16 +35,13 @@ public class BackEndSystem extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setTitle("Backend System");
 		setBounds(100, 100, 750, 550);
-		JPanel contentPane = new JPanel();
+		contentPane = new JPanel();
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane); 
 		contentPane.setBackground(new Color(51, 161, 201));
-
-
-		JLabel Label = new JLabel("Velkommen til Backend System", JLabel.CENTER);
-		Label.setFont(new Font("sansserif", Font.BOLD, 24));
-		Label.setForeground(Color.white);
-		contentPane.add(Label, BorderLayout.PAGE_START);
+		contentPane.add(new Forside());
+		
+		
 
 
 
@@ -303,7 +302,16 @@ public class BackEndSystem extends JFrame {
 		JMenuItem mntmNewMenuItem_20 = new JMenuItem("Se Statistik");
 		mntmNewMenuItem_20.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/statistics-icon.png")));
 		mnNewMenu_8.add(mntmNewMenuItem_20);
+		mntmNewMenuItem_20.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
 
+				getContentPane().removeAll();
+				getContentPane().add(new Forside());//Adding to content pane, not to Frame
+				repaint();
+				printAll(getGraphics());
+
+			}
+		});
 	
 
 
