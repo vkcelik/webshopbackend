@@ -83,24 +83,6 @@ public class TilføjKategori extends JPanel {
 		Ktable.setBackground(new Color(238, 238, 238));
 		add(Ktable);
 
-
-		TilføjKategori1.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				int a;
-				String b;
-				int c;
-				
-				try {
-					a = Integer.getInteger(TilføjKategorinavn.getText());
-				} catch (Exception e) {
-					
-				}
-				
-				KategoriDTO k = new KategoriDTO(., kategoriNavn, parent).getText()
-			}
-		});
-		
 	}
 
 }
