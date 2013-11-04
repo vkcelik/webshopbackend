@@ -3,12 +3,16 @@ package presentation;
 import java.awt.Button;
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTable;
 import javax.swing.JTextField;
+
+import logic.dto.KategoriDTO;
 
 
 
@@ -51,6 +55,16 @@ public class TilføjKategori extends JPanel {
 		JTextField kattegorinummerText = new JTextField();
 		kattegorinummerText.setBounds(160, 122, 300, 20);
 		add(kattegorinummerText);
+		
+		JLabel TilføjParent = new JLabel("Tilføj overkategori:");
+		TilføjParent.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		TilføjParent.setBounds(30, 150, 140, 20);
+		TilføjParent.setForeground(Color.black);
+		add(TilføjParent);
+
+		JTextField kattegoriParentText = new JTextField();
+		kattegoriParentText.setBounds(160, 152, 300, 20);
+		add(kattegoriParentText);
 
 
 		Button TilføjKategori1 = new Button("Tilføj");
@@ -70,6 +84,23 @@ public class TilføjKategori extends JPanel {
 		add(Ktable);
 
 
+		TilføjKategori1.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				int a;
+				String b;
+				int c;
+				
+				try {
+					a = Integer.getInteger(TilføjKategorinavn.getText());
+				} catch (Exception e) {
+					
+				}
+				
+				KategoriDTO k = new KategoriDTO(., kategoriNavn, parent).getText()
+			}
+		});
+		
 	}
 
 }
