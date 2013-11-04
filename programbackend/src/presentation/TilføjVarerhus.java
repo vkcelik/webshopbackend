@@ -35,39 +35,39 @@ public class TilføjVarerhus extends JPanel {
 		
 		JLabel varehusnavn = new JLabel("Navn:");
 		varehusnavn.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		varehusnavn.setBounds(30, 90, 120, 20);
+		varehusnavn.setBounds(160, 90, 120, 20);
 		varehusnavn.setForeground(Color.black);
 		add(varehusnavn);
 		
 		JTextField varehusnavnText = new JTextField();
-		varehusnavnText.setBounds(130, 90, 300, 20);
+		varehusnavnText.setBounds(230, 90, 300, 20);
 		add(varehusnavnText);
 		
 		
 		JLabel varehusadresse = new JLabel("Adresse:");
 		varehusadresse.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		varehusadresse.setBounds(30, 120, 130, 20);
+		varehusadresse.setBounds(160, 120, 130, 20);
 		varehusadresse.setForeground(Color.black);
 		add(varehusadresse);
 		
 		JTextField varehusadresseText = new JTextField();
-		varehusadresseText.setBounds(130, 120, 300, 20);
+		varehusadresseText.setBounds(230, 120, 300, 20);
 		add(varehusadresseText);
 		
 		JLabel BeskrivelseVarehus = new JLabel("Beskrivelse:");
 		BeskrivelseVarehus.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		BeskrivelseVarehus.setBounds(30, 150, 110, 20);
+		BeskrivelseVarehus.setBounds(160, 150, 110, 20);
 		BeskrivelseVarehus.setForeground(Color.black);
 		add(BeskrivelseVarehus);
 		
 		JTextPane BeskrivelseVarehusText = new JTextPane();
 		BeskrivelseVarehusText.setBackground(UIManager.getColor("TextPane.background"));
-		BeskrivelseVarehusText.setBounds(130, 155, 300, 150);
+		BeskrivelseVarehusText.setBounds(230, 155, 300, 150);
 		add(BeskrivelseVarehusText);
 		
 		Button TilføjVarerhus = new Button("Tilføj");
 		TilføjVarerhus.setBackground(new Color(255,215,10));
-		TilføjVarerhus.setBounds(380, 320, 70, 22);
+		TilføjVarerhus.setBounds(460, 320, 70, 22);
 		TilføjVarerhus.setForeground(Color.black);
 		add(TilføjVarerhus);
 		

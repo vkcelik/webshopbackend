@@ -40,18 +40,18 @@ public class TilføjKategori extends JPanel {
 
 		JLabel TilføjKategorinavn = new JLabel("Kategorinavn:");
 		TilføjKategorinavn.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		TilføjKategorinavn.setBounds(30, 90, 140, 20);
+		TilføjKategorinavn.setBounds(140, 90, 140, 20);
 		TilføjKategorinavn.setForeground(Color.black);
 		add(TilføjKategorinavn);
 
 		JTextField kattegorinavnText = new JTextField();
-		kattegorinavnText.setBounds(160, 90, 300, 20);
+		kattegorinavnText.setBounds(230, 90, 300, 20);
 		add(kattegorinavnText);
 		
 
 		Button TilføjKategori1 = new Button("Tilføj");
 		TilføjKategori1.setBackground(new Color(255,215,10));
-		TilføjKategori1.setBounds(391, 160, 70, 22);
+		TilføjKategori1.setBounds(460, 160, 70, 22);
 		TilføjKategori1.setForeground(Color.black);
 		add(TilføjKategori1);
 
@@ -62,13 +62,13 @@ public class TilføjKategori extends JPanel {
 		
 		JLabel TilføjOverKategori = new JLabel("Over kategori:");
 		TilføjOverKategori.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		TilføjOverKategori.setBounds(30, 120, 140, 20);
+		TilføjOverKategori.setBounds(140, 120, 140, 20);
 		TilføjOverKategori.setForeground(Color.black);
 		add(TilføjOverKategori);
 		
 		String Kategori1[] = {"Vælg kategori","Assaad","Fadi","Ziad","Ayhan","Kerim"};
 		combobox1 = new JComboBox<String>(Kategori1);
-		combobox1.setBounds(160, 120, 300, 20);
+		combobox1.setBounds(230, 120, 300, 20);
 		add(combobox1);
 		
 		
