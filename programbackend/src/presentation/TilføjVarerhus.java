@@ -9,6 +9,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTable;
 import javax.swing.JTextField;
+import javax.swing.JTextPane;
+import javax.swing.UIManager;
 
 
 
@@ -38,19 +40,30 @@ public class TilføjVarerhus extends JPanel {
 		add(varehusnavn);
 		
 		JTextField varehusnavnText = new JTextField();
-		varehusnavnText.setBounds(170, 90, 300, 20);
+		varehusnavnText.setBounds(150, 90, 300, 20);
 		add(varehusnavnText);
 		
 		
 		JLabel varehusadresse = new JLabel("Varerhusadresse:");
 		varehusadresse.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		varehusadresse.setBounds(30, 150, 130, 20);
+		varehusadresse.setBounds(30, 120, 130, 20);
 		varehusadresse.setForeground(Color.black);
 		add(varehusadresse);
 		
 		JTextField varehusadresseText = new JTextField();
-		varehusadresseText.setBounds(170, 150, 300, 20);
+		varehusadresseText.setBounds(150, 120, 300, 20);
 		add(varehusadresseText);
+		
+		JLabel BeskrivelseVarehus = new JLabel("Beskrivelse:");
+		BeskrivelseVarehus.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		BeskrivelseVarehus.setBounds(30, 150, 110, 20);
+		BeskrivelseVarehus.setForeground(Color.black);
+		add(BeskrivelseVarehus);
+		
+		JTextPane BeskrivelseVarehusText = new JTextPane();
+		BeskrivelseVarehusText.setBackground(UIManager.getColor("TextPane.background"));
+		BeskrivelseVarehusText.setBounds(150, 155, 400, 100);
+		add(BeskrivelseVarehusText);
 		
 		Button TilføjVarerhus = new Button("Tilføj");
 		TilføjVarerhus.setBackground(new Color(255,215,10));

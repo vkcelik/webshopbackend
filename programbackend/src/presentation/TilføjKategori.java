@@ -32,7 +32,7 @@ public class TilføjKategori extends JPanel {
 		TilføjKategori.setBounds(30, 30, 200, 30);
 		this.add(TilføjKategori);
 
-		JLabel TilføjKategorinavn = new JLabel("Tilføj Kategorinavn:");
+		JLabel TilføjKategorinavn = new JLabel("Kategorinavn:");
 		TilføjKategorinavn.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		TilføjKategorinavn.setBounds(30, 90, 140, 20);
 		TilføjKategorinavn.setForeground(Color.black);
@@ -42,16 +42,6 @@ public class TilføjKategori extends JPanel {
 		kattegorinavnText.setBounds(160, 92, 300, 20);
 		add(kattegorinavnText);
 		
-		JLabel TilføjKategorinummer = new JLabel("Tilføj Kategorinummer:");
-		TilføjKategorinummer.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		TilføjKategorinummer.setBounds(30, 120, 140, 20);
-		TilføjKategorinummer.setForeground(Color.black);
-		add(TilføjKategorinummer);
-
-		JTextField kattegorinummerText = new JTextField();
-		kattegorinummerText.setBounds(160, 122, 300, 20);
-		add(kattegorinummerText);
-
 
 		Button TilføjKategori1 = new Button("Tilføj");
 		TilføjKategori1.setBackground(new Color(255,215,10));

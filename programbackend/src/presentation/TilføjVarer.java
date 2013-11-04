@@ -48,7 +48,7 @@ public class TilføjVarer extends JPanel {
 		
 		
 		JTextField VareNavnText = new JTextField();
-		VareNavnText.setBounds(160, 90, 300, 20);
+		VareNavnText.setBounds(130, 90, 300, 20);
 		add(VareNavnText);
 		
 		JLabel Pris = new JLabel("Pris:");
@@ -58,7 +58,7 @@ public class TilføjVarer extends JPanel {
 		add(Pris);
 		
 		JTextField PrisText = new JTextField();
-		PrisText.setBounds(160, 120, 300, 20);
+		PrisText.setBounds(130, 120, 300, 20);
 		add(PrisText);
 		
 		JLabel KategoriNummer = new JLabel("Kategori:");
@@ -74,7 +74,7 @@ public class TilføjVarer extends JPanel {
 		add(Vægt);
 		
 		JTextField VægtText = new JTextField();
-		VægtText.setBounds(160, 180, 300, 20);
+		VægtText.setBounds(130, 180, 300, 20);
 		add(VægtText);
 		
 		JLabel Bredde = new JLabel("Bredde:");
@@ -84,7 +84,7 @@ public class TilføjVarer extends JPanel {
 		add(Bredde);
 		
 		JTextField BreddeText = new JTextField();
-		BreddeText.setBounds(160, 210, 300, 20);
+		BreddeText.setBounds(130, 210, 300, 20);
 		add(BreddeText);
 		
 		JLabel Dybde = new JLabel("Dybde:");
@@ -94,7 +94,7 @@ public class TilføjVarer extends JPanel {
 		add(Dybde);
 		
 		JTextField DybdeText = new JTextField();
-		DybdeText.setBounds(160, 240, 300, 20);
+		DybdeText.setBounds(130, 240, 300, 20);
 		add(DybdeText);
 		
 		JLabel Højde = new JLabel("Højde:");
@@ -104,7 +104,7 @@ public class TilføjVarer extends JPanel {
 		add(Højde);
 		
 		JTextField HøjdeText = new JTextField();
-		HøjdeText.setBounds(160, 270, 300, 20);
+		HøjdeText.setBounds(130, 270, 300, 20);
 		add(HøjdeText);
 		
 		JLabel Beskrivelse = new JLabel("Beskrivelse:");
@@ -115,7 +115,7 @@ public class TilføjVarer extends JPanel {
 		
 		JTextPane BeskrivelseText = new JTextPane();
 		BeskrivelseText.setBackground(UIManager.getColor("TextPane.background"));
-		BeskrivelseText.setBounds(160, 305, 400, 100);
+		BeskrivelseText.setBounds(130, 305, 400, 100);
 		add(BeskrivelseText);
 		
 		
@@ -133,7 +133,7 @@ public class TilføjVarer extends JPanel {
 		
 		String KategoriDropdown[] = {"Vælg kategori","Assaad","Fadi","Ziad","Ayhan","Kerim"};
 		combobox = new JComboBox<String>(KategoriDropdown);
-		combobox.setBounds(160, 151, 300, 20);
+		combobox.setBounds(130, 151, 300, 20);
 		add(combobox);
 		
 		Vtable = new JTable();
