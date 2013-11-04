@@ -5,6 +5,7 @@ import java.awt.Color;
 import java.awt.Font;
 
 import javax.swing.ImageIcon;
+import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTable;
@@ -18,6 +19,7 @@ public class TilføjKategori extends JPanel {
 	
 	private JTable Ktable;
 	private JTable Ktable1;
+	JComboBox<String> combobox1;
 
 	public TilføjKategori() {
 
@@ -39,13 +41,12 @@ public class TilføjKategori extends JPanel {
 		add(TilføjKategorinavn);
 
 		JTextField kattegorinavnText = new JTextField();
-		kattegorinavnText.setBounds(160, 92, 300, 20);
+		kattegorinavnText.setBounds(160, 90, 300, 20);
 		add(kattegorinavnText);
 		
-
 		Button TilføjKategori1 = new Button("Tilføj");
 		TilføjKategori1.setBackground(new Color(255,215,10));
-		TilføjKategori1.setBounds(627, 28, 70, 22);
+		TilføjKategori1.setBounds(391, 160, 70, 22);
 		TilføjKategori1.setForeground(Color.black);
 		add(TilføjKategori1);
 
@@ -53,11 +54,25 @@ public class TilføjKategori extends JPanel {
 		Ktable1.setBounds(12, 10, 710, 57);
 		Ktable1.setBackground(new Color(238, 238, 238));
 		add(Ktable1);
-
+		
+		JLabel TilføjOverKategori = new JLabel("Over kategori:");
+		TilføjOverKategori.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		TilføjOverKategori.setBounds(30, 120, 140, 20);
+		TilføjOverKategori.setForeground(Color.black);
+		add(TilføjOverKategori);
+		
+		String Kategori1[] = {"Vælg kategori","Assaad","Fadi","Ziad","Ayhan","Kerim"};
+		combobox1 = new JComboBox<String>(Kategori1);
+		combobox1.setBounds(160, 120, 300, 20);
+		add(combobox1);
+		
+		
 		Ktable = new JTable();
 		Ktable.setBounds(12, 71, 710, 405);
 		Ktable.setBackground(new Color(238, 238, 238));
 		add(Ktable);
+		
+		
 
 
 	}

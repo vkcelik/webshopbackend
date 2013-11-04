@@ -115,13 +115,13 @@ public class TilføjVarer extends JPanel {
 		
 		JTextPane BeskrivelseText = new JTextPane();
 		BeskrivelseText.setBackground(UIManager.getColor("TextPane.background"));
-		BeskrivelseText.setBounds(130, 305, 400, 100);
+		BeskrivelseText.setBounds(130, 305, 300, 100);
 		add(BeskrivelseText);
 		
 		
 		Button TilføjVarer = new Button("Tilføj");
 		TilføjVarer.setBackground(new Color(255,215,10));
-		TilføjVarer.setBounds(627, 28, 70, 22);
+		TilføjVarer.setBounds(360, 420, 70, 22);
 		TilføjVarer.setForeground(Color.black);
 		add(TilføjVarer);
 		

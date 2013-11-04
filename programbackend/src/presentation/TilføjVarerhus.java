@@ -33,25 +33,25 @@ public class TilføjVarerhus extends JPanel {
 		TilføjVarehus.setBounds(30, 30, 200, 30);
 		this.add(TilføjVarehus);
 		
-		JLabel varehusnavn = new JLabel("Varerhusnavn:");
+		JLabel varehusnavn = new JLabel("Navn:");
 		varehusnavn.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		varehusnavn.setBounds(30, 90, 120, 20);
 		varehusnavn.setForeground(Color.black);
 		add(varehusnavn);
 		
 		JTextField varehusnavnText = new JTextField();
-		varehusnavnText.setBounds(150, 90, 300, 20);
+		varehusnavnText.setBounds(130, 90, 300, 20);
 		add(varehusnavnText);
 		
 		
-		JLabel varehusadresse = new JLabel("Varerhusadresse:");
+		JLabel varehusadresse = new JLabel("Adresse:");
 		varehusadresse.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		varehusadresse.setBounds(30, 120, 130, 20);
 		varehusadresse.setForeground(Color.black);
 		add(varehusadresse);
 		
 		JTextField varehusadresseText = new JTextField();
-		varehusadresseText.setBounds(150, 120, 300, 20);
+		varehusadresseText.setBounds(130, 120, 300, 20);
 		add(varehusadresseText);
 		
 		JLabel BeskrivelseVarehus = new JLabel("Beskrivelse:");
@@ -62,12 +62,12 @@ public class TilføjVarerhus extends JPanel {
 		
 		JTextPane BeskrivelseVarehusText = new JTextPane();
 		BeskrivelseVarehusText.setBackground(UIManager.getColor("TextPane.background"));
-		BeskrivelseVarehusText.setBounds(150, 155, 400, 100);
+		BeskrivelseVarehusText.setBounds(130, 155, 300, 150);
 		add(BeskrivelseVarehusText);
 		
 		Button TilføjVarerhus = new Button("Tilføj");
 		TilføjVarerhus.setBackground(new Color(255,215,10));
-		TilføjVarerhus.setBounds(627, 28, 70, 22);
+		TilføjVarerhus.setBounds(380, 320, 70, 22);
 		TilføjVarerhus.setForeground(Color.black);
 		add(TilføjVarerhus);
 		

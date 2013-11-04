@@ -8,6 +8,7 @@ import javax.swing.*;
 
 
 
+
 public class BackEndSystem extends JFrame {
 
 	
@@ -54,7 +55,7 @@ public class BackEndSystem extends JFrame {
 
 
 		JMenuItem mntmNewMenuItem = new JMenuItem("Tilføj varer");
-		mntmNewMenuItem.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/catalog-icon (1).png")));
+		mntmNewMenuItem.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/1380431095_103.png")));
 		mnNewMenu.add(mntmNewMenuItem);
 
 		mntmNewMenuItem.addActionListener(new ActionListener() {
@@ -71,7 +72,7 @@ public class BackEndSystem extends JFrame {
 
 
 		JMenuItem mntmNewMenuItem_4 = new JMenuItem("Se/Rediger Varer");
-		mntmNewMenuItem_4.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/Start-Menu-Run-icon (1).png")));
+		mntmNewMenuItem_4.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/category-icon.png")));
 		mnNewMenu.add(mntmNewMenuItem_4);
 
 		mntmNewMenuItem_4.addActionListener(new ActionListener() {
@@ -108,6 +109,7 @@ public class BackEndSystem extends JFrame {
 		});
 
 		JMenuItem mntmNewMenuItem_5 = new JMenuItem("Se/Rediger varerhus");
+		mntmNewMenuItem_5.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/category-icon.png")));
 		mnNewMenu_1.add(mntmNewMenuItem_5);
 
 		mntmNewMenuItem_5.addActionListener(new ActionListener() {
@@ -240,9 +242,22 @@ public class BackEndSystem extends JFrame {
 
 		JMenu mnNewMenu_5 = new JMenu("Instillinger");
 		menuBar.add(mnNewMenu_5);
+		
+		JMenuItem mnNewMenu_51 = new JMenuItem("Se instillinger");
+		mnNewMenu_51.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/Start-Menu-Run-icon (1).png")));
+		mnNewMenu_5.add(mnNewMenu_51);
+		
+		
+		mnNewMenu_51.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
 
+				getContentPane().removeAll();
+				getContentPane().add(new Indstillinger());//Adding to content pane, not to Frame
+				repaint();
+				printAll(getGraphics());
 
-
+			}
+		});
 
 
 	}

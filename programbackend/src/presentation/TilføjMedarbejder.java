@@ -32,120 +32,111 @@ public class TilføjMedarbejder extends JPanel {
 		MedarbejderLabel.setBounds(30, 30, 260, 30);
 		this.add(MedarbejderLabel);
 
-		JLabel MedarbejderNr = new JLabel("Tilføj MedarbejderNr.:");
-		MedarbejderNr.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		MedarbejderNr.setBounds(30, 90, 150, 20);
-		MedarbejderNr.setForeground(Color.black);
-		add(MedarbejderNr);
 
-		JTextField MedarbejderNrText = new JTextField();
-		MedarbejderNrText.setBounds(190, 90, 300, 20);
-		add(MedarbejderNrText);
-
-		JLabel MedarbejderNavn = new JLabel("Tilføj Medarbejdernavn:");
+		JLabel MedarbejderNavn = new JLabel("Navn:");
 		MedarbejderNavn.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		MedarbejderNavn.setBounds(30, 120, 160, 20);
+		MedarbejderNavn.setBounds(30, 90, 160, 20);
 		MedarbejderNavn.setForeground(Color.black);
 		add(MedarbejderNavn);
 
 		JTextField MedarbejderNavnText = new JTextField();
-		MedarbejderNavnText.setBounds(190, 120, 300, 20);
+		MedarbejderNavnText.setBounds(190, 90, 300, 20);
 		add(MedarbejderNavnText);
 
-		JLabel MedarbejderAdresse = new JLabel("Tilføj Medarbejderadresse:");
+		JLabel MedarbejderAdresse = new JLabel("Adresse:");
 		MedarbejderAdresse.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		MedarbejderAdresse.setBounds(30, 150, 160, 20);
+		MedarbejderAdresse.setBounds(30, 120, 160, 20);
 		MedarbejderAdresse.setForeground(Color.black);
 		add(MedarbejderAdresse);
 
 		JTextField MedarbejderAdresseText = new JTextField();
-		MedarbejderAdresseText.setBounds(190, 150, 300, 20);
+		MedarbejderAdresseText.setBounds(190, 120, 300, 20);
 		add(MedarbejderAdresseText);
 
-		JLabel Medarbejderland = new JLabel("Tilføj Medarbejderland:");
+		JLabel Medarbejderland = new JLabel("Land:");
 		Medarbejderland.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		Medarbejderland.setBounds(30, 180, 160, 20);
+		Medarbejderland.setBounds(30, 150, 160, 20);
 		Medarbejderland.setForeground(Color.black);
 		add(Medarbejderland);
 
 		JTextField MedarbejderlandText = new JTextField();
-		MedarbejderlandText.setBounds(190, 180, 300, 20);
+		MedarbejderlandText.setBounds(190, 150, 300, 20);
 		add(MedarbejderlandText);
 
-		JLabel MedarbejderPostNr= new JLabel("Tilføj Medarbejderpostnr:");
+		JLabel MedarbejderPostNr= new JLabel("Postnr:");
 		MedarbejderPostNr.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		MedarbejderPostNr.setBounds(30, 210, 160, 20);
+		MedarbejderPostNr.setBounds(30, 180, 160, 20);
 		MedarbejderPostNr.setForeground(Color.black);
 		add(MedarbejderPostNr);
 
 		JTextField MedarbejderPostNrText = new JTextField();
-		MedarbejderPostNrText.setBounds(190, 210, 300, 20);
+		MedarbejderPostNrText.setBounds(190, 180, 300, 20);
 		add(MedarbejderPostNrText);
 		
-		JLabel MedarbejderEmail= new JLabel("Tilføj MedarbejderEmail:");
+		JLabel MedarbejderEmail= new JLabel("Email:");
 		MedarbejderEmail.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		MedarbejderEmail.setBounds(30, 240, 160, 20);
+		MedarbejderEmail.setBounds(30, 210, 160, 20);
 		MedarbejderEmail.setForeground(Color.black);
 		add(MedarbejderEmail);
 
 		JTextField MedarbejderEmailText = new JTextField();
-		MedarbejderEmailText.setBounds(190, 240, 300, 20);
+		MedarbejderEmailText.setBounds(190, 210, 300, 20);
 		add(MedarbejderEmailText);
 		
-		JLabel MedarbejderPassword = new JLabel("Tilføj Medarbejderpassword:");
+		JLabel MedarbejderPassword = new JLabel("Password:");
 		MedarbejderPassword.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		MedarbejderPassword.setBounds(30, 270, 160, 20);
+		MedarbejderPassword.setBounds(30, 240, 160, 20);
 		MedarbejderPassword.setForeground(Color.black);
 		add(MedarbejderPassword);
 
 		JTextField MedarbejderPasswordText = new JTextField();
-		MedarbejderPasswordText.setBounds(190, 270, 300, 20);
+		MedarbejderPasswordText.setBounds(190, 240, 300, 20);
 		add(MedarbejderPasswordText);
 		
-		JLabel MedarbejderLøn = new JLabel("Tilføj Medarbejderløn:");
+		JLabel MedarbejderLøn = new JLabel("Løn:");
 		MedarbejderLøn.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		MedarbejderLøn.setBounds(30, 300, 160, 20);
+		MedarbejderLøn.setBounds(30, 270, 160, 20);
 		MedarbejderLøn.setForeground(Color.black);
 		add(MedarbejderLøn);
 
 		JTextField MedarbejderLønText= new JTextField();
-		MedarbejderLønText.setBounds(190, 300, 300, 20);
+		MedarbejderLønText.setBounds(190, 270, 300, 20);
 		add(MedarbejderLønText);
 		
-		JLabel MedarbejderLønType = new JLabel("Tilføj Medarbejderløntype:");
+		JLabel MedarbejderLønType = new JLabel("Løntype:");
 		MedarbejderLønType.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		MedarbejderLønType.setBounds(30, 330, 160, 20);
+		MedarbejderLønType.setBounds(30, 300, 160, 20);
 		MedarbejderLønType.setForeground(Color.black);
 		add(MedarbejderLønType);
 
 		JTextField MedarbejderLønTypeText= new JTextField();
-		MedarbejderLønTypeText.setBounds(190, 330, 300, 20);
+		MedarbejderLønTypeText.setBounds(190, 300, 300, 20);
 		add(MedarbejderLønTypeText);
 		
-		JLabel MedarbejderCpr = new JLabel("Tilføj MedarbejderCpr.:");
+		JLabel MedarbejderCpr = new JLabel("Cpr.:");
 		MedarbejderCpr.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		MedarbejderCpr.setBounds(30, 360, 160, 20);
+		MedarbejderCpr.setBounds(30, 330, 160, 20);
 		MedarbejderCpr.setForeground(Color.black);
 		add(MedarbejderCpr);
 
 		JTextField MedarbejderCprText= new JTextField();
-		MedarbejderCprText.setBounds(190, 360, 300, 20);
+		MedarbejderCprText.setBounds(190, 330, 300, 20);
 		add(MedarbejderCprText);
 		
-		JLabel MedarbejderStilling = new JLabel("Tilføj Medarbejderstilling:");
+		JLabel MedarbejderStilling = new JLabel("Stilling:");
 		MedarbejderStilling.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		MedarbejderStilling.setBounds(30, 390, 160, 20);
+		MedarbejderStilling.setBounds(30, 360, 160, 20);
 		MedarbejderStilling.setForeground(Color.black);
 		add(MedarbejderStilling);
 
 		JTextField MedarbejderStillingText= new JTextField();
-		MedarbejderStillingText.setBounds(190, 390, 300, 20);
+		MedarbejderStillingText.setBounds(190, 360, 300, 20);
 		add(MedarbejderStillingText);
 		
 		
 		Button TilføjMedarbejder = new Button("Tilføj");
 		TilføjMedarbejder.setBackground(new Color(255,215,10));;
-		TilføjMedarbejder.setBounds(627, 28, 70, 22);
+		TilføjMedarbejder.setBounds(420, 395, 70, 22);
 		TilføjMedarbejder.setForeground(Color.black);
 		add(TilføjMedarbejder);
 
