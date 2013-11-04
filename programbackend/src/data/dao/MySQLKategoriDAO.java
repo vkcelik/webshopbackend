@@ -44,7 +44,6 @@ public class MySQLKategoriDAO implements IKategoriDAO {
 	public void createKategori(KategoriDTO kategori) throws DALException {
 		String s = "INSERT INTO Kategori(kategoriNummer, kategoriNavn, parent) VALUES " +
 				"(" + kategori.getKategoriNummer() + ", '" + kategori.getKategoriNavn()  + "', '" + kategori.getParent()  + "')";
-		System.out.println(s);
 		Connector.doUpdate(s);
 	}
 
