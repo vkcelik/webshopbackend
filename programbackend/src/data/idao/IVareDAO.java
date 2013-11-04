@@ -10,4 +10,4 @@ public interface IVareDAO {
 	void createVare(VareDTO vare) throws DALException;
 	void updateVare(VareDTO vare ) throws DALException;
 
-	}
+}
