@@ -88,23 +88,6 @@ public class BackEndSystem extends JFrame {
 
 
 
-		JMenuItem mntmNewMenuItem_2 = new JMenuItem("Slet varer");
-		mntmNewMenuItem_2.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/1380431140_150.png")));
-		mnNewMenu.add(mntmNewMenuItem_2);
-
-		mntmNewMenuItem_2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-
-
-				getContentPane().removeAll();
-				getContentPane().add(new SletVarer());//Adding to content pane, not to Frame
-				repaint();
-				printAll(getGraphics());
-
-			}
-		});
-
-
 		JMenu mnNewMenu_1 = new JMenu("Varerhus");
 		menuBar.add(mnNewMenu_1);
 
@@ -139,21 +122,6 @@ public class BackEndSystem extends JFrame {
 			}
 		});
 
-		JMenuItem mntmNewMenuItem_6 = new JMenuItem("Slet varehus");
-		mntmNewMenuItem_6.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/1380431140_150.png")));
-		mnNewMenu_1.add(mntmNewMenuItem_6);
-
-		mntmNewMenuItem_6.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-
-
-				getContentPane().removeAll();
-				getContentPane().add(new SletVarerhus());//Adding to content pane, not to Frame
-				repaint();
-				printAll(getGraphics());
-
-			}
-		});
 
 		JMenu mnNewMenu_2 = new JMenu("Kategorier");
 		menuBar.add(mnNewMenu_2);
@@ -191,21 +159,6 @@ public class BackEndSystem extends JFrame {
 		});
 
 
-		JMenuItem mntmNewMenuItem_11 = new JMenuItem("Slet kategori");
-		mntmNewMenuItem_11.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/1380431140_150.png")));
-		mnNewMenu_2.add(mntmNewMenuItem_11);
-
-		mntmNewMenuItem_11.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-
-
-				getContentPane().removeAll();
-				getContentPane().add(new SletKategori());//Adding to content pane, not to Frame
-				repaint();
-				printAll(getGraphics());
-
-			}
-		});
 
 		JMenu mnNewMenu_4 = new JMenu("Medarbejder");
 		menuBar.add(mnNewMenu_4);
@@ -243,22 +196,6 @@ public class BackEndSystem extends JFrame {
 		});
 
 
-		JMenuItem mntmNewMenuItem_19 = new JMenuItem("Slet medarbejeder");
-		mntmNewMenuItem_19.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/1380431140_150.png")));
-		mnNewMenu_4.add(mntmNewMenuItem_19);
-
-		mntmNewMenuItem_19.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-
-
-				getContentPane().removeAll();
-				getContentPane().add(new SletMedarbejder());//Adding to content pane, not to Frame
-				repaint();
-				printAll(getGraphics());
-
-			}
-		});
-
 		JMenu mnNewMenu_3 = new JMenu("Ordre");
 		menuBar.add(mnNewMenu_3);
 
@@ -279,21 +216,6 @@ public class BackEndSystem extends JFrame {
 			}
 		});
 
-		JMenuItem mntmNewMenuItem_16 = new JMenuItem("Slet ordre");
-		mntmNewMenuItem_16.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/1380431140_150.png")));
-		mnNewMenu_3.add(mntmNewMenuItem_16);
-
-		mntmNewMenuItem_16.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-
-
-				getContentPane().removeAll();
-				getContentPane().add(new SletOrdre());//Adding to content pane, not to Frame
-				repaint();
-				printAll(getGraphics());
-
-			}
-		});
 
 
 		JMenu mnNewMenu_8 = new JMenu("Statistik");
