@@ -21,13 +21,13 @@ public class TestAfKategori {
 		MySQLKategoriDAO ka = new MySQLKategoriDAO();
 		
 		System.out.println("Oprettelse af Kategori");
-		KategoriDTO kat1 = new KategoriDTO(1, "jeans");
+		KategoriDTO kat1 = new KategoriDTO(2, "jeans", 1);
 		try {ka.createKategori(kat1);}
 		catch (DALException e){System.out.println(e.getMessage());}
 		
 		
-		System.out.println("Hent Kategori nummer 1");
-		try {System.out.println(ka.getKategori(1).getKategoriNavn());}
+		System.out.println("Hent Kategori nummer 2");
+		try {System.out.println(ka.getKategori(2).getKategoriNavn());}
 		catch (DALException e){ System.out.println(e.getMessage());}
 		
 
@@ -35,7 +35,7 @@ public class TestAfKategori {
 		try {System.out.println(ka.getKategoriList());}
 		catch (DALException e) { System.out.println(e.getMessage()); }
 		
-		System.out.println("Ændrer jeans til bukser i nummer 1");
+		System.out.println("Ændrer jeans til bukser i nummer 2");
 		kat1.setKategoriNavn("bukser");
 		try {
 			ka.updateKategori(kat1);

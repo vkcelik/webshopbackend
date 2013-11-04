@@ -19,7 +19,7 @@ public class MySQLKategoriDAO implements IKategoriDAO {
 		ResultSet rs = Connector.doQuery("SELECT * FROM Kategori WHERE kategoriNummer = " + id);
 	    try {
 	    	if (!rs.first()) throw new DALException("Kategori med kategoriNummer " + id + " findes ikke."); 
-	    	return new KategoriDTO (rs.getInt(1), rs.getString(2));
+	    	return new KategoriDTO (rs.getInt(1), rs.getString(2), rs.getInt(3));
 	    }
 	    catch (SQLException e) {throw new DALException(e); }
 	
@@ -33,7 +33,7 @@ public class MySQLKategoriDAO implements IKategoriDAO {
 		{
 			while (rs.next()) 
 			{
-				list.add(new KategoriDTO(rs.getInt(1), rs.getString(2)));
+				list.add(new KategoriDTO(rs.getInt(1), rs.getString(2), rs.getInt(3)));
 			}
 		}
 		catch (SQLException e) { throw new DALException(e); }
@@ -42,18 +42,17 @@ public class MySQLKategoriDAO implements IKategoriDAO {
 
 	@Override
 	public void createKategori(KategoriDTO kategori) throws DALException {
-	
-		Connector.doUpdate(
-				"INSERT INTO Kategori(kategoriNummer, kategoriNavn) VALUES " +
-				"(" + kategori.getKategoriNummer() + ", '" + kategori.getKategoriNavn()  + "')");
-	
-		
+		String s = "INSERT INTO Kategori(kategoriNummer, kategoriNavn, parent) VALUES " +
+				"(" + kategori.getKategoriNummer() + ", '" + kategori.getKategoriNavn()  + "', '" + kategori.getParent()  + "')";
+		System.out.println(s);
+		Connector.doUpdate(s);
 	}
 
 	@Override
 	public void updateKategori(KategoriDTO kategori) throws DALException {
 		Connector.doUpdate(
 				"UPDATE Kategori SET kategoriNavn =  '" + kategori.getKategoriNavn() +
+				"', parent =  '" + kategori.getParent() +
 				"' WHERE kategoriNummer  = " + kategori.getKategoriNummer());
 	}
 }
