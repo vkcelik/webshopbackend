@@ -31,7 +31,7 @@ public class TilføjVarerhus extends JPanel {
 		TilføjVarehus.setBounds(30, 30, 200, 30);
 		this.add(TilføjVarehus);
 		
-		JLabel varehusnavn = new JLabel("Tilføj Varerhusnavn:");
+		JLabel varehusnavn = new JLabel("Varerhusnavn:");
 		varehusnavn.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		varehusnavn.setBounds(30, 90, 120, 20);
 		varehusnavn.setForeground(Color.black);
@@ -41,17 +41,8 @@ public class TilføjVarerhus extends JPanel {
 		varehusnavnText.setBounds(170, 90, 300, 20);
 		add(varehusnavnText);
 		
-		JLabel varehusnr = new JLabel("Tilføj Varerhusnummer:");
-		varehusnr.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		varehusnr.setBounds(30, 120, 130, 20);
-		varehusnr.setForeground(Color.black);
-		add(varehusnr);
 		
-		JTextField varehusnrText = new JTextField();
-		varehusnrText.setBounds(170, 120, 300, 20);
-		add(varehusnrText);
-		
-		JLabel varehusadresse = new JLabel("Tilføj Varerhusadresse:");
+		JLabel varehusadresse = new JLabel("Varerhusadresse:");
 		varehusadresse.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		varehusadresse.setBounds(30, 150, 130, 20);
 		varehusadresse.setForeground(Color.black);

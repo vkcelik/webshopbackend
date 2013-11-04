@@ -13,6 +13,7 @@ import javax.swing.JTextField;
 import java.awt.Button;
 import javax.swing.JTextPane;
 import javax.swing.UIManager;
+import javax.swing.JComboBox;
 
 
 
@@ -22,6 +23,8 @@ public class TilføjVarer extends JPanel {
 	
 		private JTable Vtable;
 		private JTable Vtable1;
+		JComboBox<String> combobox;
+	
 	
 		public TilføjVarer() {
 		
@@ -36,96 +39,83 @@ public class TilføjVarer extends JPanel {
 		VareLabel.setBounds(30, 28, 180, 32);
 		this.add(VareLabel);
 		
-		JLabel VareNummer = new JLabel("Tilføj varenummer:");
-		VareNummer.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		VareNummer.setBounds(30, 90, 120, 20);
-		VareNummer.setForeground(Color.black);
-		add(VareNummer);
 		
-		JTextField VareNummerText = new JTextField();
-		VareNummerText.setBounds(160, 90, 300, 20);
-		add(VareNummerText);
-		
-		JLabel VareNavn = new JLabel("Tilføj varenavn:");
+		JLabel VareNavn = new JLabel("Varenavn:");
 		VareNavn.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		VareNavn.setBounds(30, 120, 110, 20);
+		VareNavn.setBounds(30, 90, 120, 20);
 		VareNavn.setForeground(Color.black);
 		add(VareNavn);
 		
 		
 		JTextField VareNavnText = new JTextField();
-		VareNavnText.setBounds(160, 120, 300, 20);
+		VareNavnText.setBounds(160, 90, 300, 20);
 		add(VareNavnText);
 		
-		JLabel Pris = new JLabel("Tilføj pris:");
+		JLabel Pris = new JLabel("Pris:");
 		Pris.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		Pris.setBounds(30, 150, 110, 20);
+		Pris.setBounds(30, 120, 110, 20);
 		Pris.setForeground(Color.black);
 		add(Pris);
 		
 		JTextField PrisText = new JTextField();
-		PrisText.setBounds(160, 150, 300, 20);
+		PrisText.setBounds(160, 120, 300, 20);
 		add(PrisText);
 		
-		JLabel KategoriNummer = new JLabel("Tilføj kategorinummer:");
+		JLabel KategoriNummer = new JLabel("Kategori:");
 		KategoriNummer.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		KategoriNummer.setBounds(30, 180, 130, 20);
+		KategoriNummer.setBounds(30, 150, 130, 20);
 		KategoriNummer.setForeground(Color.black);
 		add(KategoriNummer);
 		
-		JTextField KategoriNummerText = new JTextField();
-		KategoriNummerText.setBounds(160, 180, 300, 20);
-		add(KategoriNummerText);
-		
-		JLabel Vægt = new JLabel("Tilføj vægt:");
+		JLabel Vægt = new JLabel("Vægt:");
 		Vægt.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		Vægt.setBounds(30, 210, 110, 20);
+		Vægt.setBounds(30, 180, 110, 20);
 		Vægt.setForeground(Color.black);
 		add(Vægt);
 		
 		JTextField VægtText = new JTextField();
-		VægtText.setBounds(160, 210, 300, 20);
+		VægtText.setBounds(160, 180, 300, 20);
 		add(VægtText);
 		
-		JLabel Bredde = new JLabel("Tilføj bredde:");
+		JLabel Bredde = new JLabel("Bredde:");
 		Bredde.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		Bredde.setBounds(30, 240, 110, 20);
+		Bredde.setBounds(30, 210, 110, 20);
 		Bredde.setForeground(Color.black);
 		add(Bredde);
 		
 		JTextField BreddeText = new JTextField();
-		BreddeText.setBounds(160, 240, 300, 20);
+		BreddeText.setBounds(160, 210, 300, 20);
 		add(BreddeText);
 		
-		JLabel Dybde = new JLabel("Tilføj dybde:");
+		JLabel Dybde = new JLabel("Dybde:");
 		Dybde.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		Dybde.setBounds(30, 270, 110, 20);
+		Dybde.setBounds(30, 240, 110, 20);
 		Dybde.setForeground(Color.black);
 		add(Dybde);
 		
 		JTextField DybdeText = new JTextField();
-		DybdeText.setBounds(160, 270, 300, 20);
+		DybdeText.setBounds(160, 240, 300, 20);
 		add(DybdeText);
 		
-		JLabel Højde = new JLabel("Tilføj højde:");
+		JLabel Højde = new JLabel("Højde:");
 		Højde.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		Højde.setBounds(30, 300, 110, 20);
+		Højde.setBounds(30, 270, 110, 20);
 		Højde.setForeground(Color.black);
 		add(Højde);
 		
 		JTextField HøjdeText = new JTextField();
-		HøjdeText.setBounds(160, 300, 300, 20);
+		HøjdeText.setBounds(160, 270, 300, 20);
 		add(HøjdeText);
 		
-		JLabel Beskrivelse = new JLabel("Tilføj Beskrivelse:");
+		JLabel Beskrivelse = new JLabel("Beskrivelse:");
 		Beskrivelse.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		Beskrivelse.setBounds(30, 345, 110, 20);
+		Beskrivelse.setBounds(30, 300, 110, 20);
 		Beskrivelse.setForeground(Color.black);
 		add(Beskrivelse);
 		
 		JTextPane BeskrivelseText = new JTextPane();
 		BeskrivelseText.setBackground(UIManager.getColor("TextPane.background"));
-		BeskrivelseText.setBounds(160, 345, 400, 100);
+		BeskrivelseText.setBounds(160, 305, 400, 100);
 		add(BeskrivelseText);
 		
 		
@@ -135,16 +125,23 @@ public class TilføjVarer extends JPanel {
 		TilføjVarer.setForeground(Color.black);
 		add(TilføjVarer);
 		
+		
+		Vtable1 = new JTable();
+		Vtable1.setBounds(12, 10, 710, 57);
+		Vtable1.setBackground(new Color(238, 238, 238));
+		add(Vtable1);
+		
+		String KategoriDropdown[] = {"Vælg kategori","Assaad","Fadi","Ziad","Ayhan","Kerim"};
+		combobox = new JComboBox<String>(KategoriDropdown);
+		combobox.setBounds(160, 151, 300, 20);
+		add(combobox);
+		
 		Vtable = new JTable();
 		Vtable.setBounds(12, 71, 710, 405);
 		Vtable.setBackground(new Color(238, 238, 238));
 		add(Vtable);
 		
 		
-		Vtable1 = new JTable();
-		Vtable1.setBounds(12, 10, 710, 57);
-		Vtable1.setBackground(new Color(238, 238, 238));
-		add(Vtable1);
 		
 		
 		 
