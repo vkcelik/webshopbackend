@@ -28,6 +28,9 @@ public class kategoriDropdown {
 			KategoriDropdown[i]=kats.get(i).getKategoriNavn();
 		}
 
+		for (String s: KategoriDropdown){
+			System.out.println(s);
+		}
 		
 	}
 }
