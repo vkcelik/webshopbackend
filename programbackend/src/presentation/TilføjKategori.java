@@ -5,6 +5,8 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
+import java.util.List;
 
 import javax.swing.ImageIcon;
 import javax.swing.JComboBox;
@@ -12,6 +14,10 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTable;
 import javax.swing.JTextField;
+
+import data.connect.Connector;
+import data.dao.MySQLKategoriDAO;
+import data.idao.DALException;
 
 import logic.dto.KategoriDTO;
 
@@ -66,8 +72,29 @@ public class TilføjKategori extends JPanel {
 		TilføjOverKategori.setForeground(Color.black);
 		add(TilføjOverKategori);
 		
-		String Kategori1[] = {"Vælg kategori","Assaad","Fadi","Ziad","Ayhan","Kerim"};
-		combobox1 = new JComboBox<String>(Kategori1);
+		/* Henter navnene på kategorier fra database til vores combobox */
+		
+		String KategoriDropdown[];
+		List<KategoriDTO> kats = null;
+		
+		try { new Connector(); }
+		catch (InstantiationException e){ e.printStackTrace(); }
+		catch (IllegalAccessException e){ e.printStackTrace(); }
+		catch (ClassNotFoundException e){ e.printStackTrace(); }
+		catch (SQLException e){ e.printStackTrace(); }
+		
+		MySQLKategoriDAO kaDd = new MySQLKategoriDAO();
+		try {kats = kaDd.getKategoriList();}
+		catch (DALException e) { System.out.println(e.getMessage()); }
+		
+		KategoriDropdown = new String[kats.size()];
+		for (int i=0; i < kats.size(); i++){
+			KategoriDropdown[i]=kats.get(i).getKategoriNavn();
+		}
+		
+		// Opretter comboxen med navnene fra herover
+		
+		combobox1 = new JComboBox<String>(KategoriDropdown);
 		combobox1.setBounds(230, 120, 300, 20);
 		add(combobox1);
 		

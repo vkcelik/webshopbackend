@@ -7,6 +7,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTable;
+import javax.swing.border.LineBorder;
 
 
 
@@ -15,6 +16,7 @@ public class SeRedigerVare extends JPanel {
 
 	private JTable SEVtable;
 	private JTable SEVtable1;
+	
 
 	public SeRedigerVare() {
 
@@ -34,6 +36,9 @@ public class SeRedigerVare extends JPanel {
 		SEVtable.setBounds(12, 71, 710, 405);
 		SEVtable.setBackground(new Color(238, 238, 238));
 		add(SEVtable);
+		
+		LineBorder lineBorder =new LineBorder(Color.black, 6, true);
+		
 		
 		
 		SEVtable1 = new JTable();
