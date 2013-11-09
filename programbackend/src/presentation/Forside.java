@@ -27,8 +27,7 @@ public class Forside extends JPanel {
 		add(Label1, BorderLayout.PAGE_START);
 		
 		
-		
-		
+	
 		
 		
 		

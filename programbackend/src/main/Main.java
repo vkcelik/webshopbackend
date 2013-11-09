@@ -2,7 +2,8 @@ package main;
 
 import java.awt.EventQueue;
 
-import presentation.BackEndSystem;
+
+import presentation.LogInd;
 
 
 public class Main {
@@ -11,7 +12,7 @@ public class Main {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					BackEndSystem frame = new BackEndSystem();
+					LogInd frame = new LogInd();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();

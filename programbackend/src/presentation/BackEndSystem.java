@@ -15,21 +15,20 @@ public class BackEndSystem extends JFrame {
 	
 	private JPanel contentPane;
 	
+	
 	public BackEndSystem() {
+		
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setTitle("Backend System");
 		setBounds(100, 100, 750, 550);
 		contentPane = new JPanel();
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane); 
-		contentPane.setBackground(new Color(51, 161, 201));
 		contentPane.add(new Forside());
+		contentPane.setBackground(new Color(51, 161, 201));
 		
 		
-
-
-
-
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
 
