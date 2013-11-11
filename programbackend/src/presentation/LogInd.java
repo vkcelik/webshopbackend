@@ -14,13 +14,15 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.KeyStroke;
 
+import controller.LogindController;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 
 
 public class LogInd extends JFrame {
-	
+	LogindController controller;
 
 	private JPanel LogIndPanel;
 	private JPasswordField password;
@@ -64,31 +66,8 @@ public class LogInd extends JFrame {
 		
 		LogInd1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				
-				if(Username.getText().trim().length()== 0 || password.getText().length()==0){
-					JOptionPane.showMessageDialog(null, "Udfyld Brugernavn og adgangskode");
-				
-				} 
-				else {
-					if(Username.getText().equals("assaad") && password.getText().equals("kerim"))
-						
-					
-					{
-						
-						BackEndSystem Logind =new BackEndSystem();
-						Logind.setVisible(true);
-						dispose();
-					}
-					
-				
-					
-					else {
-						JOptionPane.showMessageDialog(null, "Ugyldigt Brugernavn eller adgangskode", "Fejl Meddelse", JOptionPane.ERROR_MESSAGE);
-					
-						
-						
-								
-							}}}});
+				controller.login(Username, password);
+			}});
 		
 		
 		JLabel LogIndPanel = new JLabel("");
@@ -97,6 +76,10 @@ public class LogInd extends JFrame {
 		getContentPane().add(LogIndPanel);
 		
 		
+	}
+	
+	public void setController(LogindController controller){
+		this.controller = controller;
 	}
 
 }

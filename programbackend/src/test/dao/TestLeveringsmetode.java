@@ -3,10 +3,8 @@ package test.dao;
 
 import java.sql.SQLException;
 import logic.dto.LeveringsmetodeDTO;
-import logic.dto.RolleDTO;
 import data.connect.Connector;
 import data.dao.MySQLLeveringsmetodeDAO;
-import data.dao.MySQLRolleDAO;
 import data.idao.DALException;
 
 public class TestLeveringsmetode

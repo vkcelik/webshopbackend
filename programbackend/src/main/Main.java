@@ -2,6 +2,8 @@ package main;
 
 import java.awt.EventQueue;
 
+import controller.LogindController;
+
 
 import presentation.LogInd;
 
@@ -14,6 +16,8 @@ public class Main {
 				try {
 					LogInd frame = new LogInd();
 					frame.setVisible(true);
+					LogindController kc = new LogindController(frame);
+					
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
