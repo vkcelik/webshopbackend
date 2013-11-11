@@ -1,5 +1,6 @@
 package presentation;
 
+import java.awt.Button;
 import java.awt.Color;
 import java.awt.Font;
 
@@ -78,6 +79,22 @@ public class TilføjKunde extends JPanel {
 		JTextField KundePostNrText = new JTextField();
 		KundePostNrText.setBounds(230, 210, 300, 20);
 		add(KundePostNrText);
+		
+		JLabel KundeTelefon = new JLabel("Telefon:");
+		KundeTelefon.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		KundeTelefon.setBounds(150, 240, 160, 20);
+		KundeTelefon.setForeground(Color.black);
+		add(KundeTelefon);
+
+		JTextField KundeTelefonText = new JTextField();
+		KundeTelefonText.setBounds(230, 240, 300, 20);
+		add(KundeTelefonText);
+		
+		Button TilføjKunde= new Button("Tilføj");
+		TilføjKunde.setBackground(new Color(255,215,10));;
+		TilføjKunde.setBounds(460, 275, 70, 22);
+		TilføjKunde.setForeground(Color.black);
+		add(TilføjKunde);
 		
 		Vtable1 = new JTable();
 		Vtable1.setBounds(12, 10, 710, 57);

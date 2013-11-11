@@ -199,7 +199,7 @@ public class BackEndSystem extends JFrame {
 		});
 		
 		JMenuItem mntmNewMenuItem_323 = new JMenuItem("Rediger Kunde");
-		mntmNewMenuItem_13.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/users-icon.png")));
+		mntmNewMenuItem_323.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/category-icon.png")));
 		mnNewMenu_32.add(mntmNewMenuItem_323);
 
 		mntmNewMenuItem_323.addActionListener(new ActionListener() {
