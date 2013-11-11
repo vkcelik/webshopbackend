@@ -44,7 +44,7 @@ public class TilføjVarerhus extends JPanel {
 		add(varehusnavn);
 		
 		JTextField varehusnavnText = new JTextField();
-		varehusnavnText.setBounds(230, 90, 300, 20);
+		varehusnavnText.setBounds(240, 90, 300, 20);
 		add(varehusnavnText);
 		
 		
@@ -55,23 +55,32 @@ public class TilføjVarerhus extends JPanel {
 		add(varehusadresse);
 		
 		JTextField varehusadresseText = new JTextField();
-		varehusadresseText.setBounds(230, 120, 300, 20);
+		varehusadresseText.setBounds(240, 120, 300, 20);
 		add(varehusadresseText);
 		
-		JLabel BeskrivelseVarehus = new JLabel("Beskrivelse:");
-		BeskrivelseVarehus.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		BeskrivelseVarehus.setBounds(160, 150, 110, 20);
-		BeskrivelseVarehus.setForeground(Color.black);
-		add(BeskrivelseVarehus);
+		JLabel PostVarehus = new JLabel("Postnr.:");
+		PostVarehus.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		PostVarehus.setBounds(160, 150, 110, 20);
+		PostVarehus.setForeground(Color.black);
+		add(PostVarehus);
 		
-		JTextPane BeskrivelseVarehusText = new JTextPane();
-		BeskrivelseVarehusText.setBackground(UIManager.getColor("TextPane.background"));
-		BeskrivelseVarehusText.setBounds(230, 155, 300, 150);
-		add(BeskrivelseVarehusText);
+		JTextField PostVarehusText = new JTextField();
+		PostVarehusText.setBounds(240, 150, 300, 20);
+		add(PostVarehusText);
+		
+		JLabel Leveringstid = new JLabel("Leveringstid:");
+		Leveringstid.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		Leveringstid.setBounds(160, 180, 110, 20);
+		Leveringstid.setForeground(Color.black);
+		add(Leveringstid);
+		
+		JTextField LeveringstidText = new JTextField();
+		LeveringstidText.setBounds(240, 180, 300, 20);
+		add(LeveringstidText);
 		
 		Button TilføjVarerhus = new Button("Tilføj");
 		TilføjVarerhus.setBackground(new Color(255,215,10));
-		TilføjVarerhus.setBounds(460, 320, 70, 22);
+		TilføjVarerhus.setBounds(468, 215, 70, 22);
 		TilføjVarerhus.setForeground(Color.black);
 		add(TilføjVarerhus);
 		

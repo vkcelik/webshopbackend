@@ -5,8 +5,11 @@ import java.awt.Color;
 import java.awt.Font;
 
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JRadioButton;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 
@@ -133,16 +136,27 @@ public class TilføjMedarbejder extends JPanel {
 		MedarbejderStilling.setForeground(Color.black);
 		add(MedarbejderStilling);
 
-		JTextField MedarbejderStillingText= new JTextField();
-		MedarbejderStillingText.setBounds(230, 360, 300, 20);
-		add(MedarbejderStillingText);
+		JCheckBox LagerMedarbejder = new JCheckBox("LagerMedarbejder");
+		LagerMedarbejder.setBounds(225, 360, 130, 20);
+		add(LagerMedarbejder);
 		
+		JCheckBox HRMedarbejder = new JCheckBox("HRMedarbejder");
+		HRMedarbejder.setBounds(360, 360, 120, 20);
+		add(HRMedarbejder);
+		
+		JCheckBox SalgsMedarbejder = new JCheckBox("HRMedarbejder");
+		SalgsMedarbejder.setBounds(485, 360, 130, 20);
+		add(SalgsMedarbejder);
 		
 		Button TilføjMedarbejder = new Button("Tilføj");
 		TilføjMedarbejder.setBackground(new Color(255,215,10));;
 		TilføjMedarbejder.setBounds(457, 395, 70, 22);
 		TilføjMedarbejder.setForeground(Color.black);
 		add(TilføjMedarbejder);
+		
+		
+		
+		
 
 		Mtable1 = new JTable();
 		Mtable1.setBounds(12, 10, 710, 57);
@@ -153,7 +167,8 @@ public class TilføjMedarbejder extends JPanel {
 		Mtable.setBounds(12, 71, 710, 405);
 		Mtable.setBackground(new Color(238, 238, 238));
 		add(Mtable);
-
+		
+	
 
 	}
 
