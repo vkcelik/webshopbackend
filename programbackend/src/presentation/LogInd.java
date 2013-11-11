@@ -70,7 +70,7 @@ public class LogInd extends JFrame {
 				
 				} 
 				else {
-					if(Username.getText().equals("assaad") && password.getText().equals("kerim"))
+					if(Username.getText().equals("Ayhan") && password.getText().equals("Fadi"))
 						
 					
 					{

@@ -11,14 +11,14 @@ import javax.swing.border.LineBorder;
 
 
 
-public class SeRedigerVare extends JPanel {
+public class RedigerSletVare extends JPanel {
 
 
 	private JTable SEVtable;
 	private JTable SEVtable1;
 	
 
-	public SeRedigerVare() {
+	public RedigerSletVare() {
 
 
 		this.setBackground(new Color(51, 161, 201));

@@ -10,13 +10,13 @@ import javax.swing.JTable;
 
 
 
-public class SeRedigerKategori extends JPanel {
+public class RedigerSletKategori extends JPanel {
 
 	
 	private JTable SERtable;
 	private JTable SERtable1;
 
-	public SeRedigerKategori() {
+	public RedigerSletKategori() {
 
 
 		this.setBackground(new Color(51, 161, 201));
