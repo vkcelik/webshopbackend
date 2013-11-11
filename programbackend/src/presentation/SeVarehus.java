@@ -4,7 +4,6 @@ import java.awt.Color;
 import java.awt.Font;
 
 import javax.swing.ImageIcon;
-import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTable;
@@ -31,10 +30,6 @@ public class SeVarehus extends JPanel {
 		SeRedigerVarehus.setBounds(30, 30, 280, 30);
 		this.add(SeRedigerVarehus);
 		
-		JButton btnNewButton = new JButton("Log Ind");
-		btnNewButton.setBackground(new Color(202,237,249));
-		btnNewButton.setBounds(322, 304, 120, 23);
-		add(btnNewButton);
 
 		SEVHtable = new JTable();
 		SEVHtable.setBounds(12, 71, 710, 405);
