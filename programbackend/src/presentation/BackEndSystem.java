@@ -62,7 +62,7 @@ public class BackEndSystem extends JFrame {
 
 
 				getContentPane().removeAll();
-				getContentPane().add(new SeRedigerVare());//Adding to content pane, not to Frame
+				getContentPane().add(new RedigerSletVare());//Adding to content pane, not to Frame
 				repaint();
 				printAll(getGraphics());
 
@@ -99,7 +99,7 @@ public class BackEndSystem extends JFrame {
 
 
 				getContentPane().removeAll();
-				getContentPane().add(new SeVarehus());//Adding to content pane, not to Frame
+				getContentPane().add(new SeSletVarehus());//Adding to content pane, not to Frame
 				repaint();
 				printAll(getGraphics());
 
@@ -135,7 +135,7 @@ public class BackEndSystem extends JFrame {
 
 
 				getContentPane().removeAll();
-				getContentPane().add(new SeRedigerKategori());//Adding to content pane, not to Frame
+				getContentPane().add(new RedigerSletKategori());//Adding to content pane, not to Frame
 				repaint();
 				printAll(getGraphics());
 
@@ -172,12 +172,49 @@ public class BackEndSystem extends JFrame {
 
 
 				getContentPane().removeAll();
-				getContentPane().add(new SeRedigerMedarbejder());//Adding to content pane, not to Frame
+				getContentPane().add(new RedigerSletMedarbejder());//Adding to content pane, not to Frame
 				repaint();
 				printAll(getGraphics());
 
 			}
 		});
+		
+		JMenu mnNewMenu_32 = new JMenu("Kunde");
+		menuBar.add(mnNewMenu_32);
+		
+		JMenuItem mntmNewMenuItem_32 = new JMenuItem("Tilføj Kunde");
+		mntmNewMenuItem_32.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/1380431095_103.png")));
+		mnNewMenu_32.add(mntmNewMenuItem_32);
+
+		mntmNewMenuItem_32.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+
+				getContentPane().removeAll();
+				getContentPane().add(new TilføjKunde());//Adding to content pane, not to Frame
+				repaint();
+				printAll(getGraphics());
+
+			}
+		});
+		
+		JMenuItem mntmNewMenuItem_323 = new JMenuItem("Rediger Kunde");
+		mntmNewMenuItem_13.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/users-icon.png")));
+		mnNewMenu_32.add(mntmNewMenuItem_323);
+
+		mntmNewMenuItem_323.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+
+				getContentPane().removeAll();
+				getContentPane().add(new RedigerSletKunde());//Adding to content pane, not to Frame
+				repaint();
+				printAll(getGraphics());
+
+			}
+		});
+		
+		
 
 
 		JMenu mnNewMenu_3 = new JMenu("Ordre");

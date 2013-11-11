@@ -68,6 +68,7 @@ public class LogInd extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				controller.login(Username, password);
 			}});
+
 		
 		
 		JLabel LogIndPanel = new JLabel("");
