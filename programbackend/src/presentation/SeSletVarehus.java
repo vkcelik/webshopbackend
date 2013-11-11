@@ -10,14 +10,14 @@ import javax.swing.JTable;
 
 
 
-public class SeVarehus extends JPanel {
+public class SeSletVarehus extends JPanel {
 
 	
 	
 	private JTable SEVHtable;
 	private JTable SEVHtable1;
 
-	public SeVarehus() {
+	public SeSletVarehus() {
 
 
 		this.setBackground(new Color(51, 161, 201));

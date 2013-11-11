@@ -5,6 +5,8 @@ import java.awt.Button;
 import java.awt.Color;
 import java.awt.Font;
 import presentation.BackEndSystem;
+
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTable;
@@ -47,6 +49,7 @@ public class Forside extends JPanel {
 				
 				LogInd Logud =new LogInd();
 				Logud.setVisible(true);
+				System.exit(0);
 				
 			}
 		});
@@ -55,7 +58,7 @@ public class Forside extends JPanel {
 		Logud.setForeground(Color.black);
 		add(Logud);
 		
-
+		
 		
 		Vtable = new JTable();
 		Vtable.setBounds(12, 71, 710, 405);

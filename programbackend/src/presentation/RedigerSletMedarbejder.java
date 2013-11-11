@@ -8,13 +8,13 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTable;
 
-public class SeRedigerMedarbejder extends JPanel {
+public class RedigerSletMedarbejder extends JPanel {
 	
 	
 	private JTable SEMtable;
 	private JTable SEMtable1;
 	
-	public SeRedigerMedarbejder() {
+	public RedigerSletMedarbejder() {
 		
 		
 		this.setBackground(new Color(51, 161, 201));
