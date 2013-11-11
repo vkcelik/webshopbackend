@@ -17,7 +17,6 @@ public class Main {
 					LogInd frame = new LogInd();
 					frame.setVisible(true);
 					LogindController kc = new LogindController(frame);
-					
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

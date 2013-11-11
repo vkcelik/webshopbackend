@@ -21,11 +21,11 @@ public class LogindController {
 
 	public void login(JTextField usernameField, JPasswordField passwordField) {		
 		
-		if(usernameField.getText().trim().length()== 0 || passwordField.getText().length()==0){
+		if(usernameField.getText().trim().length()== 0 || passwordField.getPassword().length==0){
 			JOptionPane.showMessageDialog(null, "Udfyld Brugernavn og adgangskode");
 		} 
 		else {
-			if(usernameField.getText().equals("assaad") && passwordField.getText().equals("kerim")) {
+			if(usernameField.getText().equals("assaad") && new String(passwordField.getPassword()).equals("kerim")) {
 				BackEndSystem Logind =new BackEndSystem();
 				Logind.setVisible(true);
 				frame.dispose();
