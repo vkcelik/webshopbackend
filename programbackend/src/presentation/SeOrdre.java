@@ -13,6 +13,10 @@ import javax.swing.JTable;
 public class SeOrdre extends JPanel {
 
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 807936107106094470L;
 	private JTable SOtable;
 	private JTable SOtable1;
 

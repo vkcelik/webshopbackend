@@ -25,6 +25,10 @@ public class TilføjKategori extends JPanel {
 
 
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1541797465235551941L;
 	private JTable Ktable;
 	private JTable Ktable1;
 	JComboBox<String> combobox1;

@@ -17,6 +17,10 @@ import javax.swing.UIManager;
 public class TilføjVarerhus extends JPanel {
 	
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5911075244950799116L;
 	private JTable VHtable;
 	private JTable VHtable1;
 	

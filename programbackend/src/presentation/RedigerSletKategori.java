@@ -13,6 +13,10 @@ import javax.swing.JTable;
 public class RedigerSletKategori extends JPanel {
 
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3751582900083047274L;
 	private JTable SERtable;
 	private JTable SERtable1;
 

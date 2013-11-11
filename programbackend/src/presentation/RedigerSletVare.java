@@ -14,6 +14,10 @@ import javax.swing.border.LineBorder;
 public class RedigerSletVare extends JPanel {
 
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3093153771109800762L;
 	private JTable SEVtable;
 	private JTable SEVtable1;
 	

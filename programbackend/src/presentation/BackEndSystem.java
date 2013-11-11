@@ -13,6 +13,10 @@ public class BackEndSystem extends JFrame {
 
 	
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8393533657049762354L;
 	private JPanel contentPane;
 	
 	

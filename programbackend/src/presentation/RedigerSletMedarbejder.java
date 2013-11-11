@@ -11,6 +11,10 @@ import javax.swing.JTable;
 public class RedigerSletMedarbejder extends JPanel {
 	
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6524266733520926848L;
 	private JTable SEMtable;
 	private JTable SEMtable1;
 	

@@ -14,6 +14,10 @@ import java.awt.event.ActionListener;
 public class Forside extends JPanel {
 
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -9107024277786612174L;
 	private JTable Vtable;
 	private JTable Vtable1;
 	

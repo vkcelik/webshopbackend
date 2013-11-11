@@ -11,6 +11,10 @@ import javax.swing.JTextField;
 
 public class TilføjKunde extends JPanel {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7740794442244469219L;
 	private JTable Vtable;
 	private JTable Vtable1;
 

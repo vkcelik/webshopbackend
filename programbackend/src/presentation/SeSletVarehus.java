@@ -14,6 +14,10 @@ public class SeSletVarehus extends JPanel {
 
 	
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8489392455577731305L;
 	private JTable SEVHtable;
 	private JTable SEVHtable1;
 

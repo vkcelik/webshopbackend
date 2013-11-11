@@ -29,6 +29,10 @@ import data.idao.DALException;
 public class TilføjVarer extends JPanel {
 	
 	
+		/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2533980648166217598L;
 		private JTable Vtable;
 		private JTable Vtable1;
 		JComboBox<String> combobox;

@@ -15,6 +15,10 @@ import javax.swing.JTextField;
 public class TilføjMedarbejder extends JPanel {
 
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6340894832099128364L;
 	private JTable Mtable;
 	private JTable Mtable1;
 

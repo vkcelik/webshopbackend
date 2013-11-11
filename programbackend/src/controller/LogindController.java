@@ -1,8 +1,5 @@
 package controller;
 
-import java.awt.Component;
-import java.util.List;
-
 import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
