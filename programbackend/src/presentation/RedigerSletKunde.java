@@ -8,11 +8,14 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTable;
 
+import controller.KundeController;
+
 public class RedigerSletKunde extends JPanel {
 
 	
 	private JTable RSKtable;
 	private JTable RSKtable1;
+	private KundeController controller;
 	
 	/**
 	 * 
@@ -25,7 +28,7 @@ public class RedigerSletKunde extends JPanel {
 		setLayout(null);
 		
 		JLabel SeRedigerKunde= new JLabel("Se/Rediger Kunde");
-		SeRedigerKunde.setIcon(new ImageIcon(TilføjVarer.class.getResource("/presentation/resources/Run.png")));
+		SeRedigerKunde.setIcon(new ImageIcon(TilføjVare.class.getResource("/presentation/resources/Run.png")));
 		SeRedigerKunde.setFont(new Font("sansserif", Font.BOLD, 24));
 		SeRedigerKunde.setForeground(Color.black);
 		SeRedigerKunde.setBounds(30, 30, 330, 30);
@@ -42,6 +45,11 @@ public class RedigerSletKunde extends JPanel {
 		RSKtable1.setBackground(new Color(238, 238, 238));
 		add(RSKtable1);
 
+	}
+
+	public void setController(KundeController kundeController) {
+		this.controller = kundeController;
+		
 	}
 
 }

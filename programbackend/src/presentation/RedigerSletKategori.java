@@ -8,6 +8,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTable;
 
+import controller.KategoriController;
+
 
 
 public class RedigerSletKategori extends JPanel {
@@ -19,6 +21,7 @@ public class RedigerSletKategori extends JPanel {
 	private static final long serialVersionUID = 3751582900083047274L;
 	private JTable SERtable;
 	private JTable SERtable1;
+	private KategoriController controller;
 
 	public RedigerSletKategori() {
 
@@ -27,7 +30,7 @@ public class RedigerSletKategori extends JPanel {
 		setLayout(null);
 
 		JLabel SeRedigerKategori = new JLabel("Se/Rediger Kategori");
-		SeRedigerKategori.setIcon(new ImageIcon(TilføjVarer.class.getResource("/presentation/resources/Run.png")));
+		SeRedigerKategori.setIcon(new ImageIcon(TilføjVare.class.getResource("/presentation/resources/Run.png")));
 		SeRedigerKategori.setFont(new Font("sansserif", Font.BOLD, 24));
 		SeRedigerKategori.setForeground(Color.black);
 		SeRedigerKategori.setBounds(30, 30, 280, 30);
@@ -46,6 +49,10 @@ public class RedigerSletKategori extends JPanel {
 		
 		
 		
+	}
+	
+	public void setController(KategoriController controller){
+		this.controller = controller;
 	}
 
 }

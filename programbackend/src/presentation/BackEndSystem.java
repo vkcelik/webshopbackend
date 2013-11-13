@@ -49,7 +49,7 @@ public class BackEndSystem extends JFrame {
 
 
 				getContentPane().removeAll();
-				getContentPane().add(new TilføjVarer());//Adding to content pane, not to Frame
+				getContentPane().add(new TilføjVare());//Adding to content pane, not to Frame
 				repaint();
 				printAll(getGraphics());
 
@@ -87,7 +87,7 @@ public class BackEndSystem extends JFrame {
 
 
 				getContentPane().removeAll();
-				getContentPane().add(new TilføjVarerhus());//Adding to content pane, not to Frame
+				getContentPane().add(new TilføjVarehus());//Adding to content pane, not to Frame
 				repaint();
 				printAll(getGraphics());
 

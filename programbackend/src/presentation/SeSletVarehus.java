@@ -8,6 +8,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTable;
 
+import controller.VarehusController;
+
 
 
 public class SeSletVarehus extends JPanel {
@@ -20,6 +22,7 @@ public class SeSletVarehus extends JPanel {
 	private static final long serialVersionUID = -8489392455577731305L;
 	private JTable SEVHtable;
 	private JTable SEVHtable1;
+	private VarehusController controller;
 
 	public SeSletVarehus() {
 
@@ -28,7 +31,7 @@ public class SeSletVarehus extends JPanel {
 		setLayout(null);
 
 		JLabel SeRedigerVarehus = new JLabel("Se/Rediger Varerhus");
-		SeRedigerVarehus.setIcon(new ImageIcon(TilføjVarer.class.getResource("/presentation/resources/Run.png")));
+		SeRedigerVarehus.setIcon(new ImageIcon(TilføjVare.class.getResource("/presentation/resources/Run.png")));
 		SeRedigerVarehus.setFont(new Font("sansserif", Font.BOLD, 24));
 		SeRedigerVarehus.setForeground(Color.black);
 		SeRedigerVarehus.setBounds(30, 30, 280, 30);
@@ -46,6 +49,10 @@ public class SeSletVarehus extends JPanel {
 		SEVHtable1.setBackground(new Color(238, 238, 238));
 		add(SEVHtable1);
 		
+	}
+
+	public void setController(VarehusController varehusController) {
+		this.controller = varehusController;
 	}
 
 }

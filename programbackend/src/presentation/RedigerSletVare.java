@@ -33,7 +33,7 @@ public class RedigerSletVare extends JPanel {
 		setLayout(null);
 
 		JLabel SeRedigerVare = new JLabel("Se/Rediger Varer");
-		SeRedigerVare.setIcon(new ImageIcon(TilføjVarer.class.getResource("/presentation/resources/Run.png")));
+		SeRedigerVare.setIcon(new ImageIcon(TilføjVare.class.getResource("/presentation/resources/Run.png")));
 		SeRedigerVare.setFont(new Font("sansserif", Font.BOLD, 24));
 		SeRedigerVare.setForeground(Color.black);
 		SeRedigerVare.setBounds(30, 30, 230, 30);

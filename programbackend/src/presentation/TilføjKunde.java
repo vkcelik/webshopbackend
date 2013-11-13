@@ -10,6 +10,8 @@ import javax.swing.JPanel;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 
+import controller.KundeController;
+
 public class TilføjKunde extends JPanel {
 	
 	/**
@@ -18,6 +20,7 @@ public class TilføjKunde extends JPanel {
 	private static final long serialVersionUID = -7740794442244469219L;
 	private JTable Vtable;
 	private JTable Vtable1;
+	private KundeController controller;
 
 
 	public TilføjKunde() {
@@ -26,7 +29,7 @@ public class TilføjKunde extends JPanel {
 		setLayout(null);
 		
 		JLabel kundeLabel = new JLabel("Tilføj Kunde");
-		kundeLabel.setIcon(new ImageIcon(TilføjVarer.class.getResource("/presentation/resources/add32.png")));
+		kundeLabel.setIcon(new ImageIcon(TilføjVare.class.getResource("/presentation/resources/add32.png")));
 		kundeLabel.setFont(new Font("sansserif", Font.BOLD, 24));
 		kundeLabel.setForeground(Color.black);
 		kundeLabel.setBounds(30, 28, 180, 32);
@@ -112,6 +115,12 @@ public class TilføjKunde extends JPanel {
 		Vtable.setBackground(new Color(238, 238, 238));
 		add(Vtable);
 
+	}
+
+
+	public void setController(KundeController kundeController) {
+		this.controller = kundeController;
+		
 	}
 
 }

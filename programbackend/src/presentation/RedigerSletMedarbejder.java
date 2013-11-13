@@ -8,6 +8,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTable;
 
+import controller.MedarbejderController;
+
 public class RedigerSletMedarbejder extends JPanel {
 	
 	
@@ -17,6 +19,7 @@ public class RedigerSletMedarbejder extends JPanel {
 	private static final long serialVersionUID = 6524266733520926848L;
 	private JTable SEMtable;
 	private JTable SEMtable1;
+	private MedarbejderController controller;
 	
 	public RedigerSletMedarbejder() {
 		
@@ -25,7 +28,7 @@ public class RedigerSletMedarbejder extends JPanel {
 		setLayout(null);
 	
 		JLabel SeRedigerMedarbejder = new JLabel("Se/Rediger Medarbejder");
-		SeRedigerMedarbejder.setIcon(new ImageIcon(TilføjVarer.class.getResource("/presentation/resources/Run.png")));
+		SeRedigerMedarbejder.setIcon(new ImageIcon(TilføjVare.class.getResource("/presentation/resources/Run.png")));
 		SeRedigerMedarbejder.setFont(new Font("sansserif", Font.BOLD, 24));
 		SeRedigerMedarbejder.setForeground(Color.black);
 		SeRedigerMedarbejder.setBounds(30, 30, 330, 30);
@@ -50,6 +53,11 @@ public class RedigerSletMedarbejder extends JPanel {
 		
 
 		
+		
+	}
+
+	public void setController(MedarbejderController medarbejderController) {
+		this.controller = medarbejderController;
 		
 	}
 

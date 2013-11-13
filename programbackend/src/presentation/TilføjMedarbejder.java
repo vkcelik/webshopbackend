@@ -13,6 +13,8 @@ import javax.swing.JRadioButton;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 
+import controller.MedarbejderController;
+
 
 
 public class TilføjMedarbejder extends JPanel {
@@ -24,6 +26,7 @@ public class TilføjMedarbejder extends JPanel {
 	private static final long serialVersionUID = 6340894832099128364L;
 	private JTable Mtable;
 	private JTable Mtable1;
+	private MedarbejderController controller;
 
 
 	public TilføjMedarbejder() {
@@ -33,7 +36,7 @@ public class TilføjMedarbejder extends JPanel {
 		setLayout(null);
 
 		JLabel MedarbejderLabel = new JLabel("Tilføj Medarbejder");
-		MedarbejderLabel.setIcon(new ImageIcon(TilføjVarer.class.getResource("/presentation/resources/addM.png")));
+		MedarbejderLabel.setIcon(new ImageIcon(TilføjVare.class.getResource("/presentation/resources/addM.png")));
 		MedarbejderLabel.setFont(new Font("sansserif", Font.BOLD, 24));
 		MedarbejderLabel.setForeground(Color.black);
 		MedarbejderLabel.setBounds(30, 30, 260, 30);
@@ -170,6 +173,11 @@ public class TilføjMedarbejder extends JPanel {
 		
 	
 
+	}
+
+
+	public void setController(MedarbejderController medarbejderController) {
+		this.controller = medarbejderController;
 	}
 
 }
