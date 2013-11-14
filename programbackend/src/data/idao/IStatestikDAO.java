@@ -4,6 +4,6 @@ import java.util.List;
 
 
 public interface IStatestikDAO {
-	List<String> getTop10() throws DALException;
+	List<String[]> getTop10() throws DALException;
 
 }

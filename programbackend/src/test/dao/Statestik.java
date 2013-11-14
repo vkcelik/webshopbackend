@@ -1,28 +1,33 @@
 package test.dao;
 
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import logic.dto.OrdreLinieDTO;
 import data.connect.Connector;
-import data.dao.MySQLOrdreLinieDAO;
+import data.dao.MySQLStatestikDAO;
 import data.idao.DALException;
-import data.idao.IOrdreLinieDAO;
 
-public class Statestik {
-	
-	public List<String> getTop10() throws DALException{
 
-		List<String> liste = new ArrayList<String>();
+public class Statestik  {
+
+
+	public static void main(String[] args) {
 		
-		MySQLOrdreLinieDAO ol = new MySQLOrdreLinieDAO(); 
+		try { new Connector(); }
+		catch (InstantiationException e){ e.printStackTrace(); }
+		catch (IllegalAccessException e){ e.printStackTrace(); }
+		catch (ClassNotFoundException e){ e.printStackTrace(); }
+		catch (SQLException e){ e.printStackTrace(); }
+
+		
+		List<String[]> top;
+		MySQLStatestikDAO ol = new MySQLStatestikDAO(); 
 		System.out.println("Top 10 over ordrelinier");
-		try {liste = ol.getOrdrelinieTop10();}
+		try {System.out.println(ol.getTop10());}
 		catch (DALException e) { System.out.println(e.getMessage()); }
-		
-		return liste;
-	}
 	
+	}
 }
