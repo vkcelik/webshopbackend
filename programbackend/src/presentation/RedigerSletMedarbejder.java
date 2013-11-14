@@ -19,6 +19,7 @@ import javax.swing.ListSelectionModel;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
+import controller.MedarbejderController;
 import logic.dto.KategoriDTO;
 import logic.dto.MedarbejderDTO;
 import data.connect.Connector;
@@ -36,6 +37,7 @@ public class RedigerSletMedarbejder extends JPanel {
 	private JTable SEMtable;
 	private JTable SEMtable1;
 	private JList list;
+	private MedarbejderController controller;
 	
 	
 	public RedigerSletMedarbejder() {
@@ -99,6 +101,12 @@ public class RedigerSletMedarbejder extends JPanel {
 		
 
 		
+		
+	}
+
+
+	public void setController(MedarbejderController medarbejderController) {
+		this.controller = medarbejderController;
 		
 	}
 
