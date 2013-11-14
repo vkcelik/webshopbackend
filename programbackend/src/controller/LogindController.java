@@ -1,11 +1,10 @@
 package controller;
 
-import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 import data.dao.MySQLMedarbejderDAO;
-
+import data.idao.DALException;
 import presentation.BackEndSystem;
 import presentation.LogInd;
 
@@ -21,21 +20,33 @@ public class LogindController {
 	}
 
 	public void login(JTextField usernameField, JPasswordField passwordField) {		
-		
-	//	mdao.getMedarbejder(medarbejderId, password);
-		if(usernameField.getText().trim().length()== 0 || passwordField.getPassword().length==0){
-			JOptionPane.showMessageDialog(null, "Udfyld Brugernavn og adgangskode");
+		String idString;
+		int id = -1;
+		String password;
+
+		idString = usernameField.getText();
+		password = new String(passwordField.getPassword());
+
+		if(idString.length() == 0 || password.length() == 0){
+			frame.popupManglende();
 		} 
 		else {
-			if(usernameField.getText().equals("assaad") && new String(passwordField.getPassword()).equals("kerim")) {
+			// try convert entered id text to int
+			try {
+				id = Integer.parseInt(usernameField.getText());
+			} catch (NumberFormatException e) {
+				frame.popupIndtastTal();
+			}
+			// find employee with entered information
+			try {
+				mdao.getMedarbejder(id, password);
 				BackEndSystem Logind =new BackEndSystem();
 				Logind.setVisible(true);
 				frame.dispose();
-			} else {
-				JOptionPane.showMessageDialog(null, "Ugyldigt Brugernavn eller adgangskode", "Fejl Meddelse", JOptionPane.ERROR_MESSAGE);
+			} catch (DALException e) {
+				frame.popupForkertLogin();
 			}
 		}
 	}
-//
 }
 
