@@ -1,6 +1,10 @@
 package controller;
 
+import javax.swing.JTextField;
+
+import logic.dto.MedarbejderDTO;
 import data.dao.MySQLMedarbejderDAO;
+import data.idao.DALException;
 import presentation.RedigerSletMedarbejder;
 import presentation.TilføjMedarbejder;
 
@@ -15,6 +19,30 @@ public class MedarbejderController {
 		this.mdao = new MySQLMedarbejderDAO();
 		tm.setController(this);
 		rsm.setController(this);
+	}
+
+	public void visMedarbejder(String selectedValue) {
+		int x = 0;
+		// fjerne ", xxxxx" og lave det om til int
+		
+		x = Integer.getInteger(selectedValue.substring(0, 1));
+		
+		MedarbejderDTO dto = null;
+		try {
+			dto = mdao.getMedarbejder(x);
+		} catch (DALException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		tm.MedarbejderNavnText.setText(dto.getMedarbejderNavn());
+		tm.MedarbejderAdresseText.setText(dto.getMedarbejderAdresse());
+		tm.MedarbejderlandText.setText(dto.getMedarbejderLand());
+		tm.MedarbejderPasswordText.setText(dto.getMedarbejderPassword());
+		tm.MedarbejderLønTypeText.setText(dto.getMedarbejderLønType());
+		tm.MedarbejderCprText.setText(dto.getMedarbejderCpr());
+		
+		
+		
 	}
 	
 	
