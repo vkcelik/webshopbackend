@@ -26,7 +26,7 @@ public class MySQLMedarbejderDAO implements IMedarbejderDAO{
 		ResultSet rs = Connector.doQuery("SELECT * FROM Medarbejder WHERE medarbejderNummer = " + medarbejderId + " AND medarbejderPassword = '" + password + "'");
 		try {
 			if (!rs.first())
-				throw new DALException("Denne kombination findes ikek.");
+				throw new DALException("Denne kombination findes ikke.");
 			return new MedarbejderDTO(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getInt(5), rs.getString(6), rs.getString(7), rs.getString(8), rs.getDouble(9), rs.getInt(10), rs.getString(11), rs.getString(12));
 		} catch (SQLException e) {throw new DALException(e); }
 	}

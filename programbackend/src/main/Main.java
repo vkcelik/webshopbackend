@@ -16,9 +16,11 @@ import presentation.LogInd;
 import presentation.RedigerSletKategori;
 import presentation.RedigerSletKunde;
 import presentation.RedigerSletVare;
+import presentation.SeSletVarehus;
 import presentation.TilføjKategori;
 import presentation.TilføjKunde;
 import presentation.TilføjVare;
+import presentation.TilføjVarehus;
 
 
 public class Main {
@@ -50,6 +52,9 @@ public class Main {
 					TilføjVare tvPanel = new TilføjVare();
 					RedigerSletVare rsvPanel = new RedigerSletVare();
 					VareController vc = new VareController(tvPanel, rsvPanel);
+					
+					TilføjVarehus tvhPanel = new TilføjVarehus();
+					SeSletVarehus ssvPanel = new SeSletVarehus();
 					
 					loginFrame.setVisible(true);
 				} catch (Exception e) {
