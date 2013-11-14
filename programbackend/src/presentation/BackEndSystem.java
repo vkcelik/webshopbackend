@@ -11,11 +11,6 @@ import javax.swing.*;
 
 public class BackEndSystem extends JFrame {
 
-	
-	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -8393533657049762354L;
 	private JPanel contentPane;
 	
@@ -29,7 +24,7 @@ public class BackEndSystem extends JFrame {
 		contentPane = new JPanel();
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane); 
-		contentPane.add(new Forside());
+		contentPane.add(new Statestik());
 		contentPane.setBackground(new Color(51, 161, 201));
 		
 		
@@ -253,7 +248,7 @@ public class BackEndSystem extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 
 				getContentPane().removeAll();
-				getContentPane().add(new Forside());//Adding to content pane, not to Frame
+				getContentPane().add(new Statestik());//Adding to content pane, not to Frame
 				repaint();
 				printAll(getGraphics());
 

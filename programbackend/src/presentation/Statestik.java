@@ -11,7 +11,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-public class Forside extends JPanel {
+public class Statestik extends JPanel {
 
 
 	/**
@@ -21,7 +21,7 @@ public class Forside extends JPanel {
 	private JTable Vtable;
 	private JTable Vtable1;
 	
-	public Forside() {
+	public Statestik() {
 		
 		// Start
 			

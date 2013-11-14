@@ -3,6 +3,9 @@ package main;
 import java.awt.EventQueue;
 import java.sql.SQLException;
 
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
 import data.connect.Connector;
 import controller.IndstillingerController;
 import controller.KategoriController;
@@ -25,6 +28,9 @@ import presentation.TilføjVarehus;
 
 public class Main {
 
+	JPanel cards;
+	
+	
 	public static void main(String[] args) {
 		try { new Connector(); } 
 		catch (InstantiationException e) { e.printStackTrace(); }
