@@ -1,74 +1,53 @@
 package presentation;
-import java.awt.*;
 
+import java.awt.BorderLayout;
+import java.awt.CardLayout;
+import java.awt.Color;
+import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 
-import javax.swing.*;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JPanel;
 
 
-
-
-public class BackEndSystem extends JFrame {
+public class BackEndSystem {
 
 	private static final long serialVersionUID = -8393533657049762354L;
-	private JPanel contentPane;
-	
-	
-	public BackEndSystem() {
-		
-		
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setTitle("Backend System");
-		setBounds(100, 100, 750, 550);
-		contentPane = new JPanel();
-		contentPane.setLayout(new BorderLayout(0, 0));
-		setContentPane(contentPane); 
-		contentPane.add(new Statestik());
-		contentPane.setBackground(new Color(51, 161, 201));
-		
-		
+	private JPanel cards;
+	private CardLayout cardLayout;
+
+	public void addComponentToPane(JFrame theFrame, Container pane) {
+		cardLayout = new CardLayout();
+		// Create the things which will always show
 		JMenuBar menuBar = new JMenuBar();
-		setJMenuBar(menuBar);
 
 		JMenu mnNewMenu = new JMenu("Varekatalog");
 		menuBar.add(mnNewMenu);
 
-
 		JMenuItem mntmNewMenuItem = new JMenuItem("Tilføj varer");
 		mntmNewMenuItem.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/1380431095_103.png")));
 		mnNewMenu.add(mntmNewMenuItem);
-
 		mntmNewMenuItem.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
-
-				getContentPane().removeAll();
-				getContentPane().add(new TilføjVare());//Adding to content pane, not to Frame
-				repaint();
-				printAll(getGraphics());
-
+				cardLayout.show(cards, "tilføjVare");
 			}
 		});
-
 
 		JMenuItem mntmNewMenuItem_4 = new JMenuItem("Se/Rediger Varer");
 		mntmNewMenuItem_4.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/category-icon.png")));
 		mnNewMenu.add(mntmNewMenuItem_4);
-
 		mntmNewMenuItem_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
-
-				getContentPane().removeAll();
-				getContentPane().add(new RedigerSletVare());//Adding to content pane, not to Frame
-				repaint();
-				printAll(getGraphics());
-
+				cardLayout.show(cards, "seVare");
 			}
 		});
-
-
 
 		JMenu mnNewMenu_1 = new JMenu("Varerhus");
 		menuBar.add(mnNewMenu_1);
@@ -76,35 +55,20 @@ public class BackEndSystem extends JFrame {
 		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Tilføj varehus");
 		mntmNewMenuItem_1.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/1380431095_103.png")));
 		mnNewMenu_1.add(mntmNewMenuItem_1);
-
 		mntmNewMenuItem_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
-
-				getContentPane().removeAll();
-				getContentPane().add(new TilføjVarehus());//Adding to content pane, not to Frame
-				repaint();
-				printAll(getGraphics());
-
+				cardLayout.show(cards, "tilføjVarehus");
 			}
 		});
 
 		JMenuItem mntmNewMenuItem_5 = new JMenuItem("Se/Rediger varerhus");
 		mntmNewMenuItem_5.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/category-icon.png")));
 		mnNewMenu_1.add(mntmNewMenuItem_5);
-
 		mntmNewMenuItem_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
-
-				getContentPane().removeAll();
-				getContentPane().add(new SeSletVarehus());//Adding to content pane, not to Frame
-				repaint();
-				printAll(getGraphics());
-
+				cardLayout.show(cards, "seVarehus");
 			}
 		});
-
 
 		JMenu mnNewMenu_2 = new JMenu("Kategorier");
 		menuBar.add(mnNewMenu_2);
@@ -112,32 +76,18 @@ public class BackEndSystem extends JFrame {
 		JMenuItem mntmNewMenuItem_10 = new JMenuItem("Tilføj kategori");
 		mntmNewMenuItem_10.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/1380431095_103.png")));
 		mnNewMenu_2.add(mntmNewMenuItem_10);
-
 		mntmNewMenuItem_10.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
-
-				getContentPane().removeAll();
-				getContentPane().add(new TilføjKategori());//Adding to content pane, not to Frame
-				repaint();
-				printAll(getGraphics());
-
+				cardLayout.show(cards, "tilføjKategori");
 			}
 		});
 
 		JMenuItem mntmNewMenuItem_9 = new JMenuItem("Se/Rediger kategori");
 		mntmNewMenuItem_9.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/category-icon.png")));
 		mnNewMenu_2.add(mntmNewMenuItem_9);
-
 		mntmNewMenuItem_9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
-
-				getContentPane().removeAll();
-				getContentPane().add(new RedigerSletKategori());//Adding to content pane, not to Frame
-				repaint();
-				printAll(getGraphics());
-
+				cardLayout.show(cards, "seKategori");
 			}
 		});
 
@@ -149,94 +99,53 @@ public class BackEndSystem extends JFrame {
 		JMenuItem mntmNewMenuItem_18 = new JMenuItem("Tilføj medarbejder");
 		mntmNewMenuItem_18.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/1380431095_103.png")));
 		mnNewMenu_4.add(mntmNewMenuItem_18);
-
 		mntmNewMenuItem_18.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
-
-				getContentPane().removeAll();
-				getContentPane().add(new TilføjMedarbejder());//Adding to content pane, not to Frame
-				repaint();
-				printAll(getGraphics());
-
+				cardLayout.show(cards, "tilføjMedarbejder");
 			}
 		});
 
 		JMenuItem mntmNewMenuItem_13 = new JMenuItem("Se/Rediger medarbejder");
 		mntmNewMenuItem_13.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/users-icon.png")));
 		mnNewMenu_4.add(mntmNewMenuItem_13);
-
 		mntmNewMenuItem_13.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
-
-				getContentPane().removeAll();
-				getContentPane().add(new RedigerSletMedarbejder());//Adding to content pane, not to Frame
-				repaint();
-				printAll(getGraphics());
-
+				cardLayout.show(cards, "seMedarbejder");
 			}
 		});
-		
+
 		JMenu mnNewMenu_32 = new JMenu("Kunde");
 		menuBar.add(mnNewMenu_32);
-		
+
 		JMenuItem mntmNewMenuItem_32 = new JMenuItem("Tilføj Kunde");
 		mntmNewMenuItem_32.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/1380431095_103.png")));
 		mnNewMenu_32.add(mntmNewMenuItem_32);
-
 		mntmNewMenuItem_32.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
-
-				getContentPane().removeAll();
-				getContentPane().add(new TilføjKunde());//Adding to content pane, not to Frame
-				repaint();
-				printAll(getGraphics());
-
+				cardLayout.show(cards, "tilføjKunde");
 			}
 		});
-		
+
 		JMenuItem mntmNewMenuItem_323 = new JMenuItem("Rediger Kunde");
 		mntmNewMenuItem_323.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/category-icon.png")));
 		mnNewMenu_32.add(mntmNewMenuItem_323);
-
 		mntmNewMenuItem_323.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
-
-				getContentPane().removeAll();
-				getContentPane().add(new RedigerSletKunde());//Adding to content pane, not to Frame
-				repaint();
-				printAll(getGraphics());
-
+				cardLayout.show(cards, "seKunde");
 			}
 		});
-		
-		
-
 
 		JMenu mnNewMenu_3 = new JMenu("Ordre");
 		menuBar.add(mnNewMenu_3);
 
-
 		JMenuItem mntmNewMenuItem_12 = new JMenuItem("Se ordre");
 		mntmNewMenuItem_12.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/Start-Menu-Run-icon (1).png")));
 		mnNewMenu_3.add(mntmNewMenuItem_12);
-
 		mntmNewMenuItem_12.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
-
-				getContentPane().removeAll();
-				getContentPane().add(new SeOrdre());//Adding to content pane, not to Frame
-				repaint();
-				printAll(getGraphics());
-
+				cardLayout.show(cards, "seOrdre");
 			}
 		});
-
-
 
 		JMenu mnNewMenu_8 = new JMenu("Statistik");
 		menuBar.add(mnNewMenu_8);
@@ -246,39 +155,57 @@ public class BackEndSystem extends JFrame {
 		mnNewMenu_8.add(mntmNewMenuItem_20);
 		mntmNewMenuItem_20.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
-				getContentPane().removeAll();
-				getContentPane().add(new Statestik());//Adding to content pane, not to Frame
-				repaint();
-				printAll(getGraphics());
-
+				cardLayout.show(cards, "seStatestik");
 			}
 		});
-	
-
-
 
 		JMenu mnNewMenu_5 = new JMenu("Instillinger");
 		menuBar.add(mnNewMenu_5);
-		
+
 		JMenuItem mnNewMenu_51 = new JMenuItem("Se instillinger");
 		mnNewMenu_51.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/Start-Menu-Run-icon (1).png")));
 		mnNewMenu_5.add(mnNewMenu_51);
-		
-		
 		mnNewMenu_51.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
-				getContentPane().removeAll();
-				getContentPane().add(new Indstillinger());//Adding to content pane, not to Frame
-				repaint();
-				printAll(getGraphics());
-
+				cardLayout.show(cards, "seIndstillinger");
 			}
 		});
 
 
-	}
+		// Create the cards
+		JPanel seIndstillinger = new Indstillinger();
+		JPanel seStatestik = new Statestik();
+		JPanel seOrdre = new SeOrdre();
+		JPanel seKunde = new RedigerSletKunde();
+		JPanel tilføjKunde = new TilføjKunde();
+		JPanel tilføjMedarbejder = new TilføjMedarbejder();
+		JPanel seMedarbejder = new RedigerSletMedarbejder();
+		JPanel tilføjKategori = new TilføjKategori();
+		JPanel seKategori = new RedigerSletKategori();
+		JPanel tilføjVare = new TilføjVare();
+		JPanel seVare = new RedigerSletVare();
+		JPanel tilføjVarehus = new TilføjVarehus();
+		JPanel seVarehus = new SeSletVarehus();
 
+		// Create the panel that contains the cards
+		cards = new JPanel(cardLayout);
+		cards.add(seIndstillinger, "seIndstillinger");
+		cards.add(seStatestik, "seStatestik");
+		cards.add(seOrdre, "seOrdre");
+		cards.add(seKunde, "seKunde");
+		cards.add(tilføjKunde, "tilføjKunde");
+		cards.add(tilføjMedarbejder, "tilføjMedarbejder");
+		cards.add(seMedarbejder, "seMedarbejder");
+		cards.add(tilføjKategori, "tilføjKategori");
+		cards.add(seKategori, "seKategori");
+		cards.add(tilføjVare,"tilføjVare");
+		cards.add(seVare, "seVare");
+		cards.add(tilføjVarehus, "tilføjVarehus");
+		cards.add(seVarehus, "seVarehus");
+
+		// Add everything
+		theFrame.setJMenuBar(menuBar);
+		pane.add(cards, BorderLayout.CENTER);
+	}
 
 }
