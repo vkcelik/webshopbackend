@@ -19,6 +19,7 @@ import javax.swing.JPanel;
 
 public class BackEndSystem {
 
+	@SuppressWarnings("unused")
 	private static final long serialVersionUID = -8393533657049762354L;
 	private JPanel cards;
 	private CardLayout cardLayout;
@@ -171,37 +172,21 @@ public class BackEndSystem {
 			}
 		});
 
-
-		// Create the cards
-		JPanel seIndstillinger = new Indstillinger();
-		JPanel seStatestik = new Statestik();
-		JPanel seOrdre = new SeOrdre();
-		JPanel seKunde = new RedigerSletKunde();
-		JPanel tilføjKunde = new TilføjKunde();
-		JPanel tilføjMedarbejder = new TilføjMedarbejder();
-		JPanel seMedarbejder = new RedigerSletMedarbejder();
-		JPanel tilføjKategori = new TilføjKategori();
-		JPanel seKategori = new RedigerSletKategori();
-		JPanel tilføjVare = new TilføjVare();
-		JPanel seVare = new RedigerSletVare();
-		JPanel tilføjVarehus = new TilføjVarehus();
-		JPanel seVarehus = new SeSletVarehus();
-
 		// Create the panel that contains the cards
 		cards = new JPanel(cardLayout);
-		cards.add(seIndstillinger, "seIndstillinger");
-		cards.add(seStatestik, "seStatestik");
-		cards.add(seOrdre, "seOrdre");
-		cards.add(seKunde, "seKunde");
-		cards.add(tilføjKunde, "tilføjKunde");
-		cards.add(tilføjMedarbejder, "tilføjMedarbejder");
-		cards.add(seMedarbejder, "seMedarbejder");
-		cards.add(tilføjKategori, "tilføjKategori");
-		cards.add(seKategori, "seKategori");
-		cards.add(tilføjVare,"tilføjVare");
-		cards.add(seVare, "seVare");
-		cards.add(tilføjVarehus, "tilføjVarehus");
-		cards.add(seVarehus, "seVarehus");
+		cards.add(GUI.seIndstillinger, "seIndstillinger");
+		cards.add(GUI.seStatestik, "seStatestik");
+		cards.add(GUI.seOrdre, "seOrdre");
+		cards.add(GUI.seKunde, "seKunde");
+		cards.add(GUI.tilføjKunde, "tilføjKunde");
+		cards.add(GUI.tilføjMedarbejder, "tilføjMedarbejder");
+		cards.add(GUI.seMedarbejder, "seMedarbejder");
+		cards.add(GUI.tilføjKategori, "tilføjKategori");
+		cards.add(GUI.seKategori, "seKategori");
+		cards.add(GUI.tilføjVare,"tilføjVare");
+		cards.add(GUI.seVare, "seVare");
+		cards.add(GUI.tilføjVarehus, "tilføjVarehus");
+		cards.add(GUI.seVarehus, "seVarehus");
 
 		// Add everything
 		theFrame.setJMenuBar(menuBar);

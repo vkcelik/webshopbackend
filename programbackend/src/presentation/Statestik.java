@@ -7,6 +7,9 @@ import java.awt.Font;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTable;
+
+import controller.StatestikController;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -20,6 +23,7 @@ public class Statestik extends JPanel {
 	
 	private JTable Vtable;
 	private JTable Vtable1;
+	private StatestikController controller;
 	
 	public Statestik() {
 		
@@ -72,5 +76,9 @@ public class Statestik extends JPanel {
 				
 		// SLut
 
+	}
+
+	public void setController(StatestikController statestikController) {
+		this.controller = statestikController;
 	}
 }
