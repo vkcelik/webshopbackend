@@ -7,21 +7,25 @@ import java.awt.Font;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTable;
+
+import controller.StatestikController;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-public class Forside extends JPanel {
+public class Statestik extends JPanel {
 
 
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -9107024277786612174L;
+	
 	private JTable Vtable;
 	private JTable Vtable1;
+	private StatestikController controller;
 	
-	public Forside() {
+	public Statestik() {
 		
 		// Start
 			
@@ -46,7 +50,7 @@ public class Forside extends JPanel {
 			}
 		});
 		Logud.setBackground(new Color(255,215,10));
-		Logud.setBounds(632, 27, 70, 22);
+		Logud.setBounds(632, 27, 70, 20);
 		Logud.setForeground(Color.black);
 		add(Logud);
 		
@@ -72,5 +76,9 @@ public class Forside extends JPanel {
 				
 		// SLut
 
+	}
+
+	public void setController(StatestikController statestikController) {
+		this.controller = statestikController;
 	}
 }

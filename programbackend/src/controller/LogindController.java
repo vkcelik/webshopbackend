@@ -3,9 +3,11 @@ package controller;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
+import logic.dto.MedarbejderDTO;
 import data.dao.MySQLMedarbejderDAO;
 import data.idao.DALException;
 import presentation.BackEndSystem;
+import presentation.GUI;
 import presentation.LogInd;
 
 public class LogindController {
@@ -40,9 +42,11 @@ public class LogindController {
 			// find employee with entered information
 			try {
 				mdao.getMedarbejder(id, password);
-				BackEndSystem Logind =new BackEndSystem();
-				Logind.setVisible(true);
-				frame.dispose();
+				javax.swing.SwingUtilities.invokeLater(new Runnable() {
+					public void run() {
+						GUI.createAndShowBackend();
+					}
+				});
 			} catch (DALException e) {
 				frame.popupForkertLogin();
 			}

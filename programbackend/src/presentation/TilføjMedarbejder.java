@@ -27,8 +27,16 @@ public class TilføjMedarbejder extends JPanel {
 	private JTable Mtable;
 	private JTable Mtable1;
 	private MedarbejderController controller;
-
-
+	public JTextField MedarbejderNavnText;
+	public JTextField MedarbejderAdresseText;
+	public JTextField MedarbejderlandText;
+	public JTextField MedarbejderPostNrText;
+	public JTextField MedarbejderEmailText;
+	public JTextField MedarbejderPasswordText;
+	public JTextField MedarbejderLønText;
+	public JTextField MedarbejderLønTypeText;
+	public JTextField MedarbejderCprText;
+	
 	public TilføjMedarbejder() {
 
 
@@ -49,7 +57,7 @@ public class TilføjMedarbejder extends JPanel {
 		MedarbejderNavn.setForeground(Color.black);
 		add(MedarbejderNavn);
 
-		JTextField MedarbejderNavnText = new JTextField();
+		MedarbejderNavnText = new JTextField();
 		MedarbejderNavnText.setBounds(230, 90, 300, 20);
 		add(MedarbejderNavnText);
 
@@ -59,7 +67,7 @@ public class TilføjMedarbejder extends JPanel {
 		MedarbejderAdresse.setForeground(Color.black);
 		add(MedarbejderAdresse);
 
-		JTextField MedarbejderAdresseText = new JTextField();
+		MedarbejderAdresseText = new JTextField();
 		MedarbejderAdresseText.setBounds(230, 120, 300, 20);
 		add(MedarbejderAdresseText);
 
@@ -69,7 +77,7 @@ public class TilføjMedarbejder extends JPanel {
 		Medarbejderland.setForeground(Color.black);
 		add(Medarbejderland);
 
-		JTextField MedarbejderlandText = new JTextField();
+		MedarbejderlandText = new JTextField();
 		MedarbejderlandText.setBounds(230, 150, 300, 20);
 		add(MedarbejderlandText);
 
@@ -89,7 +97,7 @@ public class TilføjMedarbejder extends JPanel {
 		MedarbejderEmail.setForeground(Color.black);
 		add(MedarbejderEmail);
 
-		JTextField MedarbejderEmailText = new JTextField();
+		MedarbejderEmailText = new JTextField();
 		MedarbejderEmailText.setBounds(230, 210, 300, 20);
 		add(MedarbejderEmailText);
 		
@@ -99,7 +107,7 @@ public class TilføjMedarbejder extends JPanel {
 		MedarbejderPassword.setForeground(Color.black);
 		add(MedarbejderPassword);
 
-		JTextField MedarbejderPasswordText = new JTextField();
+		MedarbejderPasswordText = new JTextField();
 		MedarbejderPasswordText.setBounds(230, 240, 300, 20);
 		add(MedarbejderPasswordText);
 		
@@ -109,7 +117,7 @@ public class TilføjMedarbejder extends JPanel {
 		MedarbejderLøn.setForeground(Color.black);
 		add(MedarbejderLøn);
 
-		JTextField MedarbejderLønText= new JTextField();
+		MedarbejderLønText= new JTextField();
 		MedarbejderLønText.setBounds(230, 270, 300, 20);
 		add(MedarbejderLønText);
 		
@@ -119,7 +127,7 @@ public class TilføjMedarbejder extends JPanel {
 		MedarbejderLønType.setForeground(Color.black);
 		add(MedarbejderLønType);
 
-		JTextField MedarbejderLønTypeText= new JTextField();
+		MedarbejderLønTypeText= new JTextField();
 		MedarbejderLønTypeText.setBounds(230, 300, 300, 20);
 		add(MedarbejderLønTypeText);
 		
@@ -129,7 +137,7 @@ public class TilføjMedarbejder extends JPanel {
 		MedarbejderCpr.setForeground(Color.black);
 		add(MedarbejderCpr);
 
-		JTextField MedarbejderCprText= new JTextField();
+		MedarbejderCprText= new JTextField();
 		MedarbejderCprText.setBounds(230, 330, 300, 20);
 		add(MedarbejderCprText);
 		
@@ -147,8 +155,8 @@ public class TilføjMedarbejder extends JPanel {
 		HRMedarbejder.setBounds(360, 360, 120, 20);
 		add(HRMedarbejder);
 		
-		JCheckBox SalgsMedarbejder = new JCheckBox("HRMedarbejder");
-		SalgsMedarbejder.setBounds(485, 360, 130, 20);
+		JCheckBox SalgsMedarbejder = new JCheckBox("IndkøbMedarbejder");
+		SalgsMedarbejder.setBounds(485, 360, 150, 20);
 		add(SalgsMedarbejder);
 		
 		Button TilføjMedarbejder = new Button("Tilføj");
