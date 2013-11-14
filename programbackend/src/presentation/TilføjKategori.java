@@ -13,10 +13,11 @@ import javax.swing.JPanel;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 
+import controller.KategoriController;
+import controller.LogindController;
 import data.connect.Connector;
 import data.dao.MySQLKategoriDAO;
 import data.idao.DALException;
-
 import logic.dto.KategoriDTO;
 
 
@@ -32,6 +33,7 @@ public class TilføjKategori extends JPanel {
 	private JTable Ktable;
 	private JTable Ktable1;
 	JComboBox<String> combobox1;
+	private KategoriController controller;
 
 	public TilføjKategori() {
 
@@ -40,7 +42,7 @@ public class TilføjKategori extends JPanel {
 		setLayout(null);
 
 		JLabel TilføjKategori = new JLabel("Tilføj Kategori");
-		TilføjKategori.setIcon(new ImageIcon(TilføjVarer.class.getResource("/presentation/resources/add32.png")));
+		TilføjKategori.setIcon(new ImageIcon(TilføjVare.class.getResource("/presentation/resources/add32.png")));
 		TilføjKategori.setFont(new Font("sansserif", Font.BOLD, 24));
 		TilføjKategori.setForeground(Color.black);
 		TilføjKategori.setBounds(30, 30, 200, 30);
@@ -105,8 +107,10 @@ public class TilføjKategori extends JPanel {
 		Ktable.setBounds(12, 71, 710, 405);
 		Ktable.setBackground(new Color(238, 238, 238));
 		add(Ktable);
-
-
+	}
+	
+	public void setController(KategoriController controller){
+		this.controller = controller;
 	}
 
 }

@@ -8,6 +8,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTable;
 
+import controller.OrdreController;
+
 
 
 public class SeOrdre extends JPanel {
@@ -19,6 +21,7 @@ public class SeOrdre extends JPanel {
 	private static final long serialVersionUID = 807936107106094470L;
 	private JTable SOtable;
 	private JTable SOtable1;
+	private OrdreController controller;
 
 	public SeOrdre() {
 
@@ -27,7 +30,7 @@ public class SeOrdre extends JPanel {
 		setLayout(null);
 
 		JLabel SeOrdre = new JLabel("Se Ordre");
-		SeOrdre.setIcon(new ImageIcon(TilføjVarer.class.getResource("/presentation/resources/Run.png")));
+		SeOrdre.setIcon(new ImageIcon(TilføjVare.class.getResource("/presentation/resources/Run.png")));
 		SeOrdre.setFont(new Font("sansserif", Font.BOLD, 24));
 		SeOrdre.setForeground(Color.black);
 		SeOrdre.setBounds(30, 30, 200, 30);
@@ -46,6 +49,10 @@ public class SeOrdre extends JPanel {
 		
 
 
+	}
+
+	public void setController(OrdreController ordreController) {
+		this.controller = ordreController;
 	}
 
 }

@@ -12,9 +12,11 @@ import javax.swing.JTextField;
 import javax.swing.JTextPane;
 import javax.swing.UIManager;
 
+import controller.VarehusController;
 
 
-public class TilføjVarerhus extends JPanel {
+
+public class TilføjVarehus extends JPanel {
 	
 
 	/**
@@ -23,15 +25,16 @@ public class TilføjVarerhus extends JPanel {
 	private static final long serialVersionUID = 5911075244950799116L;
 	private JTable VHtable;
 	private JTable VHtable1;
+	private VarehusController controller;
 	
-	public TilføjVarerhus() {
+	public TilføjVarehus() {
 		
 		
 		this.setBackground(new Color(51, 161, 201));
 		setLayout(null);
 		
 		JLabel TilføjVarehus = new JLabel("Tilføj Varerhus");
-		TilføjVarehus.setIcon(new ImageIcon(TilføjVarer.class.getResource("/presentation/resources/add32.png")));
+		TilføjVarehus.setIcon(new ImageIcon(TilføjVare.class.getResource("/presentation/resources/add32.png")));
 		TilføjVarehus.setFont(new Font("sansserif", Font.BOLD, 24));
 		TilføjVarehus.setForeground(Color.black);
 		TilføjVarehus.setBounds(30, 30, 200, 30);
@@ -97,6 +100,10 @@ public class TilføjVarerhus extends JPanel {
 
 	
 		
+	}
+
+	public void setController(VarehusController varehusController) {
+		this.controller = varehusController;
 	}
 
 }

@@ -3,11 +3,13 @@ package presentation;
 
 import java.awt.Color;
 import java.awt.SystemColor;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
@@ -85,6 +87,18 @@ public class LogInd extends JFrame {
 	
 	public void setController(LogindController controller){
 		this.controller = controller;
+	}
+	
+	public void popupManglende(){
+		JOptionPane.showMessageDialog(null, "Udfyld Brugernavn og adgangskode");
+	}
+	
+	public void popupIndtastTal(){
+		JOptionPane.showMessageDialog(null, "Indtast dit medarbejderid med tal");
+	}
+	
+	public void popupForkertLogin(){
+		JOptionPane.showMessageDialog(null, "Ugyldigt Brugernavn eller adgangskode", "Fejl Meddelse", JOptionPane.ERROR_MESSAGE);
 	}
 
 }

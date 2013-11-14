@@ -38,6 +38,25 @@ public class MySQLOrdreLinieDAO implements IOrdreLinieDAO {
 	}
 
 	@Override
+	public List<String> getOrdrelinieTop10() throws DALException {
+		List<String> top = new ArrayList<String>();
+		ResultSet rs = Connector.doQuery("SELECT vareNavn,vareNummer, sum(antal) FROM webshop.OrdreLinie natural join webshop.Vare GROUP BY (vareNummer) ORDER BY (antal)  DESC LIMIT 10");
+		try { 
+			while (rs.next()){
+				String s = new String(rs.getString(1)+ ", " + rs.getInt(2) + ", " + rs.getInt(3));
+				System.out.println(s);
+				top.add(s);
+			}
+		} catch (SQLException e) {throw new DALException(e);}
+		return top;	
+	
+	
+	
+	
+	}
+	
+	
+	@Override
 	public void createOrdrelinie(OrdreLinieDTO ordreL) throws DALException {
 		
 		Connector.doUpdate(
@@ -57,5 +76,7 @@ public class MySQLOrdreLinieDAO implements IOrdreLinieDAO {
 				+ "', erGave =  '" + ordreL.isErGave()
 				+ "' WHERE linieNummer = " + ordreL.getLinieNummer());
 	}
+
+	
 
 }
