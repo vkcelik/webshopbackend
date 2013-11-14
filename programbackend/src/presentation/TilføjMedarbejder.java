@@ -144,8 +144,8 @@ public class TilføjMedarbejder extends JPanel {
 		HRMedarbejder.setBounds(360, 360, 120, 20);
 		add(HRMedarbejder);
 		
-		JCheckBox SalgsMedarbejder = new JCheckBox("HRMedarbejder");
-		SalgsMedarbejder.setBounds(485, 360, 130, 20);
+		JCheckBox SalgsMedarbejder = new JCheckBox("IndkøbMedarbejder");
+		SalgsMedarbejder.setBounds(485, 360, 150, 20);
 		add(SalgsMedarbejder);
 		
 		Button TilføjMedarbejder = new Button("Tilføj");

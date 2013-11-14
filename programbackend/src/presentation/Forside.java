@@ -17,7 +17,7 @@ public class Forside extends JPanel {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -9107024277786612174L;
+	
 	private JTable Vtable;
 	private JTable Vtable1;
 	
@@ -46,7 +46,7 @@ public class Forside extends JPanel {
 			}
 		});
 		Logud.setBackground(new Color(255,215,10));
-		Logud.setBounds(632, 27, 70, 22);
+		Logud.setBounds(632, 27, 70, 20);
 		Logud.setForeground(Color.black);
 		add(Logud);
 		
