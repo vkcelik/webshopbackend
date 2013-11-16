@@ -23,9 +23,12 @@ public class MedarbejderController {
 
 	public void visMedarbejder(String selectedValue) {
 		int x = 0;
-		// fjerne ", xxxxx" og lave det om til int
-		
-		x = Integer.getInteger(selectedValue.substring(0, 1));
+		// fjerne ", navn" og lave det om til int
+		try {
+			x = Integer.parseInt(selectedValue.substring(0, selectedValue.indexOf(",")));
+		} catch (Exception e) {
+			// should not happen
+		}
 		
 		MedarbejderDTO dto = null;
 		try {

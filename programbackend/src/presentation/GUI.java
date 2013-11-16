@@ -38,7 +38,9 @@ public class GUI {
 	static RedigerSletVare seVare;
 	static TilføjVarehus tilføjVarehus;
 	static SeSletVarehus seVarehus;
-
+	
+	private static BackEndSystem bes;
+	
 	public void run() {
 		// Create connector for application to connect to database
 		try { new Connector(); } 
@@ -112,7 +114,7 @@ public class GUI {
 		VarehusController vhc = new VarehusController(tilføjVarehus, seVarehus);
 		MedarbejderController mc = new MedarbejderController(tilføjMedarbejder, seMedarbejder);
 
-		BackEndSystem bes = new BackEndSystem();
+		bes = new BackEndSystem();
 		bes.addComponentToPane(frame, frame.getContentPane());
 
 		// Display the window

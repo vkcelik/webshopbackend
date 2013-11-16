@@ -194,5 +194,9 @@ public class BackEndSystem {
 		theFrame.setJMenuBar(menuBar);
 		pane.add(cards, BorderLayout.CENTER);
 	}
+	
+	public CardLayout getCardLayout(){
+		return cardLayout;
+	}
 
 }
