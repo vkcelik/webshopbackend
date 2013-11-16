@@ -3,6 +3,8 @@ package presentation;
 import java.awt.Button;
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JCheckBox;
@@ -17,10 +19,10 @@ import controller.MedarbejderController;
 
 public class TilføjMedarbejder extends JPanel {
 
-
-	/**
-	 * 
-	 */
+	public enum Mode{
+		REDIGER, TILFØJ
+	}
+	
 	private static final long serialVersionUID = 6340894832099128364L;
 	private JTable Mtable;
 	private JTable Mtable1;
@@ -34,6 +36,7 @@ public class TilføjMedarbejder extends JPanel {
 	public JTextField MedarbejderLønText;
 	public JTextField MedarbejderLønTypeText;
 	public JTextField MedarbejderCprText;
+	private Mode tilstand; 
 	
 	public TilføjMedarbejder() {
 
@@ -162,6 +165,11 @@ public class TilføjMedarbejder extends JPanel {
 		TilføjMedarbejder.setBounds(457, 395, 70, 22);
 		TilføjMedarbejder.setForeground(Color.black);
 		add(TilføjMedarbejder);
+		TilføjMedarbejder.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controller.opdaterMedarbejder(MedarbejderNavnText,MedarbejderAdresseText,MedarbejderlandText, MedarbejderPostNrText, MedarbejderEmailText,MedarbejderPasswordText, MedarbejderLønText, MedarbejderLønTypeText, MedarbejderCprText);
+			}
+		});
 		
 		
 		
@@ -181,7 +189,14 @@ public class TilføjMedarbejder extends JPanel {
 
 	}
 
-
+	public void makeEditMode(){
+		this.tilstand = Mode.REDIGER;
+	}
+	
+	public void makeAddMode(){
+		this.tilstand = Mode.TILFØJ;
+	}
+	
 	public void setController(MedarbejderController medarbejderController) {
 		this.controller = medarbejderController;
 	}

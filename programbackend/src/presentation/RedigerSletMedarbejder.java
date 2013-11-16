@@ -23,15 +23,7 @@ import data.idao.DALException;
 
 public class RedigerSletMedarbejder extends JPanel {
 
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -3146818100262099845L;
-	/**
-	 * 
-	 */
-	
+	private static final long serialVersionUID = -3146818100262099845L;	
 	private JTable SEMtable;
 	private JTable SEMtable1;
 	private MedarbejderController controller;
@@ -56,28 +48,8 @@ public class RedigerSletMedarbejder extends JPanel {
 		MedarbejderId.setBounds(30, 90, 130, 14);
 		add(MedarbejderId);
 
-		// Henter fra database informationer //
-
-		String Redigermedarbejder[];
-		List<MedarbejderDTO> kats = null;
-
-		try { new Connector(); }
-		catch (InstantiationException e){ e.printStackTrace(); }
-		catch (IllegalAccessException e){ e.printStackTrace(); }
-		catch (ClassNotFoundException e){ e.printStackTrace(); }
-		catch (SQLException e){ e.printStackTrace(); }
-
-		MySQLMedarbejderDAO kaDd = new MySQLMedarbejderDAO();
-		try {kats = kaDd.getMedarbejderList();}
-		catch (DALException e) { System.out.println(e.getMessage()); }
-
-		Redigermedarbejder = new String[kats.size()];
-		for (int i=0; i < kats.size(); i++){
-			Redigermedarbejder[i]=kats.get(i).getMedarbejderNummer()+", " + kats.get(i).getMedarbejderNavn();
-		}
-
 		// Opretter en liste //
-		list = new JList<String>(Redigermedarbejder);
+		list = new JList<String>();
 		add(list);
 		list.setBounds(30, 120, 70, 200);
 		list.setBackground(new Color(240,240,240));
@@ -87,15 +59,12 @@ public class RedigerSletMedarbejder extends JPanel {
 		mouseListener = new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
 				if (e.getClickCount() == 2) {
-
 					controller.visMedarbejder(list.getSelectedValue());
-//					GUI.cardLayout.show(GUI.cards, "seMedarbejder");
 				}
 			}
 		};
 		
 		list.addMouseListener(mouseListener);
-
 
 		SEMtable = new JTable();
 		SEMtable.setBounds(12, 71, 710, 405);
@@ -114,11 +83,12 @@ public class RedigerSletMedarbejder extends JPanel {
 
 	}
 
-
-
 	public void setController(MedarbejderController medarbejderController) {
 		this.controller = medarbejderController;
-
+	}
+	
+	public void updateList(){
+		list.setListData(controller.hentMedarbejderNavne());
 	}
 
 }

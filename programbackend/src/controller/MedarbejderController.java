@@ -1,5 +1,9 @@
 package controller;
 
+import java.util.List;
+
+import javax.swing.JTextField;
+
 import logic.dto.MedarbejderDTO;
 import data.dao.MySQLMedarbejderDAO;
 import data.idao.DALException;
@@ -42,11 +46,48 @@ public class MedarbejderController {
 		tm.MedarbejderPasswordText.setText(dto.getMedarbejderPassword());
 		tm.MedarbejderLønTypeText.setText(dto.getMedarbejderLønType());
 		tm.MedarbejderCprText.setText(dto.getMedarbejderCpr());
-		
-		GUI.cardLayout.show(GUI.cards, "seMedarbejder");
+
+		GUI.cardLayout.show(GUI.cards, "tilføjMedarbejder");
 		
 	}
 	
+	public String[] hentMedarbejderNavne(){
+		String Redigermedarbejder[];
+		List<MedarbejderDTO> kats = null;
+		
+		try {kats = mdao.getMedarbejderList();}
+		catch (DALException e) { System.out.println(e.getMessage()); }
+
+		Redigermedarbejder = new String[kats.size()];
+		for (int i=0; i < kats.size(); i++){
+			Redigermedarbejder[i]=kats.get(i).getMedarbejderNummer()+", " + kats.get(i).getMedarbejderNavn();
+		}
+		
+		return Redigermedarbejder;
+	}
+
+	public void opdaterMedarbejder(JTextField medarbejderNavnText,
+			JTextField medarbejderAdresseText, JTextField medarbejderlandText,
+			JTextField medarbejderPostNrText, JTextField medarbejderEmailText,
+			JTextField medarbejderPasswordText, JTextField medarbejderLønText,
+			JTextField medarbejderLønTypeText, JTextField medarbejderCprText) {
+		String navn = medarbejderNavnText.getText();
+		String adresse = medarbejderAdresseText.getText();
+		String land = medarbejderlandText.getText();
+		int postNr = Integer.parseInt(medarbejderPostNrText.getText());
+		String email = medarbejderEmailText.getText();
+		String password = medarbejderPasswordText.getText();
+		double løn = Integer.parseInt(medarbejderLønText.getText());
+		String lønType = medarbejderLønTypeText.getText();
+		String cpr = medarbejderCprText.getText();
+		
+		try {
+			mdao.updateMedarbejder(null);
+		} catch (DALException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}		
+	}
 	
 
 }

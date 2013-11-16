@@ -107,6 +107,8 @@ public class BackEndSystem {
 		mnNewMenu_4.add(mntmNewMenuItem_13);
 		mntmNewMenuItem_13.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				GUI.tilføjMedarbejder.makeEditMode();
+				GUI.seMedarbejder.updateList();
 				GUI.cardLayout.show(GUI.cards, "seMedarbejder");
 			}
 		});

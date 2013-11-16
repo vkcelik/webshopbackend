@@ -23,9 +23,7 @@ import java.awt.event.KeyEvent;
 
 
 public class LogInd extends JFrame {
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 9001421244756243668L;
 
 	LogindController controller;
