@@ -38,7 +38,7 @@ public class GUI {
 	static RedigerSletVare seVare;
 	static TilføjVarehus tilføjVarehus;
 	static SeSletVarehus seVarehus;
-	
+
 	public void run() {
 		// Create connector for application to connect to database
 		try { new Connector(); } 
@@ -72,7 +72,7 @@ public class GUI {
 		});
 
 	}
-	
+
 	private void createAndShowLogind(){
 		logindFrame = new LogInd();
 		LogindController lc = new LogindController(logindFrame);
@@ -80,17 +80,14 @@ public class GUI {
 		logindFrame.pack();
 		logindFrame.setVisible(true);
 	}
-	
+
 	public static void createAndShowBackend(){
 		logindFrame.dispose();
-		
+
 		JFrame frame = new JFrame("Webshop backend");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setMinimumSize(new Dimension(750, 550));
-		
-		BackEndSystem bes = new BackEndSystem();
-		bes.addComponentToPane(frame, frame.getContentPane());
-		
+
 		// Create the cards
 		seIndstillinger = new Indstillinger();
 		seStatestik = new Statestik();
@@ -105,7 +102,7 @@ public class GUI {
 		seVare = new RedigerSletVare();
 		tilføjVarehus = new TilføjVarehus();
 		seVarehus = new SeSletVarehus();
-		
+
 		KategoriController katc = new KategoriController(tilføjKategori, seKategori);
 		IndstillingerController ic = new IndstillingerController(seIndstillinger);
 		KundeController kunc = new KundeController(tilføjKunde, seKunde);
@@ -114,11 +111,10 @@ public class GUI {
 		OrdreController oc = new OrdreController(seOrdre);
 		VarehusController vhc = new VarehusController(tilføjVarehus, seVarehus);
 		MedarbejderController mc = new MedarbejderController(tilføjMedarbejder, seMedarbejder);
-		
 
-		TilføjVarehus tvhPanel = new TilføjVarehus();
-		SeSletVarehus ssvPanel = new SeSletVarehus();
-		
+		BackEndSystem bes = new BackEndSystem();
+		bes.addComponentToPane(frame, frame.getContentPane());
+
 		// Display the window
 		frame.pack();
 		frame.setVisible(true);

@@ -187,6 +187,8 @@ public class BackEndSystem {
 		cards.add(GUI.seVare, "seVare");
 		cards.add(GUI.tilføjVarehus, "tilføjVarehus");
 		cards.add(GUI.seVarehus, "seVarehus");
+		
+		cardLayout.show(cards, "seStatestik");
 
 		// Add everything
 		theFrame.setJMenuBar(menuBar);
