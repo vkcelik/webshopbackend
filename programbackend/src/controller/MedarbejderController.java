@@ -3,6 +3,7 @@ package controller;
 import logic.dto.MedarbejderDTO;
 import data.dao.MySQLMedarbejderDAO;
 import data.idao.DALException;
+import presentation.GUI;
 import presentation.RedigerSletMedarbejder;
 import presentation.TilføjMedarbejder;
 
@@ -42,7 +43,7 @@ public class MedarbejderController {
 		tm.MedarbejderLønTypeText.setText(dto.getMedarbejderLønType());
 		tm.MedarbejderCprText.setText(dto.getMedarbejderCpr());
 		
-		
+		GUI.cardLayout.show(GUI.cards, "seMedarbejder");
 		
 	}
 	

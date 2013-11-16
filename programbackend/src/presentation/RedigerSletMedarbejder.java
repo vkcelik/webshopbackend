@@ -14,6 +14,7 @@ import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JTable;
 import javax.swing.ListSelectionModel;
+
 import controller.MedarbejderController;
 import logic.dto.MedarbejderDTO;
 import data.connect.Connector;
@@ -88,6 +89,7 @@ public class RedigerSletMedarbejder extends JPanel {
 				if (e.getClickCount() == 2) {
 
 					controller.visMedarbejder(list.getSelectedValue());
+//					GUI.cardLayout.show(GUI.cards, "seMedarbejder");
 				}
 			}
 		};

@@ -1,9 +1,11 @@
 package presentation;
 
+import java.awt.CardLayout;
 import java.awt.Dimension;
 import java.sql.SQLException;
 
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
@@ -36,6 +38,8 @@ public class GUI {
 	static RedigerSletVare seVare;
 	static TilføjVarehus tilføjVarehus;
 	static SeSletVarehus seVarehus;
+	public static CardLayout cardLayout;
+	public static JPanel cards;
 	
 	public void run() {
 		// Create connector for application to connect to database

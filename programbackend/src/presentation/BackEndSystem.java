@@ -17,11 +17,11 @@ public class BackEndSystem {
 
 	@SuppressWarnings("unused")
 	private static final long serialVersionUID = -8393533657049762354L;
-	private JPanel cards;
-	private CardLayout cardLayout;
+	//private JPanel cards;
+	//private CardLayout cardLayout;
 
 	public void addComponentToPane(JFrame theFrame, Container pane) {
-		cardLayout = new CardLayout();
+		GUI.cardLayout = new CardLayout();
 		// Create the things which will always show
 		JMenuBar menuBar = new JMenuBar();
 
@@ -33,7 +33,7 @@ public class BackEndSystem {
 		mnNewMenu.add(mntmNewMenuItem);
 		mntmNewMenuItem.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				cardLayout.show(cards, "tilføjVare");
+				GUI.cardLayout.show(GUI.cards, "tilføjVare");
 			}
 		});
 
@@ -42,7 +42,7 @@ public class BackEndSystem {
 		mnNewMenu.add(mntmNewMenuItem_4);
 		mntmNewMenuItem_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				cardLayout.show(cards, "seVare");
+				GUI.cardLayout.show(GUI.cards, "seVare");
 			}
 		});
 
@@ -54,7 +54,7 @@ public class BackEndSystem {
 		mnNewMenu_1.add(mntmNewMenuItem_1);
 		mntmNewMenuItem_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				cardLayout.show(cards, "tilføjVarehus");
+				GUI.cardLayout.show(GUI.cards, "tilføjVarehus");
 			}
 		});
 
@@ -63,7 +63,7 @@ public class BackEndSystem {
 		mnNewMenu_1.add(mntmNewMenuItem_5);
 		mntmNewMenuItem_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				cardLayout.show(cards, "seVarehus");
+				GUI.cardLayout.show(GUI.cards, "seVarehus");
 			}
 		});
 
@@ -75,7 +75,7 @@ public class BackEndSystem {
 		mnNewMenu_2.add(mntmNewMenuItem_10);
 		mntmNewMenuItem_10.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				cardLayout.show(cards, "tilføjKategori");
+				GUI.cardLayout.show(GUI.cards, "tilføjKategori");
 			}
 		});
 
@@ -84,7 +84,7 @@ public class BackEndSystem {
 		mnNewMenu_2.add(mntmNewMenuItem_9);
 		mntmNewMenuItem_9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				cardLayout.show(cards, "seKategori");
+				GUI.cardLayout.show(GUI.cards, "seKategori");
 			}
 		});
 
@@ -98,7 +98,7 @@ public class BackEndSystem {
 		mnNewMenu_4.add(mntmNewMenuItem_18);
 		mntmNewMenuItem_18.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				cardLayout.show(cards, "tilføjMedarbejder");
+				GUI.cardLayout.show(GUI.cards, "tilføjMedarbejder");
 			}
 		});
 
@@ -107,7 +107,7 @@ public class BackEndSystem {
 		mnNewMenu_4.add(mntmNewMenuItem_13);
 		mntmNewMenuItem_13.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				cardLayout.show(cards, "seMedarbejder");
+				GUI.cardLayout.show(GUI.cards, "seMedarbejder");
 			}
 		});
 
@@ -119,7 +119,7 @@ public class BackEndSystem {
 		mnNewMenu_32.add(mntmNewMenuItem_32);
 		mntmNewMenuItem_32.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				cardLayout.show(cards, "tilføjKunde");
+				GUI.cardLayout.show(GUI.cards, "tilføjKunde");
 			}
 		});
 
@@ -128,7 +128,7 @@ public class BackEndSystem {
 		mnNewMenu_32.add(mntmNewMenuItem_323);
 		mntmNewMenuItem_323.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				cardLayout.show(cards, "seKunde");
+				GUI.cardLayout.show(GUI.cards, "seKunde");
 			}
 		});
 
@@ -140,7 +140,7 @@ public class BackEndSystem {
 		mnNewMenu_3.add(mntmNewMenuItem_12);
 		mntmNewMenuItem_12.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				cardLayout.show(cards, "seOrdre");
+				GUI.cardLayout.show(GUI.cards, "seOrdre");
 			}
 		});
 
@@ -152,7 +152,7 @@ public class BackEndSystem {
 		mnNewMenu_8.add(mntmNewMenuItem_20);
 		mntmNewMenuItem_20.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				cardLayout.show(cards, "seStatestik");
+				GUI.cardLayout.show(GUI.cards, "seStatestik");
 			}
 		});
 
@@ -164,31 +164,31 @@ public class BackEndSystem {
 		mnNewMenu_5.add(mnNewMenu_51);
 		mnNewMenu_51.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				cardLayout.show(cards, "seIndstillinger");
+				GUI.cardLayout.show(GUI.cards, "seIndstillinger");
 			}
 		});
 
 		// Create the panel that contains the cards
-		cards = new JPanel(cardLayout);
-		cards.add(GUI.seIndstillinger, "seIndstillinger");
-		cards.add(GUI.seStatestik, "seStatestik");
-		cards.add(GUI.seOrdre, "seOrdre");
-		cards.add(GUI.seKunde, "seKunde");
-		cards.add(GUI.tilføjKunde, "tilføjKunde");
-		cards.add(GUI.tilføjMedarbejder, "tilføjMedarbejder");
-		cards.add(GUI.seMedarbejder, "seMedarbejder");
-		cards.add(GUI.tilføjKategori, "tilføjKategori");
-		cards.add(GUI.seKategori, "seKategori");
-		cards.add(GUI.tilføjVare,"tilføjVare");
-		cards.add(GUI.seVare, "seVare");
-		cards.add(GUI.tilføjVarehus, "tilføjVarehus");
-		cards.add(GUI.seVarehus, "seVarehus");
+		GUI.cards = new JPanel(GUI.cardLayout);
+		GUI.cards.add(GUI.seIndstillinger, "seIndstillinger");
+		GUI.cards.add(GUI.seStatestik, "seStatestik");
+		GUI.cards.add(GUI.seOrdre, "seOrdre");
+		GUI.cards.add(GUI.seKunde, "seKunde");
+		GUI.cards.add(GUI.tilføjKunde, "tilføjKunde");
+		GUI.cards.add(GUI.tilføjMedarbejder, "tilføjMedarbejder");
+		GUI.cards.add(GUI.seMedarbejder, "seMedarbejder");
+		GUI.cards.add(GUI.tilføjKategori, "tilføjKategori");
+		GUI.cards.add(GUI.seKategori, "seKategori");
+		GUI.cards.add(GUI.tilføjVare,"tilføjVare");
+		GUI.cards.add(GUI.seVare, "seVare");
+		GUI.cards.add(GUI.tilføjVarehus, "tilføjVarehus");
+		GUI.cards.add(GUI.seVarehus, "seVarehus");
 		
-		cardLayout.show(cards, "seStatestik");
+		GUI.cardLayout.show(GUI.cards, "seStatestik");
 
 		// Add everything
 		theFrame.setJMenuBar(menuBar);
-		pane.add(cards, BorderLayout.CENTER);
+		pane.add(GUI.cards, BorderLayout.CENTER);
 	}
 
 }
