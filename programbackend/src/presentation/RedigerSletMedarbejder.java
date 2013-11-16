@@ -2,38 +2,31 @@ package presentation;
 
 import java.awt.Color;
 import java.awt.event.MouseAdapter;
-import java.awt.Container;
-import java.awt.Dimension;
 import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.sql.SQLException;
 import java.util.List;
 
-import javax.swing.DefaultListModel;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JPanel;
-import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.ListSelectionModel;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
-
 import controller.MedarbejderController;
-import logic.dto.KategoriDTO;
 import logic.dto.MedarbejderDTO;
 import data.connect.Connector;
-import data.dao.MySQLKategoriDAO;
 import data.dao.MySQLMedarbejderDAO;
 import data.idao.DALException;
 
 public class RedigerSletMedarbejder extends JPanel {
 
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3146818100262099845L;
 	/**
 	 * 
 	 */

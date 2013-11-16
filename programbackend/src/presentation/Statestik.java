@@ -20,6 +20,10 @@ public class Statestik extends JPanel {
 	/**
 	 * 
 	 */
+	private static final long serialVersionUID = -2730404141010399074L;
+	/**
+	 * 
+	 */
 	
 	private JTable Vtable;
 	private JTable Vtable1;

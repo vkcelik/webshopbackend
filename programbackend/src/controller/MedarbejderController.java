@@ -1,7 +1,5 @@
 package controller;
 
-import javax.swing.JTextField;
-
 import logic.dto.MedarbejderDTO;
 import data.dao.MySQLMedarbejderDAO;
 import data.idao.DALException;

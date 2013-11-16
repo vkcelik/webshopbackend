@@ -1,10 +1,8 @@
 package controller;
 
-import presentation.LogInd;
 import presentation.RedigerSletKategori;
 import presentation.TilføjKategori;
 import data.dao.MySQLKategoriDAO;
-import data.dao.MySQLMedarbejderDAO;
 
 public class KategoriController {
 

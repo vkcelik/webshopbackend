@@ -1,11 +1,9 @@
 package presentation;
 
 import java.awt.Dimension;
-import java.awt.EventQueue;
 import java.sql.SQLException;
 
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
@@ -38,8 +36,6 @@ public class GUI {
 	static RedigerSletVare seVare;
 	static TilføjVarehus tilføjVarehus;
 	static SeSletVarehus seVarehus;
-	
-	private static BackEndSystem bes;
 	
 	public void run() {
 		// Create connector for application to connect to database
@@ -114,7 +110,7 @@ public class GUI {
 		VarehusController vhc = new VarehusController(tilføjVarehus, seVarehus);
 		MedarbejderController mc = new MedarbejderController(tilføjMedarbejder, seMedarbejder);
 
-		bes = new BackEndSystem();
+		BackEndSystem bes = new BackEndSystem();
 		bes.addComponentToPane(frame, frame.getContentPane());
 
 		// Display the window

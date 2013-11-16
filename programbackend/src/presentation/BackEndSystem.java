@@ -2,13 +2,9 @@ package presentation;
 
 import java.awt.BorderLayout;
 import java.awt.CardLayout;
-import java.awt.Color;
 import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
-
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
@@ -193,10 +189,6 @@ public class BackEndSystem {
 		// Add everything
 		theFrame.setJMenuBar(menuBar);
 		pane.add(cards, BorderLayout.CENTER);
-	}
-	
-	public CardLayout getCardLayout(){
-		return cardLayout;
 	}
 
 }

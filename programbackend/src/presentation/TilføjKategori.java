@@ -14,7 +14,6 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 
 import controller.KategoriController;
-import controller.LogindController;
 import data.connect.Connector;
 import data.dao.MySQLKategoriDAO;
 import data.idao.DALException;
