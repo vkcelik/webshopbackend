@@ -88,7 +88,7 @@ public class TilføjMedarbejder extends JPanel {
 		MedarbejderPostNr.setForeground(Color.black);
 		add(MedarbejderPostNr);
 
-		JTextField MedarbejderPostNrText = new JTextField();
+		MedarbejderPostNrText = new JTextField();
 		MedarbejderPostNrText.setBounds(230, 180, 300, 20);
 		add(MedarbejderPostNrText);
 		
