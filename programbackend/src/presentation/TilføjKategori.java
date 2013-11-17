@@ -33,7 +33,8 @@ public class TilføjKategori extends JPanel {
 	private JTable Ktable1;
 	JComboBox<String> combobox1;
 	private KategoriController controller;
-
+	public JTextField kategorinavnText;
+	
 	public TilføjKategori() {
 
 
@@ -53,9 +54,9 @@ public class TilføjKategori extends JPanel {
 		TilføjKategorinavn.setForeground(Color.black);
 		add(TilføjKategorinavn);
 
-		JTextField kattegorinavnText = new JTextField();
-		kattegorinavnText.setBounds(230, 90, 300, 20);
-		add(kattegorinavnText);
+		kategorinavnText = new JTextField();
+		kategorinavnText.setBounds(230, 90, 300, 20);
+		add(kategorinavnText);
 		
 
 		Button TilføjKategori1 = new Button("Tilføj");
