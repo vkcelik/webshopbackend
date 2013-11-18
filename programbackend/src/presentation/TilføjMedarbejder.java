@@ -167,7 +167,7 @@ public class TilføjMedarbejder extends JPanel {
 		add(TilføjMedarbejder);
 		TilføjMedarbejder.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				controller.opdaterMedarbejder(MedarbejderNavnText,MedarbejderAdresseText,MedarbejderlandText, MedarbejderPostNrText, MedarbejderEmailText,MedarbejderPasswordText, MedarbejderLønText, MedarbejderLønTypeText, MedarbejderCprText);
+				
 			}
 		});
 		
