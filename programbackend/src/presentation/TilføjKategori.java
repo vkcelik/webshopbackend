@@ -67,10 +67,10 @@ public class TilføjKategori extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				
-				controller.
+		
 				
 			}
-		})
+		});
 
 		Ktable1 = new JTable();
 		Ktable1.setBounds(12, 10, 710, 57);
