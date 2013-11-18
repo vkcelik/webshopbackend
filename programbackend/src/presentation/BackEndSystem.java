@@ -17,8 +17,6 @@ public class BackEndSystem {
 
 	@SuppressWarnings("unused")
 	private static final long serialVersionUID = -8393533657049762354L;
-	//private JPanel cards;
-	//private CardLayout cardLayout;
 
 	public void addComponentToPane(JFrame theFrame, Container pane) {
 		GUI.cardLayout = new CardLayout();
@@ -172,20 +170,29 @@ public class BackEndSystem {
 
 		// Create the panel that contains the cards
 		GUI.cards = new JPanel(GUI.cardLayout);
+
+		GUI.cards.add(GUI.tilføjKunde, "tilføjKunde");
+		GUI.cards.add(GUI.tilføjMedarbejder, "tilføjMedarbejder");
+		GUI.cards.add(GUI.tilføjKategori, "tilføjKategori");
+		GUI.cards.add(GUI.tilføjVare,"tilføjVare");
+		GUI.cards.add(GUI.tilføjVarehus, "tilføjVarehus");
+		
 		GUI.cards.add(GUI.seIndstillinger, "seIndstillinger");
 		GUI.cards.add(GUI.seStatestik, "seStatestik");
 		GUI.cards.add(GUI.seOrdre, "seOrdre");
 		GUI.cards.add(GUI.seKunde, "seKunde");
-		GUI.cards.add(GUI.tilføjKunde, "tilføjKunde");
-		GUI.cards.add(GUI.tilføjMedarbejder, "tilføjMedarbejder");
 		GUI.cards.add(GUI.seMedarbejder, "seMedarbejder");
-		GUI.cards.add(GUI.tilføjKategori, "tilføjKategori");
 		GUI.cards.add(GUI.seKategori, "seKategori");
-		GUI.cards.add(GUI.tilføjVare,"tilføjVare");
-		GUI.cards.add(GUI.seVare, "seVare");
-		GUI.cards.add(GUI.tilføjVarehus, "tilføjVarehus");
 		GUI.cards.add(GUI.seVarehus, "seVarehus");
-		
+		GUI.cards.add(GUI.seVare, "seVare");
+
+		GUI.cards.add(GUI.redigerKunde, "redigerKunde");
+		GUI.cards.add(GUI.redigerMedarbejder, "redigerMedarbejder");
+		GUI.cards.add(GUI.redigerKategori, "redigerKategori");
+		GUI.cards.add(GUI.redigerVarehus, "redigerVarehus");
+		GUI.cards.add(GUI.redigerVare, "redigerVare");
+		GUI.cards.add(GUI.redigerOrdre, "redigerOrdre");
+				
 		GUI.cardLayout.show(GUI.cards, "seStatestik");
 
 		// Add everything

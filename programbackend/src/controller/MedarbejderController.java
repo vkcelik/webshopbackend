@@ -12,16 +12,13 @@ import presentation.OversigtMedarbejder;
 import presentation.TilføjMedarbejder;
 
 public class MedarbejderController {
-	TilføjMedarbejder tm;
-	OversigtMedarbejder rsm;
 	MySQLMedarbejderDAO mdao;
 	
-	public MedarbejderController(TilføjMedarbejder tm, OversigtMedarbejder rsm) {
-		this.tm = tm;
-		this.rsm = rsm;
+	public MedarbejderController() {
 		this.mdao = new MySQLMedarbejderDAO();
-		tm.setController(this);
-		rsm.setController(this);
+		GUI.tilføjMedarbejder.setController(this);
+		GUI.redigerMedarbejder.setController(this);
+		GUI.seMedarbejder.setController(this);
 	}
 
 	public void visMedarbejder(String selectedValue) {
@@ -40,14 +37,14 @@ public class MedarbejderController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		tm.MedarbejderNavnText.setText(dto.getMedarbejderNavn());
-		tm.MedarbejderAdresseText.setText(dto.getMedarbejderAdresse());
-		tm.MedarbejderlandText.setText(dto.getMedarbejderLand());
-		tm.MedarbejderPasswordText.setText(dto.getMedarbejderPassword());
-		tm.MedarbejderLønTypeText.setText(dto.getMedarbejderLønType());
-		tm.MedarbejderCprText.setText(dto.getMedarbejderCpr());
+		GUI.tilføjMedarbejder.MedarbejderNavnText.setText(dto.getMedarbejderNavn());
+		GUI.tilføjMedarbejder.MedarbejderAdresseText.setText(dto.getMedarbejderAdresse());
+		GUI.tilføjMedarbejder.MedarbejderlandText.setText(dto.getMedarbejderLand());
+		GUI.tilføjMedarbejder.MedarbejderPasswordText.setText(dto.getMedarbejderPassword());
+		GUI.tilføjMedarbejder.MedarbejderLønTypeText.setText(dto.getMedarbejderLønType());
+		GUI.tilføjMedarbejder.MedarbejderCprText.setText(dto.getMedarbejderCpr());
 
-		GUI.cardLayout.show(GUI.cards, "tilføjMedarbejder");
+		GUI.cardLayout.show(GUI.cards, "redigerMedarbejder");
 		
 	}
 	

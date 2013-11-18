@@ -4,22 +4,20 @@ import javax.swing.JPanel;
 
 import data.dao.MySQLVareBatchDAO;
 import data.dao.MySQLVareDAO;
+import presentation.GUI;
 import presentation.OversigtVare;
 import presentation.TilføjVare;
 
 public class VareController {
-	TilføjVare tvPanel;
-	OversigtVare rsvPanel;
 	MySQLVareDAO vdao;
 	MySQLVareBatchDAO vbdao;
 	
-	public VareController(TilføjVare tvPanel, OversigtVare rsvPanel) {
-		this.tvPanel = tvPanel;
-		this.rsvPanel = rsvPanel;
+	public VareController() {
 		this.vdao = new MySQLVareDAO();
 		this.vbdao = new MySQLVareBatchDAO();
-		tvPanel.setController(this);
-		rsvPanel.setController(this);
+		GUI.redigerVare.setController(this);
+		GUI.seVare.setController(this);
+		GUI.tilføjVare.setController(this);
 	}
 
 	public void tilføjVarer(JPanel panel){

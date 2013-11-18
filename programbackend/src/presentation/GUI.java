@@ -24,22 +24,33 @@ import controller.VarehusController;
 
 
 public class GUI {
-	static LogInd logindFrame;
-	static Indstillinger seIndstillinger;
-	static Statestik seStatestik;
-	static Ordre seOrdre;
-	static OversigtKunde seKunde;
-	static TilføjKunde tilføjKunde;
-	static TilføjMedarbejder tilføjMedarbejder;
-	static OversigtMedarbejder seMedarbejder;
-	static TilføjKategori tilføjKategori;
-	static OversigtKategori seKategori;
-	static TilføjVare tilføjVare;
-	static OversigtVare seVare;
-	static TilføjVarehus tilføjVarehus;
-	static OversigtVarehus seVarehus;
+	public static LogInd logindFrame;
+	// tilføj
+	public static TilføjKunde tilføjKunde;
+	public static TilføjMedarbejder tilføjMedarbejder;
+	public static TilføjKategori tilføjKategori;
+	public static TilføjVare tilføjVare;
+	public static TilføjVarehus tilføjVarehus;
+	// se 
+	public static OversigtVare seVare;
+	public static OversigtVarehus seVarehus;
+	public static OversigtKategori seKategori;
+	public static OversigtMedarbejder seMedarbejder;
+	public static OversigtKunde seKunde;
+	public static Ordre seOrdre;
+	public static Statestik seStatestik;
+	public static Indstillinger seIndstillinger;
+	// rediger
+	public static RedigerKategori redigerKategori;
+	public static RedigerKunde redigerKunde;
+	public static RedigerMedarbejder redigerMedarbejder;
+	public static RedigerVare redigerVare;
+	public static RedigerVarehus redigerVarehus;
+	public static RedigerOrdre redigerOrdre;
+	
 	public static CardLayout cardLayout;
 	public static JPanel cards;
+
 	
 	public void run() {
 		// Create connector for application to connect to database
@@ -77,7 +88,7 @@ public class GUI {
 
 	private void createAndShowLogind(){
 		logindFrame = new LogInd();
-		LogindController lc = new LogindController(logindFrame);
+		LogindController lc = new LogindController();
 		logindFrame.setMinimumSize(new Dimension(750, 550));
 		logindFrame.pack();
 		logindFrame.setVisible(true);
@@ -91,28 +102,36 @@ public class GUI {
 		frame.setMinimumSize(new Dimension(750, 550));
 
 		// Create the cards
+		tilføjKunde = new TilføjKunde();
+		tilføjMedarbejder = new TilføjMedarbejder();
+		tilføjKategori = new TilføjKategori();
+		tilføjVare = new TilføjVare();
+		tilføjVarehus = new TilføjVarehus();
+
 		seIndstillinger = new Indstillinger();
 		seStatestik = new Statestik();
 		seOrdre = new Ordre();
 		seKunde = new OversigtKunde();
-		tilføjKunde = new TilføjKunde();
-		tilføjMedarbejder = new TilføjMedarbejder();
 		seMedarbejder = new OversigtMedarbejder();
-		tilføjKategori = new TilføjKategori();
 		seKategori = new OversigtKategori();
-		tilføjVare = new TilføjVare();
 		seVare = new OversigtVare();
-		tilføjVarehus = new TilføjVarehus();
 		seVarehus = new OversigtVarehus();
-
-		KategoriController katc = new KategoriController(tilføjKategori, seKategori);
-		IndstillingerController ic = new IndstillingerController(seIndstillinger);
-		KundeController kunc = new KundeController(tilføjKunde, seKunde);
-		VareController vc = new VareController(tilføjVare, seVare);
-		StatestikController sc = new StatestikController(seStatestik);
-		OrdreController oc = new OrdreController(seOrdre);
-		VarehusController vhc = new VarehusController(tilføjVarehus, seVarehus);
-		MedarbejderController mc = new MedarbejderController(tilføjMedarbejder, seMedarbejder);
+		
+		redigerKunde = new RedigerKunde();
+		redigerMedarbejder = new RedigerMedarbejder();
+		redigerKategori = new RedigerKategori();
+		redigerVarehus = new RedigerVarehus();
+		redigerVare = new RedigerVare();
+		redigerOrdre = new RedigerOrdre();
+		
+		KategoriController katc = new KategoriController();
+		IndstillingerController ic = new IndstillingerController();
+		KundeController kunc = new KundeController();
+		VareController vc = new VareController();
+		StatestikController sc = new StatestikController();
+		OrdreController oc = new OrdreController();
+		VarehusController vhc = new VarehusController();
+		MedarbejderController mc = new MedarbejderController();
 
 		BackEndSystem bes = new BackEndSystem();
 		bes.addComponentToPane(frame, frame.getContentPane());

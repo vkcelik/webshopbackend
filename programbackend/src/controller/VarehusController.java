@@ -1,19 +1,18 @@
 package controller;
 
 import data.dao.MySQLVarehusDAO;
+import presentation.GUI;
 import presentation.OversigtVarehus;
+import presentation.RedigerVarehus;
 import presentation.TilføjVarehus;
 
 public class VarehusController {
-	TilføjVarehus tvhPanel;
-	OversigtVarehus sPanel;
 	MySQLVarehusDAO vhdao;
-	public VarehusController(TilføjVarehus tvhPanel, OversigtVarehus sPanel) {
-		this.tvhPanel = tvhPanel;
-		this.sPanel = sPanel;
+	public VarehusController() {
 		this.vhdao = new MySQLVarehusDAO();
-		tvhPanel.setController(this);
-		sPanel.setController(this);
+		GUI.redigerVarehus.setController(this);
+		GUI.seVarehus.setController(this);
+		GUI.tilføjVarehus.setController(this);
 	}
 	
 	

@@ -12,16 +12,13 @@ import data.idao.DALException;
 
 public class KategoriController {
 
-	TilføjKategori tilføj;
-	OversigtKategori se;
 	MySQLKategoriDAO kdao;
 
-	public KategoriController(TilføjKategori tilføj, OversigtKategori se){
-		this.tilføj = tilføj;
-		this.se = se;
+	public KategoriController(){
 		this.kdao = new MySQLKategoriDAO();
-		tilføj.setController(this);
-		se.setController(this);
+		GUI.tilføjKategori.setController(this);
+		GUI.seKategori.setController(this);
+		GUI.redigerKategori.setController(this);
 	}
 
 	public void visKategori(String selectedValue) {
@@ -41,7 +38,7 @@ public class KategoriController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		tilføj.kategorinavnText.setText(dto.getKategoriNavn());
+		GUI.redigerKategori.kategorinavnText.setText(dto.getKategoriNavn());
 		
 	
 		GUI.cardLayout.show(GUI.cards, "tilføjKategori");

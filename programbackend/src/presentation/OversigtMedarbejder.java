@@ -32,7 +32,6 @@ public class OversigtMedarbejder extends JPanel {
 
 	public OversigtMedarbejder() {
 
-
 		this.setBackground(new Color(51, 161, 201));
 		setLayout(null);
 
@@ -71,15 +70,10 @@ public class OversigtMedarbejder extends JPanel {
 		SEMtable.setBackground(new Color(238, 238, 238));
 		add(SEMtable);
 
-
 		SEMtable1 = new JTable();
 		SEMtable1.setBounds(12, 10, 710, 57);
 		SEMtable1.setBackground(new Color(238, 238, 238));
 		add(SEMtable1);
-
-
-
-
 
 	}
 

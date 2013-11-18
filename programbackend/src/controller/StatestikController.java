@@ -1,17 +1,16 @@
 package controller;
 
 import data.dao.MySQLStatestikDAO;
+import presentation.GUI;
 import presentation.Statestik;
 
 public class StatestikController {
 
-	Statestik panel;
 	MySQLStatestikDAO sdao;
 	
-	public StatestikController(Statestik seStatestik) {
-		this.panel = seStatestik;
+	public StatestikController() {
 		this.sdao = new MySQLStatestikDAO();
-		seStatestik.setController(this);
+		GUI.seStatestik.setController(this);
 	}
 
 }

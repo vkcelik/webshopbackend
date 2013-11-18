@@ -10,13 +10,11 @@ import presentation.LogInd;
 
 public class LogindController {
 
-	LogInd frame;
 	MySQLMedarbejderDAO mdao;
 
-	public LogindController(LogInd frame){
-		this.frame = frame;
+	public LogindController(){
 		this.mdao = new MySQLMedarbejderDAO();
-		frame.setController(this);
+		GUI.logindFrame.setController(this);
 	}
 
 	public void login(JTextField usernameField, JPasswordField passwordField) {		
@@ -28,14 +26,14 @@ public class LogindController {
 		password = new String(passwordField.getPassword());
 
 		if(idString.length() == 0 || password.length() == 0){
-			frame.popupManglende();
+			GUI.logindFrame.popupManglende();
 		} 
 		else {
 			// try convert entered id text to int
 			try {
 				id = Integer.parseInt(usernameField.getText());
 			} catch (NumberFormatException e) {
-				frame.popupIndtastTal();
+				GUI.logindFrame.popupIndtastTal();
 			}
 			// find employee with entered information
 			try {
@@ -46,7 +44,7 @@ public class LogindController {
 					}
 				});
 			} catch (DALException e) {
-				frame.popupForkertLogin();
+				GUI.logindFrame.popupForkertLogin();
 			}
 		}
 	}

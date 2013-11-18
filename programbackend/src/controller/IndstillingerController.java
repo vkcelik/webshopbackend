@@ -1,18 +1,15 @@
 package controller;
 
 import data.dao.MySQLIndstillingDAO;
+import presentation.GUI;
 import presentation.Indstillinger;
 
 public class IndstillingerController {
-	
-	Indstillinger iPanel;
 	MySQLIndstillingDAO idao;
 	
-
-	public IndstillingerController(Indstillinger iPanel) {
-		this.iPanel = iPanel;
+	public IndstillingerController() {
 		this.idao = new MySQLIndstillingDAO();
-		iPanel.setController(this);
+		GUI.seIndstillinger.setController(this);
 	}
 	
 
