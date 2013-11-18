@@ -3,6 +3,8 @@ package presentation;
 import java.awt.Button;
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -59,17 +61,31 @@ public class TilføjKategori extends JPanel {
 		TilføjKategori1.setBounds(460, 160, 70, 22);
 		TilføjKategori1.setForeground(Color.black);
 		add(TilføjKategori1);
+		
+		TilføjKategori1.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				
+				controller.
+				
+			}
+		})
 
 		Ktable1 = new JTable();
 		Ktable1.setBounds(12, 10, 710, 57);
 		Ktable1.setBackground(new Color(238, 238, 238));
 		add(Ktable1);
 		
+		
+		
 		JLabel TilføjOverKategori = new JLabel("Over kategori:");
 		TilføjOverKategori.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		TilføjOverKategori.setBounds(140, 120, 140, 20);
 		TilføjOverKategori.setForeground(Color.black);
 		add(TilføjOverKategori);
+		
+		
 		
 		/* Henter navnene på kategorier fra database til vores combobox */
 		

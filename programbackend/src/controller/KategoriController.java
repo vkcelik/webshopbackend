@@ -2,6 +2,9 @@ package controller;
 
 import java.util.List;
 
+import javax.swing.JComboBox;
+import javax.swing.JTextField;
+
 import logic.dto.KategoriDTO;
 import logic.dto.MedarbejderDTO;
 import presentation.GUI;
@@ -60,5 +63,13 @@ public class KategoriController {
 		}
 		
 		return redigerkategori;
+	}
+	
+	public void tilføjKategori(JTextField navn, JComboBox overKategori){
+		
+		String knavn = navn.getText();
+		
+		kdao.createKategori(new KategoriDTO(null, knavn, koverKategori));
+		
 	}
 }
