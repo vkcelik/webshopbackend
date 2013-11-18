@@ -21,7 +21,7 @@ import logic.dto.KategoriDTO;
 
 
 
-public class TilføjKategori extends JPanel {
+public class SeKategori extends JPanel {
 
 	private static final long serialVersionUID = 1541797465235551941L;
 	private JTable Ktable;
@@ -30,7 +30,7 @@ public class TilføjKategori extends JPanel {
 	private KategoriController controller;
 	public JTextField kategorinavnText;
 	
-	public TilføjKategori() {
+	public SeKategori() {
 
 
 		this.setBackground(new Color(51, 161, 201));

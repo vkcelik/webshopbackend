@@ -13,14 +13,14 @@ import controller.VarehusController;
 
 
 
-public class TilføjVarehus extends JPanel {
-	
+public class SeVarehus extends JPanel {
+
 	private static final long serialVersionUID = 5911075244950799116L;
 	private JTable VHtable;
 	private JTable VHtable1;
 	private VarehusController controller;
 	
-	public TilføjVarehus() {
+	public SeVarehus() {
 		
 		
 		this.setBackground(new Color(51, 161, 201));

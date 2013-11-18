@@ -21,7 +21,7 @@ import data.connect.Connector;
 import data.dao.MySQLMedarbejderDAO;
 import data.idao.DALException;
 
-public class RedigerSletMedarbejder extends JPanel {
+public class RedigerMedarbejder extends JPanel {
 
 	private static final long serialVersionUID = -3146818100262099845L;	
 	private JTable SEMtable;
@@ -30,7 +30,7 @@ public class RedigerSletMedarbejder extends JPanel {
 	private MouseListener mouseListener; 
 	JList<String> list; 
 
-	public RedigerSletMedarbejder() {
+	public RedigerMedarbejder() {
 
 
 		this.setBackground(new Color(51, 161, 201));

@@ -1,16 +1,16 @@
 package controller;
 
 import data.dao.MySQLKundeDAO;
-import presentation.RedigerSletKunde;
+import presentation.RedigerKunde;
 import presentation.TilføjKunde;
 
 public class KundeController {
 	
 	TilføjKunde tkunPanel;
-	RedigerSletKunde rskunPanel;
+	RedigerKunde rskunPanel;
 	MySQLKundeDAO kdao;
 
-	public KundeController(TilføjKunde tkunPanel, RedigerSletKunde rskunPanel) {
+	public KundeController(TilføjKunde tkunPanel, RedigerKunde rskunPanel) {
 		this.tkunPanel = tkunPanel;
 		this.rskunPanel = rskunPanel;
 		this.kdao = new MySQLKundeDAO();

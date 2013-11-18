@@ -7,11 +7,7 @@ import javax.swing.JPanel;
 import controller.IndstillingerController;
 
 public class Indstillinger extends JPanel {
-
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -4449413241907178775L;
 	private IndstillingerController controller;
 

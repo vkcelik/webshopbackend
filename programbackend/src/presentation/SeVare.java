@@ -28,7 +28,7 @@ import data.idao.DALException;
 
 
 
-public class TilføjVare extends JPanel {
+public class SeVare extends JPanel {
 
 	private static final long serialVersionUID = -2533980648166217598L;
 	private JTable Vtable;
@@ -37,14 +37,14 @@ public class TilføjVare extends JPanel {
 	private VareController controller;
 
 
-	public TilføjVare() {
+	public SeVare() {
 
 
 		this.setBackground(new Color(51, 161, 201));
 		setLayout(null);
 
 		JLabel VareLabel = new JLabel("Tilføj Varer");
-		VareLabel.setIcon(new ImageIcon(TilføjVare.class.getResource("/presentation/resources/add32.png")));
+		VareLabel.setIcon(new ImageIcon(SeVare.class.getResource("/presentation/resources/add32.png")));
 		VareLabel.setFont(new Font("sansserif", Font.BOLD, 24));
 		VareLabel.setForeground(Color.black);
 		VareLabel.setBounds(30, 28, 180, 32);

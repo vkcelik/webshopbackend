@@ -2,14 +2,14 @@ package controller;
 
 import data.dao.MySQLOrdreDAO;
 import data.dao.MySQLOrdreLinieDAO;
-import presentation.SeOrdre;
+import presentation.RedigerOrdre;
 
 public class OrdreController {
-	SeOrdre oPanel;
+	RedigerOrdre oPanel;
 	MySQLOrdreDAO odao;
 	MySQLOrdreLinieDAO oldao; 
 
-	public OrdreController(SeOrdre oPanel) {
+	public OrdreController(RedigerOrdre oPanel) {
 		this.oPanel = oPanel;
 		this.odao = new MySQLOrdreDAO();
 		this.oldao = new MySQLOrdreLinieDAO();

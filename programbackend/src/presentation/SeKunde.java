@@ -12,15 +12,15 @@ import javax.swing.JTextField;
 
 import controller.KundeController;
 
-public class TilføjKunde extends JPanel {
-
+public class SeKunde extends JPanel {
+	
 	private static final long serialVersionUID = -7740794442244469219L;
 	private JTable Vtable;
 	private JTable Vtable1;
 	private KundeController controller;
 
 
-	public TilføjKunde() {
+	public SeKunde() {
 		
 		this.setBackground(new Color(51, 161, 201));
 		setLayout(null);

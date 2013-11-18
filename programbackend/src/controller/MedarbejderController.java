@@ -8,15 +8,15 @@ import logic.dto.MedarbejderDTO;
 import data.dao.MySQLMedarbejderDAO;
 import data.idao.DALException;
 import presentation.GUI;
-import presentation.RedigerSletMedarbejder;
+import presentation.RedigerMedarbejder;
 import presentation.TilføjMedarbejder;
 
 public class MedarbejderController {
 	TilføjMedarbejder tm;
-	RedigerSletMedarbejder rsm;
+	RedigerMedarbejder rsm;
 	MySQLMedarbejderDAO mdao;
 	
-	public MedarbejderController(TilføjMedarbejder tm, RedigerSletMedarbejder rsm) {
+	public MedarbejderController(TilføjMedarbejder tm, RedigerMedarbejder rsm) {
 		this.tm = tm;
 		this.rsm = rsm;
 		this.mdao = new MySQLMedarbejderDAO();
@@ -30,7 +30,7 @@ public class MedarbejderController {
 		try {
 			x = Integer.parseInt(selectedValue.substring(0, selectedValue.indexOf(",")));
 		} catch (Exception e) {
-			// should not happen
+			// exception should never be catched
 		}
 		
 		MedarbejderDTO dto = null;

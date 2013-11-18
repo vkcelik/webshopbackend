@@ -5,7 +5,7 @@ import java.util.List;
 import logic.dto.KategoriDTO;
 import logic.dto.MedarbejderDTO;
 import presentation.GUI;
-import presentation.RedigerSletKategori;
+import presentation.RedigerKategori;
 import presentation.TilføjKategori;
 import data.dao.MySQLKategoriDAO;
 import data.idao.DALException;
@@ -13,10 +13,10 @@ import data.idao.DALException;
 public class KategoriController {
 
 	TilføjKategori tilføj;
-	RedigerSletKategori se;
+	RedigerKategori se;
 	MySQLKategoriDAO kdao;
 
-	public KategoriController(TilføjKategori tilføj, RedigerSletKategori se){
+	public KategoriController(TilføjKategori tilføj, RedigerKategori se){
 		this.tilføj = tilføj;
 		this.se = se;
 		this.kdao = new MySQLKategoriDAO();
@@ -48,17 +48,17 @@ public class KategoriController {
 }
 	
 	public String[] hentKategoriNavne(){
-		String Redigerkategori[];
+		String redigerkategori[];
 		List<KategoriDTO> kats = null;
 		
 		try {kats = kdao.getKategoriList();}
 		catch (DALException e) { System.out.println(e.getMessage()); }
 
-		Redigerkategori = new String[kats.size()];
+		redigerkategori = new String[kats.size()];
 		for (int i=0; i < kats.size(); i++){
-			Redigerkategori[i]=kats.get(i).getKategoriNavn();
+			redigerkategori[i]=kats.get(i).getKategoriNavn();
 		}
 		
-		return Redigerkategori;
+		return redigerkategori;
 	}
 }

@@ -10,19 +10,16 @@ import javax.swing.JTable;
 
 import controller.KundeController;
 
-public class RedigerSletKunde extends JPanel {
+public class RedigerKunde extends JPanel {
 
 	
 	private JTable RSKtable;
 	private JTable RSKtable1;
 	private KundeController controller;
-	
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 5429893899549656494L;
 
-	public RedigerSletKunde() {
+	public RedigerKunde() {
 		
 		this.setBackground(new Color(51, 161, 201));
 		setLayout(null);

@@ -11,19 +11,15 @@ import controller.VareController;
 
 
 
-public class RedigerSletVare extends JPanel {
+public class RedigerVare extends JPanel {
 
-
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 3093153771109800762L;
 	private JTable SEVtable;
 	private JTable SEVtable1;
 	private VareController controller;
 	
 
-	public RedigerSletVare() {
+	public RedigerVare() {
 
 
 		this.setBackground(new Color(51, 161, 201));

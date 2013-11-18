@@ -27,17 +27,17 @@ public class GUI {
 	static LogInd logindFrame;
 	static Indstillinger seIndstillinger;
 	static Statestik seStatestik;
-	static SeOrdre seOrdre;
-	static RedigerSletKunde seKunde;
+	static RedigerOrdre seOrdre;
+	static RedigerKunde seKunde;
 	static TilføjKunde tilføjKunde;
 	static TilføjMedarbejder tilføjMedarbejder;
-	static RedigerSletMedarbejder seMedarbejder;
+	static RedigerMedarbejder seMedarbejder;
 	static TilføjKategori tilføjKategori;
-	static RedigerSletKategori seKategori;
+	static RedigerKategori seKategori;
 	static TilføjVare tilføjVare;
-	static RedigerSletVare seVare;
+	static RedigerVare seVare;
 	static TilføjVarehus tilføjVarehus;
-	static SeSletVarehus seVarehus;
+	static RedigerVarehus seVarehus;
 	public static CardLayout cardLayout;
 	public static JPanel cards;
 	
@@ -93,17 +93,17 @@ public class GUI {
 		// Create the cards
 		seIndstillinger = new Indstillinger();
 		seStatestik = new Statestik();
-		seOrdre = new SeOrdre();
-		seKunde = new RedigerSletKunde();
+		seOrdre = new RedigerOrdre();
+		seKunde = new RedigerKunde();
 		tilføjKunde = new TilføjKunde();
 		tilføjMedarbejder = new TilføjMedarbejder();
-		seMedarbejder = new RedigerSletMedarbejder();
+		seMedarbejder = new RedigerMedarbejder();
 		tilføjKategori = new TilføjKategori();
-		seKategori = new RedigerSletKategori();
+		seKategori = new RedigerKategori();
 		tilføjVare = new TilføjVare();
-		seVare = new RedigerSletVare();
+		seVare = new RedigerVare();
 		tilføjVarehus = new TilføjVarehus();
-		seVarehus = new SeSletVarehus();
+		seVarehus = new RedigerVarehus();
 
 		KategoriController katc = new KategoriController(tilføjKategori, seKategori);
 		IndstillingerController ic = new IndstillingerController(seIndstillinger);

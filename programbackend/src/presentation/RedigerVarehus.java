@@ -12,19 +12,14 @@ import controller.VarehusController;
 
 
 
-public class SeSletVarehus extends JPanel {
+public class RedigerVarehus extends JPanel {
 
-	
-	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -8489392455577731305L;
 	private JTable SEVHtable;
 	private JTable SEVHtable1;
 	private VarehusController controller;
 
-	public SeSletVarehus() {
+	public RedigerVarehus() {
 
 
 		this.setBackground(new Color(51, 161, 201));
