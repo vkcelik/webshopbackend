@@ -6,7 +6,7 @@ public class KategoriDTO {
 	private String kategoriNavn;
 	private int parent;
 	
-	public KategoriDTO(int kategoriNummer, String kategoriNavn, int parent) {
+	public KategoriDTO(Integer kategoriNummer, String kategoriNavn, int parent) {
 		this.kategoriNummer = kategoriNummer;
 		this.kategoriNavn = kategoriNavn;
 		this.parent = parent;
