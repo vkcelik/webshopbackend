@@ -5,7 +5,7 @@ import java.util.List;
 import logic.dto.KategoriDTO;
 import logic.dto.MedarbejderDTO;
 import presentation.GUI;
-import presentation.RedigerKategori;
+import presentation.OversigtKategori;
 import presentation.TilføjKategori;
 import data.dao.MySQLKategoriDAO;
 import data.idao.DALException;
@@ -13,10 +13,10 @@ import data.idao.DALException;
 public class KategoriController {
 
 	TilføjKategori tilføj;
-	RedigerKategori se;
+	OversigtKategori se;
 	MySQLKategoriDAO kdao;
 
-	public KategoriController(TilføjKategori tilføj, RedigerKategori se){
+	public KategoriController(TilføjKategori tilføj, OversigtKategori se){
 		this.tilføj = tilføj;
 		this.se = se;
 		this.kdao = new MySQLKategoriDAO();

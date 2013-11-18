@@ -8,15 +8,15 @@ import logic.dto.MedarbejderDTO;
 import data.dao.MySQLMedarbejderDAO;
 import data.idao.DALException;
 import presentation.GUI;
-import presentation.RedigerMedarbejder;
+import presentation.OversigtMedarbejder;
 import presentation.TilføjMedarbejder;
 
 public class MedarbejderController {
 	TilføjMedarbejder tm;
-	RedigerMedarbejder rsm;
+	OversigtMedarbejder rsm;
 	MySQLMedarbejderDAO mdao;
 	
-	public MedarbejderController(TilføjMedarbejder tm, RedigerMedarbejder rsm) {
+	public MedarbejderController(TilføjMedarbejder tm, OversigtMedarbejder rsm) {
 		this.tm = tm;
 		this.rsm = rsm;
 		this.mdao = new MySQLMedarbejderDAO();
