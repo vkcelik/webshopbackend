@@ -34,8 +34,6 @@ public class KategoriController {
 		} catch (Exception e) {
 			// should not happen
 		}
-		
-
 		KategoriDTO dto = null;
 		try {
 			dto = kdao.getKategori(x);
@@ -43,10 +41,7 @@ public class KategoriController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		GUI.redigerKategori.kategorinavnText.setText(dto.getKategoriNavn());
-		
-	
-		GUI.cardLayout.show(GUI.cards, "tilføjKategori");
+
 }
 	
 	public String[] hentKategoriNavne(){

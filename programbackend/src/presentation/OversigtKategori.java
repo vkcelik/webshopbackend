@@ -42,11 +42,14 @@ public class OversigtKategori extends JPanel {
 		KategoriId.setFont(new Font("Tahoma", Font.BOLD, 14));
 		KategoriId.setBounds(30, 90, 130, 20);
 		add(KategoriId);
+		
+		
 
-
+		// Opretter en liste //
 		listKategori = new JList<String>();
 		add(listKategori);
 		listKategori.setBounds(30, 120, 70, 200);
+		listKategori.setForeground(Color.BLACK);
 		listKategori.setBackground(new Color(240,240,240));
 		listKategori.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		listKategori.setFixedCellHeight(30);
