@@ -48,7 +48,7 @@ public class OversigtKategori extends JPanel {
 		// Opretter en liste //
 		listKategori = new JList<String>();
 		add(listKategori);
-		listKategori.setBounds(30, 120, 70, 200);
+		listKategori.setBounds(30, 120, 100, 250);
 		listKategori.setForeground(Color.BLACK);
 		listKategori.setBackground(new Color(240,240,240));
 		listKategori.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
@@ -56,7 +56,8 @@ public class OversigtKategori extends JPanel {
 
 		mouseListener1 = new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
-				if (e.getClickCount() == 2) {
+				if (e.getClickCount() == 2) { 
+					controller.updateList(GUI.redigerKategori);
 					controller.visKategori(listKategori.getSelectedValue());
 				}
 			}
