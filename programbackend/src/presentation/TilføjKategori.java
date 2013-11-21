@@ -28,10 +28,10 @@ public class TilføjKategori extends JPanel {
 	private static final long serialVersionUID = 1541797465235551941L;
 	private JTable Ktable;
 	private JTable Ktable1;
-	JComboBox<String> combobox1;
+	public JComboBox<String> combobox1;
 	private KategoriController controller;
-	public JTextField kategorinavnText;
-	
+	private JTextField kategorinavnText;
+
 	public TilføjKategori() {
 
 
@@ -54,21 +54,20 @@ public class TilføjKategori extends JPanel {
 		kategorinavnText = new JTextField();
 		kategorinavnText.setBounds(230, 90, 300, 20);
 		add(kategorinavnText);
-		
+
 
 		Button TilføjKategori1 = new Button("Tilføj");
 		TilføjKategori1.setBackground(new Color(255,215,10));
 		TilføjKategori1.setBounds(460, 160, 70, 22);
 		TilføjKategori1.setForeground(Color.black);
 		add(TilføjKategori1);
-		
+
 		TilføjKategori1.addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				
-		
-				
+				System.out.println(controller);
+				controller.tilføjKategori(kategorinavnText, combobox1);
 			}
 		});
 
@@ -76,50 +75,27 @@ public class TilføjKategori extends JPanel {
 		Ktable1.setBounds(12, 10, 710, 57);
 		Ktable1.setBackground(new Color(238, 238, 238));
 		add(Ktable1);
-		
-		
-		
+
+
+
 		JLabel TilføjOverKategori = new JLabel("Over kategori:");
 		TilføjOverKategori.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		TilføjOverKategori.setBounds(140, 120, 140, 20);
 		TilføjOverKategori.setForeground(Color.black);
 		add(TilføjOverKategori);
-		
-		
-		
-		/* Henter navnene på kategorier fra database til vores combobox */
-		
-		String KategoriDropdown[];
-		List<KategoriDTO> kats = null;
-		
-		try { new Connector(); }
-		catch (InstantiationException e){ e.printStackTrace(); }
-		catch (IllegalAccessException e){ e.printStackTrace(); }
-		catch (ClassNotFoundException e){ e.printStackTrace(); }
-		catch (SQLException e){ e.printStackTrace(); }
-		
-		MySQLKategoriDAO kaDd = new MySQLKategoriDAO();
-		try {kats = kaDd.getKategoriList();}
-		catch (DALException e) { System.out.println(e.getMessage()); }
-		
-		KategoriDropdown = new String[kats.size()];
-		for (int i=0; i < kats.size(); i++){
-			KategoriDropdown[i]=kats.get(i).getKategoriNavn();
-		}
-		
+
 		// Opretter comboxen med navnene fra herover
-		
-		combobox1 = new JComboBox<String>(KategoriDropdown);
+		combobox1 = new JComboBox<String>();
 		combobox1.setBounds(230, 120, 300, 20);
 		add(combobox1);
-		
-		
+
+
 		Ktable = new JTable();
 		Ktable.setBounds(12, 71, 710, 405);
 		Ktable.setBackground(new Color(238, 238, 238));
 		add(Ktable);
 	}
-	
+
 	public void setController(KategoriController controller){
 		this.controller = controller;
 	}

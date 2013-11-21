@@ -37,12 +37,12 @@ public class MedarbejderController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		GUI.tilføjMedarbejder.MedarbejderNavnText.setText(dto.getMedarbejderNavn());
-		GUI.tilføjMedarbejder.MedarbejderAdresseText.setText(dto.getMedarbejderAdresse());
-		GUI.tilføjMedarbejder.MedarbejderlandText.setText(dto.getMedarbejderLand());
-		GUI.tilføjMedarbejder.MedarbejderPasswordText.setText(dto.getMedarbejderPassword());
-		GUI.tilføjMedarbejder.MedarbejderLønTypeText.setText(dto.getMedarbejderLønType());
-		GUI.tilføjMedarbejder.MedarbejderCprText.setText(dto.getMedarbejderCpr());
+		GUI.redigerMedarbejder.MedarbejderNavnText.setText(dto.getMedarbejderNavn());
+		GUI.redigerMedarbejder.MedarbejderAdresseText.setText(dto.getMedarbejderAdresse());
+		GUI.redigerMedarbejder.MedarbejderlandText.setText(dto.getMedarbejderLand());
+		GUI.redigerMedarbejder.MedarbejderPasswordText.setText(dto.getMedarbejderPassword());
+		GUI.redigerMedarbejder.MedarbejderLønTypeText.setText(dto.getMedarbejderLønType());
+		GUI.redigerMedarbejder.MedarbejderCprText.setText(dto.getMedarbejderCpr());
 
 		GUI.cardLayout.show(GUI.cards, "redigerMedarbejder");
 		

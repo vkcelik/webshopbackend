@@ -62,7 +62,7 @@ public class KategoriController {
 			redigerkategori[i]=kats.get(i).getKategoriNavn();
 			map.put(kats.get(i).getKategoriNavn(), kats.get(i).getKategoriNummer());
 		}
-		
+		System.out.println(map);
 		return redigerkategori;
 	}
 	
@@ -72,6 +72,7 @@ public class KategoriController {
 		String key = (String)overKategori.getSelectedItem();
 		
 		try {
+			System.out.println(key);
 			kdao.createKategori(new KategoriDTO(null, knavn, map.get(key)));
 		} catch (DALException e) {
 			e.printStackTrace();
