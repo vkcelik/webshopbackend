@@ -48,6 +48,15 @@ public class GUI {
 	public static RedigerVarehus redigerVarehus;
 	public static RedigerOrdre redigerOrdre;
 	
+	public static KategoriController katc; 
+	public static IndstillingerController ic;
+	public static KundeController kunc;
+	public static VareController vc;
+	public static StatestikController sc;
+	public static OrdreController oc;
+	public static VarehusController vhc;
+	public static MedarbejderController mc;
+	
 	public static CardLayout cardLayout;
 	public static JPanel cards;
 
@@ -124,14 +133,14 @@ public class GUI {
 		redigerVare = new RedigerVare();
 		redigerOrdre = new RedigerOrdre();
 		
-		KategoriController katc = new KategoriController();
-		IndstillingerController ic = new IndstillingerController();
-		KundeController kunc = new KundeController();
-		VareController vc = new VareController();
-		StatestikController sc = new StatestikController();
-		OrdreController oc = new OrdreController();
-		VarehusController vhc = new VarehusController();
-		MedarbejderController mc = new MedarbejderController();
+		katc = new KategoriController();
+		ic = new IndstillingerController();
+		kunc = new KundeController();
+		vc = new VareController();
+		sc = new StatestikController();
+		oc = new OrdreController();
+		vhc = new VarehusController();
+		mc = new MedarbejderController();
 
 		BackEndSystem bes = new BackEndSystem();
 		bes.addComponentToPane(frame, frame.getContentPane());

@@ -84,7 +84,6 @@ public class TilføjKategori extends JPanel {
 		TilføjOverKategori.setForeground(Color.black);
 		add(TilføjOverKategori);
 
-		// Opretter comboxen med navnene fra herover
 		combobox1 = new JComboBox<String>();
 		combobox1.setBounds(230, 120, 300, 20);
 		add(combobox1);

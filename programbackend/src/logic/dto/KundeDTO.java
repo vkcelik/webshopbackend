@@ -2,7 +2,7 @@ package logic.dto;
 
 public class KundeDTO {
 	
-	private int kundeNummer;
+	private Integer kundeNummer;
 	private String kundeNavn;
 	private String kundeEmail;
 	private String kundeAdresse;
@@ -10,7 +10,7 @@ public class KundeDTO {
 	private int kundePostnummer;
 	private int kundeTelefon;
 	
-	public KundeDTO(int kundeNummer, String kundeNavn, String kundeEmail,
+	public KundeDTO(Integer kundeNummer, String kundeNavn, String kundeEmail,
 			String kundeAdresse, String kundeLand, int kundePostnummer,
 			int kundeTelefon) {
 		this.kundeNummer = kundeNummer;
@@ -22,7 +22,7 @@ public class KundeDTO {
 		this.kundeTelefon = kundeTelefon;
 	}
 
-	public int getKundeNummer() {
+	public Integer getKundeNummer() {
 		return kundeNummer;
 	}
 

@@ -12,7 +12,7 @@ public class VareDTO {
 	private double dybde;
 	private double højde;
 	
-	public VareDTO(int vareNummer, String vareNavn, double pris,
+	public VareDTO(Integer vareNummer, String vareNavn, double pris,
 			int kategoriNummer, String beskrivelse, double vægt, double bredde,
 			double dybde, double højde) {
 		this.vareNummer = vareNummer;

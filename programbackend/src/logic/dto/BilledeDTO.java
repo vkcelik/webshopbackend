@@ -2,17 +2,17 @@ package logic.dto;
 
 public class BilledeDTO {
 	
-	private int billedeNummer;
+	private Integer billedeNummer;
 	private int vareNummer;
 	private String billedeSti;
 	
-	public BilledeDTO(int billedeNummer, int vareNummer, String billedeSti) {
+	public BilledeDTO(Integer billedeNummer, int vareNummer, String billedeSti) {
 		this.billedeNummer = billedeNummer;
 		this.vareNummer = vareNummer;
 		this.billedeSti = billedeSti;
 	}
 
-	public int getBilledeNummer() {
+	public Integer getBilledeNummer() {
 		return billedeNummer;
 	}
 

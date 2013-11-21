@@ -2,7 +2,7 @@ package logic.dto;
 
 public class MedarbejderDTO {
 	
-	private int medarbejderNummer;
+	private Integer medarbejderNummer;
 	private String medarbejderNavn;
 	private String medarbejderAdresse;
 	private String medarbejderLand;
@@ -16,7 +16,7 @@ public class MedarbejderDTO {
 	private String medarbejderCpr;
 	
 
-	public MedarbejderDTO(int medarbejderNummer, String medarbejderNavn,
+	public MedarbejderDTO(Integer medarbejderNummer, String medarbejderNavn,
 			String medarbejderAdresse, String medarbejderLand,
 			int medarbejderPostnummer, String medarbejderEmail,
 			String medarbejderPassword, String medarbejderLønType, double medarbejderLøn,
@@ -35,7 +35,7 @@ public class MedarbejderDTO {
 		this.medarbejderCpr = medarbejderCpr;
 	}
 
-	public int getMedarbejderNummer() {
+	public Integer getMedarbejderNummer() {
 		return medarbejderNummer;
 	}
 

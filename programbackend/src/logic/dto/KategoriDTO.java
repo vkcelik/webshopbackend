@@ -2,7 +2,7 @@ package logic.dto;
 
 public class KategoriDTO {
 	
-	private int kategoriNummer;
+	private Integer kategoriNummer;
 	private String kategoriNavn;
 	private int parent;
 	
@@ -12,7 +12,7 @@ public class KategoriDTO {
 		this.parent = parent;
 	}
 	
-	public int getKategoriNummer() {
+	public Integer getKategoriNummer() {
 		return kategoriNummer;
 	}
 	public void setKategoriNummer(int kategoriNummer) {

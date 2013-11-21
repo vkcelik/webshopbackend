@@ -23,7 +23,7 @@ public class OversigtKategori extends JPanel {
 	private JTable SERtable;
 	private JTable SERtable1;
 	private KategoriController controller;
-	JList<String> listKategori; 
+	public JList<String> listKategori; 
 	private MouseListener mouseListener1; 
 	public OversigtKategori() {
 
@@ -83,9 +83,5 @@ public class OversigtKategori extends JPanel {
 	public void setController(KategoriController controller){
 		this.controller = controller;
 
-	}
-
-	public void updateList(){
-		listKategori.setListData(controller.hentKategoriNavne());
 	}
 }

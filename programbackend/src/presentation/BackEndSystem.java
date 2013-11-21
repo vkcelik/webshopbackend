@@ -73,6 +73,7 @@ public class BackEndSystem {
 		mnNewMenu_2.add(mntmNewMenuItem_10);
 		mntmNewMenuItem_10.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				GUI.katc.updateList(GUI.tilføjKategori);
 				GUI.cardLayout.show(GUI.cards, "tilføjKategori");
 			}
 		});

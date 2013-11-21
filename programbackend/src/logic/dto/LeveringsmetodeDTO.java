@@ -3,18 +3,18 @@ package logic.dto;
 public class LeveringsmetodeDTO {
 
 	
-	private int leveringsmetodeNummer;
+	private Integer leveringsmetodeNummer;
 	private String leveringsmetodeNavn;
 	private double leveringsmetodePris;
 	
-	public LeveringsmetodeDTO(int leveringsmetodeNummer,
+	public LeveringsmetodeDTO(Integer leveringsmetodeNummer,
 			String leveringsmetodeNavn, double leveringsmetodePris) {
 		this.leveringsmetodeNummer = leveringsmetodeNummer;
 		this.leveringsmetodeNavn = leveringsmetodeNavn;
 		this.leveringsmetodePris = leveringsmetodePris;
 	}
 
-	public int getLeveringsmetodeNummer() {
+	public Integer getLeveringsmetodeNummer() {
 		return leveringsmetodeNummer;
 	}
 

@@ -3,6 +3,7 @@ package controller;
 import java.util.HashMap;
 import java.util.List;
 
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JComboBox;
 import javax.swing.JTextField;
 
@@ -73,5 +74,15 @@ public class KategoriController {
 			e.printStackTrace();
 		}
 		
+	}
+
+	public void updateList(TilføjKategori tk) {
+		DefaultComboBoxModel<String> model = new DefaultComboBoxModel<String>(hentKategoriNavne());
+		GUI.tilføjKategori.combobox1.removeAllItems();
+		GUI.tilføjKategori.combobox1.setModel(model);
+	}
+	
+	public void updateList(OversigtKategori tk) {
+		GUI.seKategori.listKategori.setListData(hentKategoriNavne());
 	}
 }
