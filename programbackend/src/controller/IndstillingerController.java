@@ -11,6 +11,4 @@ public class IndstillingerController {
 		this.idao = new MySQLIndstillingDAO();
 		GUI.seIndstillinger.setController(this);
 	}
-	
-
 }

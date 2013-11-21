@@ -29,19 +29,24 @@ public class KategoriController {
 
 	public void visKategori(String selectedValue) {
 		int x = 0;
-		// fjerne ", navn" og lave det om til int
-		try {
-			x = Integer.parseInt(selectedValue.substring(0, selectedValue.indexOf(",")));
-		} catch (Exception e) {
-			// should not happen
-		}
+		
+		x = map.get(selectedValue);
+		System.out.println(x);
+		
 		KategoriDTO dto = null;
 		try {
 			dto = kdao.getKategori(x);
 		} catch (DALException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		GUI.redigerKategori.kategorinavnText.setText(dto.getKategoriNavn());
+		try {
+			GUI.redigerKategori.combobox1.setSelectedItem(kdao.getKategori(dto.getParent()).getKategoriNavn());
+		} catch (DALException e) {
+			// Should not happen
+		}
+
+		GUI.cardLayout.show(GUI.cards, "redigerKategori");
 
 }
 	

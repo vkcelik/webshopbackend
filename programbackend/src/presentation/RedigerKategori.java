@@ -26,7 +26,7 @@ public class RedigerKategori extends JPanel {
 	private static final long serialVersionUID = 1541797465235551941L;
 	private JTable Ktable;
 	private JTable Ktable1;
-	JComboBox<String> combobox1;
+	public JComboBox<String> combobox1;
 	private KategoriController controller;
 	public JTextField kategorinavnText;
 	

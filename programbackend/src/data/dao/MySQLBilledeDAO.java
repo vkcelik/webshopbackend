@@ -14,7 +14,7 @@ public class MySQLBilledeDAO implements IBilledeDAO{
 
 	@Override
 	public BilledeDTO getbilledNummer(int billedeNummer) throws DALException {
-		
+
 		ResultSet rs = Connector.doQuery("SELECT * FROM Billede WHERE billedeNummer = " + billedeNummer);
 		try {
 			if (!rs.first())
@@ -22,11 +22,6 @@ public class MySQLBilledeDAO implements IBilledeDAO{
 			return new BilledeDTO(rs.getInt(1),rs.getInt(2), rs.getString(2) );
 		} catch (SQLException e) {throw new DALException(e); }
 	}
-		
-		
-		
-		
-	
 
 	@Override
 	public List<BilledeDTO> getBilledeList() throws DALException {
@@ -39,11 +34,11 @@ public class MySQLBilledeDAO implements IBilledeDAO{
 		} catch (SQLException e) {throw new DALException(e);}
 		return list;
 	}	 
-	
+
 
 	@Override
 	public List<BilledeDTO> getBilledeList(int vareNummer) throws DALException {
-		
+
 		List<BilledeDTO> list = new ArrayList<BilledeDTO>();
 		ResultSet rs = Connector.doQuery("SELECT * FROM Billede WHERE vareNummer = " +vareNummer);
 		try { 
@@ -61,8 +56,6 @@ public class MySQLBilledeDAO implements IBilledeDAO{
 		Connector.doUpdate(
 				s
 				);
-
-		
 	}
 
 	@Override
@@ -71,9 +64,7 @@ public class MySQLBilledeDAO implements IBilledeDAO{
 				+ "' , billedeSti = '" + billede.getBilledeSti()
 				+ "' WHERE billedeNummer = " + billede.getBilledeNummer();
 		Connector.doUpdate(
-		s
+				s
 				);
-		
 	}
-
 }
