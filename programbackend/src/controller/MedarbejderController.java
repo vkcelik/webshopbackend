@@ -78,6 +78,7 @@ public class MedarbejderController {
 		String lønType = medarbejderLønTypeText.getText();
 		String cpr = medarbejderCprText.getText();
 		
+		
 		try {
 			mdao.updateMedarbejder(null);
 		} catch (DALException e) {
