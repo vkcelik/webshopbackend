@@ -13,7 +13,7 @@ public class VarehusDTO {
 		this.leveringsTid = leveringsTid;
 	}
 	
-	public int getVarehusNummer() {
+	public Integer getVarehusNummer() {
 		return varehusNummer;
 	}
 	public void setVarehusNummer(int varehusNummer) {

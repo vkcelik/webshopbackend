@@ -16,7 +16,6 @@ import presentation.RedigerVarehus;
 import presentation.TilføjVarehus;
 
 public class VarehusController {
-	HashMap<String,Integer> map = new HashMap<String, Integer>();
 	MySQLVarehusDAO vhdao;
 	public VarehusController() {
 		this.vhdao = new MySQLVarehusDAO();
@@ -27,16 +26,20 @@ public class VarehusController {
 	}
 	
 	public void tilføjVarehus(JTextField adresse, JTextField Postnr, JTextField Leveringstid){
-		
 		String vhadresse = adresse.getText();
-		String key = (String) Postnr.getText();
+		int postNr = 0;
 		String vhLeveringstid = Leveringstid.getText();
 		try {
-			System.out.println(key);
-			vhdao.createVarehus(new VarehusDTO(null, vhadresse, map.get(key), vhLeveringstid));
-		} catch (DALException e) {
-			e.printStackTrace();
+			postNr = Integer.parseInt(Postnr.getText());			
+			try {
+				vhdao.createVarehus(new VarehusDTO(null, vhadresse, postNr, vhLeveringstid));
+			} catch (DALException e) {
+				e.printStackTrace();
+			}
+		} catch (NumberFormatException e) {
+			// TODO: handle exception
 		}
+
 	}
 	
 	
