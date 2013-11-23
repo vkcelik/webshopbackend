@@ -129,10 +129,19 @@ public class TilføjVare extends JPanel {
 		BeskrivelseText.setBounds(230, 305, 300, 100);
 		add(BeskrivelseText);
 
-
+		JLabel billeder = new JLabel("Billeder");
+		billeder.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		billeder.setBounds(150, 420, 110, 20);
+		billeder.setForeground(Color.black);
+		add(billeder);
+		
+		JTextField billederText = new JTextField();
+		billederText.setBounds(230, 420, 300, 20);
+		add(billederText);
+		
 		Button TilføjVarer = new Button("Tilføj");
 		TilføjVarer.setBackground(new Color(255,215,10));
-		TilføjVarer.setBounds(460, 420, 70, 22);
+		TilføjVarer.setBounds(460, 445, 70, 22);
 		TilføjVarer.setForeground(Color.black);
 		add(TilføjVarer);
 
@@ -144,7 +153,7 @@ public class TilføjVare extends JPanel {
 		add(Vtable1);
 
 		// Opretter comboxen med navnene fra herover
-		combobox = new JComboBox<String>(controller.hentKategoriNavne());
+		combobox = new JComboBox<String>();
 		combobox.setBounds(230, 151, 300, 20);
 		add(combobox);
 
