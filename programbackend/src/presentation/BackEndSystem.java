@@ -44,7 +44,7 @@ public class BackEndSystem {
 			}
 		});
 
-		JMenu mnNewMenu_1 = new JMenu("Varerhus");
+		JMenu mnNewMenu_1 = new JMenu("Lager");
 		menuBar.add(mnNewMenu_1);
 
 		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Tilføj varehus");
@@ -65,6 +65,25 @@ public class BackEndSystem {
 			}
 		});
 
+		JMenuItem mntmNewMenuItem_11 = new JMenuItem("Tilføj varebatch");
+		mntmNewMenuItem_11.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/1380431095_103.png")));
+		mnNewMenu_1.add(mntmNewMenuItem_11);
+		mntmNewMenuItem_11.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				GUI.cardLayout.show(GUI.cards, "tilføjVarehus");
+			}
+		});
+
+		JMenuItem mntmNewMenuItem_51 = new JMenuItem("Se/Rediger varebatch");
+		mntmNewMenuItem_51.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/Box.png")));
+		mnNewMenu_1.add(mntmNewMenuItem_51);
+		mntmNewMenuItem_51.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				GUI.cardLayout.show(GUI.cards, "seVarehus");
+			}
+		});
+
+		
 		JMenu mnNewMenu_2 = new JMenu("Kategorier");
 		menuBar.add(mnNewMenu_2);
 
