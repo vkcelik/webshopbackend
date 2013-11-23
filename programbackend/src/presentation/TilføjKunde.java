@@ -3,6 +3,8 @@ package presentation;
 import java.awt.Button;
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -18,7 +20,12 @@ public class TilføjKunde extends JPanel {
 	private JTable Vtable;
 	private JTable Vtable1;
 	private KundeController controller;
-
+	public JTextField KundeNavnText;
+	public JTextField KundeAdresseText;
+	public JTextField KundeEmailText;
+	public JTextField KundelandText;
+	public JTextField kundePostNrText;
+	public JTextField KundeTelefonText;
 
 	public TilføjKunde() {
 		
@@ -39,30 +46,30 @@ public class TilføjKunde extends JPanel {
 		KundeNavn.setForeground(Color.black);
 		add(KundeNavn);
 
-		JTextField KundeNavnText = new JTextField();
+		KundeNavnText = new JTextField();
 		KundeNavnText.setBounds(230, 90, 300, 20);
 		add(KundeNavnText);
 		
 
-		JLabel KundeAdresse = new JLabel("Adresse:");
-		KundeAdresse.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		KundeAdresse.setBounds(150, 120, 160, 20);
-		KundeAdresse.setForeground(Color.black);
-		add(KundeAdresse);
-
-		JTextField KundeAdresseText = new JTextField();
-		KundeAdresseText.setBounds(230, 120, 300, 20);
-		add(KundeAdresseText);
-		
-		JLabel KundeEmail= new JLabel("Email:");
+		JLabel KundeEmail = new JLabel("Email:");
 		KundeEmail.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		KundeEmail.setBounds(150, 150, 160, 20);
+		KundeEmail.setBounds(150, 120, 160, 20);
 		KundeEmail.setForeground(Color.black);
 		add(KundeEmail);
 
-		JTextField KundeEmailText = new JTextField();
-		KundeEmailText.setBounds(230, 150, 300, 20);
+		KundeEmailText = new JTextField();
+		KundeEmailText.setBounds(230, 120, 300, 20);
 		add(KundeEmailText);
+		
+		JLabel KundeAdresse= new JLabel("Adresse:");
+		KundeAdresse.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		KundeAdresse.setBounds(150, 150, 160, 20);
+		KundeAdresse.setForeground(Color.black);
+		add(KundeAdresse);
+
+		KundeAdresseText = new JTextField();
+		KundeAdresseText.setBounds(230, 150, 300, 20);
+		add(KundeAdresseText);
 		
 		JLabel	Kundeland = new JLabel("Land:");
 		Kundeland.setFont(new Font("Tahoma", Font.PLAIN, 12));
@@ -70,7 +77,7 @@ public class TilføjKunde extends JPanel {
 		Kundeland.setForeground(Color.black);
 		add(Kundeland);
 
-		JTextField KundelandText = new JTextField();
+		KundelandText = new JTextField();
 		KundelandText.setBounds(230, 180, 300, 20);
 		add(KundelandText);
 		
@@ -80,9 +87,9 @@ public class TilføjKunde extends JPanel {
 		KundePostNr.setForeground(Color.black);
 		add(KundePostNr);
 
-		JTextField KundePostNrText = new JTextField();
-		KundePostNrText.setBounds(230, 210, 300, 20);
-		add(KundePostNrText);
+		kundePostNrText = new JTextField();
+		kundePostNrText.setBounds(230, 210, 300, 20);
+		add(kundePostNrText);
 		
 		JLabel KundeTelefon = new JLabel("Telefon:");
 		KundeTelefon.setFont(new Font("Tahoma", Font.PLAIN, 12));
@@ -90,7 +97,7 @@ public class TilføjKunde extends JPanel {
 		KundeTelefon.setForeground(Color.black);
 		add(KundeTelefon);
 
-		JTextField KundeTelefonText = new JTextField();
+		KundeTelefonText = new JTextField();
 		KundeTelefonText.setBounds(230, 240, 300, 20);
 		add(KundeTelefonText);
 		
@@ -99,6 +106,14 @@ public class TilføjKunde extends JPanel {
 		TilføjKunde.setBounds(460, 275, 70, 22);
 		TilføjKunde.setForeground(Color.black);
 		add(TilføjKunde);
+		
+		TilføjKunde.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				System.out.println(controller);
+				controller.tilføjkunde(KundeNavnText,KundeEmailText,KundeAdresseText,KundelandText, kundePostNrText,KundeTelefonText );
+			}
+		});
 		
 		Vtable1 = new JTable();
 		Vtable1.setBounds(12, 10, 710, 57);
