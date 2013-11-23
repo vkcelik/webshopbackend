@@ -1,12 +1,12 @@
 package logic.dto;
 
 public class VarehusDTO {
-	int varehusNummer;
+	Integer varehusNummer;
 	String adresse;
 	int postnummer;
 	String leveringsTid;
 
-	public VarehusDTO(int varehusNummer, String adresse, int postnummer, String leveringsTid) {
+	public VarehusDTO(Integer varehusNummer, String adresse, int postnummer, String leveringsTid) {
 		this.varehusNummer = varehusNummer;
 		this.adresse = adresse;
 		this.postnummer = postnummer;
