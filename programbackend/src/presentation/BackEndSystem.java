@@ -56,7 +56,7 @@ public class BackEndSystem {
 			}
 		});
 
-		JMenuItem mntmNewMenuItem_5 = new JMenuItem("Se/Rediger varerhus");
+		JMenuItem mntmNewMenuItem_5 = new JMenuItem("Se/Rediger varehus");
 		mntmNewMenuItem_5.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/category-icon.png")));
 		mnNewMenu_1.add(mntmNewMenuItem_5);
 		mntmNewMenuItem_5.addActionListener(new ActionListener() {
@@ -70,7 +70,7 @@ public class BackEndSystem {
 		mnNewMenu_1.add(mntmNewMenuItem_11);
 		mntmNewMenuItem_11.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				GUI.cardLayout.show(GUI.cards, "tilføjVarehus");
+
 			}
 		});
 
@@ -79,7 +79,7 @@ public class BackEndSystem {
 		mnNewMenu_1.add(mntmNewMenuItem_51);
 		mntmNewMenuItem_51.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				GUI.cardLayout.show(GUI.cards, "seVarehus");
+				
 			}
 		});
 

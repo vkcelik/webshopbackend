@@ -12,14 +12,14 @@ import controller.OrdreController;
 
 
 
-public class Ordre extends JPanel {
+public class OversigtOrdre extends JPanel {
 
 	private static final long serialVersionUID = 807936107106094470L;
 	private JTable SOtable;
 	private JTable SOtable1;
 	private OrdreController controller;
 
-	public Ordre() {
+	public OversigtOrdre() {
 
 
 		this.setBackground(new Color(51, 161, 201));

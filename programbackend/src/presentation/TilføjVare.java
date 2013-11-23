@@ -143,27 +143,8 @@ public class TilføjVare extends JPanel {
 		Vtable1.setBackground(new Color(238, 238, 238));
 		add(Vtable1);
 
-		/* Henter navnene på kategorier fra database til vores combobox */
-		String KategoriDropdown[];
-		List<KategoriDTO> kats = null;
-
-		try { new Connector(); }
-		catch (InstantiationException e){ e.printStackTrace(); }
-		catch (IllegalAccessException e){ e.printStackTrace(); }
-		catch (ClassNotFoundException e){ e.printStackTrace(); }
-		catch (SQLException e){ e.printStackTrace(); }
-
-		MySQLKategoriDAO kaDd = new MySQLKategoriDAO();
-		try {kats = kaDd.getKategoriList();}
-		catch (DALException e) { System.out.println(e.getMessage()); }
-
-		KategoriDropdown = new String[kats.size()];
-		for (int i=0; i < kats.size(); i++){
-			KategoriDropdown[i]=kats.get(i).getKategoriNavn();
-		}
-
 		// Opretter comboxen med navnene fra herover
-		combobox = new JComboBox<String>(KategoriDropdown);
+		combobox = new JComboBox<String>(controller.hentKategoriNavne());
 		combobox.setBounds(230, 151, 300, 20);
 		add(combobox);
 
@@ -171,10 +152,6 @@ public class TilføjVare extends JPanel {
 		Vtable.setBounds(12, 71, 710, 405);
 		Vtable.setBackground(new Color(238, 238, 238));
 		add(Vtable);
-
-
-
-
 
 	}
 

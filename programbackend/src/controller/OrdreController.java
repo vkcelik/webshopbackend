@@ -3,7 +3,7 @@ package controller;
 import data.dao.MySQLOrdreDAO;
 import data.dao.MySQLOrdreLinieDAO;
 import presentation.GUI;
-import presentation.Ordre;
+import presentation.OversigtOrdre;
 
 public class OrdreController {
 	MySQLOrdreDAO odao;

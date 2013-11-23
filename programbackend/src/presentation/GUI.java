@@ -37,7 +37,7 @@ public class GUI {
 	public static OversigtKategori seKategori;
 	public static OversigtMedarbejder seMedarbejder;
 	public static OversigtKunde seKunde;
-	public static Ordre seOrdre;
+	public static OversigtOrdre seOrdre;
 	public static Statestik seStatestik;
 	public static Indstillinger seIndstillinger;
 	// rediger
@@ -119,7 +119,7 @@ public class GUI {
 
 		seIndstillinger = new Indstillinger();
 		seStatestik = new Statestik();
-		seOrdre = new Ordre();
+		seOrdre = new OversigtOrdre();
 		seKunde = new OversigtKunde();
 		seMedarbejder = new OversigtMedarbejder();
 		seKategori = new OversigtKategori();
