@@ -141,6 +141,7 @@ public class GUI {
 		seVare = new OversigtVare();
 		seVarehus = new OversigtVarehus();
 		seLeveringsmetode = new OversigtLeveringsmetode();
+		seVarebatch = new OversigtVarebatch();
 		
 		redigerKunde = new RedigerKunde();
 		redigerMedarbejder = new RedigerMedarbejder();
@@ -148,6 +149,7 @@ public class GUI {
 		redigerVarehus = new RedigerVarehus();
 		redigerVare = new RedigerVare();
 		redigerOrdre = new RedigerOrdre();
+		redigerVarebatch = new RedigerVarebatch();
 		redigerLeveringsmetode = new RedigerLeveringsmetode();
 		
 		katc = new KategoriController();
