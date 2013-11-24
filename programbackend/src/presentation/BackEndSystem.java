@@ -70,7 +70,8 @@ public class BackEndSystem {
 		mnNewMenu_1.add(mntmNewMenuItem_11);
 		mntmNewMenuItem_11.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
+				GUI.katc.updateList(GUI.tilføjKategori);
+				GUI.cardLayout.show(GUI.cards, "tilføjVarebatch");
 			}
 		});
 
@@ -79,7 +80,8 @@ public class BackEndSystem {
 		mnNewMenu_1.add(mntmNewMenuItem_51);
 		mntmNewMenuItem_51.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				GUI.katc.updateList(GUI.tilføjKategori);
+				GUI.cardLayout.show(GUI.cards, "seVarebatch");
 			}
 		});
 

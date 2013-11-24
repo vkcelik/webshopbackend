@@ -20,6 +20,7 @@ import controller.MedarbejderController;
 import controller.OrdreController;
 import controller.StatestikController;
 import controller.VareController;
+import controller.VarebatchController;
 import controller.VarehusController;
 
 
@@ -31,6 +32,8 @@ public class GUI {
 	public static TilføjKategori tilføjKategori;
 	public static TilføjVare tilføjVare;
 	public static TilføjVarehus tilføjVarehus;
+	public static TilføjVarebatch tilføjVarebatch;
+	
 	// se 
 	public static OversigtVare seVare;
 	public static OversigtVarehus seVarehus;
@@ -38,6 +41,7 @@ public class GUI {
 	public static OversigtMedarbejder seMedarbejder;
 	public static OversigtKunde seKunde;
 	public static OversigtOrdre seOrdre;
+	public static OversigtVarebatch oversigtVarebatch;
 	public static Statestik seStatestik;
 	public static Indstillinger seIndstillinger;
 	// rediger
@@ -47,6 +51,7 @@ public class GUI {
 	public static RedigerVare redigerVare;
 	public static RedigerVarehus redigerVarehus;
 	public static RedigerOrdre redigerOrdre;
+	public static RedigerVarebatch redigerVarebatch;
 	
 	public static KategoriController katc; 
 	public static IndstillingerController ic;
@@ -56,6 +61,7 @@ public class GUI {
 	public static OrdreController oc;
 	public static VarehusController vhc;
 	public static MedarbejderController mc;
+	public static VarebatchController vbc;
 	
 	public static CardLayout cardLayout;
 	public static JPanel cards;
@@ -116,6 +122,7 @@ public class GUI {
 		tilføjKategori = new TilføjKategori();
 		tilføjVare = new TilføjVare();
 		tilføjVarehus = new TilføjVarehus();
+		tilføjVarebatch = new TilføjVarebatch();
 
 		seIndstillinger = new Indstillinger();
 		seStatestik = new Statestik();
