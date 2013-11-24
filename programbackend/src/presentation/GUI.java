@@ -16,21 +16,30 @@ import controller.KundeController;
 import controller.LogindController;
 
 
+import controller.LeveringsmetodeController;
 import controller.MedarbejderController;
 import controller.OrdreController;
 import controller.StatestikController;
 import controller.VareController;
+import controller.VarebatchController;
 import controller.VarehusController;
 
 
 public class GUI {
 	public static LogInd logindFrame;
+	
+	public static CardLayout cardLayout;
+	public static JPanel cards;
+	
 	// tilføj
 	public static TilføjKunde tilføjKunde;
 	public static TilføjMedarbejder tilføjMedarbejder;
 	public static TilføjKategori tilføjKategori;
 	public static TilføjVare tilføjVare;
 	public static TilføjVarehus tilføjVarehus;
+	public static TilføjVarebatch tilføjVarebatch;
+	public static TilføjLeveringsmetode tilføjLeveringsmetode;
+	
 	// se 
 	public static OversigtVare seVare;
 	public static OversigtVarehus seVarehus;
@@ -38,8 +47,11 @@ public class GUI {
 	public static OversigtMedarbejder seMedarbejder;
 	public static OversigtKunde seKunde;
 	public static OversigtOrdre seOrdre;
+	public static OversigtVarebatch seVarebatch;
+	public static OversigtLeveringsmetode seLeveringsmetode;
 	public static Statestik seStatestik;
 	public static Indstillinger seIndstillinger;
+	
 	// rediger
 	public static RedigerKategori redigerKategori;
 	public static RedigerKunde redigerKunde;
@@ -47,7 +59,10 @@ public class GUI {
 	public static RedigerVare redigerVare;
 	public static RedigerVarehus redigerVarehus;
 	public static RedigerOrdre redigerOrdre;
+	public static RedigerVarebatch redigerVarebatch;
+	public static RedigerLeveringsmetode redigerLeveringsmetode;
 	
+	// controller
 	public static KategoriController katc; 
 	public static IndstillingerController ic;
 	public static KundeController kunc;
@@ -56,10 +71,8 @@ public class GUI {
 	public static OrdreController oc;
 	public static VarehusController vhc;
 	public static MedarbejderController mc;
-	
-	public static CardLayout cardLayout;
-	public static JPanel cards;
-
+	public static VarebatchController vbc;
+	public static LeveringsmetodeController lmc;
 	
 	public void run() {
 		// Create connector for application to connect to database
@@ -116,6 +129,8 @@ public class GUI {
 		tilføjKategori = new TilføjKategori();
 		tilføjVare = new TilføjVare();
 		tilføjVarehus = new TilføjVarehus();
+		tilføjVarebatch = new TilføjVarebatch();
+		tilføjLeveringsmetode = new TilføjLeveringsmetode();
 
 		seIndstillinger = new Indstillinger();
 		seStatestik = new Statestik();
@@ -125,6 +140,8 @@ public class GUI {
 		seKategori = new OversigtKategori();
 		seVare = new OversigtVare();
 		seVarehus = new OversigtVarehus();
+		seLeveringsmetode = new OversigtLeveringsmetode();
+		seVarebatch = new OversigtVarebatch();
 		
 		redigerKunde = new RedigerKunde();
 		redigerMedarbejder = new RedigerMedarbejder();
@@ -132,6 +149,8 @@ public class GUI {
 		redigerVarehus = new RedigerVarehus();
 		redigerVare = new RedigerVare();
 		redigerOrdre = new RedigerOrdre();
+		redigerVarebatch = new RedigerVarebatch();
+		redigerLeveringsmetode = new RedigerLeveringsmetode();
 		
 		katc = new KategoriController();
 		ic = new IndstillingerController();
@@ -141,6 +160,8 @@ public class GUI {
 		oc = new OrdreController();
 		vhc = new VarehusController();
 		mc = new MedarbejderController();
+		vbc = new VarebatchController();
+		lmc = new LeveringsmetodeController();
 
 		BackEndSystem bes = new BackEndSystem();
 		bes.addComponentToPane(frame, frame.getContentPane());

@@ -70,7 +70,8 @@ public class BackEndSystem {
 		mnNewMenu_1.add(mntmNewMenuItem_11);
 		mntmNewMenuItem_11.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
+				GUI.katc.updateList(GUI.tilføjKategori);
+				GUI.cardLayout.show(GUI.cards, "tilføjVarebatch");
 			}
 		});
 
@@ -79,7 +80,8 @@ public class BackEndSystem {
 		mnNewMenu_1.add(mntmNewMenuItem_51);
 		mntmNewMenuItem_51.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				GUI.katc.updateList(GUI.tilføjKategori);
+				GUI.cardLayout.show(GUI.cards, "seVarebatch");
 			}
 		});
 
@@ -153,6 +155,28 @@ public class BackEndSystem {
 			}
 		});
 
+		JMenu mnNewMenu_7 = new JMenu("Leveringsmetode");
+		menuBar.add(mnNewMenu_7);
+		
+		JMenuItem mntmNewMenuItem_71 = new JMenuItem("Tilføj leveringsmetoder");
+		mntmNewMenuItem_71.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/1380431095_103.png")));
+		mnNewMenu_7.add(mntmNewMenuItem_71);
+		mntmNewMenuItem_71.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
+		
+		JMenuItem mntmNewMenuItem_72 = new JMenuItem("Se/rediger leveringsmetoder");
+		mntmNewMenuItem_72.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/truck.png")));
+		mnNewMenu_7.add(mntmNewMenuItem_72);
+		mntmNewMenuItem_72.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
+		
+		
 		JMenu mnNewMenu_3 = new JMenu("Ordre");
 		menuBar.add(mnNewMenu_3);
 
@@ -197,6 +221,8 @@ public class BackEndSystem {
 		GUI.cards.add(GUI.tilføjKategori, "tilføjKategori");
 		GUI.cards.add(GUI.tilføjVare,"tilføjVare");
 		GUI.cards.add(GUI.tilføjVarehus, "tilføjVarehus");
+		GUI.cards.add(GUI.tilføjVarebatch, "tilføjVarebatch");
+		GUI.cards.add(GUI.tilføjLeveringsmetode, "tilføjLeveringsmetode");
 		
 		GUI.cards.add(GUI.seIndstillinger, "seIndstillinger");
 		GUI.cards.add(GUI.seStatestik, "seStatestik");
@@ -206,6 +232,8 @@ public class BackEndSystem {
 		GUI.cards.add(GUI.seKategori, "seKategori");
 		GUI.cards.add(GUI.seVarehus, "seVarehus");
 		GUI.cards.add(GUI.seVare, "seVare");
+		GUI.cards.add(GUI.seVarebatch, "seVarebatch");
+		GUI.cards.add(GUI.seLeveringsmetode, "seLeveringsmetode");
 
 		GUI.cards.add(GUI.redigerKunde, "redigerKunde");
 		GUI.cards.add(GUI.redigerMedarbejder, "redigerMedarbejder");
@@ -213,6 +241,9 @@ public class BackEndSystem {
 		GUI.cards.add(GUI.redigerVarehus, "redigerVarehus");
 		GUI.cards.add(GUI.redigerVare, "redigerVare");
 		GUI.cards.add(GUI.redigerOrdre, "redigerOrdre");
+		GUI.cards.add(GUI.redigerVarebatch, "redigerVarebatch");
+		GUI.cards.add(GUI.redigerLeveringsmetode, "redigerLeveringsmetode");
+		
 				
 		GUI.cardLayout.show(GUI.cards, "seStatestik");
 

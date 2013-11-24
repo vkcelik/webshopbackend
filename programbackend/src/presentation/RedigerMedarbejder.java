@@ -27,15 +27,20 @@ public class RedigerMedarbejder extends JPanel {
 	private JTable Mtable;
 	private JTable Mtable1;
 	private MedarbejderController controller;
-	public JTextField MedarbejderNavnText;
-	public JTextField MedarbejderAdresseText;
-	public JTextField MedarbejderlandText;
-	public JTextField MedarbejderPostNrText;
-	public JTextField MedarbejderEmailText;
-	public JTextField MedarbejderPasswordText;
-	public JTextField MedarbejderLønText;
-	public JTextField MedarbejderLønTypeText;
-	public JTextField MedarbejderCprText;
+	public JTextField medarbejderNavnText;
+	public JTextField medarbejderAdresseText;
+	public JTextField medarbejderlandText;
+	public JTextField medarbejderPostNrText;
+	public JTextField medarbejderEmailText;
+	public JTextField medarbejderPasswordText;
+	public JTextField medarbejderLønText;
+	public JTextField medarbejderLønTypeText;
+	public JTextField medarbejderCprText;
+	public JTextField medarbejderRegNrText;
+	public JTextField medarbejderKontonrText;
+	public JCheckBox LagerMedarbejder;
+	public JCheckBox HRMedarbejder;
+	public JCheckBox SalgsMedarbejder;
 	private Mode tilstand; 
 	
 	public RedigerMedarbejder() {
@@ -58,9 +63,9 @@ public class RedigerMedarbejder extends JPanel {
 		MedarbejderNavn.setForeground(Color.black);
 		add(MedarbejderNavn);
 
-		MedarbejderNavnText = new JTextField();
-		MedarbejderNavnText.setBounds(230, 90, 300, 20);
-		add(MedarbejderNavnText);
+		medarbejderNavnText = new JTextField();
+		medarbejderNavnText.setBounds(230, 90, 300, 20);
+		add(medarbejderNavnText);
 
 		JLabel MedarbejderAdresse = new JLabel("Adresse:");
 		MedarbejderAdresse.setFont(new Font("Tahoma", Font.PLAIN, 12));
@@ -68,9 +73,9 @@ public class RedigerMedarbejder extends JPanel {
 		MedarbejderAdresse.setForeground(Color.black);
 		add(MedarbejderAdresse);
 
-		MedarbejderAdresseText = new JTextField();
-		MedarbejderAdresseText.setBounds(230, 120, 300, 20);
-		add(MedarbejderAdresseText);
+		medarbejderAdresseText = new JTextField();
+		medarbejderAdresseText.setBounds(230, 120, 300, 20);
+		add(medarbejderAdresseText);
 
 		JLabel Medarbejderland = new JLabel("Land:");
 		Medarbejderland.setFont(new Font("Tahoma", Font.PLAIN, 12));
@@ -78,9 +83,9 @@ public class RedigerMedarbejder extends JPanel {
 		Medarbejderland.setForeground(Color.black);
 		add(Medarbejderland);
 
-		MedarbejderlandText = new JTextField();
-		MedarbejderlandText.setBounds(230, 150, 300, 20);
-		add(MedarbejderlandText);
+		medarbejderlandText = new JTextField();
+		medarbejderlandText.setBounds(230, 150, 300, 20);
+		add(medarbejderlandText);
 
 		JLabel MedarbejderPostNr= new JLabel("Postnr:");
 		MedarbejderPostNr.setFont(new Font("Tahoma", Font.PLAIN, 12));
@@ -88,9 +93,9 @@ public class RedigerMedarbejder extends JPanel {
 		MedarbejderPostNr.setForeground(Color.black);
 		add(MedarbejderPostNr);
 
-		MedarbejderPostNrText = new JTextField();
-		MedarbejderPostNrText.setBounds(230, 180, 300, 20);
-		add(MedarbejderPostNrText);
+		medarbejderPostNrText = new JTextField();
+		medarbejderPostNrText.setBounds(230, 180, 300, 20);
+		add(medarbejderPostNrText);
 		
 		JLabel MedarbejderEmail= new JLabel("Email:");
 		MedarbejderEmail.setFont(new Font("Tahoma", Font.PLAIN, 12));
@@ -98,9 +103,9 @@ public class RedigerMedarbejder extends JPanel {
 		MedarbejderEmail.setForeground(Color.black);
 		add(MedarbejderEmail);
 
-		MedarbejderEmailText = new JTextField();
-		MedarbejderEmailText.setBounds(230, 210, 300, 20);
-		add(MedarbejderEmailText);
+		medarbejderEmailText = new JTextField();
+		medarbejderEmailText.setBounds(230, 210, 300, 20);
+		add(medarbejderEmailText);
 		
 		JLabel MedarbejderPassword = new JLabel("Password:");
 		MedarbejderPassword.setFont(new Font("Tahoma", Font.PLAIN, 12));
@@ -108,9 +113,9 @@ public class RedigerMedarbejder extends JPanel {
 		MedarbejderPassword.setForeground(Color.black);
 		add(MedarbejderPassword);
 
-		MedarbejderPasswordText = new JTextField();
-		MedarbejderPasswordText.setBounds(230, 240, 300, 20);
-		add(MedarbejderPasswordText);
+		medarbejderPasswordText = new JTextField();
+		medarbejderPasswordText.setBounds(230, 240, 300, 20);
+		add(medarbejderPasswordText);
 		
 		JLabel MedarbejderLøn = new JLabel("Løn:");
 		MedarbejderLøn.setFont(new Font("Tahoma", Font.PLAIN, 12));
@@ -118,9 +123,9 @@ public class RedigerMedarbejder extends JPanel {
 		MedarbejderLøn.setForeground(Color.black);
 		add(MedarbejderLøn);
 
-		MedarbejderLønText= new JTextField();
-		MedarbejderLønText.setBounds(230, 270, 300, 20);
-		add(MedarbejderLønText);
+		medarbejderLønText= new JTextField();
+		medarbejderLønText.setBounds(230, 270, 300, 20);
+		add(medarbejderLønText);
 		
 		JLabel MedarbejderLønType = new JLabel("Løntype:");
 		MedarbejderLønType.setFont(new Font("Tahoma", Font.PLAIN, 12));
@@ -128,46 +133,66 @@ public class RedigerMedarbejder extends JPanel {
 		MedarbejderLønType.setForeground(Color.black);
 		add(MedarbejderLønType);
 
-		MedarbejderLønTypeText= new JTextField();
-		MedarbejderLønTypeText.setBounds(230, 300, 300, 20);
-		add(MedarbejderLønTypeText);
+		medarbejderLønTypeText = new JTextField();
+		medarbejderLønTypeText.setBounds(230, 300, 300, 20);
+		add(medarbejderLønTypeText);
+		
+		JLabel regnr = new JLabel("Reg.nr.:");
+		regnr.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		regnr.setBounds(150, 330, 160, 20);
+		regnr.setForeground(Color.black);
+		add(regnr);
+
+		medarbejderRegNrText = new JTextField();
+		medarbejderRegNrText.setBounds(230, 330, 300, 20);
+		add(medarbejderRegNrText);
+		
+		JLabel medarbejderKontonr = new JLabel("Konto:");
+		medarbejderKontonr.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		medarbejderKontonr.setBounds(150, 360, 160, 20);
+		medarbejderKontonr.setForeground(Color.black);
+		add(medarbejderKontonr);
+
+		medarbejderKontonrText= new JTextField();
+		medarbejderKontonrText.setBounds(230, 360, 300, 20);
+		add(medarbejderKontonrText);
 		
 		JLabel MedarbejderCpr = new JLabel("Cpr.:");
 		MedarbejderCpr.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		MedarbejderCpr.setBounds(150, 330, 160, 20);
+		MedarbejderCpr.setBounds(150, 390, 160, 20);
 		MedarbejderCpr.setForeground(Color.black);
 		add(MedarbejderCpr);
 
-		MedarbejderCprText= new JTextField();
-		MedarbejderCprText.setBounds(230, 330, 300, 20);
-		add(MedarbejderCprText);
+		medarbejderCprText= new JTextField();
+		medarbejderCprText.setBounds(230, 390, 300, 20);
+		add(medarbejderCprText);
 		
 		JLabel MedarbejderStilling = new JLabel("Stilling:");
 		MedarbejderStilling.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		MedarbejderStilling.setBounds(150, 360, 160, 20);
+		MedarbejderStilling.setBounds(150, 420, 160, 20);
 		MedarbejderStilling.setForeground(Color.black);
 		add(MedarbejderStilling);
 
-		JCheckBox LagerMedarbejder = new JCheckBox("LagerMedarbejder");
-		LagerMedarbejder.setBounds(225, 360, 130, 20);
+		LagerMedarbejder = new JCheckBox("LagerMedarbejder");
+		LagerMedarbejder.setBounds(225, 420, 130, 20);
 		add(LagerMedarbejder);
 		
-		JCheckBox HRMedarbejder = new JCheckBox("HRMedarbejder");
-		HRMedarbejder.setBounds(360, 360, 120, 20);
+		HRMedarbejder = new JCheckBox("HRMedarbejder");
+		HRMedarbejder.setBounds(360, 420, 120, 20);
 		add(HRMedarbejder);
 		
-		JCheckBox SalgsMedarbejder = new JCheckBox("IndkøbMedarbejder");
-		SalgsMedarbejder.setBounds(485, 360, 150, 20);
+		SalgsMedarbejder = new JCheckBox("IndkøbMedarbejder");
+		SalgsMedarbejder.setBounds(485, 420, 150, 20);
 		add(SalgsMedarbejder);
 		
 		Button TilføjMedarbejder = new Button("Gem");
 		TilføjMedarbejder.setBackground(new Color(255,215,10));;
-		TilføjMedarbejder.setBounds(457, 395, 70, 22);
+		TilføjMedarbejder.setBounds(457, 445, 70, 22);
 		TilføjMedarbejder.setForeground(Color.black);
 		add(TilføjMedarbejder);
 		TilføjMedarbejder.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				controller.opdaterMedarbejder(MedarbejderNavnText,MedarbejderAdresseText,MedarbejderlandText,MedarbejderPostNrText,MedarbejderEmailText,MedarbejderPasswordText,MedarbejderLønText,MedarbejderLønTypeText,MedarbejderCprText);
+				controller.tilføjMedarbejder(medarbejderNavnText, medarbejderAdresseText, medarbejderlandText, medarbejderPostNrText, medarbejderEmailText, medarbejderPasswordText, medarbejderLønText, medarbejderLønTypeText, medarbejderRegNrText, medarbejderKontonrText, medarbejderCprText, LagerMedarbejder, HRMedarbejder, SalgsMedarbejder);
 			}
 		});
 		
