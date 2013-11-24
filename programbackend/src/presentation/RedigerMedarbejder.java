@@ -40,7 +40,7 @@ public class RedigerMedarbejder extends JPanel {
 	public JTextField medarbejderKontonrText;
 	public JCheckBox LagerMedarbejder;
 	public JCheckBox HRMedarbejder;
-	public JCheckBox SalgsMedarbejder;
+	public JCheckBox IndkøbMedarbejder;
 	private Mode tilstand; 
 	
 	public RedigerMedarbejder() {
@@ -181,9 +181,9 @@ public class RedigerMedarbejder extends JPanel {
 		HRMedarbejder.setBounds(360, 420, 120, 20);
 		add(HRMedarbejder);
 		
-		SalgsMedarbejder = new JCheckBox("IndkøbMedarbejder");
-		SalgsMedarbejder.setBounds(485, 420, 150, 20);
-		add(SalgsMedarbejder);
+		IndkøbMedarbejder = new JCheckBox("IndkøbMedarbejder");
+		IndkøbMedarbejder.setBounds(485, 420, 150, 20);
+		add(IndkøbMedarbejder);
 		
 		Button TilføjMedarbejder = new Button("Gem");
 		TilføjMedarbejder.setBackground(new Color(255,215,10));;
@@ -192,14 +192,10 @@ public class RedigerMedarbejder extends JPanel {
 		add(TilføjMedarbejder);
 		TilføjMedarbejder.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				controller.tilføjMedarbejder(medarbejderNavnText, medarbejderAdresseText, medarbejderlandText, medarbejderPostNrText, medarbejderEmailText, medarbejderPasswordText, medarbejderLønText, medarbejderLønTypeText, medarbejderRegNrText, medarbejderKontonrText, medarbejderCprText, LagerMedarbejder, HRMedarbejder, SalgsMedarbejder);
+				controller.tilføjMedarbejder(medarbejderNavnText, medarbejderAdresseText, medarbejderlandText, medarbejderPostNrText, medarbejderEmailText, medarbejderPasswordText, medarbejderLønText, medarbejderLønTypeText, medarbejderRegNrText, medarbejderKontonrText, medarbejderCprText, LagerMedarbejder, HRMedarbejder, IndkøbMedarbejder);
 			}
 		});
 		
-		
-		
-		
-
 		Mtable1 = new JTable();
 		Mtable1.setBounds(12, 10, 710, 57);
 		Mtable1.setBackground(new Color(238, 238, 238));
@@ -210,8 +206,6 @@ public class RedigerMedarbejder extends JPanel {
 		Mtable.setBackground(new Color(238, 238, 238));
 		add(Mtable);
 		
-	
-
 	}
 
 	public void makeEditMode(){
