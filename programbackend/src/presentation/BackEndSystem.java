@@ -153,6 +153,28 @@ public class BackEndSystem {
 			}
 		});
 
+		JMenu mnNewMenu_7 = new JMenu("Leveringsmetode");
+		menuBar.add(mnNewMenu_7);
+		
+		JMenuItem mntmNewMenuItem_71 = new JMenuItem("Tilføj leveringsmetoder");
+		mntmNewMenuItem_71.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/1380431095_103.png")));
+		mnNewMenu_7.add(mntmNewMenuItem_71);
+		mntmNewMenuItem_71.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
+		
+		JMenuItem mntmNewMenuItem_72 = new JMenuItem("Se/rediger leveringsmetoder");
+		mntmNewMenuItem_72.setIcon(new ImageIcon(BackEndSystem.class.getResource("/presentation/resources/truck.png")));
+		mnNewMenu_7.add(mntmNewMenuItem_72);
+		mntmNewMenuItem_72.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
+		
+		
 		JMenu mnNewMenu_3 = new JMenu("Ordre");
 		menuBar.add(mnNewMenu_3);
 
