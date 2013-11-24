@@ -61,7 +61,6 @@ public class MedarbejderController {
 		GUI.redigerMedarbejder.medarbejderKontonrText.setText(dto.getMedarbejderKonto());
 		GUI.redigerMedarbejder.medarbejderRegNrText.setText(String.valueOf(dto.getMedarbejderRegnr()));
 		GUI.redigerMedarbejder.medarbejderCprText.setText(dto.getMedarbejderCpr());
-
 		GUI.redigerMedarbejder.LagerMedarbejder.setSelected(dto.isLager());
 		GUI.redigerMedarbejder.IndkøbMedarbejder.setSelected(dto.isIndkøb());
 		GUI.redigerMedarbejder.HRMedarbejder.setSelected(dto.isHr());

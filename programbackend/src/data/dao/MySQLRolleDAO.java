@@ -45,7 +45,6 @@ public class MySQLRolleDAO implements IRolleDAO {
 		
 		List<Integer> list = new ArrayList<Integer>();
 		String q = "SELECT * FROM Rolle WHERE medarbejderNummer = " + medarbejderId;
-		System.out.println(q);
 		ResultSet rs = Connector.doQuery(q);
 		try
 		{
