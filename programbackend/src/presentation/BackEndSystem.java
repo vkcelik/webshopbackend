@@ -221,6 +221,8 @@ public class BackEndSystem {
 		GUI.cards.add(GUI.tilføjKategori, "tilføjKategori");
 		GUI.cards.add(GUI.tilføjVare,"tilføjVare");
 		GUI.cards.add(GUI.tilføjVarehus, "tilføjVarehus");
+		GUI.cards.add(GUI.tilføjVarebatch, "tilføjVarebatch");
+		GUI.cards.add(GUI.tilføjLeveringsmetode, "tilføjLeveringsmetode");
 		
 		GUI.cards.add(GUI.seIndstillinger, "seIndstillinger");
 		GUI.cards.add(GUI.seStatestik, "seStatestik");
@@ -230,6 +232,8 @@ public class BackEndSystem {
 		GUI.cards.add(GUI.seKategori, "seKategori");
 		GUI.cards.add(GUI.seVarehus, "seVarehus");
 		GUI.cards.add(GUI.seVare, "seVare");
+		GUI.cards.add(GUI.seVarebatch, "seVarebatch");
+		GUI.cards.add(GUI.seLeveringsmetode, "seLeveringsmetode");
 
 		GUI.cards.add(GUI.redigerKunde, "redigerKunde");
 		GUI.cards.add(GUI.redigerMedarbejder, "redigerMedarbejder");
@@ -237,6 +241,9 @@ public class BackEndSystem {
 		GUI.cards.add(GUI.redigerVarehus, "redigerVarehus");
 		GUI.cards.add(GUI.redigerVare, "redigerVare");
 		GUI.cards.add(GUI.redigerOrdre, "redigerOrdre");
+		GUI.cards.add(GUI.redigerVarebatch, "redigerVarebatch");
+		GUI.cards.add(GUI.redigerLeveringsmetode, "redigerLeveringsmetode");
+		
 				
 		GUI.cardLayout.show(GUI.cards, "seStatestik");
 

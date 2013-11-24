@@ -2,10 +2,12 @@ package controller;
 
 import java.util.List;
 
+import javax.swing.JCheckBox;
 import javax.swing.JTextField;
 
 import logic.dto.MedarbejderDTO;
 import data.dao.MySQLMedarbejderDAO;
+import data.dao.MySQLRolleDAO;
 import data.idao.DALException;
 import presentation.GUI;
 import presentation.OversigtMedarbejder;
@@ -13,9 +15,11 @@ import presentation.TilføjMedarbejder;
 
 public class MedarbejderController {
 	MySQLMedarbejderDAO mdao;
+	MySQLRolleDAO rdao;
 	
 	public MedarbejderController() {
 		this.mdao = new MySQLMedarbejderDAO();
+		this.rdao = new MySQLRolleDAO();
 		GUI.tilføjMedarbejder.setController(this);
 		GUI.redigerMedarbejder.setController(this);
 		GUI.seMedarbejder.setController(this);
@@ -37,12 +41,13 @@ public class MedarbejderController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		GUI.redigerMedarbejder.MedarbejderNavnText.setText(dto.getMedarbejderNavn());
-		GUI.redigerMedarbejder.MedarbejderAdresseText.setText(dto.getMedarbejderAdresse());
-		GUI.redigerMedarbejder.MedarbejderlandText.setText(dto.getMedarbejderLand());
-		GUI.redigerMedarbejder.MedarbejderPasswordText.setText(dto.getMedarbejderPassword());
-		GUI.redigerMedarbejder.MedarbejderLønTypeText.setText(dto.getMedarbejderLønType());
-		GUI.redigerMedarbejder.MedarbejderCprText.setText(dto.getMedarbejderCpr());
+		GUI.redigerMedarbejder.medarbejderNavnText.setText(dto.getMedarbejderNavn());
+		GUI.redigerMedarbejder.medarbejderAdresseText.setText(dto.getMedarbejderAdresse());
+		GUI.redigerMedarbejder.medarbejderlandText.setText(dto.getMedarbejderLand());
+		GUI.redigerMedarbejder.medarbejderPasswordText.setText(dto.getMedarbejderPassword());
+		GUI.redigerMedarbejder.medarbejderLønTypeText.setText(dto.getMedarbejderLønType());
+		GUI.redigerMedarbejder.medarbejderRegNrText.setText(String.valueOf(dto.getMedarbejderRegnr()));
+		GUI.redigerMedarbejder.medarbejderCprText.setText(dto.getMedarbejderCpr());
 
 		GUI.cardLayout.show(GUI.cards, "redigerMedarbejder");
 		
@@ -62,12 +67,16 @@ public class MedarbejderController {
 		
 		return Redigermedarbejder;
 	}
-
-	public void opdaterMedarbejder(JTextField medarbejderNavnText,
+	
+	public void tilføjMedarbejder(JTextField medarbejderNavnText,
 			JTextField medarbejderAdresseText, JTextField medarbejderlandText,
 			JTextField medarbejderPostNrText, JTextField medarbejderEmailText,
 			JTextField medarbejderPasswordText, JTextField medarbejderLønText,
-			JTextField medarbejderLønTypeText, JTextField medarbejderCprText) {
+			JTextField medarbejderLønTypeText, JTextField medarbejderRegnr, 
+			JTextField medarbejderKontonr, JTextField medarbejderCprText, 
+			JCheckBox lagerMedarbejder, JCheckBox hRMedarbejder, 
+			JCheckBox salgsMedarbejder) {
+		
 		String navn = medarbejderNavnText.getText();
 		String adresse = medarbejderAdresseText.getText();
 		String land = medarbejderlandText.getText();
@@ -76,11 +85,13 @@ public class MedarbejderController {
 		String password = medarbejderPasswordText.getText();
 		double løn = Integer.parseInt(medarbejderLønText.getText());
 		String lønType = medarbejderLønTypeText.getText();
+		int regnr = Integer.parseInt(medarbejderRegnr.getText());
+		String konto = medarbejderKontonr.getText();
 		String cpr = medarbejderCprText.getText();
 		
 		
 		try {
-			mdao.updateMedarbejder(null);
+			mdao.updateMedarbejder(new MedarbejderDTO(null, navn, adresse, land, postNr, email, password, lønType, løn, regnr, konto, cpr));
 		} catch (DALException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
