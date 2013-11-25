@@ -6,6 +6,7 @@ import javax.swing.JCheckBox;
 import javax.swing.JTextField;
 
 import logic.dto.MedarbejderDTO;
+import logic.dto.RolleDTO;
 import data.dao.MySQLMedarbejderDAO;
 import data.dao.MySQLRolleDAO;
 import data.idao.DALException;
@@ -16,7 +17,7 @@ import presentation.TilføjMedarbejder;
 public class MedarbejderController {
 	MySQLMedarbejderDAO mdao;
 	MySQLRolleDAO rdao;
-	
+
 	public MedarbejderController() {
 		this.mdao = new MySQLMedarbejderDAO();
 		this.rdao = new MySQLRolleDAO();
@@ -33,10 +34,18 @@ public class MedarbejderController {
 		} catch (Exception e) {
 			// exception should never be catched
 		}
-		
+
 		MedarbejderDTO dto = null;
 		try {
 			dto = mdao.getMedarbejder(x);
+			List<Integer> roller = rdao.getRolleList(dto.getMedarbejderNummer());
+			if (roller.contains(1))
+				dto.setHr(true);
+			if (roller.contains(2))
+				dto.setIndkøb(true);
+			if (roller.contains(3))
+				dto.setLager(true);
+
 		} catch (DALException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -44,19 +53,26 @@ public class MedarbejderController {
 		GUI.redigerMedarbejder.medarbejderNavnText.setText(dto.getMedarbejderNavn());
 		GUI.redigerMedarbejder.medarbejderAdresseText.setText(dto.getMedarbejderAdresse());
 		GUI.redigerMedarbejder.medarbejderlandText.setText(dto.getMedarbejderLand());
+		GUI.redigerMedarbejder.medarbejderPostNrText.setText(String.valueOf(dto.getMedarbejderPostnummer()));
+		GUI.redigerMedarbejder.medarbejderEmailText.setText(dto.getMedarbejderEmail());
 		GUI.redigerMedarbejder.medarbejderPasswordText.setText(dto.getMedarbejderPassword());
+		GUI.redigerMedarbejder.medarbejderLønText.setText(String.valueOf(dto.getMedarbejderLøn()));
 		GUI.redigerMedarbejder.medarbejderLønTypeText.setText(dto.getMedarbejderLønType());
+		GUI.redigerMedarbejder.medarbejderKontonrText.setText(dto.getMedarbejderKonto());
 		GUI.redigerMedarbejder.medarbejderRegNrText.setText(String.valueOf(dto.getMedarbejderRegnr()));
 		GUI.redigerMedarbejder.medarbejderCprText.setText(dto.getMedarbejderCpr());
+		GUI.redigerMedarbejder.LagerMedarbejder.setSelected(dto.isLager());
+		GUI.redigerMedarbejder.IndkøbMedarbejder.setSelected(dto.isIndkøb());
+		GUI.redigerMedarbejder.HRMedarbejder.setSelected(dto.isHr());
 
 		GUI.cardLayout.show(GUI.cards, "redigerMedarbejder");
-		
+
 	}
-	
+
 	public String[] hentMedarbejderNavne(){
 		String Redigermedarbejder[];
 		List<MedarbejderDTO> kats = null;
-		
+
 		try {kats = mdao.getMedarbejderList();}
 		catch (DALException e) { System.out.println(e.getMessage()); }
 
@@ -64,10 +80,10 @@ public class MedarbejderController {
 		for (int i=0; i < kats.size(); i++){
 			Redigermedarbejder[i]=kats.get(i).getMedarbejderNummer()+", " + kats.get(i).getMedarbejderNavn();
 		}
-		
+
 		return Redigermedarbejder;
 	}
-	
+
 	public void tilføjMedarbejder(JTextField medarbejderNavnText,
 			JTextField medarbejderAdresseText, JTextField medarbejderlandText,
 			JTextField medarbejderPostNrText, JTextField medarbejderEmailText,
@@ -75,8 +91,8 @@ public class MedarbejderController {
 			JTextField medarbejderLønTypeText, JTextField medarbejderRegnr, 
 			JTextField medarbejderKontonr, JTextField medarbejderCprText, 
 			JCheckBox lagerMedarbejder, JCheckBox hRMedarbejder, 
-			JCheckBox salgsMedarbejder) {
-		
+			JCheckBox indkøbsMedarbejder) {
+
 		String navn = medarbejderNavnText.getText();
 		String adresse = medarbejderAdresseText.getText();
 		String land = medarbejderlandText.getText();
@@ -88,15 +104,24 @@ public class MedarbejderController {
 		int regnr = Integer.parseInt(medarbejderRegnr.getText());
 		String konto = medarbejderKontonr.getText();
 		String cpr = medarbejderCprText.getText();
-		
-		
+
+
 		try {
-			mdao.updateMedarbejder(new MedarbejderDTO(null, navn, adresse, land, postNr, email, password, lønType, løn, regnr, konto, cpr));
+			mdao.createMedarbejder((new MedarbejderDTO(null, navn, adresse, land, postNr, email, password, lønType, løn, regnr, konto, cpr)));
+			int id = mdao.getLastInsertId();
+			if (lagerMedarbejder.isSelected()){
+				rdao.createRolle(new RolleDTO(3, id));
+			}
+			if (hRMedarbejder.isSelected()){
+				rdao.createRolle(new RolleDTO(1, id));
+			}
+			if (indkøbsMedarbejder.isSelected()){
+				rdao.createRolle(new RolleDTO(2, id));
+			}
 		} catch (DALException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}		
 	}
-	
 
 }

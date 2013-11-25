@@ -10,5 +10,5 @@ public interface IMedarbejderDAO {
 	List<MedarbejderDTO> getMedarbejderList() throws DALException;
 	void createMedarbejder(MedarbejderDTO medarbejderObject) throws DALException;
 	void updateMedarbejder(MedarbejderDTO medarbejderObject) throws DALException;
-
+	int getLastInsertId() throws DALException;
 }

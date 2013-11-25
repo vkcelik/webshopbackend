@@ -14,7 +14,10 @@ public class MedarbejderDTO {
 	private int medarbejderRegnr;
 	private String medarbejderKonto;
 	private String medarbejderCpr;
-	
+	private boolean isHr;
+	private boolean isLager;
+	private boolean isIndkøb;
+	private boolean isAdmin;
 
 	public MedarbejderDTO(Integer medarbejderNummer, String medarbejderNavn,
 			String medarbejderAdresse, String medarbejderLand,
@@ -39,7 +42,7 @@ public class MedarbejderDTO {
 		return medarbejderNummer;
 	}
 
-	public void setMedarbejderNummer(int medarbejderNummer) {
+	public void setMedarbejderNummer(Integer medarbejderNummer) {
 		this.medarbejderNummer = medarbejderNummer;
 	}
 
@@ -131,4 +134,39 @@ public class MedarbejderDTO {
 		this.medarbejderCpr = medarbejderCpr;
 	}
 
+	public boolean isHr() {
+		return isHr;
+	}
+
+	public void setHr(boolean isHr) {
+		this.isHr = isHr;
+		checkIfAdmin();
+	}
+
+	public boolean isLager() {
+		return isLager;
+	}
+
+	public void setLager(boolean isLager) {
+		this.isLager = isLager;
+		checkIfAdmin();
+	}
+
+	public boolean isIndkøb() {
+		return isIndkøb;
+	}
+
+	public void setIndkøb(boolean isIndkøb) {
+		this.isIndkøb = isIndkøb;
+		checkIfAdmin();
+	}
+
+	public boolean isAdmin() {
+		return isAdmin;
+	}
+
+	public void checkIfAdmin() {
+		this.isAdmin = isIndkøb && isHr && isLager;
+	}
+	
 }

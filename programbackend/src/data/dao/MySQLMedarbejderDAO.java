@@ -46,8 +46,8 @@ public class MySQLMedarbejderDAO implements IMedarbejderDAO{
 	@Override
 	public void createMedarbejder(MedarbejderDTO medarb) throws DALException {
 		Connector.doUpdate(
-				"INSERT INTO Medarbejder(medarbejderNummer, medarbejderNavn, medarbejderAdresse, medarbejderPostnummer, medarbejderEmail, medarbejderPassword, medarbejderLønType, medarbejderLøn, medarbejderRegnr, medarbejderKonto, medarbejderCpr) VALUES " +
-				"('" + medarb.getMedarbejderNummer() + "', '" + medarb.getMedarbejderLand() + "', '" + medarb.getMedarbejderAdresse() + "', '" + medarb.getMedarbejderPostnummer() + "', '" + medarb.getMedarbejderEmail() + "', '" + medarb.getMedarbejderPassword() + "', '" + medarb.getMedarbejderLønType() + "', '" + medarb.getMedarbejderLøn() + "', '" + medarb.getMedarbejderRegnr() + "', '" + medarb.getMedarbejderKonto() + "', '" + medarb.getMedarbejderCpr() + "')"
+				"INSERT INTO Medarbejder(medarbejderNummer, medarbejderNavn, medarbejderAdresse, medarbejderLand, medarbejderPostnummer, medarbejderEmail, medarbejderPassword, medarbejderLønType, medarbejderLøn, medarbejderRegnr, medarbejderKonto, medarbejderCpr) VALUES " +
+				"('" + medarb.getMedarbejderNummer() + "', '" + medarb.getMedarbejderNavn() + "', '" + medarb.getMedarbejderAdresse() + "', '" + medarb.getMedarbejderLand() + "', '" + medarb.getMedarbejderPostnummer() + "', '" + medarb.getMedarbejderEmail() + "', '" + medarb.getMedarbejderPassword() + "', '" + medarb.getMedarbejderLønType() + "', '" + medarb.getMedarbejderLøn() + "', '" + medarb.getMedarbejderRegnr() + "', '" + medarb.getMedarbejderKonto() + "', '" + medarb.getMedarbejderCpr() + "')"
 				);
 	}
 
@@ -66,5 +66,17 @@ public class MySQLMedarbejderDAO implements IMedarbejderDAO{
 				"', medarbejderCpr =  '" + m.getMedarbejderCpr() +
 				"' WHERE medarbejderNummer = " + m.getMedarbejderNummer()
 				);
+	}
+
+	@Override
+	public int getLastInsertId() throws DALException {
+		ResultSet rs = Connector.doQuery("SELECT LAST_INSERT_ID()");
+		int id = -1;
+	    try {
+	    	if (!rs.first()) throw new DALException("Fejl"); 
+	    	id = rs.getInt(1);
+	    }
+	    catch (SQLException e) {throw new DALException(e); }
+		return id;
 	}
 }
