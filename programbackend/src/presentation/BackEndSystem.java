@@ -32,6 +32,7 @@ public class BackEndSystem {
 			mnNewMenu.add(mntmNewMenuItem);
 			mntmNewMenuItem.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
+					GUI.vc.updateList(GUI.tilføjVare);
 					GUI.cardLayout.show(GUI.cards, "tilføjVare");
 				}
 			});
@@ -41,6 +42,7 @@ public class BackEndSystem {
 			mnNewMenu.add(mntmNewMenuItem_4);
 			mntmNewMenuItem_4.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
+					GUI.vc.updateList(GUI.seVare);
 					GUI.cardLayout.show(GUI.cards, "seVare");
 				}
 			});

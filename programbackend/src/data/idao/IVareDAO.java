@@ -9,5 +9,5 @@ public interface IVareDAO {
 	List<VareDTO> getVareList() throws DALException;
 	void createVare(VareDTO vare) throws DALException;
 	void updateVare(VareDTO vare ) throws DALException;
-
+	int getLastInsertId() throws DALException;
 }

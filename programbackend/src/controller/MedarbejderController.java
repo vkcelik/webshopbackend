@@ -17,6 +17,7 @@ import presentation.TilføjMedarbejder;
 public class MedarbejderController {
 	MySQLMedarbejderDAO mdao;
 	MySQLRolleDAO rdao;
+	MedarbejderDTO dto;
 
 	public MedarbejderController() {
 		this.mdao = new MySQLMedarbejderDAO();
@@ -35,7 +36,7 @@ public class MedarbejderController {
 			// exception should never be catched
 		}
 
-		MedarbejderDTO dto = null;
+		dto = null;
 		try {
 			dto = mdao.getMedarbejder(x);
 			List<Integer> roller = rdao.getRolleList(dto.getMedarbejderNummer());
@@ -160,7 +161,66 @@ public class MedarbejderController {
 		String kontonr = medarbejderKontonrText.getText();
 		String cpr = medarbejderCprText.getText();
 		
+		try {
+			mdao.updateMedarbejder(new MedarbejderDTO(dto.getMedarbejderNummer(), navn, adresse, land, postnr, email, password, løntype, løn, regnr, kontonr, cpr));
+		} catch (DALException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		
+		if(lagerMedarbejder.isSelected() && !dto.isLager()){
+			try {
+				rdao.createRolle(new RolleDTO(3, dto.getMedarbejderNummer()));
+			} catch (DALException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		if(!lagerMedarbejder.isSelected() && dto.isLager()){
+			try {
+				rdao.deleteRolle(new RolleDTO(3, dto.getMedarbejderNummer()));
+			} catch (DALException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		if (hRMedarbejder.isSelected() && !dto.isHr()){
+			try {
+				rdao.createRolle(new RolleDTO(1, dto.getMedarbejderNummer()));
+			} catch (DALException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		if (!hRMedarbejder.isSelected() && dto.isHr()){
+			try {
+				rdao.deleteRolle(new RolleDTO(1, dto.getMedarbejderNummer()));
+			} catch (DALException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		if (indkøbMedarbejder.isSelected() && !dto.isIndkøb()){
+			try {
+				rdao.createRolle(new RolleDTO(2, dto.getMedarbejderNummer()));
+			} catch (DALException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		if (!indkøbMedarbejder.isSelected() && dto.isIndkøb()){
+			try {
+				rdao.deleteRolle(new RolleDTO(2, dto.getMedarbejderNummer()));
+			} catch (DALException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 		
 	}
 

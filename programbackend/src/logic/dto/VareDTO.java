@@ -2,7 +2,7 @@ package logic.dto;
 
 public class VareDTO {
 
-	private int vareNummer;
+	private Integer vareNummer;
 	private String vareNavn;
 	private double pris;
 	private int kategoriNummer;
@@ -26,11 +26,11 @@ public class VareDTO {
 		this.højde = højde;
 	}
 
-	public int getVareNummer() {
+	public Integer getVareNummer() {
 		return vareNummer;
 	}
 
-	public void setVareNummer(int vareNummer) {
+	public void setVareNummer(Integer vareNummer) {
 		this.vareNummer = vareNummer;
 	}
 
