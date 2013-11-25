@@ -6,6 +6,7 @@ import java.awt.Font;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JTable;
 
@@ -44,7 +45,7 @@ public class Statestik extends JPanel {
 		
 		JLabel Top = new JLabel("Top 10 over ordrelinie:");
 		Top.setFont(new Font("Tahoma", Font.BOLD, 14));
-		Top.setBounds(50, 250, 200, 27);
+		Top.setBounds(50, 180, 200, 27);
 		Top.setForeground(Color.black);
 		add(Top);
 		
@@ -59,6 +60,10 @@ public class Statestik extends JPanel {
 				
 				
 				
+				JList<String> list = new JList<String>();
+				add(list);
+				list.setBounds(50, 220, 400, 200);
+				list.setBackground(Color.ORANGE);
 				
 			}
 		});
@@ -72,6 +77,10 @@ public class Statestik extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				
 				
+				JList<String> list1 = new JList<String>();
+				add(list1);
+				list1.setBounds(50, 220, 400, 200);
+				list1.setBackground(Color.BLUE);
 				
 				
 			}
@@ -87,6 +96,10 @@ public class Statestik extends JPanel {
 				
 				
 				
+				JList<String> list2 = new JList<String>();
+				add(list2);
+				list2.setBounds(50, 220, 400, 200);
+				list2.setBackground(Color.RED);
 				
 			}
 		});
@@ -102,6 +115,10 @@ public class Statestik extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				
 				
+				JList<String> list3 = new JList<String>();
+				add(list3);
+				list3.setBounds(50, 220, 400, 200);
+				list3.setBackground(Color.GREEN);
 				
 				
 			}
