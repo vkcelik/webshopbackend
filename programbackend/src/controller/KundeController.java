@@ -30,7 +30,6 @@ public class KundeController {
 		int postnr1 = 0;
 		int tlf = 0;
 
-
 		try {
 			tlf = Integer.parseInt(Tlf.getText());	
 			postnr1 = Integer.parseInt(Postnr.getText());	
@@ -40,5 +39,6 @@ public class KundeController {
 				e.printStackTrace();
 			}
 		} catch (NumberFormatException e) {
+		
 			// TODO: handle exception
 		}}}
