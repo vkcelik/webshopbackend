@@ -66,4 +66,14 @@ public class MySQLRolleDAO implements IRolleDAO {
 		
 	}
 
+	@Override					
+	public void deleteRolle(RolleDTO rolle) throws DALException {
+		Connector.doUpdate("DELETE FROM Rolle WHERE rolleNummer = " + rolle.getRolleNummer() +
+				" AND medarbejderNummer = " + rolle.getMedarbejderNummer());
+	}
+
+	
+	
+	
+
 }

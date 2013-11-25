@@ -40,7 +40,7 @@ public class TilføjMedarbejder extends JPanel {
 	public JTextField medarbejderKontonrText;
 	public JCheckBox LagerMedarbejder;
 	public JCheckBox HRMedarbejder;
-	public JCheckBox SalgsMedarbejder;
+	public JCheckBox IndkøbsMedarbejder;
 	private Mode tilstand; 
 	
 	public TilføjMedarbejder() {
@@ -181,9 +181,9 @@ public class TilføjMedarbejder extends JPanel {
 		HRMedarbejder.setBounds(360, 420, 120, 20);
 		add(HRMedarbejder);
 		
-		SalgsMedarbejder = new JCheckBox("IndkøbMedarbejder");
-		SalgsMedarbejder.setBounds(485, 420, 150, 20);
-		add(SalgsMedarbejder);
+		IndkøbsMedarbejder = new JCheckBox("IndkøbMedarbejder");
+		IndkøbsMedarbejder.setBounds(485, 420, 150, 20);
+		add(IndkøbsMedarbejder);
 		
 		Button TilføjMedarbejder = new Button("Tilføj");
 		TilføjMedarbejder.setBackground(new Color(255,215,10));;
@@ -192,7 +192,7 @@ public class TilføjMedarbejder extends JPanel {
 		add(TilføjMedarbejder);
 		TilføjMedarbejder.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				controller.tilføjMedarbejder(medarbejderNavnText, medarbejderAdresseText, medarbejderlandText, medarbejderPostNrText, medarbejderEmailText, medarbejderPasswordText, medarbejderLønText, medarbejderLønTypeText, medarbejderRegNrText, medarbejderKontonrText, medarbejderCprText, LagerMedarbejder, HRMedarbejder, SalgsMedarbejder);
+				controller.tilføjMedarbejder(medarbejderNavnText, medarbejderAdresseText, medarbejderlandText, medarbejderPostNrText, medarbejderEmailText, medarbejderPasswordText, medarbejderLønText, medarbejderLønTypeText, medarbejderRegNrText, medarbejderKontonrText, medarbejderCprText, LagerMedarbejder, HRMedarbejder, IndkøbsMedarbejder);
 			}
 		});
 		

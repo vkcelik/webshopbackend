@@ -91,7 +91,7 @@ public class MedarbejderController {
 			JTextField medarbejderLønTypeText, JTextField medarbejderRegnr, 
 			JTextField medarbejderKontonr, JTextField medarbejderCprText, 
 			JCheckBox lagerMedarbejder, JCheckBox hRMedarbejder, 
-			JCheckBox salgsMedarbejder) {
+			JCheckBox indkøbsMedarbejder) {
 
 		String navn = medarbejderNavnText.getText();
 		String adresse = medarbejderAdresseText.getText();
@@ -107,7 +107,17 @@ public class MedarbejderController {
 
 
 		try {
-			mdao.updateMedarbejder(new MedarbejderDTO(null, navn, adresse, land, postNr, email, password, lønType, løn, regnr, konto, cpr));
+			mdao.createMedarbejder((new MedarbejderDTO(null, navn, adresse, land, postNr, email, password, lønType, løn, regnr, konto, cpr)));
+			int id = mdao.getLastInsertId();
+			if (lagerMedarbejder.isSelected()){
+				rdao.createRolle(new RolleDTO(3, id));
+			}
+			if (hRMedarbejder.isSelected()){
+				rdao.createRolle(new RolleDTO(1, id));
+			}
+			if (indkøbsMedarbejder.isSelected()){
+				rdao.createRolle(new RolleDTO(2, id));
+			}
 		} catch (DALException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

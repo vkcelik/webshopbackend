@@ -9,4 +9,6 @@ public interface IRolleDAO {
 	List<RolleDTO> getRolleList() throws DALException;
 	List<Integer> getRolleList(int medarbejderId) throws DALException;
 	void createRolle(RolleDTO rolle) throws DALException;
+	void deleteRolle(RolleDTO rolle) throws DALException;
+	
 }
