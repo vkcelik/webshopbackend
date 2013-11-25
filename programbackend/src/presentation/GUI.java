@@ -31,6 +31,11 @@ public class GUI {
 	public static CardLayout cardLayout;
 	public static JPanel cards;
 	
+	public static boolean isHr;
+	public static boolean isIndkøb;
+	public static boolean isLager;
+	public static boolean isAdmin;
+	
 	// tilføj
 	public static TilføjKunde tilføjKunde;
 	public static TilføjMedarbejder tilføjMedarbejder;

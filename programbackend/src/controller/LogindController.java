@@ -1,19 +1,24 @@
 package controller;
 
+import java.util.List;
+
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 import data.dao.MySQLMedarbejderDAO;
+import data.dao.MySQLRolleDAO;
 import data.idao.DALException;
 import presentation.GUI;
-import presentation.LogInd;
+
 
 public class LogindController {
 
 	MySQLMedarbejderDAO mdao;
+	MySQLRolleDAO rdao;
 
 	public LogindController(){
 		this.mdao = new MySQLMedarbejderDAO();
+		this.rdao = new MySQLRolleDAO();
 		GUI.logindFrame.setController(this);
 	}
 
@@ -38,6 +43,15 @@ public class LogindController {
 			// find employee with entered information
 			try {
 				mdao.getMedarbejder(id, password);
+				List<Integer> roller = rdao.getRolleList(id);
+				if (roller.contains(1))
+					GUI.isHr = true;
+				if (roller.contains(2))
+					GUI.isIndkøb = true;
+				if (roller.contains(3))
+					GUI.isLager = true;
+				if (GUI.isLager && GUI.isHr && GUI.isIndkøb)
+					GUI.isAdmin = true;
 				javax.swing.SwingUtilities.invokeLater(new Runnable() {
 					public void run() {
 						GUI.createAndShowBackend();

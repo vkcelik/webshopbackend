@@ -22,7 +22,7 @@ public class KundeController {
 	}
 
 
-	public void tilføjkunde(JTextField navn, JTextField adresse, JTextField email,JTextField land, JTextField Postnr, JTextField Tlf  ){
+	public void tilføjkunde(JTextField navn, JTextField adresse, JTextField email,JTextField land, JTextField Postnr, JTextField Tlf ){
 		String knavn = navn.getText();
 		String kemail = email.getText();
 		String kadresse = adresse.getText();
@@ -31,14 +31,16 @@ public class KundeController {
 		int tlf = 0;
 
 		try {
-			tlf = Integer.parseInt(Tlf.getText());	
-			postnr1 = Integer.parseInt(Postnr.getText());	
+			tlf = Integer.parseInt(Tlf.getText());        
+			postnr1 = Integer.parseInt(Postnr.getText());        
 			try {
 				kdao.createKunde(new KundeDTO(null, knavn, kemail, kadresse,Kland, postnr1,tlf));
 			} catch (DALException e) {
 				e.printStackTrace();
 			}
 		} catch (NumberFormatException e) {
-		
+
 			// TODO: handle exception
-		}}}
+		}
+	}
+}

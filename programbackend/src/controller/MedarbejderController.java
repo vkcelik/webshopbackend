@@ -123,5 +123,45 @@ public class MedarbejderController {
 			e.printStackTrace();
 		}		
 	}
+	
+	public void updateMedarbejder(JTextField medarbejderNavnText,
+			JTextField medarbejderAdresseText, JTextField medarbejderlandText,
+			JTextField medarbejderPostNrText, JTextField medarbejderEmailText,
+			JTextField medarbejderPasswordText, JTextField medarbejderLønText,
+			JTextField medarbejderLønTypeText, JTextField medarbejderRegNrText,
+			JTextField medarbejderKontonrText, JTextField medarbejderCprText,
+			JCheckBox lagerMedarbejder, JCheckBox hRMedarbejder,
+			JCheckBox indkøbMedarbejder) {
+		
+		String navn = medarbejderNavnText.getText();
+		String adresse = medarbejderAdresseText.getText();
+		String land = medarbejderlandText.getText();
+		int postnr = 0;
+		try {
+			postnr = Integer.parseInt(medarbejderPostNrText.getText());
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		String email = medarbejderEmailText.getText();
+		String password = medarbejderPasswordText.getText();
+		double løn = 0.0;
+		try {
+			løn = Double.parseDouble(medarbejderLønText.getText());
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		String løntype = medarbejderLønTypeText.getText();
+		int regnr = 0;
+		try {
+			regnr = Integer.parseInt(medarbejderPostNrText.getText());
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		String kontonr = medarbejderKontonrText.getText();
+		String cpr = medarbejderCprText.getText();
+		
+		
+		
+	}
 
 }
