@@ -26,7 +26,7 @@ public class KundeDTO {
 		return kundeNummer;
 	}
 
-	public void setKundeNummer(int kundeNummer) {
+	public void setKundeNummer(Integer kundeNummer) {
 		this.kundeNummer = kundeNummer;
 	}
 

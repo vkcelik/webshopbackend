@@ -44,11 +44,10 @@ public class MySQLKundeDAO implements IKundeDAO {
 
 	
 	public void createKunde(KundeDTO kunde) throws DALException {
-		
-		Connector.doUpdate(
-				"INSERT INTO Kunde(kundeNummer, kundeNavn, kundeEmail, kundeAdresse, KundeLand, kundePostnummer, kundeTelefon) VALUES " +
-				"(" + kunde.getKundeNummer() + ", '" + kunde.getKundeNavn()+ ", '" + kunde.getKundeEmail() + ", '" + kunde.getKundeAdresse()+ ", '" +
-				kunde.getKundeLand()+ ", '" + kunde.getKundePostnummer()+ ", '" + kunde.getKundeTelefon()  + "')");
+		String q ="INSERT INTO Kunde(kundeNummer, kundeNavn, kundeEmail, kundeAdresse, kundeLand, kundePostnummer, kundeTelefon) VALUES " +
+				"(" + kunde.getKundeNummer() + ", '" + kunde.getKundeNavn()+ "', '" + kunde.getKundeEmail() + "', '" + kunde.getKundeAdresse()+ "', '" +
+				kunde.getKundeLand()+ "', '" + kunde.getKundePostnummer()+ "', '" + kunde.getKundeTelefon()  + "')";
+		Connector.doUpdate(q);
 	
 		
 	}
