@@ -71,11 +71,6 @@ public class Statestik extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				
 				
-				try { new Connector(); }
-				catch (InstantiationException e1){ e1.printStackTrace(); }
-				catch (IllegalAccessException e1){ e1.printStackTrace(); }
-				catch (ClassNotFoundException e1){ e1.printStackTrace(); }
-				catch (SQLException e1){ e1.printStackTrace(); }
 
 				
 				JList<String> list = new JList<String>();

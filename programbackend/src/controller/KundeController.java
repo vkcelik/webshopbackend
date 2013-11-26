@@ -93,6 +93,8 @@ public class KundeController {
 		}
 
 		return RedigerKunde;
+		
+		
 
 	}
 	
