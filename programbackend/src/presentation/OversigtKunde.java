@@ -40,11 +40,17 @@ public class OversigtKunde extends JPanel {
 		SeRedigerKunde.setBounds(30, 30, 330, 30);
 		add(SeRedigerKunde);
 		
+		JLabel KundeListe = new JLabel("Kundeliste");
+		KundeListe.setFont(new Font("Tahoma", Font.BOLD, 14));
+		KundeListe.setBounds(30, 90, 130, 14);
+		add(KundeListe);
+		
 		list1 = new JList<String>();
 		add(list1);
-		list1.setBounds(30, 120, 100, 200);
+		list1.setBounds(30, 120, 130, 200);
 		list1.setBackground(new Color(240,240,240));
 		list1.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+		list1.setFixedCellHeight(30);
 		
 
 		mouseListener = new MouseAdapter() {

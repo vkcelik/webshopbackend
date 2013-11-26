@@ -56,7 +56,7 @@ public class MySQLKundeDAO implements IKundeDAO {
 	public void updateKunde(KundeDTO kunde) throws DALException {
 		
 		Connector.doUpdate(
-				"UPDATE kundeDTO SET kundeNavn =  '" + kunde.getKundeNavn()
+				"UPDATE Kunde SET kundeNavn =  '" + kunde.getKundeNavn()
 				+ "', kundeEmail =  '" + kunde.getKundeEmail() 
 				+ "', kundeAdresse =  '" + kunde.getKundeAdresse() 
 				+ "', kundeLand =  '" + kunde.getKundeLand() 

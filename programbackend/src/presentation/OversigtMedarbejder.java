@@ -42,15 +42,15 @@ public class OversigtMedarbejder extends JPanel {
 		SeRedigerMedarbejder.setBounds(30, 30, 330, 30);
 		add(SeRedigerMedarbejder);
 
-		JLabel MedarbejderId = new JLabel("MedarbejderId");
-		MedarbejderId.setFont(new Font("Tahoma", Font.BOLD, 14));
-		MedarbejderId.setBounds(30, 90, 130, 14);
-		add(MedarbejderId);
+		JLabel MedarbejderListe= new JLabel("Medarbejderliste");
+		MedarbejderListe.setFont(new Font("Tahoma", Font.BOLD, 14));
+		MedarbejderListe.setBounds(30, 90, 130, 14);
+		add(MedarbejderListe);
 
 		// Opretter en liste //
 		list = new JList<String>();
 		add(list);
-		list.setBounds(30, 120, 70, 200);
+		list.setBounds(30, 120, 130, 200);
 		list.setBackground(new Color(240,240,240));
 		list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		list.setFixedCellHeight(30);
