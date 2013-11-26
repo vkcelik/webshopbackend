@@ -139,8 +139,7 @@ public class BackEndSystem {
 			mnNewMenu_4.add(mntmNewMenuItem_13);
 			mntmNewMenuItem_13.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					GUI.tilføjMedarbejder.makeEditMode();
-					GUI.seMedarbejder.updateList();
+					GUI.mc.updateList();
 					GUI.cardLayout.show(GUI.cards, "seMedarbejder");
 				}
 			});
@@ -164,6 +163,7 @@ public class BackEndSystem {
 			mnNewMenu_32.add(mntmNewMenuItem_323);
 			mntmNewMenuItem_323.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
+					GUI.kunc.updateList();
 					GUI.cardLayout.show(GUI.cards, "seKunde");
 				}
 			});
@@ -201,6 +201,7 @@ public class BackEndSystem {
 			mnNewMenu_3.add(mntmNewMenuItem_12);
 			mntmNewMenuItem_12.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
+					GUI.oc.updateList();
 					GUI.cardLayout.show(GUI.cards, "seOrdre");
 				}
 			});
@@ -227,6 +228,7 @@ public class BackEndSystem {
 			mnNewMenu_5.add(mnNewMenu_51);
 			mnNewMenu_51.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
+					GUI.ic.visIndstillinger();
 					GUI.cardLayout.show(GUI.cards, "seIndstillinger");
 				}
 			});

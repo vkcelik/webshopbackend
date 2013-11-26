@@ -28,7 +28,7 @@ public class OversigtMedarbejder extends JPanel {
 	private JTable SEMtable1;
 	private MedarbejderController controller;
 	private MouseListener mouseListener; 
-	JList<String> list; 
+	public JList<String> list; 
 
 	public OversigtMedarbejder() {
 
@@ -81,8 +81,4 @@ public class OversigtMedarbejder extends JPanel {
 		this.controller = medarbejderController;
 	}
 	
-	public void updateList(){
-		list.setListData(controller.hentMedarbejderNavne());
-	}
-
 }

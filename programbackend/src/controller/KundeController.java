@@ -85,4 +85,9 @@ public class KundeController {
 		return RedigerKunde;
 		
 	}
+
+
+	public void updateList() {
+		GUI.seKunde.list1.setListData(hentKundeNavne());
+	}
 }

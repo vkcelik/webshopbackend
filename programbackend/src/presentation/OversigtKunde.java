@@ -22,7 +22,7 @@ public class OversigtKunde extends JPanel {
 	private JTable RSKtable1;
 	private KundeController controller;
 	private MouseListener mouseListener; 
-	JList<String> list1; 
+	public JList<String> list1; 
 
 	
 
@@ -50,7 +50,6 @@ public class OversigtKunde extends JPanel {
 		mouseListener = new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
 				if (e.getClickCount() == 2) {
-					
 					controller.visKunde(list1.getSelectedValue());
 				}
 			}
@@ -72,10 +71,6 @@ public class OversigtKunde extends JPanel {
 	}
 
 	public void setController(KundeController kundeController) {
-		this.controller = kundeController;
-		
-	}
-	public void updateList(){
-		list1.setListData(controller.hentKundeNavne());
+		this.controller = kundeController;	
 	}
 }

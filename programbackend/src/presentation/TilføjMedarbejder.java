@@ -18,10 +18,6 @@ import controller.MedarbejderController;
 
 
 public class TilføjMedarbejder extends JPanel {
-
-	public enum Mode{
-		REDIGER, TILFØJ
-	}
 	
 	private static final long serialVersionUID = 6340894832099128364L;
 	private JTable Mtable;
@@ -40,8 +36,7 @@ public class TilføjMedarbejder extends JPanel {
 	public JTextField medarbejderKontonrText;
 	public JCheckBox LagerMedarbejder;
 	public JCheckBox HRMedarbejder;
-	public JCheckBox IndkøbsMedarbejder;
-	private Mode tilstand; 
+	public JCheckBox IndkøbsMedarbejder; 
 	
 	public TilføjMedarbejder() {
 
@@ -196,10 +191,6 @@ public class TilføjMedarbejder extends JPanel {
 			}
 		});
 		
-		
-		
-		
-
 		Mtable1 = new JTable();
 		Mtable1.setBounds(12, 10, 710, 57);
 		Mtable1.setBackground(new Color(238, 238, 238));
@@ -209,17 +200,7 @@ public class TilføjMedarbejder extends JPanel {
 		Mtable.setBounds(12, 71, 710, 405);
 		Mtable.setBackground(new Color(238, 238, 238));
 		add(Mtable);
-		
-	
 
-	}
-
-	public void makeEditMode(){
-		this.tilstand = Mode.REDIGER;
-	}
-	
-	public void makeAddMode(){
-		this.tilstand = Mode.TILFØJ;
 	}
 	
 	public void setController(MedarbejderController medarbejderController) {

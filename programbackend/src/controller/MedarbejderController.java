@@ -223,5 +223,10 @@ public class MedarbejderController {
 		}
 		
 	}
+	
+	public void updateList(){
+		GUI.seMedarbejder.list.setListData(hentMedarbejderNavne());
+	}
+
 
 }
