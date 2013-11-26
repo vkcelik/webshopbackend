@@ -216,6 +216,7 @@ public class BackEndSystem {
 		mntmNewMenuItem_20.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				GUI.cardLayout.show(GUI.cards, "seStatestik");
+				
 			}
 		});
 
