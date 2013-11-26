@@ -12,6 +12,8 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 
 import java.awt.Button;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -33,10 +35,17 @@ public class RedigerVare extends JPanel {
 	private static final long serialVersionUID = -2533980648166217598L;
 	private JTable Vtable;
 	private JTable Vtable1;
-	JComboBox<String> combobox;
+	public JComboBox<String> combobox;
 	private VareController controller;
-
-
+	public JTextField VareNavnText;
+	public JTextField PrisText;
+	public JTextField VægtText;
+	public JTextField BreddeText;
+	public JTextField DybdeText;
+	public JTextField HøjdeText;
+	public JTextPane BeskrivelseText;
+	public JTextField billederText;
+	
 	public RedigerVare() {
 
 
@@ -58,7 +67,7 @@ public class RedigerVare extends JPanel {
 		add(VareNavn);
 
 
-		JTextField VareNavnText = new JTextField();
+		VareNavnText = new JTextField();
 		VareNavnText.setBounds(230, 90, 300, 20);
 		add(VareNavnText);
 
@@ -68,7 +77,7 @@ public class RedigerVare extends JPanel {
 		Pris.setForeground(Color.black);
 		add(Pris);
 
-		JTextField PrisText = new JTextField();
+		PrisText = new JTextField();
 		PrisText.setBounds(230, 120, 300, 20);
 		add(PrisText);
 
@@ -84,7 +93,7 @@ public class RedigerVare extends JPanel {
 		Vægt.setForeground(Color.black);
 		add(Vægt);
 
-		JTextField VægtText = new JTextField();
+		VægtText = new JTextField();
 		VægtText.setBounds(230, 180, 300, 20);
 		add(VægtText);
 
@@ -94,7 +103,7 @@ public class RedigerVare extends JPanel {
 		Bredde.setForeground(Color.black);
 		add(Bredde);
 
-		JTextField BreddeText = new JTextField();
+		BreddeText = new JTextField();
 		BreddeText.setBounds(230, 210, 300, 20);
 		add(BreddeText);
 
@@ -104,7 +113,7 @@ public class RedigerVare extends JPanel {
 		Dybde.setForeground(Color.black);
 		add(Dybde);
 
-		JTextField DybdeText = new JTextField();
+		DybdeText = new JTextField();
 		DybdeText.setBounds(230, 240, 300, 20);
 		add(DybdeText);
 
@@ -114,7 +123,7 @@ public class RedigerVare extends JPanel {
 		Højde.setForeground(Color.black);
 		add(Højde);
 
-		JTextField HøjdeText = new JTextField();
+		HøjdeText = new JTextField();
 		HøjdeText.setBounds(230, 270, 300, 20);
 		add(HøjdeText);
 
@@ -124,7 +133,7 @@ public class RedigerVare extends JPanel {
 		Beskrivelse.setForeground(Color.black);
 		add(Beskrivelse);
 
-		JTextPane BeskrivelseText = new JTextPane();
+		BeskrivelseText = new JTextPane();
 		BeskrivelseText.setBackground(UIManager.getColor("TextPane.background"));
 		BeskrivelseText.setBounds(230, 305, 300, 100);
 		add(BeskrivelseText);
@@ -135,15 +144,23 @@ public class RedigerVare extends JPanel {
 		billeder.setForeground(Color.black);
 		add(billeder);
 		
-		JTextField billederText = new JTextField();
+		billederText = new JTextField();
 		billederText.setBounds(230, 420, 300, 20);
 		add(billederText);
 		
-		Button TilføjVarer = new Button("Gem");
-		TilføjVarer.setBackground(new Color(255,215,10));
-		TilføjVarer.setBounds(460, 445, 70, 22);
-		TilføjVarer.setForeground(Color.black);
-		add(TilføjVarer);
+		Button redigerVare = new Button("Gem");
+		redigerVare.setBackground(new Color(255,215,10));
+		redigerVare.setBounds(460, 445, 70, 22);
+		redigerVare.setForeground(Color.black);
+		add(redigerVare);
+		
+		redigerVare.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				System.out.println(controller);
+				controller.updateVare(VareNavnText, PrisText, combobox, VægtText, BreddeText, DybdeText, HøjdeText, BeskrivelseText, billederText);
+			}
+		});
 
 
 		Vtable1 = new JTable();

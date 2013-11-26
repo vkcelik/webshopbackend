@@ -43,7 +43,7 @@ public class MySQLBilledeDAO implements IBilledeDAO{
 		ResultSet rs = Connector.doQuery("SELECT * FROM Billede WHERE vareNummer = " +vareNummer);
 		try { 
 			while (rs.next()){
-				list.add(new BilledeDTO(rs.getInt(1),rs.getInt(2), rs.getString(2)));
+				list.add(new BilledeDTO(rs.getInt(1),rs.getInt(2), rs.getString(3)));
 			}
 		} catch (SQLException e) {throw new DALException(e);}
 		return list;
@@ -63,6 +63,16 @@ public class MySQLBilledeDAO implements IBilledeDAO{
 		String s = "UPDATE Billede SET vareNummer = '" + billede.getVareNummer() 
 				+ "' , billedeSti = '" + billede.getBilledeSti()
 				+ "' WHERE billedeNummer = " + billede.getBilledeNummer();
+		Connector.doUpdate(
+				s
+				);
+	}
+
+	@Override
+	public void deleteBillede(int vareNummer, String billedeSti)
+			throws DALException {
+		String s = "DELETE FROM Billede WHERE vareNummer = " + vareNummer + " AND billedeSti = '" + billedeSti + "'";
+		System.out.println(s);
 		Connector.doUpdate(
 				s
 				);

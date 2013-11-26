@@ -10,4 +10,5 @@ public interface IBilledeDAO {
 	List<BilledeDTO> getBilledeList(int vareNummer) throws DALException;
 	void createBillede(BilledeDTO billede) throws DALException;
 	void updateBillede(BilledeDTO billede) throws DALException;
+	void deleteBillede(int vareNummer, String billedeSti) throws DALException;
 }

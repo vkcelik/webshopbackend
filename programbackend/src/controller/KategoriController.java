@@ -18,7 +18,7 @@ import data.idao.DALException;
 public class KategoriController {
 
 	MySQLKategoriDAO kdao;
-	HashMap<String,Integer> map = new HashMap<String, Integer>();
+	public HashMap<String,Integer> map = new HashMap<String, Integer>();
 	KategoriDTO dto;
 
 	public KategoriController(){
