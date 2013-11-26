@@ -19,7 +19,7 @@ public class MySQLKundeDAO implements IKundeDAO {
 		ResultSet rs = Connector.doQuery("SELECT * FROM Kunde WHERE kundeNummer = " + id);
 	    try {
 	    	if (!rs.first()) throw new DALException("Kunde med kundeNummer " + id + " findes ikke."); 
-	    	return new KundeDTO (rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getInt(6), rs.getInt(6));
+	    	return new KundeDTO (rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getInt(6), rs.getInt(7));
 	    }
 	    catch (SQLException e) {throw new DALException(e); }
 		
@@ -34,7 +34,7 @@ public class MySQLKundeDAO implements IKundeDAO {
 		{
 			while (rs.next()) 
 			{
-				list.add(new KundeDTO(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getInt(6), rs.getInt(6)));
+				list.add(new KundeDTO(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getInt(6), rs.getInt(7)));
 			}
 		}
 		catch (SQLException e) { throw new DALException(e); }

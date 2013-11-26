@@ -15,9 +15,15 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.ListSelectionModel;
 
+import presentation.RedigerMedarbejder.Mode;
+
 import controller.KundeController;
 
 public class RedigerKunde extends JPanel {
+	
+	public enum Mode{
+		REDIGER, TILFØJ
+	}
 
 	private static final long serialVersionUID = -7740794442244469219L;
 	private JTable Vtable;
@@ -29,6 +35,7 @@ public class RedigerKunde extends JPanel {
 	public JTextField KundelandText;
 	public JTextField kundePostNrText;
 	public JTextField KundeTelefonText;
+	private Mode tilstand;
 
 	public RedigerKunde() {
 
@@ -39,7 +46,7 @@ public class RedigerKunde extends JPanel {
 		kundeLabel.setIcon(new ImageIcon(TilføjVare.class.getResource("/presentation/resources/add32.png")));
 		kundeLabel.setFont(new Font("sansserif", Font.BOLD, 24));
 		kundeLabel.setForeground(Color.black);
-		kundeLabel.setBounds(30, 28, 180, 32);
+		kundeLabel.setBounds(30, 28, 200, 32);
 		this.add(kundeLabel);
 
 
@@ -54,25 +61,25 @@ public class RedigerKunde extends JPanel {
 		add(KundeNavnText);
 
 
-		JLabel KundeAdresse = new JLabel("Adresse:");
-		KundeAdresse.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		KundeAdresse.setBounds(150, 120, 160, 20);
-		KundeAdresse.setForeground(Color.black);
-		add(KundeAdresse);
-
-		KundeAdresseText = new JTextField();
-		KundeAdresseText.setBounds(230, 120, 300, 20);
-		add(KundeAdresseText);
-
-		JLabel KundeEmail= new JLabel("Email:");
+		JLabel KundeEmail = new JLabel("Email:");
 		KundeEmail.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		KundeEmail.setBounds(150, 150, 160, 20);
+		KundeEmail.setBounds(150, 120, 160, 20);
 		KundeEmail.setForeground(Color.black);
 		add(KundeEmail);
 
 		KundeEmailText = new JTextField();
-		KundeEmailText.setBounds(230, 150, 300, 20);
+		KundeEmailText.setBounds(230, 120, 300, 20);
 		add(KundeEmailText);
+
+		JLabel KundeAdresse = new JLabel("Adresse:");
+		KundeAdresse.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		KundeAdresse.setBounds(150, 150, 160, 20);
+		KundeAdresse.setForeground(Color.black);
+		add(KundeAdresse);
+
+		KundeAdresseText = new JTextField();
+		KundeAdresseText.setBounds(230, 150, 300, 20);
+		add(KundeAdresseText);
 
 		JLabel	Kundeland = new JLabel("Land:");
 		Kundeland.setFont(new Font("Tahoma", Font.PLAIN, 12));
@@ -126,7 +133,10 @@ public class RedigerKunde extends JPanel {
 
 	}
 
-
+	public void makeEditMode(){
+		this.tilstand = Mode.REDIGER;
+	
+	}
 	public void setController(KundeController kundeController) {
 		this.controller = kundeController;
 

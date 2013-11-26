@@ -47,7 +47,7 @@ public class KundeController {
 
 
 	public void visKunde(String selectedValue) {
-		
+
 		int x = 0;
 		// fjerne ", navn" og lave det om til int
 		try {
@@ -55,22 +55,30 @@ public class KundeController {
 		} catch (Exception e) {
 			// exception should never be catched
 		}
-		
+
+		dto = null;
+		try {
+			dto = kdao.getKunde(x);
+		} catch (DALException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 		GUI.redigerKunde.KundeNavnText.setText(dto.getKundeNavn());
-		GUI.redigerKunde.KundeAdresseText.setText(dto.getKundeAdresse());
 		GUI.redigerKunde.KundeEmailText.setText(dto.getKundeEmail());
+		GUI.redigerKunde.KundeAdresseText.setText(dto.getKundeAdresse());
 		GUI.redigerKunde.KundelandText.setText(dto.getKundeLand());
 		GUI.redigerKunde.kundePostNrText.setText(String.valueOf(dto.getKundePostnummer()));
 		GUI.redigerKunde.KundeTelefonText.setText(String.valueOf(dto.getKundeTelefon()));
-	
+
 
 		GUI.cardLayout.show(GUI.cards, "redigerKunde");
-		
+
 	}
 
 
 	public String[] hentKundeNavne() {
-	
+
 		String RedigerKunde[];
 		List<KundeDTO> kats = null;
 
@@ -83,7 +91,7 @@ public class KundeController {
 		}
 
 		return RedigerKunde;
-		
+
 	}
 
 
