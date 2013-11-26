@@ -52,7 +52,8 @@ public class MySQLVareDAO implements IVareDAO {
 	public void updateVare(VareDTO vare) throws DALException {
 
 		Connector.doUpdate(
-				"UPDATE Vare SET Pris = '" + vare.getPris() 
+				"UPDATE Vare SET vareNavn  = '" + vare.getVareNavn()
+				+ "', Pris = '" + vare.getPris() 
 				+ "', kategoriNummer =  '" + vare.getKategoriNummer()
 				+ "', beskrivelse =  '" + vare.getBeskrivelse()
 				+ "', vægt =  '" + vare.getVægt()

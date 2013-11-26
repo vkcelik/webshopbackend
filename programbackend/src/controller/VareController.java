@@ -30,7 +30,7 @@ public class VareController {
 	MySQLVareBatchDAO vbdao;
 	MySQLKategoriDAO kdao;
 	MySQLBilledeDAO bdao;
-	
+
 	HashMap<String,Integer> map = new HashMap<String, Integer>();
 	private VareDTO dto;
 
@@ -123,7 +123,7 @@ public class VareController {
 			}
 		}
 	}
-	
+
 	public void updateList(TilføjVare tv) {
 		GUI.tilføjVare.combobox.removeAllItems();
 		GUI.tilføjVare.combobox.setModel(new DefaultComboBoxModel<String>(GUI.katc.hentKategoriNavne()));
@@ -160,7 +160,7 @@ public class VareController {
 		GUI.redigerVare.DybdeText.setText(Double.toString(dto.getDybde()));
 		GUI.redigerVare.HøjdeText.setText(Double.toString(dto.getHøjde()));
 		GUI.redigerVare.BeskrivelseText.setText(dto.getBeskrivelse());
-		
+
 		List<BilledeDTO> billeder = null;
 		try {
 			billeder = bdao.getBilledeList(dto.getVareNummer());
@@ -173,7 +173,9 @@ public class VareController {
 			billedString = billedString + b.getBilledeSti() + ",";
 		}
 		// remove last comma
-		billedString =billedString.substring(0, billedString.length()-1);
+		if (!billedString.isEmpty()){
+			billedString =billedString.substring(0, billedString.length()-1);
+		}
 		GUI.redigerVare.billederText.setText(billedString);
 		GUI.cardLayout.show(GUI.cards, "redigerVare");
 	}
@@ -214,17 +216,16 @@ public class VareController {
 			ok = false;
 		}
 		int kategoriNummer = GUI.katc.map.get(combobox.getSelectedItem());
-
+		int vareNummer = dto.getVareNummer();
 		if (ok){
 			try {
-				vdao.createVare(new VareDTO(null, vareNavnText.getText(), pris, kategoriNummer, beskrivelseText.getText(), vægt, bredde, dybde, højde));
+				vdao.updateVare(new VareDTO(vareNummer, vareNavnText.getText(), pris, kategoriNummer, beskrivelseText.getText(), vægt, bredde, dybde, højde));
 			} catch (DALException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
-		int vareNummer = dto.getVareNummer();
-		
+
 		if (ok){
 			try {
 				vdao.updateVare(new VareDTO(vareNummer, vareNavnText.getText() , pris, kategoriNummer, beskrivelseText.getText(), vægt, bredde, dybde, højde));
@@ -245,10 +246,10 @@ public class VareController {
 		for (BilledeDTO b:  billeder){
 			gamle.add(b.getBilledeSti());
 		}
-		
+
 		String[] nye = billederText.getText().replaceAll("\\s+","").split(",");
 
-		
+
 		for(int i=0; i<nye.length; i++){
 			if (!gamle.contains(nye[i])){
 				try {
@@ -259,7 +260,7 @@ public class VareController {
 				}
 			}	
 		}
-		
+
 		for (int i=0; i<gamle.size(); i++){
 			if (!Arrays.asList(nye).contains(gamle.get(i))){
 				try {
