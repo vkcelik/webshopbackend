@@ -11,9 +11,14 @@ import javax.swing.JPanel;
 import javax.swing.JTable;
 
 import controller.StatestikController;
+import data.connect.Connector;
+import data.dao.MySQLStatestikDAO;
+import data.idao.DALException;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
+import java.util.List;
 
 
 public class Statestik extends JPanel {
@@ -23,6 +28,7 @@ public class Statestik extends JPanel {
 	private JTable Vtable;
 	private JTable Vtable1;
 	private StatestikController controller;
+	JList<String> list3; 
 	
 	public Statestik() {
 		
@@ -65,11 +71,17 @@ public class Statestik extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				
 				
+				try { new Connector(); }
+				catch (InstantiationException e1){ e1.printStackTrace(); }
+				catch (IllegalAccessException e1){ e1.printStackTrace(); }
+				catch (ClassNotFoundException e1){ e1.printStackTrace(); }
+				catch (SQLException e1){ e1.printStackTrace(); }
+
 				
 				JList<String> list = new JList<String>();
 				add(list);
 				list.setBounds(40, 250, 400, 200);
-				list.setBackground(Color.ORANGE);
+				list.setBackground(new Color(240,240,240));
 				
 			}
 		});
@@ -86,7 +98,7 @@ public class Statestik extends JPanel {
 				JList<String> list1 = new JList<String>();
 				add(list1);
 				list1.setBounds(40, 250, 400, 200);
-				list1.setBackground(Color.BLUE);
+				list1.setBackground(new Color(240,240,240));
 				
 				
 			}
@@ -105,7 +117,7 @@ public class Statestik extends JPanel {
 				JList<String> list2 = new JList<String>();
 				add(list2);
 				list2.setBounds(40, 250, 400, 200);
-				list2.setBackground(Color.RED);
+				list2.setBackground(new Color(240,240,240));
 				
 			}
 		});
@@ -121,10 +133,12 @@ public class Statestik extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				
 				
-				JList<String> list3 = new JList<String>();
+
+				
+				list3 = new JList<String>();
 				add(list3);
 				list3.setBounds(40, 250, 400, 200);
-				list3.setBackground(Color.GREEN);
+				list3.setBackground(new Color(240,240,240));
 				
 				
 			}
@@ -147,7 +161,7 @@ public class Statestik extends JPanel {
 		});
 		Logud.setBackground(new Color(255,215,10));
 		Logud.setBounds(632, 27, 70, 20);
-		Logud.setForeground(Color.black);
+		Logud.setForeground(Color.BLACK);
 		add(Logud);
 		
 		
