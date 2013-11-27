@@ -23,7 +23,8 @@ public class TestStatestik  {
 
 		
 		List<String[]> top = null;
-		MySQLStatestikDAO ol = new MySQLStatestikDAO(); 
+		MySQLStatestikDAO ol = new MySQLStatestikDAO();
+		
 		System.out.println("Top 10 over ordrelinier");
 		try {top = ol.getTop10Vare("Dag");}
 		catch (DALException e) { System.out.println(e.getMessage()); }
