@@ -10,7 +10,7 @@ import data.dao.MySQLStatestikDAO;
 import data.idao.DALException;
 
 
-public class Statestik  {
+public class TestStatestik  {
 
 
 	public static void main(String[] args) {

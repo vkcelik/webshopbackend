@@ -89,7 +89,9 @@ public class BackEndSystem {
 				mnNewMenu_1.add(mntmNewMenuItem_5);
 				mntmNewMenuItem_5.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
+						GUI.vhc.updateList();
 						GUI.cardLayout.show(GUI.cards, "seVarehus");
+						
 					}
 				});
 			}
@@ -217,6 +219,7 @@ public class BackEndSystem {
 		mntmNewMenuItem_20.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				GUI.cardLayout.show(GUI.cards, "seStatestik");
+				GUI.sc.updateList();
 				
 			}
 		});
