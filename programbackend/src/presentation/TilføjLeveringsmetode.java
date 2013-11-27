@@ -27,11 +27,11 @@ public class TilføjLeveringsmetode extends JPanel {
 		this.setBackground(new Color(51, 161, 201));
 		setLayout(null);
 
-		JLabel TilføjVarehus = new JLabel("Tilføj Varerhus");
+		JLabel TilføjVarehus = new JLabel("Tilføj Leveringmetode");
 		TilføjVarehus.setIcon(new ImageIcon(TilføjVare.class.getResource("/presentation/resources/add32.png")));
 		TilføjVarehus.setFont(new Font("sansserif", Font.BOLD, 24));
 		TilføjVarehus.setForeground(Color.black);
-		TilføjVarehus.setBounds(30, 30, 200, 30);
+		TilføjVarehus.setBounds(30, 30, 300, 30);
 		this.add(TilføjVarehus);
 
 		JLabel lab1 = new JLabel("Metodenavn:");
@@ -56,7 +56,7 @@ public class TilføjLeveringsmetode extends JPanel {
 
 		Button tilfoej = new Button("Tilføj");
 		tilfoej.setBackground(new Color(255,215,10));
-		tilfoej.setBounds(468, 215, 70, 22);
+		tilfoej.setBounds(468, 190, 70, 22);
 		tilfoej.setForeground(Color.black);
 		add(tilfoej);
 

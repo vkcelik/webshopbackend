@@ -70,7 +70,7 @@ public class Indstillinger extends JPanel {
 		
 		JLabel ind4 = new JLabel("Godkend ordre automatisk:");
 		ind4.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		ind4.setBounds(140, 180, 200, 20);
+		ind4.setBounds(70, 180, 200, 20);
 		ind4.setForeground(Color.black);
 		add(ind4);
 

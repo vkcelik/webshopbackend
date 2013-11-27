@@ -32,12 +32,12 @@ public class OversigtLeveringsmetode extends JPanel {
 		lab1.setIcon(new ImageIcon(TilføjVare.class.getResource("/presentation/resources/Run.png")));
 		lab1.setFont(new Font("sansserif", Font.BOLD, 24));
 		lab1.setForeground(Color.black);
-		lab1.setBounds(30, 30, 330, 30);
+		lab1.setBounds(30, 30, 350, 30);
 		add(lab1);
 
 		JLabel lab2= new JLabel("Leveringsmetodeliste");
 		lab2.setFont(new Font("Tahoma", Font.BOLD, 14));
-		lab2.setBounds(30, 90, 130, 14);
+		lab2.setBounds(30, 90, 150, 14);
 		add(lab2);
 
 		// Opretter en liste //
