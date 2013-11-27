@@ -8,4 +8,5 @@ public interface IOrdreLinieDAO {
 	List<OrdreLinieDTO> getOrdrelinieList() throws DALException;
 	void createOrdrelinie(OrdreLinieDTO ordreL) throws DALException;
 	void updateOrdrelinie(OrdreLinieDTO ordreL) throws DALException;
+	List<OrdreLinieDTO> getOrdrelinieList(int ordre) throws DALException;
 }

@@ -20,12 +20,12 @@ public class TestAfOrdre {
 		MySQLOrdreDAO ia = new MySQLOrdreDAO();
 		
 		System.out.println("Oprettelse af ordre 1");
-		OrdreDTO i1 = new OrdreDTO(1, 1, new Timestamp(System.currentTimeMillis()), 120.00, "Oprettet");
+		OrdreDTO i1 = new OrdreDTO(1, 1, new Timestamp(System.currentTimeMillis()), 120.00, 33.00 ,"Oprettet", "God ostvej 23", 3000, "Strandvejen 1", 3000, 1);
 		try {ia.createOrdre(i1);}
 		catch (DALException e){System.out.println(e.getMessage());}
 		
 		System.out.println("Oprettelse af ordre 2");
-		OrdreDTO i2 = new OrdreDTO(2, 1, new Timestamp(System.currentTimeMillis()), 150.00, "Oprettet");
+		OrdreDTO i2 = new OrdreDTO(2, 1, new Timestamp(System.currentTimeMillis()), 150.00, 33.00 ,"Oprettet", "God ostvej 23", 3000, "Strandvejen 1", 3000, 1);
 		try {ia.createOrdre(i2);}
 		catch (DALException e){System.out.println(e.getMessage());}
 		

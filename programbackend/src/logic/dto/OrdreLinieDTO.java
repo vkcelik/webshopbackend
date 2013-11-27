@@ -7,16 +7,18 @@ public class OrdreLinieDTO {
 	private int antal;
 	private double stykPris;
 	private double linieTotal;
-	private boolean erGave; // hvis man bestiller fx 3 bøger som gave, skal der oprettes 3 ordrelinier og hver bog skal pakkes ind i gavepapir enkeltvis 
+	private boolean erGave; // hvis man bestiller fx 3 bøger som gave, skal der oprettes 3 ordrelinier og hver bog skal pakkes ind i gavepapir enkeltvis
+	private int ordreNummer;
 	
 	public OrdreLinieDTO(int linieNummer, int vareNummer, int antal, double stykPris,
-			double linieTotal, boolean erGave) {
+			double linieTotal, boolean erGave, int ordreNummer) {
 		this.linieNummer = linieNummer;
 		this.vareNummer = vareNummer;
 		this.antal = antal;
 		this.stykPris = stykPris;
 		this.linieTotal = linieTotal;
 		this.erGave = erGave;
+		this.ordreNummer = ordreNummer;
 	}
 
 	public int getVareNummer() {
@@ -65,6 +67,18 @@ public class OrdreLinieDTO {
 
 	public void setLinieNummer(int linieNummer) {
 		this.linieNummer = linieNummer;
+	}
+
+	public int getOrdreNummer() {
+		return ordreNummer;
+	}
+
+	public void setOrdreNummer(int ordreNummer) {
+		this.ordreNummer = ordreNummer;
+	}
+
+	public void setLinieTotal(double linieTotal) {
+		this.linieTotal = linieTotal;
 	}
 	
 	

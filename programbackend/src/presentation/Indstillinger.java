@@ -24,6 +24,7 @@ public class Indstillinger extends JPanel {
 	public JTextField antal;
 	public JTextField ikkePåLager;
 	public JTextField moms;
+	public JTextField godkend;
 	
 	public Indstillinger() {
 		
@@ -67,9 +68,19 @@ public class Indstillinger extends JPanel {
 		moms.setBounds(230, 150, 300, 20);
 		add(moms);
 		
+		JLabel ind4 = new JLabel("Godkend ordre automatisk:");
+		ind4.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		ind4.setBounds(140, 180, 200, 20);
+		ind4.setForeground(Color.black);
+		add(ind4);
+
+		godkend = new JTextField();
+		godkend.setBounds(230, 180, 300, 20);
+		add(godkend);
+		
 		Button gem = new Button("Gem");
 		gem.setBackground(new Color(255,215,10));
-		gem.setBounds(460, 175, 70, 22);
+		gem.setBounds(460, 205, 70, 22);
 		gem.setForeground(Color.black);
 		add(gem);
 
@@ -78,7 +89,7 @@ public class Indstillinger extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				System.out.println(controller);
-				controller.updateIndstillinger(antal, ikkePåLager, moms);
+				controller.updateIndstillinger(antal, ikkePåLager, moms, godkend);
 			}
 		});
 		

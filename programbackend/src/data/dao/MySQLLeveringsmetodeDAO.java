@@ -14,7 +14,7 @@ public class MySQLLeveringsmetodeDAO implements ILeveringsmetodeDAO {
 
 	@Override
 	public LeveringsmetodeDTO getLeveringsmetode(int levmetodeId) throws DALException {
-		ResultSet rs = Connector.doQuery("SELECT * FROM Leveringsmulighed WHERE metodeNummer = " + levmetodeId);
+		ResultSet rs = Connector.doQuery("SELECT * FROM Leveringsmetode WHERE metodeNummer = " + levmetodeId);
 		try {
 			if (!rs.first())
 				throw new DALException("Leveringsmulighed med metodeNummer " + levmetodeId + " findes ikke.");

@@ -18,7 +18,7 @@ public class MySQLOrdreLinieDAO implements IOrdreLinieDAO {
 		ResultSet rs = Connector.doQuery("SELECT * FROM OrdreLinie WHERE linieNummer = " + id);
 	    try {
 	    	if (!rs.first()) throw new DALException("OrdreLinie med linieNummer " + id + " findes ikke."); 
-	    	return new OrdreLinieDTO (rs.getInt(1), rs.getInt(2), rs.getInt(3), rs.getDouble(4), rs.getDouble(5), rs.getBoolean(6));
+	    	return new OrdreLinieDTO (rs.getInt(1), rs.getInt(2), rs.getInt(3), rs.getDouble(4), rs.getDouble(5), rs.getBoolean(6), rs.getInt(7));
 	    }
 	    catch (SQLException e) {throw new DALException(e); }
 	}
@@ -30,14 +30,26 @@ public class MySQLOrdreLinieDAO implements IOrdreLinieDAO {
 		ResultSet rs = Connector.doQuery("SELECT * FROM OrdreLinie");
 		try { 
 			while (rs.next()){
-				list.add(new OrdreLinieDTO(rs.getInt(1), rs.getInt(2), rs.getInt(3), rs.getDouble(4), rs.getDouble(5), rs.getBoolean(6)));
+				list.add(new OrdreLinieDTO(rs.getInt(1), rs.getInt(2), rs.getInt(3), rs.getDouble(4), rs.getDouble(5), rs.getBoolean(6), rs.getInt(7)));
 			}
 		} catch (SQLException e) {throw new DALException(e);}
 		return list;	
 		
 	}
 
+	@Override
+	public List<OrdreLinieDTO> getOrdrelinieList(int ordre) throws DALException {
 	
+		List<OrdreLinieDTO> list = new ArrayList<OrdreLinieDTO>();
+		ResultSet rs = Connector.doQuery("SELECT * FROM OrdreLinie WHERE ordreNummer = " + ordre);
+		try { 
+			while (rs.next()){
+				list.add(new OrdreLinieDTO(rs.getInt(1), rs.getInt(2), rs.getInt(3), rs.getDouble(4), rs.getDouble(5), rs.getBoolean(6), rs.getInt(7)));
+			}
+		} catch (SQLException e) {throw new DALException(e);}
+		return list;	
+		
+	}
 	
 	
 

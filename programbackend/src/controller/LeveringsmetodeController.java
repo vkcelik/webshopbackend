@@ -15,5 +15,11 @@ public class LeveringsmetodeController {
 		GUI.redigerLeveringsmetode.setController(this);
 		GUI.seLeveringsmetode.setController(this);
 	}
+	
+	public String[] getLeveringsMetodeNavne(){
+		return null;
+	}
+	
+	
 
 }

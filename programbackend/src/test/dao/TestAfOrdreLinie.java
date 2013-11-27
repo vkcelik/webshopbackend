@@ -19,12 +19,12 @@ public class TestAfOrdreLinie {
 		MySQLOrdreLinieDAO ia = new MySQLOrdreLinieDAO();
 		
 		System.out.println("Oprettelse af ordrelinieNummer 39 til af varer 5");
-		OrdreLinieDTO i1 = new OrdreLinieDTO(39, 5, 2, 240, 480, false);
+		OrdreLinieDTO i1 = new OrdreLinieDTO(39, 5, 2, 240, 480, false, 4);
 		try {ia.createOrdrelinie(i1);}
 		catch (DALException e){System.out.println(e.getMessage());}
 		
 		System.out.println("Oprettelse af ordrelinieNummer 40 til af varer 4 som gave");
-		OrdreLinieDTO i2 = new OrdreLinieDTO(40, 4, 1, 240, 240, true);
+		OrdreLinieDTO i2 = new OrdreLinieDTO(40, 4, 1, 240, 240, true, 4);
 		try {ia.createOrdrelinie(i2);}
 		catch (DALException e){System.out.println(e.getMessage());}
 		

@@ -20,11 +20,12 @@ public class IndstillingerController {
 
 
 
-	public void updateIndstillinger(JTextField antal, JTextField ikkePåLager, JTextField moms) {
+	public void updateIndstillinger(JTextField antal, JTextField ikkePåLager, JTextField moms, JTextField godkend) {
 		try {
 			idao.updateIndstilling(new IndstillingDTO(1, antal.getText()));
 			idao.updateIndstilling(new IndstillingDTO(2, ikkePåLager.getText()));
 			idao.updateIndstilling(new IndstillingDTO(3, moms.getText()));
+			idao.updateIndstilling(new IndstillingDTO(4, godkend.getText()));
 		} catch (DALException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -52,6 +53,9 @@ public class IndstillingerController {
 				break;
 			case 3:
 				GUI.seIndstillinger.moms.setText(i.getIndstillingVærdi());
+				break;
+			case 4:
+				GUI.seIndstillinger.godkend.setText(i.getIndstillingVærdi());
 				break;
 			default:
 				break;
