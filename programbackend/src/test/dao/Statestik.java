@@ -25,8 +25,21 @@ public class Statestik  {
 		List<String[]> top = null;
 		MySQLStatestikDAO ol = new MySQLStatestikDAO(); 
 		System.out.println("Top 10 over ordrelinier");
+		try {top = ol.getTop10Vare("Dag");}
+		catch (DALException e) { System.out.println(e.getMessage()); }
+		
+		System.out.println("Top 10 over ordrelinier");
+		try {top = ol.getTop10Vare("Uge");}
+		catch (DALException e) { System.out.println(e.getMessage()); }
+		
+		System.out.println("Top 10 over ordrelinier");
 		try {top = ol.getTop10Vare("Måned");}
 		catch (DALException e) { System.out.println(e.getMessage()); }
+		
+		System.out.println("Top 10 over ordrelinier");
+		try {top = ol.getTop10Vare("År");}
+		catch (DALException e) { System.out.println(e.getMessage()); }
+		
 		//printArray(top);
 		
 		for (int i = 0; i<top.size(); i++){
@@ -37,11 +50,38 @@ public class Statestik  {
 			System.out.println();
 		}
 		System.out.println("Omsætning");
-		try {System.out.println(ol.getOmsætning());}
+		try {System.out.println(ol.getOmsætning("Dag"));}
+		catch (DALException e){ System.out.println(e.getMessage()); }
+		
+		System.out.println("Omsætning");
+		try {System.out.println(ol.getOmsætning("Uge"));}
+		catch (DALException e){ System.out.println(e.getMessage()); }
+		
+		System.out.println("Omsætning");
+		try {System.out.println(ol.getOmsætning("Måned"));}
+		catch (DALException e){ System.out.println(e.getMessage()); }
+		
+		System.out.println("Omsætning");
+		try {System.out.println(ol.getOmsætning("År"));}
+		catch (DALException e){ System.out.println(e.getMessage()); }
+		
+		
+		
+		
+		System.out.println("antal ordre");
+		try {System.out.println(ol.getAntalOrdre("Dag"));}
 		catch (DALException e){ System.out.println(e.getMessage()); }
 		
 		System.out.println("antal ordre");
-		try {System.out.println(ol.getAntalOrdre());}
+		try {System.out.println(ol.getAntalOrdre("Uge"));}
+		catch (DALException e){ System.out.println(e.getMessage()); }
+		
+		System.out.println("antal ordre");
+		try {System.out.println(ol.getAntalOrdre("Måned"));}
+		catch (DALException e){ System.out.println(e.getMessage()); }
+		
+		System.out.println("antal ordre");
+		try {System.out.println(ol.getAntalOrdre("År"));}
 		catch (DALException e){ System.out.println(e.getMessage()); }
 		
 	}

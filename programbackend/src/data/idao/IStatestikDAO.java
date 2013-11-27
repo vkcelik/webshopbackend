@@ -5,7 +5,7 @@ import java.util.List;
 
 public interface IStatestikDAO {
 	List<String[]> getTop10Vare(String tid) throws DALException;
-	String getOmsætning() throws DALException;
-	String getAntalOrdre() throws DALException;
+	String getOmsætning(String omsætning) throws DALException;
+	String getAntalOrdre(String antalordre) throws DALException;
 
 }

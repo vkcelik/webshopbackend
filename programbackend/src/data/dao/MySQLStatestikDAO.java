@@ -43,8 +43,23 @@ public class MySQLStatestikDAO implements IStatestikDAO {
 	}
 
 
-	public String getOmsætning() throws DALException {
-		ResultSet rs = Connector.doQuery("select sum(total) from webshop.Ordre");
+	public String getOmsætning(String omsætning) throws DALException {
+		
+		String q = null;
+
+		if(omsætning.equals("Dag"))
+			q = "SELECT sum(total) FROM webshop.Ordre  WHERE bestillingsDato >= DATE_SUB(CURRENT_DATE, INTERVAL 1 DAY)";
+		
+		else if(omsætning.equals("Uge"))
+			q = "SELECT sum(total) FROM webshop.Ordre  WHERE bestillingsDato >= DATE_SUB(CURRENT_DATE, INTERVAL 1 WEEK)";
+			
+		else if(omsætning.equals("Måned"))
+			q = "SELECT sum(total) FROM webshop.Ordre  WHERE bestillingsDato >= DATE_SUB(CURRENT_DATE, INTERVAL 1 MONTH)";
+		
+		else if(omsætning.equals("År"))
+			q = "SELECT sum(total) FROM webshop.Ordre  WHERE bestillingsDato >= DATE_SUB(CURRENT_DATE, INTERVAL 12 MONTH)";
+		
+		ResultSet rs = Connector.doQuery(q);
 		String s = null;
 		try { 
 			while (rs.next()){
@@ -55,8 +70,24 @@ public class MySQLStatestikDAO implements IStatestikDAO {
 		return s;
 	}
 
-	public String getAntalOrdre() throws DALException {
-		ResultSet rs = Connector.doQuery("select count(ordreNummer) from webshop.Ordre");
+	public String getAntalOrdre(String antalordre) throws DALException {
+		
+		String q = null;
+
+		if(antalordre.equals("Dag"))
+			q = "SELECT COUNT(ordreNummer) FROM webshop.Ordre  WHERE bestillingsDato >= DATE_SUB(CURRENT_DATE, INTERVAL 1 DAY)";
+		
+		else if(antalordre.equals("Uge"))
+			q = "SELECT COUNT(ordreNummer) FROM webshop.Ordre  WHERE bestillingsDato >= DATE_SUB(CURRENT_DATE, INTERVAL 1 WEEK)";
+			
+		else if(antalordre.equals("Måned"))
+			q = "SELECT COUNT(ordreNummer) FROM webshop.Ordre  WHERE bestillingsDato >= DATE_SUB(CURRENT_DATE, INTERVAL 1 MONTH)";
+		
+		else if(antalordre.equals("År"))
+			q = "SELECT COUNT(ordreNummer) FROM webshop.Ordre  WHERE bestillingsDato >= DATE_SUB(CURRENT_DATE, INTERVAL 12 MONTH)";
+		
+		
+		ResultSet rs = Connector.doQuery(q);
 		String s = null;
 		try { 
 			while (rs.next()){
