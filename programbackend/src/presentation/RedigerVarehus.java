@@ -3,6 +3,8 @@ package presentation;
 import java.awt.Button;
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -18,6 +20,9 @@ public class RedigerVarehus extends JPanel {
 	private static final long serialVersionUID = 5911075244950799116L;
 	private JTable VHtable;
 	private JTable VHtable1;
+	public JTextField varehusadresseText;
+	public JTextField PostVarehusText;
+	public JTextField LeveringstidText;
 	private VarehusController controller;
 	
 	public RedigerVarehus() {
@@ -30,19 +35,8 @@ public class RedigerVarehus extends JPanel {
 		TilføjVarehus.setIcon(new ImageIcon(TilføjVare.class.getResource("/presentation/resources/add32.png")));
 		TilføjVarehus.setFont(new Font("sansserif", Font.BOLD, 24));
 		TilføjVarehus.setForeground(Color.black);
-		TilføjVarehus.setBounds(30, 30, 200, 30);
+		TilføjVarehus.setBounds(30, 30, 250, 30);
 		this.add(TilføjVarehus);
-		
-		JLabel varehusnavn = new JLabel("Navn:");
-		varehusnavn.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		varehusnavn.setBounds(160, 90, 120, 20);
-		varehusnavn.setForeground(Color.black);
-		add(varehusnavn);
-		
-		JTextField varehusnavnText = new JTextField();
-		varehusnavnText.setBounds(240, 90, 300, 20);
-		add(varehusnavnText);
-		
 		
 		JLabel varehusadresse = new JLabel("Adresse:");
 		varehusadresse.setFont(new Font("Tahoma", Font.PLAIN, 12));
@@ -50,7 +44,7 @@ public class RedigerVarehus extends JPanel {
 		varehusadresse.setForeground(Color.black);
 		add(varehusadresse);
 		
-		JTextField varehusadresseText = new JTextField();
+		varehusadresseText = new JTextField();
 		varehusadresseText.setBounds(240, 120, 300, 20);
 		add(varehusadresseText);
 		
@@ -60,7 +54,7 @@ public class RedigerVarehus extends JPanel {
 		PostVarehus.setForeground(Color.black);
 		add(PostVarehus);
 		
-		JTextField PostVarehusText = new JTextField();
+		PostVarehusText = new JTextField();
 		PostVarehusText.setBounds(240, 150, 300, 20);
 		add(PostVarehusText);
 		
@@ -70,15 +64,21 @@ public class RedigerVarehus extends JPanel {
 		Leveringstid.setForeground(Color.black);
 		add(Leveringstid);
 		
-		JTextField LeveringstidText = new JTextField();
+		LeveringstidText = new JTextField();
 		LeveringstidText.setBounds(240, 180, 300, 20);
 		add(LeveringstidText);
 		
-		Button TilføjVarerhus = new Button("Gem");
-		TilføjVarerhus.setBackground(new Color(255,215,10));
-		TilføjVarerhus.setBounds(468, 215, 70, 22);
-		TilføjVarerhus.setForeground(Color.black);
-		add(TilføjVarerhus);
+		Button OpdaterVarerhus = new Button("Gem");
+		OpdaterVarerhus.setBackground(new Color(255,215,10));
+		OpdaterVarerhus.setBounds(468, 215, 70, 22);
+		OpdaterVarerhus.setForeground(Color.black);
+		add(OpdaterVarerhus);
+		
+		OpdaterVarerhus.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controller.updateVarehus(varehusadresseText, PostVarehusText, LeveringstidText);
+			}
+		});
 		
 		VHtable1 = new JTable();
 		VHtable1.setBounds(12, 10, 710, 57);

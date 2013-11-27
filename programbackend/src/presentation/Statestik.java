@@ -28,7 +28,7 @@ public class Statestik extends JPanel {
 	private JTable Vtable;
 	private JTable Vtable1;
 	private StatestikController controller;
-	JList<String> list3; 
+	public JList<String> list3; 
 	
 	public Statestik() {
 		
@@ -49,7 +49,7 @@ public class Statestik extends JPanel {
 		statistik.setBounds(40, 90, 130, 14);
 		add(statistik);
 		
-		JLabel Interval = new JLabel("Interval:");
+		JLabel Interval = new JLabel("Periode:");
 		Interval.setFont(new Font("Tahoma", Font.BOLD, 14));
 		Interval.setBounds(40, 150, 60, 27);
 		Interval.setForeground(Color.black);
@@ -62,7 +62,7 @@ public class Statestik extends JPanel {
 		add(Top);
 		
 		
-		Button knap1 = new Button("Dag");
+		Button knap1 = new Button("1 Dag");
 		knap1.setBounds(150, 150, 100, 27);
 		knap1.setBackground(new Color(255,215,10));
 		add(knap1);
@@ -81,7 +81,7 @@ public class Statestik extends JPanel {
 			}
 		});
 		
-		Button knap2 = new Button("Uge");
+		Button knap2 = new Button("1 Uge");
 		knap2.setBounds(300, 150, 84, 27);
 		knap2.setBackground(new Color(255,215,10));
 		add(knap2);
@@ -99,7 +99,7 @@ public class Statestik extends JPanel {
 			}
 		});
 		
-		Button knap3 = new Button("Måned");
+		Button knap3 = new Button("1 Måned");
 		knap3.setBounds(450, 150, 84, 27);
 		knap3.setBackground(new Color(255,215,10));
 		add(knap3);
@@ -119,7 +119,7 @@ public class Statestik extends JPanel {
 		
 		
 		
-		Button knap4 = new Button("År");
+		Button knap4 = new Button("1 År");
 		knap4.setBounds(600, 150, 84, 27);
 		knap4.setBackground(new Color(255,215,10));
 		add(knap4);
