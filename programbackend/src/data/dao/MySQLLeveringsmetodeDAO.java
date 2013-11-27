@@ -36,9 +36,10 @@ public class MySQLLeveringsmetodeDAO implements ILeveringsmetodeDAO {
 
 	@Override
 	public void createLeveringsmetode(LeveringsmetodeDTO l) throws DALException {
+		String q = "INSERT INTO Leveringsmetode(metodeNummer, metodeNavn, metodePris) VALUES " +
+				"(" + l.getLeveringsmetodeNummer() + ", '" + l.getLeveringsmetodeNavn() + "', " + l.getLeveringsmetodePris() + ")";
 		Connector.doUpdate(
-				"INSERT INTO Leveringsmetode(metodeNummer, metodeNavn, metodePris) VALUES " +
-				"(" + l.getLeveringsmetodeNummer() + ", '" + l.getLeveringsmetodeNavn() + l.getLeveringsmetodePris() + "')"
+				q
 				);
 	}
 

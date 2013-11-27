@@ -178,7 +178,7 @@ public class BackEndSystem {
 			mnNewMenu_7.add(mntmNewMenuItem_71);
 			mntmNewMenuItem_71.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-
+					GUI.cardLayout.show(GUI.cards, "tilføjLeveringsmetode");
 				}
 			});
 
@@ -187,7 +187,8 @@ public class BackEndSystem {
 			mnNewMenu_7.add(mntmNewMenuItem_72);
 			mntmNewMenuItem_72.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-
+					GUI.lmc.updateOversigtList();
+					GUI.cardLayout.show(GUI.cards, "seLeveringsmetode");
 				}
 			});
 		}
