@@ -38,7 +38,7 @@ public class OversigtKategori extends JPanel {
 		SeRedigerKategori.setBounds(30, 30, 280, 30);
 		this.add(SeRedigerKategori);
 
-		JLabel KategoriId = new JLabel("KategoriId");
+		JLabel KategoriId = new JLabel("Kategoriliste");
 		KategoriId.setFont(new Font("Tahoma", Font.BOLD, 14));
 		KategoriId.setBounds(30, 90, 130, 20);
 		add(KategoriId);

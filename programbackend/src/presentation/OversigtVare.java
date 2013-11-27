@@ -40,7 +40,7 @@ public class OversigtVare extends JPanel {
 		SeRedigerVare.setBounds(30, 30, 230, 30);
 		this.add(SeRedigerVare);
 		
-		JLabel vareId = new JLabel("vareId");
+		JLabel vareId = new JLabel("vareliste");
 		vareId.setFont(new Font("Tahoma", Font.BOLD, 14));
 		vareId.setBounds(30, 90, 130, 20);
 		add(vareId);
