@@ -125,7 +125,7 @@ public class RedigerOrdre extends JPanel{
 		add(faktureringsPostnummer);
 		
 		linjer = new JTable();
-		linjer.setBounds(30, 245, 600, 240);
+		linjer.setBounds(30, 245, 600, 220);
 		linjer.setBackground(Color.WHITE);
 		add(linjer);
 		
