@@ -2,13 +2,13 @@ package logic.dto;
 
 public class VarebatchDTO {
 
-	private int vareBatchNummer;
+	private Integer vareBatchNummer;
 	private int vareNummer;
 	private int vareLager;
 	private String lagerPlacering;
 	private int mængde;
 	
-	public VarebatchDTO(int vareBatchNummer, int vareNummer, int vareLager,
+	public VarebatchDTO(Integer vareBatchNummer, int vareNummer, int vareLager,
 			String lagerPlacering, int mængde) {
 		this.vareBatchNummer = vareBatchNummer;
 		this.vareNummer = vareNummer;
@@ -17,11 +17,11 @@ public class VarebatchDTO {
 		this.mængde = mængde;
 	}
 
-	public int getVareBatchNummer() {
+	public Integer getVareBatchNummer() {
 		return vareBatchNummer;
 	}
 
-	public void setVareBatchNummer(int vareBatchNummer) {
+	public void setVareBatchNummer(Integer vareBatchNummer) {
 		this.vareBatchNummer = vareBatchNummer;
 	}
 

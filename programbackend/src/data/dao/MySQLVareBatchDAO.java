@@ -36,10 +36,12 @@ public class MySQLVareBatchDAO implements IVareBatchDAO {
 	}
 
 	@Override
-	public void createVareBatch(VarebatchDTO vb) throws DALException {	
+	public void createVareBatch(VarebatchDTO vb) throws DALException {
+		String s = "INSERT INTO VareBatch(vareBatchNummer, vareNummer, vareLager, lagerPlacering, mængde) VALUES " +
+				"(" + vb.getVareBatchNummer() + ", " + vb.getVareNummer() + ", " + vb.getVareLager() + ", '" + vb.getLagerPlacering() + "', " + vb.getMængde()  + ")";
+		System.out.println(s);
 		Connector.doUpdate(
-				"INSERT INTO VareBatch(vareBatchNummer, vareNummer, vareLager, lagerPlacering, mængde) VALUES " +
-				"(" + vb.getVareBatchNummer() + ", '" + vb.getVareNummer() + ", '" + vb.getVareLager() + ", '" + vb.getLagerPlacering() + ", '" + vb.getMængde()  + "')"
+				s
 				);
 				
 	}

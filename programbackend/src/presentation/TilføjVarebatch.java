@@ -3,6 +3,8 @@ package presentation;
 import java.awt.Button;
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JComboBox;
@@ -24,9 +26,7 @@ public class TilføjVarebatch extends JPanel {
 	private JTextField lagerPlaceringText;
 	private JTextField mængdeText;
 	
-	public void setController(VarebatchController controller){
-		this.controller = controller;
-		
+	public TilføjVarebatch(){
 		this.setBackground(new Color(51, 161, 201));
 		setLayout(null);
 		
@@ -83,6 +83,13 @@ public class TilføjVarebatch extends JPanel {
 		TilføjVarebatch1.setForeground(Color.black);
 		add(TilføjVarebatch1);
 		
+		TilføjVarebatch1.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				controller.tilføjVarebatch(combobox1, combobox2, lagerPlaceringText, mængdeText);
+			}
+		});
+		
 		VBtable1 = new JTable();
 		VBtable1.setBounds(12, 10, 710, 57);
 		VBtable1.setBackground(new Color(238, 238, 238));
@@ -94,4 +101,7 @@ public class TilføjVarebatch extends JPanel {
 		add(VBtable);
 	}
 
+	public void setController(VarebatchController controller){
+		this.controller = controller;
+	}
 }

@@ -2,11 +2,17 @@ package controller;
 
 import java.util.List;
 
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JComboBox;
+import javax.swing.JTextField;
+
 import logic.dto.MedarbejderDTO;
 import logic.dto.VareDTO;
 import logic.dto.VarebatchDTO;
 import logic.dto.VarehusDTO;
 import presentation.GUI;
+import presentation.RedigerVarebatch;
+import presentation.TilføjVarebatch;
 import data.dao.MySQLVareBatchDAO;
 import data.dao.MySQLVareDAO;
 import data.dao.MySQLVarehusDAO;
@@ -17,6 +23,7 @@ public class VarebatchController {
 	MySQLVareBatchDAO vbdao;
 	MySQLVareDAO vdao;
 	MySQLVarehusDAO vhdao;
+	VarebatchDTO dto;
 	
 	public VarebatchController() {
 		this.vbdao = new MySQLVareBatchDAO();
@@ -26,7 +33,11 @@ public class VarebatchController {
 		GUI.redigerVarebatch.setController(this);
 		GUI.seVarebatch.setController(this);
 	}
-	
+
+	public void updateOversigt(){
+		GUI.seVarebatch.list.setListData(hentVarebatchInfo());
+	}
+
 	public String[] hentVarebatchInfo(){
 		String info[];
 		List<VarebatchDTO> vbs = null;
@@ -80,8 +91,90 @@ public class VarebatchController {
 		}
 		return info;
 	}
+
+	public void visVarebatch(String selectedValue) {
+		VareDTO vare = null;
+		VarehusDTO vh = null;
+		int id = Integer.parseInt(selectedValue.substring(0, selectedValue.indexOf(":")));
+		try {
+			dto = vbdao.getVareBatch(id);
+			vare = vdao.getVare(dto.getVareNummer());
+			vh = vhdao.getVarehus(dto.getVareLager());
+		} catch (DALException e) {
+			e.printStackTrace();
+		}
+		GUI.redigerVarebatch.combobox1.setSelectedItem(dto.getVareBatchNummer() + ": " + vare.getVareNavn());
+		GUI.redigerVarebatch.combobox2.setSelectedItem(vh.getVarehusNummer() + ": "+ vh.getAdresse());
+		GUI.redigerVarebatch.lagerPlaceringText.setText(dto.getLagerPlacering());
+		GUI.redigerVarebatch.mængdeText.setText(Integer.toString(dto.getMængde()));
+		GUI.cardLayout.show(GUI.cards, "redigerVarebatch");
+	}
+
+	public void tilføjVarebatch(JComboBox<String> combobox1,
+			JComboBox<String> combobox2, JTextField lagerPlaceringText,
+			JTextField mængdeText) {
+		int vareNummer;
+		int vareLager;
+		String lagerPlacering;
+		int mængde;
+		
+		String temp =(String)combobox1.getSelectedItem();
+		vareNummer = Integer.parseInt(temp.substring(0, temp.indexOf(":")));
+		String temp2 =(String)combobox2.getSelectedItem();
+		vareLager = Integer.parseInt(temp2.substring(0, temp2.indexOf(":")));
+		lagerPlacering = lagerPlaceringText.getText();
+		mængde = Integer.parseInt(mængdeText.getText());
+		
+		try {
+			vbdao.createVareBatch(new VarebatchDTO(null, vareNummer, vareLager, lagerPlacering, mængde));
+		} catch (DALException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public void updateComboboxes(RedigerVarebatch rvb) {
+		GUI.redigerVarebatch.combobox1.removeAllItems();
+		GUI.redigerVarebatch.combobox1.setModel(new DefaultComboBoxModel<String>(hentVareInfo()));
+		GUI.redigerVarebatch.combobox2.removeAllItems();
+		GUI.redigerVarebatch.combobox2.setModel(new DefaultComboBoxModel<String>(hentVarehusInfo()));
+		
+	}
 	
+	public void updateComboboxes(TilføjVarebatch tvb) {
+		GUI.tilføjVarebatch.combobox1.removeAllItems();
+		GUI.tilføjVarebatch.combobox1.setModel(new DefaultComboBoxModel<String>(hentVareInfo()));
+		GUI.tilføjVarebatch.combobox2.removeAllItems();
+		GUI.tilføjVarebatch.combobox2.setModel(new DefaultComboBoxModel<String>(hentVarehusInfo()));
+		
+	}
+
+	public void updateVarebatch(JComboBox<String> combobox1,
+			JComboBox<String> combobox2, JTextField lagerPlaceringText,
+			JTextField mængdeText) {
 	
-	
+		int vareNummer;
+		int vareLager;
+		String lagerPlacering;
+		int mængde;
+		
+		String temp =(String)combobox1.getSelectedItem();
+		vareNummer = Integer.parseInt(temp.substring(0, temp.indexOf(":")));
+		String temp2 =(String)combobox2.getSelectedItem();
+		vareLager = Integer.parseInt(temp2.substring(0, temp2.indexOf(":")));
+		lagerPlacering = lagerPlaceringText.getText();
+		mængde = Integer.parseInt(mængdeText.getText());
+		
+		dto.setVareNummer(vareNummer);
+		dto.setVareLager(vareLager);
+		dto.setLagerPlacering(lagerPlacering);
+		dto.setMængde(mængde);
+		try {
+			vbdao.updateVareBatch(dto);
+		} catch (DALException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 
 }

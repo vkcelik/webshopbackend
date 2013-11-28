@@ -58,7 +58,7 @@ public class BackEndSystem {
 			mnNewMenu_1.add(mntmNewMenuItem_11);
 			mntmNewMenuItem_11.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					GUI.katc.updateList(GUI.tilføjKategori);
+					GUI.vbc.updateComboboxes(GUI.tilføjVarebatch);
 					GUI.cardLayout.show(GUI.cards, "tilføjVarebatch");
 				}
 			});
@@ -68,7 +68,7 @@ public class BackEndSystem {
 			mnNewMenu_1.add(mntmNewMenuItem_51);
 			mntmNewMenuItem_51.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					GUI.katc.updateList(GUI.tilføjKategori);
+					GUI.vbc.updateOversigt();
 					GUI.cardLayout.show(GUI.cards, "seVarebatch");
 				}
 			});
@@ -218,8 +218,8 @@ public class BackEndSystem {
 		mnNewMenu_8.add(mntmNewMenuItem_20);
 		mntmNewMenuItem_20.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				GUI.cardLayout.show(GUI.cards, "seStatestik");
 				GUI.sc.updateList();
+				GUI.cardLayout.show(GUI.cards, "seStatestik");
 				
 			}
 		});
