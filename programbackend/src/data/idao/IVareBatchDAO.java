@@ -1,6 +1,7 @@
 package data.idao;
 
 import java.util.List;
+
 import logic.dto.VarebatchDTO;
 
 public interface IVareBatchDAO {
@@ -9,5 +10,5 @@ public interface IVareBatchDAO {
 	List<VarebatchDTO> getVareBatchList() throws DALException;
 	void createVareBatch(VarebatchDTO vb) throws DALException;
 	void updateVareBatch(VarebatchDTO vb) throws DALException;
-
+	String getVareNavn(int vbId) throws DALException;
 }

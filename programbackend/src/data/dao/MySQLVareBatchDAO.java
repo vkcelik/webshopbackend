@@ -53,4 +53,14 @@ public class MySQLVareBatchDAO implements IVareBatchDAO {
 				+ "' WHERE vareBatchNummer = " + vb.getVareBatchNummer());
 	}
 	
+	@Override
+	public String getVareNavn(int vbId) throws DALException {
+		ResultSet rs = Connector.doQuery("SELECT vareNavn FROM VareBatch NATURAL JOIN Vare WHERE vareBatchNummer = " + vbId);
+	    try {
+	    	if (!rs.first()) throw new DALException("VareBatch med vareBatchNummer " + vbId + " findes ikke."); 
+	    	return rs.getString(1);
+	    }
+	    catch (SQLException e) {throw new DALException(e); }
+	}
+	
 }
