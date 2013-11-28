@@ -148,6 +148,20 @@ public class RedigerVare extends JPanel {
 		billederText.setBounds(230, 420, 300, 20);
 		add(billederText);
 		
+		Button sletVare = new Button("Slet");
+		sletVare.setBackground(new Color(255,215,10));
+		sletVare.setBounds(380, 445, 70, 22);
+		sletVare.setForeground(Color.black);
+		add(sletVare);
+		
+		sletVare.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				
+				//actionlistener
+			}
+		});
+		
 		Button redigerVare = new Button("Gem");
 		redigerVare.setBackground(new Color(255,215,10));
 		redigerVare.setBounds(460, 445, 70, 22);

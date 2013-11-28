@@ -53,7 +53,7 @@ public class RedigerMedarbejder extends JPanel {
 		MedarbejderLabel.setIcon(new ImageIcon(TilføjVare.class.getResource("/presentation/resources/addM.png")));
 		MedarbejderLabel.setFont(new Font("sansserif", Font.BOLD, 24));
 		MedarbejderLabel.setForeground(Color.black);
-		MedarbejderLabel.setBounds(30, 30, 260, 30);
+		MedarbejderLabel.setBounds(30, 30, 300, 30);
 		this.add(MedarbejderLabel);
 
 
@@ -184,6 +184,20 @@ public class RedigerMedarbejder extends JPanel {
 		IndkøbMedarbejder = new JCheckBox("IndkøbMedarbejder");
 		IndkøbMedarbejder.setBounds(485, 420, 150, 20);
 		add(IndkøbMedarbejder);
+		
+		Button sletMedarbejder = new Button("Slet");
+		sletMedarbejder.setBackground(new Color(255,215,10));
+		sletMedarbejder.setBounds(380, 445, 70, 22);
+		sletMedarbejder.setForeground(Color.black);
+		add(sletMedarbejder);
+		
+		sletMedarbejder.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				
+				//actionlistener
+			}
+		});
 		
 		Button TilføjMedarbejder = new Button("Gem");
 		TilføjMedarbejder.setBackground(new Color(255,215,10));;

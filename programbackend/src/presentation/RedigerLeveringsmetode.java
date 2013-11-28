@@ -53,10 +53,25 @@ public class RedigerLeveringsmetode extends JPanel {
 		metodePris = new JTextField();
 		metodePris.setBounds(240, 150, 300, 20);
 		add(metodePris);
+		
+		Button sletLeveringsmetode= new Button("Slet");
+		sletLeveringsmetode.setBackground(new Color(255,215,10));
+		sletLeveringsmetode.setBounds(380, 190, 70, 22);
+		sletLeveringsmetode.setForeground(Color.black);
+		add(sletLeveringsmetode);
+		
+		sletLeveringsmetode.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				
+				//actionlistener
+			}
+		});
+		
 
 		Button tilfoej = new Button("Gem");
 		tilfoej.setBackground(new Color(255,215,10));
-		tilfoej.setBounds(468, 215, 70, 22);
+		tilfoej.setBounds(468, 190, 70, 22);
 		tilfoej.setForeground(Color.black);
 		add(tilfoej);
 

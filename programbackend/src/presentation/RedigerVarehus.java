@@ -68,6 +68,21 @@ public class RedigerVarehus extends JPanel {
 		LeveringstidText.setBounds(240, 180, 300, 20);
 		add(LeveringstidText);
 		
+
+		Button sletVarehus = new Button("Slet");
+		sletVarehus.setBackground(new Color(255,215,10));
+		sletVarehus.setBounds(380, 215, 70, 22);
+		sletVarehus.setForeground(Color.black);
+		add(sletVarehus);
+		
+		sletVarehus.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				
+				//actionlistener
+			}
+		});
+		
 		Button OpdaterVarerhus = new Button("Gem");
 		OpdaterVarerhus.setBackground(new Color(255,215,10));
 		OpdaterVarerhus.setBounds(468, 215, 70, 22);

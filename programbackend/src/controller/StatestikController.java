@@ -42,7 +42,7 @@ public class StatestikController {
 					System.out.println();
 				}
 		
-		return hentStatistik();
+		return null;
 	}
 	
 

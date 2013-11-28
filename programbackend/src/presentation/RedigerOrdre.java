@@ -129,6 +129,20 @@ public class RedigerOrdre extends JPanel{
 		linjer.setBackground(Color.WHITE);
 		add(linjer);
 		
+		Button sletOrdre= new Button("Slet");
+		sletOrdre.setBackground(new Color(255,215,10));
+		sletOrdre.setBounds(380, 445, 70, 22);
+		sletOrdre.setForeground(Color.black);
+		add(sletOrdre);
+		
+		sletOrdre.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				
+				//actionlistener
+			}
+		});
+		
 		Button gem = new Button("Gem");
 		gem.setBackground(new Color(255,215,10));;
 		gem.setBounds(640, 445, 70, 22);

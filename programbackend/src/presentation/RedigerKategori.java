@@ -55,6 +55,12 @@ public class RedigerKategori extends JPanel {
 		kategorinavnText.setBounds(230, 90, 300, 20);
 		add(kategorinavnText);
 		
+		Button sletKategori= new Button("Slet");
+		sletKategori.setBackground(new Color(255,215,10));
+		sletKategori.setBounds(380, 160, 70, 22);
+		sletKategori.setForeground(Color.black);
+		add(sletKategori);
+		
 
 		Button TilføjKategori1 = new Button("Gem");
 		TilføjKategori1.setBackground(new Color(255,215,10));
@@ -66,6 +72,7 @@ public class RedigerKategori extends JPanel {
 		Ktable1.setBounds(12, 10, 710, 57);
 		Ktable1.setBackground(new Color(238, 238, 238));
 		add(Ktable1);
+		
 		
 		JLabel TilføjOverKategori = new JLabel("Over kategori:");
 		TilføjOverKategori.setFont(new Font("Tahoma", Font.PLAIN, 12));
