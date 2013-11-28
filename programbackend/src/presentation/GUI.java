@@ -5,6 +5,7 @@ import java.awt.Dimension;
 import java.sql.SQLException;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
@@ -174,5 +175,21 @@ public class GUI {
 		// Display the window
 		frame.pack();
 		frame.setVisible(true);
+	}
+	
+	public static void popupBogstavFejl(){
+		JOptionPane.showMessageDialog(null, "Indtast venligst ikke bogstaver");
+	}
+	
+	public static void popupTilføjet(){
+		JOptionPane.showMessageDialog(null, "Fuldført");
+	}
+	
+	public static void popupSlettet(){
+		JOptionPane.showMessageDialog(null, "Slettet");
+	}
+	
+	public static void popupÆndret(){
+		JOptionPane.showMessageDialog(null, "Dine ændringer er nu gemt");
 	}
 }

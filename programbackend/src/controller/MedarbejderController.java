@@ -93,18 +93,34 @@ public class MedarbejderController {
 			JTextField medarbejderKontonr, JTextField medarbejderCprText, 
 			JCheckBox lagerMedarbejder, JCheckBox hRMedarbejder, 
 			JCheckBox indkøbsMedarbejder) {
-
-		String navn = medarbejderNavnText.getText();
-		String adresse = medarbejderAdresseText.getText();
-		String land = medarbejderlandText.getText();
-		int postNr = Integer.parseInt(medarbejderPostNrText.getText());
-		String email = medarbejderEmailText.getText();
-		String password = medarbejderPasswordText.getText();
-		double løn = Integer.parseInt(medarbejderLønText.getText());
-		String lønType = medarbejderLønTypeText.getText();
-		int regnr = Integer.parseInt(medarbejderRegnr.getText());
-		String konto = medarbejderKontonr.getText();
-		String cpr = medarbejderCprText.getText();
+		
+		String navn = null;
+		String adresse = null;
+		String land = null;
+		int postNr = 0;
+		String email= null;
+		String password= null;
+		double løn = 0;
+		String lønType= null;
+		int regnr = 0;
+		String konto= null;
+		String cpr= null;
+		try {
+			navn = medarbejderNavnText.getText();
+			adresse = medarbejderAdresseText.getText();
+			land = medarbejderlandText.getText();
+			postNr = Integer.parseInt(medarbejderPostNrText.getText());
+			email = medarbejderEmailText.getText();
+			password = medarbejderPasswordText.getText();
+			løn = Integer.parseInt(medarbejderLønText.getText());
+			lønType = medarbejderLønTypeText.getText();
+			regnr = Integer.parseInt(medarbejderRegnr.getText());
+			konto = medarbejderKontonr.getText();
+			cpr = medarbejderCprText.getText();
+		} catch (Exception e) {
+			GUI.popupBogstavFejl();
+		}
+		
 
 
 		try {
@@ -119,6 +135,7 @@ public class MedarbejderController {
 			if (indkøbsMedarbejder.isSelected()){
 				rdao.createRolle(new RolleDTO(2, id));
 			}
+			GUI.popupTilføjet();
 		} catch (DALException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -141,7 +158,7 @@ public class MedarbejderController {
 		try {
 			postnr = Integer.parseInt(medarbejderPostNrText.getText());
 		} catch (Exception e) {
-			// TODO: handle exception
+			GUI.popupBogstavFejl();
 		}
 		String email = medarbejderEmailText.getText();
 		String password = medarbejderPasswordText.getText();
@@ -149,20 +166,21 @@ public class MedarbejderController {
 		try {
 			løn = Double.parseDouble(medarbejderLønText.getText());
 		} catch (Exception e) {
-			// TODO: handle exception
+			GUI.popupBogstavFejl();
 		}
 		String løntype = medarbejderLønTypeText.getText();
 		int regnr = 0;
 		try {
 			regnr = Integer.parseInt(medarbejderPostNrText.getText());
 		} catch (Exception e) {
-			// TODO: handle exception
+			GUI.popupBogstavFejl();
 		}
 		String kontonr = medarbejderKontonrText.getText();
 		String cpr = medarbejderCprText.getText();
 		
 		try {
 			mdao.updateMedarbejder(new MedarbejderDTO(dto.getMedarbejderNummer(), navn, adresse, land, postnr, email, password, løntype, løn, regnr, kontonr, cpr));
+			GUI.popupÆndret();
 		} catch (DALException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -231,6 +249,7 @@ public class MedarbejderController {
 	public void slet() {
 		try {
 			mdao.deleteMedarbejder(dto.getMedarbejderNummer());
+			GUI.popupSlettet();
 		} catch (DALException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -113,20 +113,24 @@ public class VarebatchController {
 	public void tilføjVarebatch(JComboBox<String> combobox1,
 			JComboBox<String> combobox2, JTextField lagerPlaceringText,
 			JTextField mængdeText) {
-		int vareNummer;
-		int vareLager;
-		String lagerPlacering;
-		int mængde;
-		
-		String temp =(String)combobox1.getSelectedItem();
-		vareNummer = Integer.parseInt(temp.substring(0, temp.indexOf(":")));
-		String temp2 =(String)combobox2.getSelectedItem();
-		vareLager = Integer.parseInt(temp2.substring(0, temp2.indexOf(":")));
-		lagerPlacering = lagerPlaceringText.getText();
-		mængde = Integer.parseInt(mængdeText.getText());
+		int vareNummer = 0;
+		int vareLager = 0;
+		String lagerPlacering = null;
+		int mængde = 0;
+		try {
+			String temp =(String)combobox1.getSelectedItem();
+			vareNummer = Integer.parseInt(temp.substring(0, temp.indexOf(":")));
+			String temp2 =(String)combobox2.getSelectedItem();
+			vareLager = Integer.parseInt(temp2.substring(0, temp2.indexOf(":")));
+			lagerPlacering = lagerPlaceringText.getText();
+			mængde = Integer.parseInt(mængdeText.getText());
+		} catch (Exception e) {
+			GUI.popupBogstavFejl();
+		}
 		
 		try {
 			vbdao.createVareBatch(new VarebatchDTO(null, vareNummer, vareLager, lagerPlacering, mængde));
+			GUI.popupTilføjet();
 		} catch (DALException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -153,17 +157,21 @@ public class VarebatchController {
 			JComboBox<String> combobox2, JTextField lagerPlaceringText,
 			JTextField mængdeText) {
 	
-		int vareNummer;
-		int vareLager;
-		String lagerPlacering;
-		int mængde;
+		int vareNummer = 0;
+		int vareLager = 0;
+		String lagerPlacering = null;
+		int mængde = 0;
 		
-		String temp =(String)combobox1.getSelectedItem();
-		vareNummer = Integer.parseInt(temp.substring(0, temp.indexOf(":")));
-		String temp2 =(String)combobox2.getSelectedItem();
-		vareLager = Integer.parseInt(temp2.substring(0, temp2.indexOf(":")));
-		lagerPlacering = lagerPlaceringText.getText();
-		mængde = Integer.parseInt(mængdeText.getText());
+		try {
+			String temp =(String)combobox1.getSelectedItem();
+			vareNummer = Integer.parseInt(temp.substring(0, temp.indexOf(":")));
+			String temp2 =(String)combobox2.getSelectedItem();
+			vareLager = Integer.parseInt(temp2.substring(0, temp2.indexOf(":")));
+			lagerPlacering = lagerPlaceringText.getText();
+			mængde = Integer.parseInt(mængdeText.getText());
+		} catch (Exception e) {
+			GUI.popupBogstavFejl();
+		}
 		
 		dto.setVareNummer(vareNummer);
 		dto.setVareLager(vareLager);
@@ -171,6 +179,7 @@ public class VarebatchController {
 		dto.setMængde(mængde);
 		try {
 			vbdao.updateVareBatch(dto);
+			GUI.popupÆndret();
 		} catch (DALException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -180,6 +189,7 @@ public class VarebatchController {
 	public void slet() {
 		try {
 			vbdao.deleteVarebatch(dto.getVareBatchNummer());
+			GUI.popupSlettet();
 		} catch (DALException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

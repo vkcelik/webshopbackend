@@ -16,16 +16,16 @@ public class MySQLStatestikDAO implements IStatestikDAO {
 		String q = null;
 
 		if(tid.equals("Dag"))
-			q= "SELECT vareNavn,vareNummer, sum(antal) FROM webshop.OrdreLinie natural join webshop.Vare natural join webshop.Ordre WHERE bestillingsDato >= DATE_SUB(CURRENT_DATE, INTERVAL 1 DAY) GROUP BY (vareNummer) ORDER BY (antal)  DESC LIMIT 10";
+			q= "SELECT vareNavn,vareNummer, sum(antal) AS antal FROM webshop.OrdreLinie natural join webshop.Vare natural join webshop.Ordre WHERE bestillingsDato >= DATE_SUB(CURRENT_DATE, INTERVAL 1 DAY) GROUP BY (vareNummer) ORDER BY (antal)  DESC LIMIT 10";
 
 		else if(tid.equals("Uge"))
-			q = "SELECT vareNavn,vareNummer, sum(antal) FROM webshop.OrdreLinie natural join webshop.Vare natural join webshop.Ordre WHERE bestillingsDato >= DATE_SUB(CURRENT_DATE, INTERVAL 1 WEEK) GROUP BY (vareNummer) ORDER BY (antal)  DESC LIMIT 10";
+			q = "SELECT vareNavn,vareNummer, sum(antal) AS antal FROM webshop.OrdreLinie natural join webshop.Vare natural join webshop.Ordre WHERE bestillingsDato >= DATE_SUB(CURRENT_DATE, INTERVAL 1 WEEK) GROUP BY (vareNummer) ORDER BY (antal)  DESC LIMIT 10";
 
 		else if(tid.equals("Måned"))
-			q = "SELECT vareNavn,vareNummer, sum(antal) FROM webshop.OrdreLinie natural join webshop.Vare natural join webshop.Ordre WHERE bestillingsDato >= DATE_SUB(CURRENT_DATE, INTERVAL 1 MONTH) GROUP BY (vareNummer) ORDER BY (antal)  DESC LIMIT 10";
+			q = "SELECT vareNavn,vareNummer, sum(antal) AS antal FROM webshop.OrdreLinie natural join webshop.Vare natural join webshop.Ordre WHERE bestillingsDato >= DATE_SUB(CURRENT_DATE, INTERVAL 1 MONTH) GROUP BY (vareNummer) ORDER BY (antal)  DESC LIMIT 10";
 
 		else if(tid.equals("År"))
-			q = "SELECT vareNavn,vareNummer, sum(antal) FROM webshop.OrdreLinie natural join webshop.Vare natural join webshop.Ordre WHERE bestillingsDato >= DATE_SUB(CURRENT_DATE, INTERVAL 12 MONTH) GROUP BY (vareNummer) ORDER BY (antal)  DESC LIMIT 10";
+			q = "SELECT vareNavn,vareNummer, sum(antal) AS antal FROM webshop.OrdreLinie natural join webshop.Vare natural join webshop.Ordre WHERE bestillingsDato >= DATE_SUB(CURRENT_DATE, INTERVAL 12 MONTH) GROUP BY (vareNummer) ORDER BY (antal)  DESC LIMIT 10";
 
 		ResultSet rs = Connector.doQuery(q);
 		try { 
@@ -64,6 +64,9 @@ public class MySQLStatestikDAO implements IStatestikDAO {
 		try { 
 			while (rs.next()){
 				s = rs.getString(1);
+			}
+			if(null == s){
+				s = "0";
 			}
 		}
 		catch (SQLException e) {throw new DALException(e); }

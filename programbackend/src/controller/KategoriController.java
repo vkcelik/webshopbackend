@@ -71,6 +71,7 @@ public class KategoriController {
 		try {
 			System.out.println(key);
 			kdao.createKategori(new KategoriDTO(null, knavn, map.get(key)));
+			GUI.popupTilføjet();
 		} catch (DALException e) {
 			e.printStackTrace();
 		}
@@ -82,6 +83,7 @@ public class KategoriController {
 
 		try {
 			kdao.updateKategori(new KategoriDTO(dto.getKategoriNummer(), knavn, parentNr));
+			GUI.popupÆndret();
 		} catch (DALException e) {
 			e.printStackTrace();
 		}
@@ -106,6 +108,7 @@ public class KategoriController {
 	public void slet() {
 		try {
 			kdao.deleteKategori(dto.getKategoriNummer());
+			GUI.popupSlettet();
 		} catch (DALException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -65,6 +65,24 @@ public class Statestik extends JPanel {
 		Top.setForeground(Color.black);
 		add(Top);
 		
+		JLabel vareNavn = new JLabel("Varenavn:");
+		vareNavn.setFont(new Font("Tahoma", Font.BOLD, 14));
+		vareNavn.setBounds(150, 230, 200, 27);
+		vareNavn.setForeground(Color.black);
+		add(vareNavn);
+		
+		JLabel vareNummer = new JLabel("Varenummer:");
+		vareNummer.setFont(new Font("Tahoma", Font.BOLD, 14));
+		vareNummer.setBounds(333, 230, 200, 27);
+		vareNummer.setForeground(Color.black);
+		add(vareNummer);
+		
+		JLabel table_antal = new JLabel("Antal:");
+		table_antal.setFont(new Font("Tahoma", Font.BOLD, 14));
+		table_antal.setBounds(516, 230, 200, 27);
+		table_antal.setForeground(Color.black);
+		add(table_antal);
+		
 		varer = new JTable();
 		varer.setBounds(150, 250, 550, 220);
 		varer.setBackground(Color.WHITE);

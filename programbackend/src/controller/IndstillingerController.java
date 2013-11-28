@@ -26,6 +26,7 @@ public class IndstillingerController {
 			idao.updateIndstilling(new IndstillingDTO(2, ikkePåLager.getText()));
 			idao.updateIndstilling(new IndstillingDTO(3, moms.getText()));
 			idao.updateIndstilling(new IndstillingDTO(4, godkend.getText()));
+			GUI.popupÆndret();
 		} catch (DALException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

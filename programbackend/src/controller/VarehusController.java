@@ -35,11 +35,12 @@ public class VarehusController {
 			postNr = Integer.parseInt(Postnr.getText());			
 			try {
 				vhdao.createVarehus(new VarehusDTO(null, vhadresse, postNr, vhLeveringstid));
+				GUI.popupTilføjet();
 			} catch (DALException e) {
 				e.printStackTrace();
 			}
 		} catch (NumberFormatException e) {
-			// TODO: handle exception
+			GUI.popupBogstavFejl();
 		}
 
 	}
@@ -111,13 +112,14 @@ public class VarehusController {
 			postnr = Integer.parseInt(PostVarehusText.getText());
 			
 		} catch (Exception e) {
-			// TODO: handle exception
+			GUI.popupBogstavFejl();
 		}
 		
 		String Leveringstid = LeveringstidText.getText();
 		
 		try {
 			vhdao.updateVarehus(new VarehusDTO(dto.getVarehusNummer(), Varehusadresse, postnr, Leveringstid));
+			GUI.popupÆndret();
 		} catch (DALException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -128,6 +130,7 @@ public class VarehusController {
 	public void slet() {
 		try {
 			vhdao.deleteVarehus(dto.getVarehusNummer());
+			GUI.popupSlettet();
 		} catch (DALException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -31,6 +31,7 @@ public class LeveringsmetodeController {
 		double pris = Double.parseDouble(metodePris.getText());
 		try {
 			lmdao.createLeveringsmetode(new LeveringsmetodeDTO(null, navn, pris));
+			GUI.popupTilføjet();
 		} catch (DALException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -84,6 +85,7 @@ public class LeveringsmetodeController {
 		dto.setLeveringsmetodePris(Double.parseDouble(metodePris.getText()));
 		try {
 			lmdao.updateLeveringsmetode(dto);
+			GUI.popupÆndret();
 		} catch (DALException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -95,6 +97,7 @@ public class LeveringsmetodeController {
 		
 		try {
 			lmdao.deleteLeveringsmetode(dto.getLeveringsmetodeNummer());
+			GUI.popupSlettet();
 		} catch (DALException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -101,10 +101,13 @@ public class VareController {
 		if (ok){
 			try {
 				vdao.createVare(new VareDTO(null, vareNavnText.getText(), pris, kategoriNummer, beskrivelseText.getText(), vægt, bredde, dybde, højde));
+				GUI.popupTilføjet();
 			} catch (DALException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+		} else {
+			GUI.popupBogstavFejl();
 		}
 		int vareNummer = -1;
 		try {
@@ -220,19 +223,13 @@ public class VareController {
 		if (ok){
 			try {
 				vdao.updateVare(new VareDTO(vareNummer, vareNavnText.getText(), pris, kategoriNummer, beskrivelseText.getText(), vægt, bredde, dybde, højde));
+				GUI.popupÆndret();
 			} catch (DALException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
 
-		if (ok){
-			try {
-				vdao.updateVare(new VareDTO(vareNummer, vareNavnText.getText() , pris, kategoriNummer, beskrivelseText.getText(), vægt, bredde, dybde, højde));
-			} catch (Exception e) {
-				// TODO: handle exception
-			}
-		}
 		// Varens billeder hentes
 		List<BilledeDTO> billeder = null;
 		try {
@@ -276,6 +273,7 @@ public class VareController {
 	public void slet() {
 		try {
 			vdao.deleteVare(dto.getVareNummer());
+			GUI.popupSlettet();
 		} catch (DALException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

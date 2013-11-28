@@ -76,6 +76,7 @@ public class OrdreController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		GUI.redigerOrdre.combobox1.setSelectedItem(dto.getOrdreNummer());
 		GUI.redigerOrdre.ordreNummer.setText("Ordrenummer: " +Integer.toString(dto.getOrdreNummer()));
 		KundeDTO kunde = null;
 		try {
@@ -136,6 +137,7 @@ public class OrdreController {
 		dto.setOrdreStatus((String) combobox.getSelectedItem());
 		try {
 			odao.updateOrdre(dto);
+			GUI.popupÆndret();
 		} catch (DALException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

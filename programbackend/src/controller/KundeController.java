@@ -38,12 +38,12 @@ public class KundeController {
 			postnr1 = Integer.parseInt(Postnr.getText());        
 			try {
 				kdao.createKunde(new KundeDTO(null, knavn, kemail, kadresse,Kland, postnr1,tlf));
+				GUI.popupTilføjet();
 			} catch (DALException e) {
 				e.printStackTrace();
 			}
 		} catch (NumberFormatException e) {
-
-			// TODO: handle exception
+			GUI.popupBogstavFejl();
 		}
 	}
 
@@ -115,12 +115,13 @@ public class KundeController {
 			postnr = Integer.parseInt(kundePostNrText.getText());
 			Tlf = Integer.parseInt(KundeTelefonText.getText());
 		} catch (Exception e) {
-			// TODO: handle exception
+			GUI.popupBogstavFejl();
 		}
 
 
 		try {
 			kdao.updateKunde(new KundeDTO(dto.getKundeNummer(), kundenavn, kundeemail, kundeadresse, kundeland, postnr, Tlf ));
+			GUI.popupÆndret();
 		} catch (DALException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
