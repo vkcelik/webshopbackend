@@ -9,4 +9,5 @@ public interface ILeveringsmetodeDAO {
 	List<LeveringsmetodeDTO> getLeveringsmetode() throws DALException;
 	void createLeveringsmetode(LeveringsmetodeDTO l) throws DALException;
 	void updateLeveringsmetode(LeveringsmetodeDTO l) throws DALException;
+	void deleteLeveringsmetode(int id) throws DALException;
 }

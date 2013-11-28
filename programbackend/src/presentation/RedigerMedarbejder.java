@@ -195,7 +195,8 @@ public class RedigerMedarbejder extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				
-				//actionlistener
+				controller.slet();
+				
 			}
 		});
 		

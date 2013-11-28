@@ -11,4 +11,5 @@ public interface IVareBatchDAO {
 	void createVareBatch(VarebatchDTO vb) throws DALException;
 	void updateVareBatch(VarebatchDTO vb) throws DALException;
 	String getVareNavn(int vbId) throws DALException;
+	void deleteVarebatch(int id) throws DALException;
 }

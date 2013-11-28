@@ -31,7 +31,7 @@ public class OversigtOrdre extends JPanel {
 		// Opretter en liste //
 		list = new JList<String>();
 		add(list);
-		list.setBounds(30, 120, 200, 200);
+		list.setBounds(30, 120, 200, 350);
 		list.setBackground(new Color(240,240,240));
 		list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		list.setFixedCellHeight(30);
@@ -55,6 +55,11 @@ public class OversigtOrdre extends JPanel {
 		SeOrdre.setForeground(Color.black);
 		SeOrdre.setBounds(30, 30, 200, 30);
 		this.add(SeOrdre);
+		
+		JLabel Ordreliste = new JLabel("Ordreliste");
+		Ordreliste.setFont(new Font("Tahoma", Font.BOLD, 14));
+		Ordreliste.setBounds(30, 90, 130, 20);
+		add(Ordreliste);
 
 		SOtable = new JTable();
 		SOtable.setBounds(12, 71, 710, 405);

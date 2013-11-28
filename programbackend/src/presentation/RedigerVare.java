@@ -157,8 +157,7 @@ public class RedigerVare extends JPanel {
 		sletVare.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				
-				//actionlistener
+				controller.slet();
 			}
 		});
 		

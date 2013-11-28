@@ -28,7 +28,7 @@ public class OversigtMedarbejder extends JPanel {
 	private JTable SEMtable1;
 	private MedarbejderController controller;
 	private MouseListener mouseListener; 
-	public JList<String> list; 
+	public JList<String> listmedarbejder; 
 
 	public OversigtMedarbejder() {
 
@@ -48,22 +48,22 @@ public class OversigtMedarbejder extends JPanel {
 		add(MedarbejderListe);
 
 		// Opretter en liste //
-		list = new JList<String>();
-		add(list);
-		list.setBounds(30, 120, 130, 200);
-		list.setBackground(new Color(240,240,240));
-		list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-		list.setFixedCellHeight(30);
+		listmedarbejder = new JList<String>();
+		add(listmedarbejder);
+		listmedarbejder.setBounds(30, 120, 130, 200);
+		listmedarbejder.setBackground(new Color(240,240,240));
+		listmedarbejder.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+		listmedarbejder.setFixedCellHeight(30);
 
 		mouseListener = new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
 				if (e.getClickCount() == 2) {
-					controller.visMedarbejder(list.getSelectedValue());
+					controller.visMedarbejder(listmedarbejder.getSelectedValue());
 				}
 			}
 		};
 		
-		list.addMouseListener(mouseListener);
+		listmedarbejder.addMouseListener(mouseListener);
 
 		SEMtable = new JTable();
 		SEMtable.setBounds(12, 71, 710, 405);

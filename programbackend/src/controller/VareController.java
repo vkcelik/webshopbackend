@@ -272,4 +272,13 @@ public class VareController {
 			}
 		}
 	}
+
+	public void slet() {
+		try {
+			vdao.deleteVare(dto.getVareNummer());
+		} catch (DALException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 }

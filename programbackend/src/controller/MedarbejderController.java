@@ -225,8 +225,22 @@ public class MedarbejderController {
 	}
 	
 	public void updateList(){
-		GUI.seMedarbejder.list.setListData(hentMedarbejderNavne());
+		GUI.seMedarbejder.listmedarbejder.setListData(hentMedarbejderNavne());
+	}
+
+	public void slet() {
+		try {
+			mdao.deleteMedarbejder(dto.getMedarbejderNummer());
+		} catch (DALException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 
-}
+		
+		
+	}
+
+
+

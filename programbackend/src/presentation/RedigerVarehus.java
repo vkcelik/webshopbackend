@@ -78,7 +78,7 @@ public class RedigerVarehus extends JPanel {
 		sletVarehus.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				
+				controller.slet();
 				//actionlistener
 			}
 		});

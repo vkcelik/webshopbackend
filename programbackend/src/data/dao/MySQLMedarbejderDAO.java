@@ -79,4 +79,13 @@ public class MySQLMedarbejderDAO implements IMedarbejderDAO{
 	    catch (SQLException e) {throw new DALException(e); }
 		return id;
 	}
-}
+
+
+		public void deleteMedarbejder(int id) throws DALException {
+			String query = "DELETE FROM Medarbejder WHERE medarbejderNummer = " + id;
+			Connector.doUpdate(query);
+			
+		}
+		
+	}
+
