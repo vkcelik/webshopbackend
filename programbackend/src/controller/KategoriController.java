@@ -102,4 +102,14 @@ public class KategoriController {
 		GUI.redigerKategori.combobox1.removeAllItems();
 		GUI.redigerKategori.combobox1.setModel(new DefaultComboBoxModel<String>(hentKategoriNavne()));
 	}
+
+	public void slet() {
+		try {
+			kdao.deleteKategori(dto.getKategoriNummer());
+		} catch (DALException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
 }

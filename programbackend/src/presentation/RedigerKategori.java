@@ -61,6 +61,14 @@ public class RedigerKategori extends JPanel {
 		sletKategori.setForeground(Color.black);
 		add(sletKategori);
 		
+		sletKategori.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				controller.slet();
+			}
+		});
+		
 
 		Button TilføjKategori1 = new Button("Gem");
 		TilføjKategori1.setBackground(new Color(255,215,10));

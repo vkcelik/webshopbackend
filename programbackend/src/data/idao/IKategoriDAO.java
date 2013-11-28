@@ -10,5 +10,5 @@ public interface IKategoriDAO {
 	List<KategoriDTO> getKategoriList() throws DALException;
 	void createKategori(KategoriDTO kategori) throws DALException;
 	void updateKategori(KategoriDTO kunde) throws DALException;
-
+	void deleteKategori(int id) throws DALException;
 }

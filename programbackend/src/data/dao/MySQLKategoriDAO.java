@@ -54,4 +54,12 @@ public class MySQLKategoriDAO implements IKategoriDAO {
 				"', parent =  '" + kategori.getParent() +
 				"' WHERE kategoriNummer  = " + kategori.getKategoriNummer());
 	}
+
+	@Override
+	public void deleteKategori(int id) throws DALException {
+		
+		String query = "DELETE FROM Kategori WHERE KategoriNummer = " + id;
+		Connector.doUpdate(query);
+		
+	}
 }
