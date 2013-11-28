@@ -77,6 +77,20 @@ public class RedigerVarebatch extends JPanel {
 		mængdeText.setBounds(230, 185, 303, 20);
 		add(mængdeText);
 		
+		Button slet = new Button("Slet");
+		slet.setBackground(new Color(255,215,10));
+		slet.setBounds(380, 220, 70, 22);
+		slet.setForeground(Color.black);
+		add(slet);
+		
+		slet.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				controller.slet();
+				//actionlistener
+			}
+		});
+		
 		Button TilføjVarebatch1 = new Button("Tilføj");
 		TilføjVarebatch1.setBackground(new Color(255,215,10));
 		TilføjVarebatch1.setBounds(460, 220, 70, 22);

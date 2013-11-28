@@ -177,4 +177,13 @@ public class VarebatchController {
 		}
 	}
 
+	public void slet() {
+		try {
+			vbdao.deleteVarebatch(dto.getVareBatchNummer());
+		} catch (DALException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
 }

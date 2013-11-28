@@ -68,7 +68,7 @@ public class MySQLVareBatchDAO implements IVareBatchDAO {
 	@Override
 	public void deleteVarebatch(int id) throws DALException {
 	
-		String query = "DELETE FROM Varebatch WHERE vareNummer = " + id;
+		String query = "DELETE FROM VareBatch WHERE vareBatchNummer = " + id;
 		Connector.doUpdate(query);
 		
 	}

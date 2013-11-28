@@ -8,6 +8,7 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
 import controller.StatestikController;
@@ -28,7 +29,10 @@ public class Statestik extends JPanel {
 	private JTable Vtable;
 	private JTable Vtable1;
 	private StatestikController controller;
-	public JList<String> list3; 
+	public JLabel antalLabel;
+	public JLabel omsætningLabel;
+	public JTable varer;
+	
 	
 	public Statestik() {
 		
@@ -57,9 +61,38 @@ public class Statestik extends JPanel {
 		
 		JLabel Top = new JLabel("Top 10 over ordrelinie:");
 		Top.setFont(new Font("Tahoma", Font.BOLD, 14));
-		Top.setBounds(40, 210, 200, 27);
+		Top.setBounds(540, 210, 200, 27);
 		Top.setForeground(Color.black);
 		add(Top);
+		
+		varer = new JTable();
+		varer.setBounds(150, 250, 550, 220);
+		varer.setBackground(Color.WHITE);
+		add(varer);
+		
+		JLabel antal = new JLabel("Antal ordre:");
+		antal.setFont(new Font("Tahoma", Font.BOLD, 14));
+		antal.setBounds(40, 210, 200, 27);
+		antal.setForeground(Color.black);
+		add(antal);
+
+		antalLabel = new JLabel();
+		antalLabel.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		antalLabel.setBounds(40, 240, 200, 27);
+		antalLabel.setForeground(Color.black);
+		add(antalLabel);
+		
+		JLabel omsætning = new JLabel("Omsætning:");
+		omsætning.setFont(new Font("Tahoma", Font.BOLD, 14));
+		omsætning.setBounds(40, 270, 200, 27);
+		omsætning.setForeground(Color.black);
+		add(omsætning);
+		
+		omsætningLabel = new JLabel();
+		omsætningLabel.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		omsætningLabel.setBounds(40, 300, 200, 27);
+		omsætningLabel.setForeground(Color.black);
+		add(omsætningLabel);
 		
 		
 		Button knap1 = new Button("1 Dag");
@@ -69,15 +102,7 @@ public class Statestik extends JPanel {
 		
 		knap1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				
-
-				
-				JList<String> list = new JList<String>();
-				add(list);
-				list.setBounds(40, 250, 400, 200);
-				list.setBackground(new Color(240,240,240));
-				
+				controller.update("Dag");
 			}
 		});
 		
@@ -88,14 +113,7 @@ public class Statestik extends JPanel {
 		
 		knap2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				
-				JList<String> list1 = new JList<String>();
-				add(list1);
-				list1.setBounds(40, 250, 400, 200);
-				list1.setBackground(new Color(240,240,240));
-				
-				
+				controller.update("Uge");
 			}
 		});
 		
@@ -106,18 +124,9 @@ public class Statestik extends JPanel {
 		
 		knap3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				
-				
-				JList<String> list2 = new JList<String>();
-				add(list2);
-				list2.setBounds(40, 250, 400, 200);
-				list2.setBackground(new Color(240,240,240));
-				
+				controller.update("Måned");
 			}
 		});
-		
-		
 		
 		Button knap4 = new Button("1 År");
 		knap4.setBounds(600, 150, 84, 27);
@@ -126,39 +135,21 @@ public class Statestik extends JPanel {
 		
 		knap4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				
-
-				
-				list3 = new JList<String>();
-				add(list3);
-				list3.setBounds(40, 250, 400, 200);
-				list3.setBackground(new Color(240,240,240));
-				
-				
+				controller.update("År");
 			}
 		});
-		
-		
-		
-		
 		
 		Button Logud = new Button("Log ud");
 		Logud.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				
-				LogInd Logud =new LogInd();
-				Logud.setVisible(true);
 				System.exit(0);
-				
 			}
 		});
+		
 		Logud.setBackground(new Color(255,215,10));
 		Logud.setBounds(632, 27, 70, 20);
 		Logud.setForeground(Color.BLACK);
 		add(Logud);
-		
 		
 		Vtable = new JTable();
 		Vtable.setBounds(12, 71, 710, 405);
@@ -170,13 +161,6 @@ public class Statestik extends JPanel {
 		Vtable1.setAutoResizeMode(HEIGHT);
 		Vtable1.setBackground(new Color(238, 238, 238));
 		add(Vtable1);
-		
-	
-		
-		
-		
-		
-		
 				
 		// SLut
 

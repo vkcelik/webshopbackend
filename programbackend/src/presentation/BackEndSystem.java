@@ -218,9 +218,8 @@ public class BackEndSystem {
 		mnNewMenu_8.add(mntmNewMenuItem_20);
 		mntmNewMenuItem_20.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				GUI.sc.updateList();
+				GUI.sc.update("Uge");
 				GUI.cardLayout.show(GUI.cards, "seStatestik");
-				
 			}
 		});
 
