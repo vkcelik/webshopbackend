@@ -93,42 +93,47 @@ public class KundeController {
 		}
 
 		return RedigerKunde;
-		
-		
+
+
 
 	}
-	
+
 	public void updateKunde(JTextField KundeNavnText,
 			JTextField KundeEmailText, JTextField KundeAdresseText,
 			JTextField KundelandText, JTextField kundePostNrText,
 			JTextField KundeTelefonText) {
-		
+
 		String kundenavn = KundeNavnText.getText();
 		String kundeemail= KundeEmailText.getText();
 		String kundeadresse = KundeAdresseText.getText();
 		String kundeland = KundelandText.getText();
-		
+
 		int postnr = 0;
 		int Tlf = 0;
-		
+
 		try {
 			postnr = Integer.parseInt(kundePostNrText.getText());
 			Tlf = Integer.parseInt(KundeTelefonText.getText());
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
-		
-		
+
+
 		try {
 			kdao.updateKunde(new KundeDTO(dto.getKundeNummer(), kundenavn, kundeemail, kundeadresse, kundeland, postnr, Tlf ));
 		} catch (DALException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-		
+
 	}
 
 	public void updateList() {
 		GUI.seKunde.list1.setListData(hentKundeNavne());
 	}
+
+
+
 }
+
+

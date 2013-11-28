@@ -76,6 +76,13 @@ public class MySQLVareDAO implements IVareDAO {
 		return id;
 	}
 
+	@Override
+	public void deleteVare(int id) throws DALException {
+		String query = "DELETE FROM Vare WHERE vareNummer = " + id;
+		Connector.doUpdate(query);
+		
+	}
+
 }
 
 

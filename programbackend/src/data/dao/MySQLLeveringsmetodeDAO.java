@@ -52,4 +52,11 @@ public class MySQLLeveringsmetodeDAO implements ILeveringsmetodeDAO {
 				);
 	}
 
+	@Override
+	public void deleteLeveringsmetode(int id) throws DALException {
+		String query = "DELETE FROM Leveringsmetode WHERE metodeNummer = " + id;
+		Connector.doUpdate(query);
+		
+	}
+
 }

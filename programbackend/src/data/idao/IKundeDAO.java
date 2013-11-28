@@ -14,4 +14,5 @@ public interface IKundeDAO {
 	void createKunde(KundeDTO kunde) throws DALException;
 	void updateKunde(KundeDTO kunde) throws DALException;
 
+
 }

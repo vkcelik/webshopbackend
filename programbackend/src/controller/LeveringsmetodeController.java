@@ -89,6 +89,18 @@ public class LeveringsmetodeController {
 			e.printStackTrace();
 		}
 	}
+
+
+	public void slet() {
+		
+		try {
+			lmdao.deleteLeveringsmetode(dto.getLeveringsmetodeNummer());
+		} catch (DALException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+		
+	}
 	
 
-}

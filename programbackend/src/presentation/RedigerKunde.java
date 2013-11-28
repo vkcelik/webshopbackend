@@ -113,19 +113,7 @@ public class RedigerKunde extends JPanel {
 		KundeTelefonText.setBounds(230, 240, 300, 20);
 		add(KundeTelefonText);
 		
-		Button sletKunde= new Button("Slet");
-		sletKunde.setBackground(new Color(255,215,10));
-		sletKunde.setBounds(380, 275, 70, 22);
-		sletKunde.setForeground(Color.black);
-		add(sletKunde);
 		
-		sletKunde.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				
-				//actionlistener
-			}
-		});
 
 		Button OpdaterKunde= new Button("Gem");
 		OpdaterKunde.setBackground(new Color(255,215,10));;

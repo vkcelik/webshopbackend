@@ -124,5 +124,15 @@ public class VarehusController {
 		}
 		
 	}
+
+	public void slet() {
+		try {
+			vhdao.deleteVarehus(dto.getVarehusNummer());
+		} catch (DALException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+		
+	}
 	
-}

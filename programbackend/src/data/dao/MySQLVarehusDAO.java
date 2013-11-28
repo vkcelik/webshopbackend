@@ -52,4 +52,13 @@ public class MySQLVarehusDAO implements IVarehusDAO{
 				+ "' WHERE varehusNummer = " + varehus.getVarehusNummer() );
 	}
 
-}
+	@Override
+	public void deleteVarehus(int id) throws DALException {
+		
+		String query = "DELETE FROM Varehus WHERE varehusNummer = " + id;
+		Connector.doUpdate(query);
+		
+	}
+		
+	}
+
