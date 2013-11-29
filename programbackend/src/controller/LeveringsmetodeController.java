@@ -14,10 +14,11 @@ import data.dao.MySQLLeveringsmetodeDAO;
 import data.idao.DALException;
 
 public class LeveringsmetodeController {
-	
+
 	MySQLLeveringsmetodeDAO lmdao;
 	LeveringsmetodeDTO dto;
-	
+	boolean ok;
+
 	public LeveringsmetodeController(){
 		this.lmdao = new MySQLLeveringsmetodeDAO();
 		GUI.tilføjLeveringsmetode.setController(this);
@@ -27,21 +28,32 @@ public class LeveringsmetodeController {
 
 	public void tilføjLeveringsmetode(JTextField metodeNavn,
 			JTextField metodePris) {
+		ok = true;
 		String navn = metodeNavn.getText();
-		double pris = Double.parseDouble(metodePris.getText());
+		double pris = -1;
+		String prisStr;
 		try {
-			lmdao.createLeveringsmetode(new LeveringsmetodeDTO(null, navn, pris));
-			GUI.popupTilføjet();
+			prisStr = metodePris.getText();
+			pris = Double.parseDouble(prisStr);
+		} catch (Exception e) {
+			ok = false;
+			GUI.popupBogstavFejl();
+		}
+
+		try {
+			if (ok){
+				lmdao.createLeveringsmetode(new LeveringsmetodeDTO(null, navn, pris));
+				GUI.popupTilføjet();
+			}
 		} catch (DALException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 	}
-	
+
 	public String[] hentLeveringsmetodeNavne(){
 		String[] navne;
-		
+
 		List<LeveringsmetodeDTO> levs = null;
 
 		try {levs = lmdao.getLeveringsmetode(); }
@@ -53,7 +65,7 @@ public class LeveringsmetodeController {
 		}
 		return navne;
 	}
-	
+
 	public void updateOversigtList(){
 		GUI.seLeveringsmetode.list.setListData(hentLeveringsmetodeNavne());
 	}
@@ -66,7 +78,7 @@ public class LeveringsmetodeController {
 		} catch (Exception e) {
 			// exception should never be catched
 		}
-		
+
 		dto = null;
 		try {
 			dto = lmdao.getLeveringsmetode(x);
@@ -94,7 +106,7 @@ public class LeveringsmetodeController {
 
 
 	public void slet() {
-		
+
 		try {
 			lmdao.deleteLeveringsmetode(dto.getLeveringsmetodeNummer());
 			GUI.popupSlettet();
@@ -103,7 +115,7 @@ public class LeveringsmetodeController {
 			e.printStackTrace();
 		}
 	}
-		
-	}
-	
+
+}
+
 
