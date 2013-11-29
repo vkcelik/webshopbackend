@@ -13,7 +13,9 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import controller.VarehusController;
 
-
+/**
+* @author  Veli Kerim Celik  
+*/
 
 public class RedigerVarehus extends JPanel {
 

@@ -14,6 +14,12 @@ import presentation.GUI;
 import presentation.OversigtMedarbejder;
 import presentation.TilføjMedarbejder;
 
+
+
+/**
+* @author  Veli Kerim Celik  
+*/
+
 public class MedarbejderController {
 	MySQLMedarbejderDAO mdao;
 	MySQLRolleDAO rdao;

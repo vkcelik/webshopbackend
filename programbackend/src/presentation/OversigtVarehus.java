@@ -15,7 +15,9 @@ import javax.swing.ListSelectionModel;
 
 import controller.VarehusController;
 
-
+/**
+* @author  Ayhan Erman  
+*/
 
 public class OversigtVarehus extends JPanel {
 

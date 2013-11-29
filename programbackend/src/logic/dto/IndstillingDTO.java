@@ -1,5 +1,9 @@
 package logic.dto;
 
+/**
+* @author  Veli Kerim Celik  
+*/
+
 public class IndstillingDTO {
 
 	private int indstillingNummer;

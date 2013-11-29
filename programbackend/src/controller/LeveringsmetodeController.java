@@ -13,6 +13,12 @@ import presentation.TilføjLeveringsmetode;
 import data.dao.MySQLLeveringsmetodeDAO;
 import data.idao.DALException;
 
+
+/**
+* @author  Veli Kerim Celik  
+*/
+
+
 public class LeveringsmetodeController {
 
 	MySQLLeveringsmetodeDAO lmdao;

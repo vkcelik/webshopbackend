@@ -4,6 +4,12 @@ import java.util.List;
 
 import logic.dto.OrdreDTO;
 
+
+
+/**
+* @author  Veli Kerim Celik  
+*/
+
 public interface IOrdreDAO {
 	OrdreDTO getOrdre(int ordreId) throws DALException;
 	List<OrdreDTO> getOrdreList() throws DALException;

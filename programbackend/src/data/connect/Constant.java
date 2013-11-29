@@ -1,6 +1,11 @@
 package data.connect;
 
 
+
+/**
+* @author  Veli Kerim Celik  
+*/
+
 // erstat konstanterne nedenfor
 
 public abstract class Constant

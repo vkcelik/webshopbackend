@@ -16,6 +16,10 @@ import javax.swing.ListSelectionModel;
 import controller.KategoriController;
 import controller.VarebatchController;
 
+/**
+* @author  Assaad kassem 
+*/
+
 public class OversigtVarebatch extends JPanel {
 
 	private static final long serialVersionUID = -6592130543777646172L;

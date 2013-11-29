@@ -4,6 +4,12 @@ import logic.dto.RolleDTO;
 
 import java.util.List;
 
+
+/**
+* @author  Veli Kerim Celik  
+*/
+
+
 public interface IRolleDAO {
 	RolleDTO getRolle(int rolleId) throws DALException;
 	List<RolleDTO> getRolleList() throws DALException;

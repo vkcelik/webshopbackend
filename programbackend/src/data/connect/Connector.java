@@ -9,6 +9,11 @@ import java.sql.Statement;
 import data.idao.DALException;
 
 
+/**
+* @author  Veli Kerim Celik  
+*/
+
+
 public class Connector
 {
 	/**

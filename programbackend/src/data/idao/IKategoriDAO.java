@@ -4,6 +4,10 @@ import java.util.List;
 
 import logic.dto.KategoriDTO;
 
+/**
+* @author  Veli Kerim Celik  
+*/
+
 public interface IKategoriDAO {
 	
 	KategoriDTO getKategori(int id) throws DALException;

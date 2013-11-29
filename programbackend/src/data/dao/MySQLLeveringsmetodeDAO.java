@@ -10,6 +10,10 @@ import data.connect.Connector;
 import data.idao.DALException;
 import data.idao.ILeveringsmetodeDAO;
 
+/**
+* @author  Veli Kerim Celik  
+*/
+
 public class MySQLLeveringsmetodeDAO implements ILeveringsmetodeDAO {
 
 	@Override

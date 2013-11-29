@@ -10,6 +10,10 @@ import data.connect.Connector;
 import data.idao.DALException;
 import data.idao.IBilledeDAO;
 
+/**
+* @author  Fadi abdul harim  
+*/
+
 public class MySQLBilledeDAO implements IBilledeDAO{
 
 	@Override

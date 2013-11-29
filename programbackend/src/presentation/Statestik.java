@@ -21,6 +21,9 @@ import java.awt.event.ActionListener;
 import java.sql.SQLException;
 import java.util.List;
 
+/**
+* @author  Ayhan Erman
+*/
 
 public class Statestik extends JPanel {
 

@@ -22,6 +22,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 
 
+
+/**
+* @author  Veli Kerim Celik  
+*/
+
 public class LogInd extends JFrame {
 
 	private static final long serialVersionUID = 9001421244756243668L;

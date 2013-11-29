@@ -4,6 +4,10 @@ import java.util.List;
 
 import logic.dto.MedarbejderDTO;
 
+/**
+* @author  Veli Kerim Celik  
+*/
+
 public interface IMedarbejderDAO {
 	MedarbejderDTO getMedarbejder(int medarbejderId) throws DALException;
 	MedarbejderDTO getMedarbejder(int medarbejderId, String password) throws DALException;

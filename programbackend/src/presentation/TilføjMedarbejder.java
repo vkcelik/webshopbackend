@@ -15,7 +15,9 @@ import javax.swing.JTextField;
 
 import controller.MedarbejderController;
 
-
+/**
+* @author  Assaad kassem 
+*/
 
 public class TilføjMedarbejder extends JPanel {
 	

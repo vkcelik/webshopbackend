@@ -25,6 +25,12 @@ import presentation.OversigtVare;
 import presentation.RedigerVare;
 import presentation.TilføjVare;
 
+
+/**
+* @author  Veli Kerim Celik  
+*/
+
+
 public class VareController {
 	MySQLVareDAO vdao;
 	MySQLVareBatchDAO vbdao;

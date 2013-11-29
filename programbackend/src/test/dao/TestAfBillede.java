@@ -6,6 +6,9 @@ import data.connect.Connector;
 import data.dao.MySQLBilledeDAO;
 import data.idao.DALException;
 
+/**
+* @author  Ziad Bahlawan  
+*/
 
 public class TestAfBillede {
 

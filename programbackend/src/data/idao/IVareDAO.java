@@ -4,6 +4,11 @@ import java.util.List;
 
 import logic.dto.VareDTO;
 
+
+/**
+* @author  Ayhan Erman  
+*/
+
 public interface IVareDAO {
 	VareDTO getVare(int vareNummer) throws DALException;
 	List<VareDTO> getVareList() throws DALException;

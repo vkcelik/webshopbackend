@@ -12,7 +12,9 @@ import data.connect.Connector;
 import data.idao.DALException;
 import data.idao.IBynavnDAO;
 
-
+/**
+* @author  Fadi abdul harim 
+*/
 
 public class MySQLBynavnDAO implements IBynavnDAO   {
 

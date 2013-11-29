@@ -2,6 +2,9 @@ package data.idao;
 
 import java.util.List;
 
+/**
+* @author  Ayhan Erman
+*/
 
 public interface IStatestikDAO {
 	List<String[]> getTop10Vare(String tid) throws DALException;

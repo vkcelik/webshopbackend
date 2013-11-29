@@ -16,6 +16,10 @@ import presentation.OversigtVarehus;
 import presentation.RedigerVarehus;
 import presentation.TilføjVarehus;
 
+/**
+* @author  Ziad el bahlawan
+*/
+
 public class VarehusController {
 	MySQLVarehusDAO vhdao;
 	VarehusDTO dto;

@@ -15,7 +15,9 @@ import javax.swing.ListSelectionModel;
 
 import controller.OrdreController;
 
-
+/**
+* @author  Veli Kerim Celik  
+*/
 
 public class OversigtOrdre extends JPanel {
 

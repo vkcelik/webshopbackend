@@ -4,6 +4,11 @@ import java.util.List;
 
 import logic.dto.VarehusDTO;
 
+
+/**
+* @author  Veli Kerim Celik  
+*/
+
 public interface IVarehusDAO {
 	VarehusDTO getVarehus(int varehusNummer) throws DALException;
 	List<VarehusDTO> getVarehusList() throws DALException;

@@ -7,6 +7,11 @@ import data.connect.Connector;
 import data.dao.MySQLLeveringsmetodeDAO;
 import data.idao.DALException;
 
+
+/**
+* @author  Veli Kerim Celik  
+*/
+
 public class TestLeveringsmetode
 {
 	public static void main(String[] args) {

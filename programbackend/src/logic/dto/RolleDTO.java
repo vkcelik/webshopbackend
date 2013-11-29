@@ -1,5 +1,10 @@
 package logic.dto;
 
+
+/**
+* @author  Veli Kerim Celik  
+*/
+
 public class RolleDTO {
 	
 	private int rolleNummer;

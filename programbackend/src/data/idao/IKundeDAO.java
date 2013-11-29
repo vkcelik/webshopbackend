@@ -6,6 +6,9 @@ import logic.dto.KundeDTO;
 
 
 
+/**
+* @author  Veli Kerim Celik  
+*/
 
 public interface IKundeDAO {
 	

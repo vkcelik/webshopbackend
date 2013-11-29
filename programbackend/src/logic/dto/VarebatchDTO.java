@@ -1,5 +1,10 @@
 package logic.dto;
 
+
+/**
+* @author  Ziad bahlawan  
+*/
+
 public class VarebatchDTO {
 
 	private Integer vareBatchNummer;

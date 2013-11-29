@@ -8,6 +8,10 @@ import data.dao.MySQLKategoriDAO;
 import data.idao.DALException;
 import logic.dto.KategoriDTO;
 
+/**
+* @author  Veli Kerim Celik  
+*/
+
 public class kategoriDropdown {
 	public static void main(String[] args) {
 		String KategoriDropdown[];

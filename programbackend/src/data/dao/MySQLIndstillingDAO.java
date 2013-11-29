@@ -11,6 +11,11 @@ import data.connect.Connector;
 import data.idao.DALException;
 import data.idao.IIndstillingDAO;
 
+
+/**
+* @author  Veli Kerim Celik  
+*/
+
 public class MySQLIndstillingDAO implements IIndstillingDAO {
 
 	@Override

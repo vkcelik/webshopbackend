@@ -15,6 +15,12 @@ import javax.swing.JTextField;
 import controller.IndstillingerController;
 import controller.VareController;
 
+
+
+/**
+* @author  Veli Kerim Celik  
+*/
+
 public class Indstillinger extends JPanel {
 	
 	private static final long serialVersionUID = -4449413241907178775L;

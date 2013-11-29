@@ -11,6 +11,11 @@ import data.idao.DALException;
 import presentation.GUI;
 import presentation.Statestik;
 
+
+/**
+* @author    Ayhan Erman 
+*/
+
 public class StatestikController {
 
 	MySQLStatestikDAO sdao;

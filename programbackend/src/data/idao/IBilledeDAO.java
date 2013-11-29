@@ -4,6 +4,10 @@ import java.util.List;
 
 import logic.dto.BilledeDTO;
 
+/**
+* @author  Fadi abdul harim 
+*/
+
 public interface IBilledeDAO {
 	BilledeDTO getbilledNummer(int billedeNummer) throws DALException;
 	List<BilledeDTO> getBilledeList() throws DALException;

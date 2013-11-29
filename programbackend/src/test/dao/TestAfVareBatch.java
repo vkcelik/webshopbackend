@@ -7,6 +7,10 @@ import data.connect.Connector;
 import data.dao.MySQLVareBatchDAO;
 import data.idao.DALException;
 
+/**
+* @author  Ziad bahlawan  
+*/
+
 public class TestAfVareBatch {
 
 	public static void main(String[] args) {

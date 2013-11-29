@@ -1,5 +1,10 @@
 package logic.dto;
 
+
+/**
+* @author  Fadi abdul halim 
+*/
+
 public class BilledeDTO {
 	
 	private Integer billedeNummer;

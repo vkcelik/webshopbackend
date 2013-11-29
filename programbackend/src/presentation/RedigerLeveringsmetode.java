@@ -15,6 +15,10 @@ import javax.swing.JTextField;
 import controller.KategoriController;
 import controller.LeveringsmetodeController;
 
+/**
+* @author  Ziad Bahlawan
+*/
+
 public class RedigerLeveringsmetode extends JPanel {
 	private LeveringsmetodeController controller;
 	public JTextField metodeNavn;

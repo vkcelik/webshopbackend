@@ -10,6 +10,12 @@ import data.connect.Connector;
 import data.idao.DALException;
 import data.idao.IVarehusDAO;
 
+
+
+/**
+* @author  Veli Kerim Celik  
+*/
+
 public class MySQLVarehusDAO implements IVarehusDAO{
 
 	@Override

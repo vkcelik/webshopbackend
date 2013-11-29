@@ -10,6 +10,10 @@ import data.connect.Connector;
 import data.idao.DALException;
 import data.idao.IVareBatchDAO;
 
+/**
+* @author  Veli Kerim Celik  
+*/
+
 public class MySQLVareBatchDAO implements IVareBatchDAO {
 
 	@Override

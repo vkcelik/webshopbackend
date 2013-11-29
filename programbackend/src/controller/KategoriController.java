@@ -15,6 +15,10 @@ import presentation.TilføjKategori;
 import data.dao.MySQLKategoriDAO;
 import data.idao.DALException;
 
+/**
+* @author    Fadi abdul halim
+*/
+
 public class KategoriController {
 
 	MySQLKategoriDAO kdao;

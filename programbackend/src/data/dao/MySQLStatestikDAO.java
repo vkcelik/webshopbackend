@@ -8,6 +8,10 @@ import data.connect.Connector;
 import data.idao.DALException;
 import data.idao.IStatestikDAO;
 
+/**
+* @author  Ayhan Erman
+*/
+
 public class MySQLStatestikDAO implements IStatestikDAO {
 
 	@Override

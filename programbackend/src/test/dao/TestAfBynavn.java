@@ -8,6 +8,10 @@ import data.connect.Connector;
 import data.dao.MySQLBynavnDAO;
 import data.idao.DALException;
 
+/**
+* @author  Fadi abdul halim 
+*/
+
 public class TestAfBynavn {
 
 	/**

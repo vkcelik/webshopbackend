@@ -10,6 +10,10 @@ import data.dao.MySQLStatestikDAO;
 import data.idao.DALException;
 
 
+/**
+* @author  Ayhan Erman
+*/
+
 public class TestStatestik  {
 
 

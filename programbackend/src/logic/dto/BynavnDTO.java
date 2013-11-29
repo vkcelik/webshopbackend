@@ -1,5 +1,9 @@
 package logic.dto;
 
+/**
+* @author  Fadi abdul halim
+*/
+
 public class BynavnDTO {
 
 	private int postNummer;

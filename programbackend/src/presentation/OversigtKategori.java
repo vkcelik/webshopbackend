@@ -15,7 +15,9 @@ import javax.swing.ListSelectionModel;
 
 import controller.KategoriController;
 
-
+/**
+* @author  Veli Kerim Celik  
+*/
 
 public class OversigtKategori extends JPanel {
 

@@ -21,6 +21,10 @@ import data.connect.Connector;
 import data.dao.MySQLMedarbejderDAO;
 import data.idao.DALException;
 
+/**
+* @author  Veli Kerim Celik  
+*/
+
 public class OversigtMedarbejder extends JPanel {
 
 	private static final long serialVersionUID = -3146818100262099845L;	

@@ -10,6 +10,11 @@ import data.connect.Connector;
 import data.idao.DALException;
 import data.idao.IRolleDAO;
 
+
+/**
+* @author  Veli Kerim Celik  
+*/
+
 public class MySQLRolleDAO implements IRolleDAO {
 
 	@Override

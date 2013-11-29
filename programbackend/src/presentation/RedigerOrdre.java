@@ -16,6 +16,10 @@ import javax.swing.table.DefaultTableModel;
 
 import controller.OrdreController;
 
+/**
+* @author  Veli Kerim Celik  
+*/
+
 public class RedigerOrdre extends JPanel{
 
 	OrdreController controller;

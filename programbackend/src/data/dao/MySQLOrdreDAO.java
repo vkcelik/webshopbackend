@@ -10,6 +10,11 @@ import data.connect.Connector;
 import data.idao.DALException;
 import data.idao.IOrdreDAO;
 
+
+/**
+* @author  Assaad Kassem
+*/
+
 public class MySQLOrdreDAO implements IOrdreDAO {
 
 	@Override

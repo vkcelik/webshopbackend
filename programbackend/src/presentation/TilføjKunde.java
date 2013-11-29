@@ -15,6 +15,10 @@ import javax.swing.JTextField;
 
 import controller.KundeController;
 
+/**
+* @author  Ayhan Erman
+*/
+
 public class TilføjKunde extends JPanel {
 
 	private static final long serialVersionUID = -7740794442244469219L;

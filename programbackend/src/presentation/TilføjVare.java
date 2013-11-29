@@ -29,7 +29,9 @@ import data.dao.MySQLKategoriDAO;
 import data.idao.DALException;
 
 
-
+/**
+* @author  Veli Kerim Celik  
+*/
 
 public class TilføjVare extends JPanel {
 

@@ -11,6 +11,10 @@ import data.connect.Connector;
 import data.idao.DALException;
 import data.idao.IVareDAO;
 
+/**
+* @author  Ayhan Erman
+*/
+
 public class MySQLVareDAO implements IVareDAO {
 
 	@Override

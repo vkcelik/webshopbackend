@@ -4,6 +4,12 @@ import java.util.List;
 
 import logic.dto.IndstillingDTO;
 
+
+
+/**
+* @author  Veli Kerim Celik  
+*/
+
 public interface IIndstillingDAO {
 	IndstillingDTO getIndstilling(int iId) throws DALException;
 	List<IndstillingDTO> getIndstillingList() throws DALException;

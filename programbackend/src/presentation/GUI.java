@@ -26,6 +26,10 @@ import controller.VarebatchController;
 import controller.VarehusController;
 
 
+/**
+* @author  Assaad kassem og Veli Kerim Celik 
+*/
+
 public class GUI {
 	public static LogInd logindFrame;
 	

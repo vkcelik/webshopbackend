@@ -16,6 +16,10 @@ import javax.swing.JTextField;
 import controller.KategoriController;
 import controller.VarebatchController;
 
+/**
+* @author  Veli Kerim Celik  
+*/
+
 public class RedigerVarebatch extends JPanel {
 	
 	private VarebatchController controller;

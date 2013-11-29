@@ -15,7 +15,9 @@ import javax.swing.JTextField;
 
 import controller.MedarbejderController;
 
-
+/**
+* @author Fadi abdul halim  
+*/
 
 public class RedigerMedarbejder extends JPanel {
 

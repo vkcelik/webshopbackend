@@ -15,6 +15,10 @@ import javax.swing.ListSelectionModel;
 
 import controller.KundeController;
 
+/**
+* @author  Veli Kerim Celik  
+*/
+
 public class OversigtKunde extends JPanel {
 
 	

@@ -2,6 +2,9 @@ package logic.dto;
 
 import java.sql.Timestamp;
 
+/**
+* @author  Veli Kerim Celik  
+*/
 public class OrdreDTO {
 
 	private int ordreNummer;

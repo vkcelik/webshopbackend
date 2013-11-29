@@ -8,6 +8,10 @@ import data.connect.Connector;
 import data.dao.MySQLKategoriDAO;
 import data.idao.DALException;
 
+/**
+* @author  Ziad bahlawan
+*/
+
 public class TestAfKategori {
 
 	public static void main(String[] args) {

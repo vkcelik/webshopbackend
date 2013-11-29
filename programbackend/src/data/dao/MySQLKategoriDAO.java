@@ -11,6 +11,12 @@ import data.idao.DALException;
 import data.idao.IKategoriDAO;
 import logic.dto.KategoriDTO;
 
+
+
+/**
+* @author  Veli Kerim Celik  
+*/
+
 public class MySQLKategoriDAO implements IKategoriDAO {
 
 	@Override

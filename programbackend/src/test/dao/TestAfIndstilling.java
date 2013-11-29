@@ -8,6 +8,10 @@ import data.connect.Connector;
 import data.dao.MySQLIndstillingDAO;
 import data.idao.DALException;
 
+/**
+* @author  Veli Kerim Celik  
+*/
+
 public class TestAfIndstilling {
 	public static void main(String[] args) {
 		try { new Connector(); }

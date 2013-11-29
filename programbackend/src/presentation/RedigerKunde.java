@@ -21,6 +21,10 @@ import javax.swing.ListSelectionModel;
 
 import controller.KundeController;
 
+/**
+* @author  Ayhan Erman
+*/
+
 public class RedigerKunde extends JPanel {
 
 

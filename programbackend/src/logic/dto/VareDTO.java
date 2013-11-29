@@ -1,5 +1,10 @@
 package logic.dto;
 
+
+/**
+* @author  Ayhan Erman
+*/
+
 public class VareDTO {
 
 	private Integer vareNummer;

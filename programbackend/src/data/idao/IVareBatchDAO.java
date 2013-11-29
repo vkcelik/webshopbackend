@@ -4,6 +4,10 @@ import java.util.List;
 
 import logic.dto.VarebatchDTO;
 
+/**
+* @author  Ziad bahlawan 
+*/
+
 public interface IVareBatchDAO {
 	
 	VarebatchDTO getVareBatch(int vareBatchNummer) throws DALException;

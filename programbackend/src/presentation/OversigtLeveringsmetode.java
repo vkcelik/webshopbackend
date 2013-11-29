@@ -16,6 +16,10 @@ import javax.swing.ListSelectionModel;
 import controller.KategoriController;
 import controller.LeveringsmetodeController;
 
+/**
+* @author  Veli Kerim Celik  
+*/
+
 public class OversigtLeveringsmetode extends JPanel {
 	
 	private LeveringsmetodeController controller;

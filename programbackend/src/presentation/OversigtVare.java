@@ -15,7 +15,9 @@ import javax.swing.ListSelectionModel;
 
 import controller.VareController;
 
-
+/**
+* @author  Veli Kerim Celik  
+*/
 
 public class OversigtVare extends JPanel {
 

@@ -11,6 +11,9 @@ import data.dao.MySQLKundeDAO;
 import data.idao.DALException;
 import presentation.GUI;
 
+/**
+* @author     Veli Kerim Celik  
+*/
 
 public class KundeController {
 

@@ -18,6 +18,10 @@ import data.dao.MySQLVareDAO;
 import data.dao.MySQLVarehusDAO;
 import data.idao.DALException;
 
+
+/**
+* @author  Fadi abdul harim
+*/
 public class VarebatchController {
 	
 	MySQLVareBatchDAO vbdao;

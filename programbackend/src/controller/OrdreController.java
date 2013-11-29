@@ -22,6 +22,11 @@ import data.idao.DALException;
 import presentation.GUI;
 import presentation.OversigtOrdre;
 
+
+/**
+* @author  Assaad kassem  
+*/
+
 public class OrdreController {
 	MySQLOrdreDAO odao;
 	MySQLKundeDAO kdao;

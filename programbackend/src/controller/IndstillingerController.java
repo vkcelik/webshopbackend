@@ -10,6 +10,12 @@ import data.idao.DALException;
 import presentation.GUI;
 import presentation.Indstillinger;
 
+
+/**
+* @author  Veli Kerim Celik  
+*/
+
+
 public class IndstillingerController {
 	MySQLIndstillingDAO idao;
 

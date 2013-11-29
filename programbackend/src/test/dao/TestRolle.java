@@ -7,6 +7,10 @@ import data.connect.Connector;
 import data.dao.MySQLRolleDAO;
 import data.idao.DALException;
 
+/**
+* @author  Veli Kerim Celik  
+*/
+
 public class TestRolle {
 
 	public static void main(String[] args) {

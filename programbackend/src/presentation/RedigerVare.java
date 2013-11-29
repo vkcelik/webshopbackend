@@ -28,7 +28,9 @@ import data.dao.MySQLKategoriDAO;
 import data.idao.DALException;
 
 
-
+/**
+* @author  Ayhan Erman
+*/
 
 public class RedigerVare extends JPanel {
 
