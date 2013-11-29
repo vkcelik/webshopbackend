@@ -19,9 +19,7 @@ import controller.MedarbejderController;
 
 public class RedigerMedarbejder extends JPanel {
 
-	public enum Mode{
-		REDIGER, TILFØJ
-	}
+	
 	
 	private static final long serialVersionUID = 6340894832099128364L;
 	private JTable Mtable;
@@ -41,7 +39,7 @@ public class RedigerMedarbejder extends JPanel {
 	public JCheckBox LagerMedarbejder;
 	public JCheckBox HRMedarbejder;
 	public JCheckBox IndkøbMedarbejder;
-	private Mode tilstand; 
+
 	
 	public RedigerMedarbejder() {
 
@@ -223,13 +221,8 @@ public class RedigerMedarbejder extends JPanel {
 		
 	}
 
-	public void makeEditMode(){
-		this.tilstand = Mode.REDIGER;
-	}
+
 	
-	public void makeAddMode(){
-		this.tilstand = Mode.TILFØJ;
-	}
 	
 	public void setController(MedarbejderController medarbejderController) {
 		this.controller = medarbejderController;

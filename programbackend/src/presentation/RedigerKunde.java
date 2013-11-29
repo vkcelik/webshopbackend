@@ -17,15 +17,12 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.ListSelectionModel;
 
-import presentation.RedigerMedarbejder.Mode;
+
 
 import controller.KundeController;
 
 public class RedigerKunde extends JPanel {
-	
-	public enum Mode{
-		REDIGER, TILFØJ
-	}
+
 
 	private static final long serialVersionUID = -7740794442244469219L;
 	private JTable Vtable;
@@ -37,7 +34,7 @@ public class RedigerKunde extends JPanel {
 	public JTextField KundelandText;
 	public JTextField kundePostNrText;
 	public JTextField KundeTelefonText;
-	private Mode tilstand;
+	
 
 	public RedigerKunde() {
 
@@ -140,16 +137,6 @@ public class RedigerKunde extends JPanel {
 		Vtable.setBackground(new Color(238, 238, 238));
 		add(Vtable);
 
-	}
-
-	public void makeEditMode(){
-		this.tilstand = Mode.REDIGER;
-	
-	}
-	
-	public void makeAddMode(){
-		
-		this.tilstand = Mode.TILFØJ;
 	}
 	
 	public void setController(KundeController kundeController) {
