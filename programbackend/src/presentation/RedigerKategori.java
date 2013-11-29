@@ -42,7 +42,7 @@ public class RedigerKategori extends JPanel {
 		TilføjKategori.setIcon(new ImageIcon(TilføjVare.class.getResource("/presentation/resources/add32.png")));
 		TilføjKategori.setFont(new Font("sansserif", Font.BOLD, 24));
 		TilføjKategori.setForeground(Color.black);
-		TilføjKategori.setBounds(30, 30, 200, 30);
+		TilføjKategori.setBounds(30, 30, 250, 30);
 		this.add(TilføjKategori);
 
 		JLabel TilføjKategorinavn = new JLabel("Kategorinavn:");

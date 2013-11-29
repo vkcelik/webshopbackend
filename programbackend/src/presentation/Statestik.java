@@ -55,13 +55,13 @@ public class Statestik extends JPanel {
 		
 		JLabel Interval = new JLabel("Periode:");
 		Interval.setFont(new Font("Tahoma", Font.BOLD, 14));
-		Interval.setBounds(40, 150, 60, 27);
+		Interval.setBounds(40, 130, 60, 27);
 		Interval.setForeground(Color.black);
 		add(Interval);
 		
-		JLabel Top = new JLabel("Top 10 over ordrelinie:");
+		JLabel Top = new JLabel("Top 10 over ordrelinie");
 		Top.setFont(new Font("Tahoma", Font.BOLD, 14));
-		Top.setBounds(540, 210, 200, 27);
+		Top.setBounds(150, 190, 200, 27);
 		Top.setForeground(Color.black);
 		add(Top);
 		
@@ -114,7 +114,7 @@ public class Statestik extends JPanel {
 		
 		
 		Button knap1 = new Button("1 Dag");
-		knap1.setBounds(150, 150, 100, 27);
+		knap1.setBounds(150, 130, 100, 27);
 		knap1.setBackground(new Color(255,215,10));
 		add(knap1);
 		
@@ -125,7 +125,7 @@ public class Statestik extends JPanel {
 		});
 		
 		Button knap2 = new Button("1 Uge");
-		knap2.setBounds(300, 150, 84, 27);
+		knap2.setBounds(300, 130, 84, 27);
 		knap2.setBackground(new Color(255,215,10));
 		add(knap2);
 		
@@ -136,7 +136,7 @@ public class Statestik extends JPanel {
 		});
 		
 		Button knap3 = new Button("1 Måned");
-		knap3.setBounds(450, 150, 84, 27);
+		knap3.setBounds(450, 130, 84, 27);
 		knap3.setBackground(new Color(255,215,10));
 		add(knap3);
 		
@@ -147,7 +147,7 @@ public class Statestik extends JPanel {
 		});
 		
 		Button knap4 = new Button("1 År");
-		knap4.setBounds(600, 150, 84, 27);
+		knap4.setBounds(600, 130, 84, 27);
 		knap4.setBackground(new Color(255,215,10));
 		add(knap4);
 		
